@@ -1,0 +1,18 @@
+{
+  "key" : {
+    "name" : "Formulário da Vigilancia Comunitaria",
+    "id" : "Comunidade"
+  },
+  "formDir" : "forms/Formulário da Vigilancia Comunitaria",
+  "hasBeenPulled" : true,
+  "cursor" : {
+    "type" : "aggregate",
+    "value" : "<cursor xmlns=\"http://www.opendatakit.org/cursor\"><attributeName>_LAST_UPDATE_DATE</attributeName><attributeValue>2025-08-15T15:08:54.383+02:00</attributeValue><uriLastReturnedValue>uuid:9c62e664-2d60-420d-9277-c5b5472d1457</uriLastReturnedValue><isForwardCursor>true</isForwardCursor></cursor>"
+  },
+  "lastExportedSubmission" : {
+    "instanceId" : "uuid:9c62e664-2d60-420d-9277-c5b5472d1457",
+    "submissionDate" : "2025-08-15T15:08:54.374+02:00",
+    "exportDateTime" : "2025-08-18T08:48:18.508+02:00"
+  },
+  "submissionVersions" : [ "1" ]
+}

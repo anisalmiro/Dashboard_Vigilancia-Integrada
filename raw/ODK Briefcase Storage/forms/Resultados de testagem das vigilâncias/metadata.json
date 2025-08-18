@@ -1,0 +1,18 @@
+{
+  "key" : {
+    "name" : "Resultados de testagem das vigilâncias",
+    "id" : "hospitalar_LB"
+  },
+  "formDir" : "forms/Resultados de testagem das vigilâncias",
+  "hasBeenPulled" : true,
+  "cursor" : {
+    "type" : "aggregate",
+    "value" : "<cursor xmlns=\"http://www.opendatakit.org/cursor\"><attributeName>_LAST_UPDATE_DATE</attributeName><attributeValue>2025-08-18T07:54:13.803+02:00</attributeValue><uriLastReturnedValue>uuid:066e98eb-a681-4d6e-aa6c-317753ec0bef</uriLastReturnedValue><isForwardCursor>true</isForwardCursor></cursor>"
+  },
+  "lastExportedSubmission" : {
+    "instanceId" : "uuid:066e98eb-a681-4d6e-aa6c-317753ec0bef",
+    "submissionDate" : "2025-08-18T07:54:13.796+02:00",
+    "exportDateTime" : "2025-08-18T08:48:28.599+02:00"
+  },
+  "submissionVersions" : [ "12", "1", "13" ]
+}

@@ -18,13 +18,17 @@ source(file.path(dir_function, "1_lread_db.R"), encoding = "UTF-8")
 
 #3
 #corigindo variaveis e base de dados
-source(file.path(dir_function, "2_correct_data.R"), encoding = "UTF-8")
+source(file.path(dir_function, "2_rename_Var.R"), encoding = "UTF-8")
+
+#3
+#corigindo variaveis e base de dados
+source(file.path(dir_function, "3_correct_data.R"), encoding = "UTF-8")
 
 
 #Coorecao de Variaveis
 #Limpando Valores da base de dados
 #Renomeando Resultados e Filtrando falores Null
-source(file.path(dir_function, "export_DB_Dashboard.R"), encoding = "UTF-8")
+source(file.path(dir_function, "5_export_DB_Dashboard.R"), encoding = "UTF-8")
 
 #
 #

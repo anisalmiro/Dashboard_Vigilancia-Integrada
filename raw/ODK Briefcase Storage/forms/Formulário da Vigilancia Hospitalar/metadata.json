@@ -1,0 +1,18 @@
+{
+  "key" : {
+    "name" : "Formulário da Vigilancia Hospitalar",
+    "id" : "hospitalar_v3"
+  },
+  "formDir" : "forms/Formulário da Vigilancia Hospitalar",
+  "hasBeenPulled" : true,
+  "cursor" : {
+    "type" : "aggregate",
+    "value" : "<cursor xmlns=\"http://www.opendatakit.org/cursor\"><attributeName>_LAST_UPDATE_DATE</attributeName><attributeValue>2025-08-15T09:48:42.908+02:00</attributeValue><uriLastReturnedValue>uuid:64f14c53-2aef-4430-8640-62d54963a619</uriLastReturnedValue><isForwardCursor>true</isForwardCursor></cursor>"
+  },
+  "lastExportedSubmission" : {
+    "instanceId" : "uuid:b1bd24b8-dcd0-4586-8c25-76b2b287d43d",
+    "submissionDate" : "2025-08-15T13:43:21.803+02:00",
+    "exportDateTime" : "2025-08-18T08:48:24.452+02:00"
+  },
+  "submissionVersions" : [ "3" ]
+}

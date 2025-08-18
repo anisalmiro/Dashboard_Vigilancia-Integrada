@@ -1,0 +1,18 @@
+{
+  "key" : {
+    "name" : "Formulário da Vigilancia Hospitalar - Laboratório",
+    "id" : "hospitalar_ib"
+  },
+  "formDir" : "forms/Formulário da Vigilancia Hospitalar _ Laboratório",
+  "hasBeenPulled" : true,
+  "cursor" : {
+    "type" : "aggregate",
+    "value" : "<cursor xmlns=\"http://www.opendatakit.org/cursor\"><attributeName>_LAST_UPDATE_DATE</attributeName><attributeValue>2025-08-15T15:10:37.989+02:00</attributeValue><uriLastReturnedValue>uuid:440c93a3-2483-4560-97de-f5be47e5a619</uriLastReturnedValue><isForwardCursor>true</isForwardCursor></cursor>"
+  },
+  "lastExportedSubmission" : {
+    "instanceId" : "uuid:440c93a3-2483-4560-97de-f5be47e5a619",
+    "submissionDate" : "2025-08-15T15:10:37.977+02:00",
+    "exportDateTime" : "2025-08-18T08:48:28.574+02:00"
+  },
+  "submissionVersions" : [ "1" ]
+}

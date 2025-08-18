@@ -1,0 +1,18 @@
+{
+  "key" : {
+    "name" : "Formulário da Recepção da Amostra",
+    "id" : "frm_recep_amo"
+  },
+  "formDir" : "forms/Formulário da Recepção da Amostra",
+  "hasBeenPulled" : true,
+  "cursor" : {
+    "type" : "aggregate",
+    "value" : "<cursor xmlns=\"http://www.opendatakit.org/cursor\"><attributeName>_LAST_UPDATE_DATE</attributeName><attributeValue>2025-04-17T09:43:16.729+02:00</attributeValue><uriLastReturnedValue>uuid:91ffad12-566b-4eea-b37e-34a43bbeb5fb</uriLastReturnedValue><isForwardCursor>true</isForwardCursor></cursor>"
+  },
+  "lastExportedSubmission" : {
+    "instanceId" : "uuid:91ffad12-566b-4eea-b37e-34a43bbeb5fb",
+    "submissionDate" : "2025-04-17T09:43:16.722+02:00",
+    "exportDateTime" : "2025-08-18T08:48:14.399+02:00"
+  },
+  "submissionVersions" : [ "1" ]
+}

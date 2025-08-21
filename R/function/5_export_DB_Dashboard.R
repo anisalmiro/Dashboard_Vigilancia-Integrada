@@ -1,4 +1,4 @@
-
+#' @title Exportar Bases de Dados para DashBoard
 
 cli::cli_alert_info("Combinando base de dado Hospital e Comunitaria para analises")
 BD_VH_VC_Preliminar<-full_join(vigilancia_hospitalar,vigilancia_comunitaria)
@@ -38,3 +38,19 @@ write.csv(BD_VH_VC_Preliminar, file = file.path(dir_dashboard, "BD_VH_VC_Prelimi
 cli::cli_alert_success("Exportando Base intermidiaria para resultados")
 write.csv(BD_VH_VC_VA_Intermidiaria, file = file.path(dir_dashboard, "BD_VH_VC_VA_Intermidiate.csv"),row.names = FALSE, fileEncoding = "UTF-8")
 
+cli::cli_alert_success("Exportando Base de Dados para GENOMICA de SARS-CoV-2")
+
+write.csv(gen_sarscov2, file = file.path(dir_dashboard, "Base_Genomica_SARS-CoV-2.csv"),
+          row.names = FALSE, fileEncoding = "UTF-8")
+
+cli::cli_alert_success("Exportando Base de Dados para GENOMICA de INFLUENZA")
+write.csv(gen_influenza, file = file.path(dir_dashboard, "Base_Genomica_Influenza.csv"),
+          row.names = FALSE, fileEncoding = "UTF-8")
+
+cli::cli_alert_success("Exportando Base de Dados para GENOMICA de SARS-CoV-2 em Esgoto")
+write.csv(gen_ww_sarscov2, file = file.path(dir_dashboard, "Base_Genomica_SARS-CoV-2_Esgoto.csv"),
+          row.names = FALSE, fileEncoding = "UTF-8")
+
+cli::cli_alert_success("Exportando Base de Dados para GENOMICA de INFLUENZA em Esgoto")
+write.csv(gen_ww_influenza, file = file.path(dir_dashboard, "Base_Genomica_Influenza_Esgoto.csv"),
+          row.names = FALSE, fileEncoding = "UTF-8")

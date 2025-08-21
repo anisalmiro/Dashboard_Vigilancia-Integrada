@@ -19,9 +19,6 @@ vigilancia_hospitalar <- vigilancia_hospitalar %>%
   ))
 
 
-
-
-
 cli::cli_alert_success("Correcao da data de Nascimento na base Comunitaria")
 vigilancia_comunitaria <- vigilancia_comunitaria %>%
   mutate(`Dados_demograficos:data_nascimento` = case_when(
@@ -38,7 +35,7 @@ vigilancia_comunitaria <- vigilancia_comunitaria %>%
   ))
 
 
-cli::cli_alert_info("Correcao da data de coheita de dados")
+cli::cli_alert_success("Correcao da data de coheita de dados")
 
 cli::cli_alert_success("Correcao da data de Testagem")
 resultado_testagem <- resultado_testagem %>%
@@ -70,7 +67,7 @@ vigilancia_hospitalar <- vigilancia_hospitalar %>%
 
 
 
-cli::cli_alert_info("Correcao do ID da AMOSTRA")
+cli::cli_alert_success("Correcao do ID da AMOSTRA")
 
 
 cli::cli_alert_success("Limpeza da base de resultados")
@@ -268,3 +265,27 @@ vigilancia_ambiental <- vigilancia_ambiental %>%
   ))
 
 
+cli::cli_alert_success("Correcao da data de reporte na base Genomica SARS-CoV-2")
+gen_sarscov2 <- gen_sarscov2 %>%
+  mutate(
+    `Sample Collection Date (MM-DD-YYYY)` = case_when(
+      # se for número (decimal do Excel), converte para Date
+      suppressWarnings(!is.na(as.numeric(`Sample Collection Date (MM-DD-YYYY)`))) ~ 
+        format(as.Date(as.numeric(`Sample Collection Date (MM-DD-YYYY)`), origin = "1899-12-30"), "%m/%d/%Y"),
+      
+      # se já for texto de data, mantém a sua lógica anterior
+      !is.na(`Sample Collection Date (MM-DD-YYYY)`) & `Sample Collection Date (MM-DD-YYYY)` != "" ~
+        format(lubridate::parse_date_time(`Sample Collection Date (MM-DD-YYYY)`, orders = c("ymd", "dmy", "mdy")), "%m/%d/%Y"),
+      
+      TRUE ~ as.character(`Sample Collection Date (MM-DD-YYYY)`)
+    )
+  ) %>%
+  rename(data_de_reporte = `Sample Collection Date (MM-DD-YYYY)`)
+
+cli::cli_alert_success("Filtrando a base de Genomica SARS-CoV-2 para IDS")
+gen_sarscov2 <- gen_sarscov2 %>%
+  filter(substr(`IDS ID`, 1, 3) == "IDS")
+
+cli::cli_alert_success("Filtrando a base de Genomica influenza para IDS")
+gen_influenza <- gen_influenza %>%
+  filter(substr(`IDS ID`, 1, 3) == "IDS")

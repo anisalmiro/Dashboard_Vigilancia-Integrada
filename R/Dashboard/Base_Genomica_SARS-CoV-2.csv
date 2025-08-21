@@ -1,0 +1,28 @@
+"ORDER","IDS ID","Sample ID","...4","Semanas","data_de_reporte","Age","Gender","Country","State","District","Bairro","clade_who","Pangolin Lineage","Accession ID (GISAID)","Lineage Clad and Pangolin","Reference_Coverage"
+"ORDER","IDS ID","Sample ID","Source","week",NA,"Age","Gender","Country","State","District","Bairro","clade_who","Accession ID (GISAID)","Accesiion number","Lineage (Clade and Pangolin)","Percentage coverage"
+"1","IDS0100004","PMB0723440","Clinic","47","11/19/2024","10m","Masculino","Mozambique","Maputo provincia","Matola","Mathemele","Omicron","EPI_ISL_19682383",NA,"24A (JN.1.40)","0.87255459318463002"
+"2","IDS0100014","PMB0724175","Clinic","48","11/25/2024","31a","Feminino","Mozambique","Maputo provincia","Matola","Maputo","Omicron","EPI_ISL_19682387",NA,"24A (JN.1.49.1)","0.96468581747650695"
+"3","IDS0100020","PMB0724180","Clinic","48","11/26/2024","4m","Masculino","Mozambique","Maputo provincia","Matola","Kongolote","Omicron","EPI_ISL_19682388",NA,"24A (JN.1.40)","0.86392669631809504"
+"4","IDS0100021","PMB0724184","Clinic","49","11/27/2024","10m","Feminino","Mozambique","Maputo Cidade","Matola","Khongolote","Omicron","EPI_ISL_19682389",NA,"24H (LF.7)","0.98535264020332403"
+"5","IDS0100022","PMB0724782","Clinic","49","12/03/2024","1a","Masculino","Mozambique","Maputo Cidade","Kamabukuane","Muhaladze","Omicron","low coverage",NA,"low coverage","0.37166839447547001"
+"6","IDS0100031","PMB0724785","Clinic","49","12/03/2024","63a","Feminino","Mozambique","Maputo Cidade","Kamabukuane","Zimpeto","Omicron","EPI_ISL_19682397",NA,"24A (JN.1.16.3)","0.986790623014413"
+"7","IDS0100033","PMB0724786","Clinic","49","12/06/2024","64a","Masculino","Mozambique","Maputo Cidade","Kamabukuane","Naure","Omicron","EPI_ISL_19682398",NA,"24A (JN.1.40)","0.905661639300404"
+"8","IDS0100034","PMB0724790","Clinic","49","12/06/2024","20a","Feminino","Mozambique","Maputo Cidade","Kampfumo","Kampfumo","Omicron","EPI_ISL_19682399",NA,"24H (LF.7)","0.97702571648329595"
+"9","IDS0100024","PMB0724829","Clinic","49","12/03/2024","1a","Feminino","Mozambique","Maputo provincia","Matola","Mathemele","Omicron","low coverage",NA,"low coverage","4.6918369394375103E-2"
+"10","IDS0100092","PMB0726392","Clinic","51","12/19/2024","35a","Feminino","Mozambique","Maputo Provincia","Matola","Matlemele","Omicron",NA,NA,"24A (JN.1)","0.98652309132862903"
+"11","IDS0100093","PMB0726397","Clinic","51","12/20/2024","52a","Feminino","Mozambique","Maputo Provincia","Matola","Matidjuana","Omicron",NA,NA,"24A (JN.1)","0.97304618265725795"
+"12","IDS0100094","PMB0726400","Clinic","51","12/20/2024","35a","Feminino","Mozambique","Maputo Provincia","Matola","Intaka","Omicron",NA,NA,"24A (JN.1)","0.98839581312911695"
+"13","IDS0100062","PMB0726403","Clinic","51","12/12/2024","1a","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","Magoanine","Omicron",NA,NA,"24H (LF.7)","0.84182189078018899"
+"14","IDS0100064","PMB0726408","Clinic","51","12/19/2024","4m","Masculino","Mozambique","Maputo Provincia","Matola","Intaka","Omicron",NA,NA,"24A (JN.1)","0.79894993813329696"
+"15","IDS0100066","PMB0726413","Clinic","51","12/20/2024","5m","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","Omicron",NA,NA,"24A (JN.1)","0.78985386081664"
+"16","IDS0100039","PMB0726429","Clinic","51","12/17/2024","55a","Masculino","Mozambique","Maputo Provincia","Matola","Khongolote","Omicron",NA,NA,"24A (JN.1)","0.98702471323947405"
+"17","IDS0100097","PMB0727138","Clinic","2","01/07/2025","39a","Feminino","Mozambique","Maputo Provincia","Matola","Nkobe","Omicron",NA,NA,"24H (LF.7)","0.98836237166839402"
+"18","IDS0100205","PMB0732229","Clinic","10","03/06/2025","2a","Masculino","Mozambique","Maputo Provincia","Matola","Intaka","Omicron",NA,NA,"24B (JN.1.11.1)","0.77500585225562602"
+"19","IDSC100012","PMB0734918","Community","12","03/17/2025","9a","Feminino","Mozambique","Maputo Provincia","Matola","Matlemele","Omicron",NA,NA,"Outgroup (BA.3)","0.89114804534661995"
+"20","IDS0100511","PMB0742087","Clinic","23","06/05/2025","2a","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","Mapulene","Omicron","CS Zimpeto",NA,"low coverage",NA
+"21","IDSC100278","PMB0739969","Community","24","05/14/2025","6a","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","Magoanine","Omicron","CS Zimpeto",NA,"low coverage",NA
+"22","IDS0100281","PMB0738031","Clinic","18","05/02/2025","1a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Kumbeza","Omicron","CS Zimpeto",NA,"low coverage",NA
+"23","IDS0100386","PMB0738086","Clinic","19","05/06/2025","4a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Mathemele","Omicron","CS Zimpeto",NA,"low coverage",NA
+"24","IDS0100168","PMB0730225","Clinic","7","02/10/2025","39a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","INTAKA","Omicron",NA,NA,"low coverage","foi positiva pra iras"
+"25","IDS0100205","PMB0732229","Clinic","10","03/06/2025","2a","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","INTAKA","Omicron",NA,NA,"low coverage","repeticao na testagem"
+"26","IDSC100012","PMB0734918","Community","12","03/17/2025","9a","Feminino","Mozambique","Maputo Provincia","Matola","MATHEMELE","Omicron",NA,NA,"low coverage","repeticao na testagem"

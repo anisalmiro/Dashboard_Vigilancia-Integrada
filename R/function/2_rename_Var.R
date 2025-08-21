@@ -606,7 +606,7 @@ vigilancia_ambiental <- v_ambiental %>%
     "WHOTA:Observacao" = "WHOTA.Observacao",
     "meta:instanceID" = "meta.instanceID"
   )
-
+str
 
 rm(vh_1)
 rm(vh_lab)

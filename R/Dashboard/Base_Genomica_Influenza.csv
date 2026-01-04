@@ -1,69 +1,133 @@
-"ORDER","IDS ID","Sample ID","Source","Week","Sample Collection Date (MM-DD-YYYY)","Age","Gender","Country","State","District","Bairro","Subtype and subclade","Accession ID (GISAID)","Accesiion number"
-1,"IDSC100013","PMB0734919","Community",12,2025-03-19,"2a","Feminino","Mozambique","Maputo Provincia","Matola","NKOBE","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-2,"IDSC100128","PMB0734922","Community",12,2025-03-19,"39a","Feminino","Mozambique","Maputo Provincia","Matola","NKOBE","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-3,"IDS0100184","PMB0735099","Clinic",12,2025-03-20,"3a","Feminino","Mozambique","Maputo Provincia","Matola","MUHALAZE","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-4,"IDS0100274","PMB0735420","Clinic",NA,2025-04-01,"30a","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","KUMBEZA","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-5,"IDS0100244","PMB0735505","Clinic",13,2025-03-24,"18a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","KUMBEZA","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-6,"IDS0100265","PMB0735513","Clinic",13,2025-03-24,"2a","Masculino","Mozambique","Maputo Provincia","Matola","MATHEMELE","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-7,"IDS0100305","PMB0735516","Clinic",14,2025-04-02,"1a","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","ZIMPETO","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-8,"IDS0100310","PMB0735521","Clinic",14,2025-04-01,"5a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","KUMBEZA","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-9,"IDS0100357","PMB0736549","Clinic",16,2025-04-14,"3a","Masculino","Mozambique","Maputo Provincia","Matola","INTAKA","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-10,"IDSO100253","PMB0736551","Clinic",14,2025-04-14,"24a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","KHONGOLOTE","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-11,"IDSC100213","PMB0736653","Community",16,2025-04-15,"1a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","MAGOANINE C","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-12,"IDS0100250","PMB0736870","Clinic",16,2025-04-16,"21a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","ZIMPETO","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-13,"IDSC100398","PMB0740623","Clinic",20,2025-05-13,"2a","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","Magoanine C","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-14,"IDSC100396","PMB0741510","Clinic",27,2025-05-30,"22a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Magoanine C","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-15,"IDSC100256","PMB0741746","Clinic",23,2025-06-03,"10a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-16,"IDS0100500","PMB0741759","Clinic",23,2025-06-02,"2a","Feminino","Mozambique","Matola","Maputo Cidade","Mathemele","No subtype predicted",NA,NA
-17,"IDS0100477","PMB0741763","Clinic",23,2025-06-03,"1a","Masculino","Mozambique","Matola","Maputo Cidade","Matlemele","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-18,"IDSC100267","PMB0742082","Clinic",23,2025-06-05,"11m","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-19,"IDS0100517","PMB0742127","Clinic",23,2025-06-06,"20a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-20,"IDS0100486","PMB0740908","Clinic",26,2025-05-26,"2a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","No subtype predicted",NA,NA
-21,"IDS0100473","PMB0741756","Clinic",23,2025-06-02,"19a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Santa Isabel","No subtype predicted",NA,NA
-22,"IDS0100474","PMB0741757","Clinic",23,2025-06-02,"27a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Magoanine C","No subtype predicted",NA,NA
-23,"IDS0100476","PMB0741762","Clinic",23,2025-06-03,"24a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","No subtype predicted",NA,NA
-24,"IDSC100274","PMB0742229","Community",24,2025-06-09,"5a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","No subtype predicted",NA,NA
-25,"IDS0100327","PMB0738010","Clinic",18,2025-04-29,"1a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","MATIWONE","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-26,"IDSC100277","PMB0738019","Community",NA,2025-02-05,"32a","Masculino","Mozambique","Maputo Provincia","Matola","INTAKA 1","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-27,"IDS0100044","PMB0738024","Clinic",18,2025-05-02,"30a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","KONGOLOTE","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-28,"IDS0100278","PMB0738026","Clinic",18,2025-05-02,"17a","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","CUMBEZA","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-29,"IDS0100279","PMB0738027","Clinic",18,2025-05-02,"27a","Feminino","Mozambique","Maputo Provincia","Matola","MATLEMELE","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-30,"IDS0100282","PMB0738032","Clinic",18,2025-05-02,"2a","Masculino","Mozambique","Maputo Provincia","Matola","MARRACUENE","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-31,"IDS0100362","PMB0738049","Clinic",NA,2025-05-05,"20a","Masculino","Mozambique","Maputo Provincia","Matola","MUHALAZE","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-32,"IDS0100363","PMB0738083","Clinic",19,2025-05-06,"19a","Feminino","Mozambique","Maputo Provincia","Matola","INTAKA","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-33,"IDS0100385","PMB0738085","Clinic",19,2025-05-06,"8m","Masculino","Mozambique","Maputo Provincia","Matola","INTAKA","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-34,"IDS0100369","PMB0738624","Clinic",19,2025-05-08,"38a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","KUMBEZA","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-35,"IDS0100390","PMB0738626","Clinic",19,2025-05-08,"2a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","MICHAFUTENE","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-36,"IDS0100392","PMB0738628","Clinic",19,2025-05-08,"1a","Masculino","Mozambique","Maputo Provincia","Matola","MATHEMELE","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-37,"IDS0100372","PMB0738635","Clinic",19,2025-05-09,"28a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","ZIMPETO","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-38,"IDS0100460","PMB0739961","Clinic",20,2025-05-15,"24a","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","POLANA CANICO B","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-39,"IDS0100412","PMB0740294","Clinic",21,2025-05-20,"3a","Feminino","Mozambique","Maputo Provincia","Matola","MUHALAZE","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-40,"IDS0100448","PMB0740296","Clinic",21,2025-05-20,"24a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","ZIMPETO","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-41,"IDS0100446","PMB0739151","Clinic",20,2025-05-14,"1a","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","MAGOANINE","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-42,"IDSC100320","PMB0745291","Community",26,2025-06-23,"4","Masculino","Mozambique","Maputo","Maputo","Maputo","low coverage",NA,NA
-43,"IDS0100537","PMB0745308","Clinic",26,2025-06-23,"39","Feminino","Mozambique","Maputo","Maputo","Maputo","low coverage",NA,NA
-44,"IDS0100539","PMB0745310","Clinic",26,2025-06-24,"4","Masculino","Mozambique","Maputo","Maputo","Maputo","low coverage",NA,NA
-45,"IDS0100566","PMB0745909","Clinic",28,2025-07-04,"2","Masculino","Mozambique","Maputo","Maputo","C.S. Zimpeto","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-46,"IDS0100578","PMB0746535","Clinic",28,2025-07-08,"2","Masculino","Mozambique","Maputo","Maputo","C.S. Zimpeto","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-47,"IDSC100368","PMB0746917","Community",28,2025-07-10,"33","Feminino","Mozambique","Maputo","Maputo","C.S Zimpeto","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-48,"IDS0200091","PMB0746921","Clinic",28,2025-07-10,"55","Feminino","Mozambique","Maputo","Maputo","C.S Mavalane","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-49,"IDS0100615","PMB0747015","Clinic",28,2025-07-11,"7","Masculino","Mozambique","Maputo","Maputo","C.S Zimpeto","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-50,"IDS0200093","PMB0747023","Clinic",28,2025-07-11,"16","Feminino","Mozambique","Maputo","Maputo","C.S Mavalane","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-51,"IDS0100618","PMB0747037","Clinic",29,2025-07-14,"6a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Magoanine","No subtype predicted",NA,NA
-52,"IDSC100376","PMB0747045","Community",29,2025-07-14,"12a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","H1N1 (6B.1A.5a.2a)",NA,NA
-53,"IDS0100643","PMB0747117","Clinic",29,2025-07-15,"4a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Khongolote","No subtype predicted",NA,NA
-54,"IDS0100646","PMB0747159","Clinic",29,2025-07-16,"9m","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Boquisso","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-55,"IDS0100650","PMB0747163","Clinic",29,2025-07-16,"22a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Cumbeza","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-56,"IDS0100653","PMB0747468","Clinic",28,2025-07-09,"6a","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","Nkobe","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-57,"IDS0200015","PMB0747479","Clinic",29,2025-07-17,"30d",NA,"Mozambique","Maputo Cidade","Maputo Cidade","Maxaquene D","No subtype predicted",NA,NA
-58,"IDSC200001","PMB0747482","Community",29,2025-07-17,"1a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Mavalane A","No subtype predicted",NA,NA
-59,"IDSC200002","PMB0747483","Community",29,2025-07-17,"7a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Mavalane A","No subtype predicted",NA,NA
-60,"IDSC200005","PMB0747486","Community",29,2025-07-17,"1a","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","Mavalane A","No subtype predicted",NA,NA
-61,"IDS0100665","PMB0748090","Clinic",30,2025-07-21,"40a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Madeira","H1N1 (6B.1A.5a.2a)",NA,NA
-62,"IDSC100417","PMB0748121","Community",30,2025-07-21,"13a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-63,"IDSC100418","PMB0748122","Community",30,2025-07-21,"32a","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","H1N1 (6B.1A.5a.2a)",NA,NA
-64,"IDS0100668","PMB0748129","Clinic",30,2025-07-22,"1a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-65,"IDSC100420","PMB0748133","Community",30,2025-07-22,"14a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
-66,"IDS0100673","PMB0748189","Clinic",30,2025-07-23,"2a","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","H1N1 (6B.1A.5a.2a)",NA,NA
-67,"IDS0100678","PMB0748352","Clinic",30,2025-07-24,"2a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","No subtype predicted",NA,NA
-68,"IDSC100432","PMB0748355","Clinic",30,2025-07-24,"36a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","H3N2 (3C.2a1b.2a.2a.3a.1)",NA,NA
+"ORDER","IDS ID","Sample ID","Source","Week","Sample Collection Date (MM-DD-YYYY)","Age","Gender","Country","State","District","Bairro","Subtype and subclade"
+1,"IDSC100013","PMB0734919","Community",12,2025-03-19,"2a","Feminino","Mozambique","Maputo Provincia","Matola","NKOBE","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+2,"IDSC100128","PMB0734922","Community",12,2025-03-19,"39a","Feminino","Mozambique","Maputo Provincia","Matola","NKOBE","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+3,"IDS0100184","PMB0735099","Clinic",12,2025-03-20,"3a","Feminino","Mozambique","Maputo Provincia","Matola","MUHALAZE","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+4,"IDS0100274","PMB0735420","Clinic",NA,2025-04-01,"30a","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","KUMBEZA","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+5,"IDS0100244","PMB0735505","Clinic",13,2025-03-24,"18a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","KUMBEZA","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+6,"IDS0100265","PMB0735513","Clinic",13,2025-03-24,"2a","Masculino","Mozambique","Maputo Provincia","Matola","MATHEMELE","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+7,"IDS0100305","PMB0735516","Clinic",14,2025-04-02,"1a","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","ZIMPETO","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+8,"IDS0100310","PMB0735521","Clinic",14,2025-04-01,"5a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","KUMBEZA","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+9,"IDS0100357","PMB0736549","Clinic",16,2025-04-14,"3a","Masculino","Mozambique","Maputo Provincia","Matola","INTAKA","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+10,"IDS0100253","PMB0736551","Clinic",14,2025-04-14,"24a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","KHONGOLOTE","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+11,"IDSC100213","PMB0736653","Community",16,2025-04-15,"1a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","MAGOANINE C","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+12,"IDS0100250","PMB0736870","Clinic",16,2025-04-16,"21a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","ZIMPETO","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+13,"IDSC100398","PMB0740623","Community",20,2025-05-13,"2a","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","Magoanine C","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+14,"IDSC100396","PMB0741510","Community",27,2025-05-30,"22a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Magoanine C","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+15,"IDSC100256","PMB0741746","Community",23,2025-06-03,"10a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+16,"IDS0100500","PMB0741759","Clinic",23,2025-06-02,"2a","Feminino","Mozambique","Matola","Maputo Cidade","Mathemele","B (lineage result pending)"
+17,"IDS0100477","PMB0741763","Clinic",23,2025-06-03,"1a","Masculino","Mozambique","Matola","Maputo Cidade","Matlemele","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+18,"IDSC100267","PMB0742082","Community",23,2025-06-05,"11m","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+19,"IDS0100517","PMB0742127","Clinic",23,2025-06-06,"20a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+20,"IDS0100486","PMB0740908","Clinic",26,2025-05-26,"2a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","B (lineage result pending)"
+21,"IDS0100473","PMB0741756","Clinic",23,2025-06-02,"19a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Santa Isabel","B (lineage result pending)"
+22,"IDS0100474","PMB0741757","Clinic",23,2025-06-02,"27a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Magoanine C","B (lineage result pending)"
+23,"IDS0100476","PMB0741762","Clinic",23,2025-06-03,"24a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","B (lineage result pending)"
+24,"IDSC100274","PMB0742229","Community",24,2025-06-09,"5a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","B (lineage result pending)"
+25,"IDS0100327","PMB0738010","Clinic",18,2025-04-29,"1a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","MATIWONE","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+26,"IDSC100277","PMB0738019","Community",NA,2025-02-05,"32a","Masculino","Mozambique","Maputo Provincia","Matola","INTAKA 1","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+27,"IDS0100044","PMB0738024","Clinic",18,2025-05-02,"30a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","KONGOLOTE","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+28,"IDS0100278","PMB0738026","Clinic",18,2025-05-02,"17a","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","CUMBEZA","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+29,"IDS0100279","PMB0738027","Clinic",18,2025-05-02,"27a","Feminino","Mozambique","Maputo Provincia","Matola","MATLEMELE","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+30,"IDS0100282","PMB0738032","Clinic",18,2025-05-02,"2a","Masculino","Mozambique","Maputo Provincia","Matola","MARRACUENE","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+31,"IDS0100362","PMB0738049","Clinic",NA,2025-05-05,"20a","Masculino","Mozambique","Maputo Provincia","Matola","MUHALAZE","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+32,"IDS0100363","PMB0738083","Clinic",19,2025-05-06,"19a","Feminino","Mozambique","Maputo Provincia","Matola","INTAKA","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+33,"IDS0100385","PMB0738085","Clinic",19,2025-05-06,"8m","Masculino","Mozambique","Maputo Provincia","Matola","INTAKA","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+34,"IDS0100369","PMB0738624","Clinic",19,2025-05-08,"38a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","KUMBEZA","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+35,"IDS0100390","PMB0738626","Clinic",19,2025-05-08,"2a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","MICHAFUTENE","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+36,"IDS0100392","PMB0738628","Clinic",19,2025-05-08,"1a","Masculino","Mozambique","Maputo Provincia","Matola","MATHEMELE","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+37,"IDS0100372","PMB0738635","Clinic",19,2025-05-09,"28a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","ZIMPETO","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+38,"IDS0100460","PMB0739961","Clinic",20,2025-05-15,"24a","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","POLANA CANICO B","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+39,"IDS0100412","PMB0740294","Clinic",21,2025-05-20,"3a","Feminino","Mozambique","Maputo Provincia","Matola","MUHALAZE","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+40,"IDS0100448","PMB0740296","Clinic",21,2025-05-20,"24a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","ZIMPETO","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+41,"IDS0100446","PMB0739151","Clinic",20,2025-05-14,"1a","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","MAGOANINE","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+42,"IDSC100320","PMB0745291","Community",26,2025-06-23,"4","Masculino","Mozambique","Maputo","Maputo","Maputo","low coverage"
+43,"IDS0100537","PMB0745308","Clinic",26,2025-06-23,"39","Feminino","Mozambique","Maputo","Maputo","Maputo","low coverage"
+44,"IDS0100539","PMB0745310","Clinic",26,2025-06-24,"4","Masculino","Mozambique","Maputo","Maputo","Maputo","low coverage"
+45,"IDS0100566","PMB0745909","Clinic",28,2025-07-04,"2","Masculino","Mozambique","Maputo","Maputo","C.S. Zimpeto","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+46,"IDS0100578","PMB0746535","Clinic",28,2025-07-08,"2","Masculino","Mozambique","Maputo","Maputo","C.S. Zimpeto","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+47,"IDSC100368","PMB0746917","Community",28,2025-07-10,"33","Feminino","Mozambique","Maputo","Maputo","C.S Zimpeto","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+48,"IDS0200091","PMB0746921","Clinic",28,2025-07-10,"55","Feminino","Mozambique","Maputo","Maputo","C.S Mavalane","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+49,"IDS0100615","PMB0747015","Clinic",28,2025-07-11,"7","Masculino","Mozambique","Maputo","Maputo","C.S Zimpeto","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+50,"IDS0200093","PMB0747023","Clinic",28,2025-07-11,"16","Feminino","Mozambique","Maputo","Maputo","C.S Mavalane","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+51,"IDS0100618","PMB0747037","Clinic",29,2025-07-14,"6a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Magoanine","B (lineage result pending)"
+52,"IDSC100376","PMB0747045","Community",29,2025-07-14,"12a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","H1N1 D.3.1 (6B.1A.5a.2a)"
+53,"IDS0100643","PMB0747117","Clinic",29,2025-07-15,"4a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Khongolote","B (lineage result pending)"
+54,"IDS0100646","PMB0747159","Clinic",29,2025-07-16,"9m","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Boquisso","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+55,"IDS0100650","PMB0747163","Clinic",29,2025-07-16,"22a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Cumbeza","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+56,"IDS0100653","PMB0747468","Clinic",28,2025-07-09,"6a","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","Nkobe","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+57,"IDS0200015","PMB0747479","Clinic",29,2025-07-17,"30d",NA,"Mozambique","Maputo Cidade","Maputo Cidade","Maxaquene D","B (lineage result pending)"
+58,"IDSC200001","PMB0747482","Community",29,2025-07-17,"1a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Mavalane A","B (lineage result pending)"
+59,"IDSC200002","PMB0747483","Community",29,2025-07-17,"7a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Mavalane A","B (lineage result pending)"
+60,"IDSC200005","PMB0747486","Community",29,2025-07-17,"1a","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","Mavalane A","B (lineage result pending)"
+61,"IDS0100665","PMB0748090","Clinic",30,2025-07-21,"40a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Madeira","A H1N1 D.3.1 (6B.1A.5a.2a)"
+62,"IDSC100417","PMB0748121","Community",30,2025-07-21,"13a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+63,"IDSC100418","PMB0748122","Community",30,2025-07-21,"32a","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","A H1N1 D.3.1 (6B.1A.5a.2a)"
+64,"IDS0100668","PMB0748129","Clinic",30,2025-07-22,"1a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+65,"IDSC100420","PMB0748133","Community",30,2025-07-22,"14a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+66,"IDS0100673","PMB0748189","Clinic",30,2025-07-23,"2a","Masculino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","A H1N1 D.3.1 (6B.1A.5a.2a)"
+67,"IDS0100678","PMB0748352","Clinic",30,2025-07-24,"2a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","B (lineage result pending)"
+68,"IDSC100432","PMB0748355","Community",30,2025-07-24,"36a","Feminino","Mozambique","Maputo Cidade","Maputo Cidade","Zimpeto","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+69,"IDSC200050","PMB0748951","Community",31,2025-07-29,"9a","Feminino","Mozambique","Tete","Tete","MAVALANE B","pending"
+70,"IDS0100638","PMB0749182","Clinic",31,2025-07-31,"29a","Feminino","Mozambique",NA,"Maputo","INTAKA II","pending"
+71,"IDS0101314","PMB0749748","Clinic",32,2025-08-04,"31a","Feminino","Mozambique",NA,"Maputo","KHONGOLOTE","pending"
+72,"IDS0200290","PMB0749823",NA,32,2025-08-06,"21a","Feminino","Mozambique",NA,"Maputo","INTAKA","pending"
+73,"IDS0200179","PMB0749824",NA,32,2025-08-06,"1a","Feminino","Mozambique",NA,"Maputo","AGOSTINHO NETO","pending"
+74,"IDS0101319","PMB0756040","Clinic",32,2025-08-05,"2a","Feminino","Mozambique",NA,"Maputo","MAGOANINE","low coverage"
+75,"IDS0200333","PMB0756720",NA,35,2025-08-25,"92d","Feminino","Mozambique",NA,"Maputo","LAULANE","pending"
+76,"IDS0200344","PMB0756725",NA,35,2025-08-29,"3a","Masculino","Mozambique",NA,"Maputo","MAVALANE","pending"
+77,"IDS0200465","PMB0757508",NA,39,2025-09-26,"6a","Masculino","Mozambique",NA,"Maputo","MAXAQUENE","pending"
+78,"IDS0200543","PMB0759646",NA,42,2025-10-15,"7a","Feminino","Mozambique",NA,"Maputo","Mavalane","low coverage"
+79,"IDS0100736","PMB0759659","Clinic",42,2025-10-15,"1a","Feminino","Mozambique",NA,"Maputo","Intaka","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+80,"IDS0100737","PMB0759660","Clinic",42,2025-10-15,"2a","Masculino","Mozambique",NA,"Maputo","Matola Gare","low coverage"
+81,"IDS0200500","PMB0759675",NA,42,2025-10-14,"12a","Feminino","Mozambique",NA,"Maputo","Mavalane A","low coverage"
+82,"IDS0200541","PMB0759676",NA,42,2025-10-14,"1a","Feminino","Mozambique",NA,"Maputo","Mavalane A","A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1)"
+83,"IDS0200564","PMB0759628",NA,43,2025-10-24,"13a","Masculino","Mozambique",NA,"Maputo","MAXAQUENE","low coverage"
+84,"IDS0100762","PMB0759633","Clinic",43,2025-10-24,"2a","Masculino","Mozambique",NA,"Maputo","Kumbeza","A H3N2 K (3C.2a1b.2a.2a.3a.1)"
+85,"IDS0100744","PMB0758922","Clinic",42,2025-10-16,"42a","Feminino","Mozambique",NA,"Maputo","Intaka","A H1N1 D.3.1 (6B.1A.5a.2a)"
+86,"IDS0200551","PMB0758933",NA,43,2025-10-20,"10a","Feminino","Mozambique",NA,"Maputo","MAXAQUENE","pending"
+87,"IDS0100748","PMB0758939","Clinic",43,2025-10-20,"4a","Masculino","Mozambique",NA,"Maputo","MAGOANINE B","low coverage"
+88,"IDS0200556","PMB0760205",NA,43,2025-10-21,"5a","Masculino","Mozambique",NA,"Maputo","FPLM","A H3N2 K (3C.2a1b.2a.2a.3a.1)"
+89,"IDS0100777","PMB0760237","Clinic",44,2025-10-30,"31a","Feminino","Mozambique",NA,"Maputo","CUMBEZA","A H1N1 D.3.1 (6B.1A.5a.2a)"
+90,"IDS0200575","PMB0760239",NA,44,2025-10-30,"9a","Feminino","Mozambique",NA,"Maputo","HULENE A","A H3N2 K (3C.2a1b.2a.2a.3a.1)"
+91,"IDS0200577","PMB0760242",NA,44,2025-10-30,"9a","Feminino","Mozambique",NA,"Maputo","MAVALANE A","A H3N2 K (3C.2a1b.2a.2a.3a.1)"
+92,"IDS0200569","PMB0760259",NA,44,2025-10-29,"9a","Masculino","Mozambique",NA,"Maputo","HULENE A","low coverage"
+93,"IDS0100773","PMB0760267","Clinic",44,2025-10-29,"2a","Masculino","Mozambique",NA,"Maputo","MATLEMELE","A H3N2 K (3C.2a1b.2a.2a.3a.1)"
+94,"IDS0100748","PMB0758925","Clinic",42,2025-10-16,"15a","Masculino","Mozambique",NA,"Maputo","KHONGOLOTE","low coverage"
+95,"IDS0100748","PMB0758996","Clinic",35,2025-08-29,"25a","Masculino","Mozambique",NA,"Maputo","MAVALANE A","low coverage"
+96,"IDS0200408","PMB0759027",NA,34,2025-08-19,"24a","Masculino","Mozambique",NA,"Maputo","NDJAULE","low coverage"
+97,"IDS0200246","PMB0759029",NA,34,2025-08-20,"7a","Masculino","Mozambique",NA,"Maputo","MAVALANE A","low coverage"
+98,"IDS0200246","PMB0759047",NA,33,2025-08-11,"10a","Feminino","Mozambique",NA,"Maputo","MAVALANE B","low coverage"
+99,"IDS0200262","PMB0759475",NA,33,2025-08-11,"2a","Feminino","Mozambique",NA,"Maputo","MATHEMELE","low coverage"
+100,"IDS0100737","PMB0759667","Clinic",42,2025-10-14,"12a","Feminino","Mozambique",NA,"Maputo","ZIMPETO","pending"
+101,"IDS0200412","PMB0752753",NA,36,2025-01-09,"13a","Feminino","Mozambique",NA,"Maputo","Munguini","low coverage"
+102,"IDS0200413","PMB0752754",NA,36,2025-02-09,"1a","Masculino","Mozambique",NA,"Maputo",NA,"low coverage"
+103,"IDS0200254","PMB0760746",NA,35,2025-08-25,"3a","Feminino","Mozambique",NA,"Maputo","POLANA CANICO","pending"
+104,"IDS0200359","PMB0760815",NA,36,2025-09-04,"1a","Masculino","Mozambique",NA,"Maputo","FERROVIARIO","pending"
+105,"IDSC300124","PMB0760847","Community",45,2025-11-04,"15a","Masculino","Mozambique","Maputo Cidade","Maputo","ZIMPETO","pending"
+106,"IDSC300126","PMB0760855","Community",45,2025-11-05,"25a","Feminino","Mozambique","Maputo Cidade","Maputo","ZIMPETO","pending"
+107,"IDS0100785","PMB0760861","Clinic",45,2025-11-04,"7a","Masculino","Mozambique",NA,"Maputo","MATHEMELE","pending"
+108,"IDSC200317","PMB0760874","Community",45,2025-11-05,"4a","Masculino","Mozambique","Maputo Cidade","Maputo","HULENE B","pending"
+109,"IDS0200590","PMB0760905",NA,45,2025-11-06,"10m","Masculino","Mozambique",NA,"Maputo","COSTA DO SOL","pending"
+110,"IDS0200609","PMB0760907",NA,45,2025-11-06,"3a","Masculino","Mozambique",NA,"Maputo","FERROVIARIO","pending"
+111,"IDS0200593","PMB0760930",NA,45,2025-11-06,"3a","Feminino","Mozambique",NA,"Maputo","FERROVIARIO","pending"
+112,"IDS0100792","PMB0760931","Clinic",45,2025-11-06,"51a","Feminino","Mozambique",NA,"Maputo","ZIMPETO","pending"
+113,"IDS0100794","PMB0760933","Clinic",45,2025-11-06,"6a","Feminino","Mozambique",NA,"Maputo","ZIMPETO","pending"
+114,"IDS0100796","PMB0761348","Clinic",45,2025-11-07,"7a","Masculino","Mozambique",NA,"Maputo","MATIBWANA","pending"
+115,"IDS0100797","PMB0761349","Clinic",45,2025-11-07,"11a","Masculino","Mozambique",NA,"Maputo","MUHALAZE","pending"
+116,"IDS0100799","PMB0761360","Clinic",45,2025-11-07,"25a","Feminino","Mozambique",NA,"Maputo","NKOBE","pending"
+117,"IDS0100800","PMB0761614","Clinic",46,2025-11-11,"25a","Feminino","Mozambique",NA,"Maputo","KHONGOLOTE","pending"
+118,"IDS0200666","PMB0761806",NA,46,2025-11-13,"12a","Masculino","Mozambique",NA,"Maputo","MAVALANE B","pending"
+119,"IDS0100806","PMB0761809","Clinic",46,2025-11-13,"19a","Masculino","Mozambique",NA,"Maputo","MATHEMELE","pending"
+120,"IDS0100807","PMB0761810","Clinic",46,2025-11-13,"10a","Feminino","Mozambique",NA,"Maputo","INTAKA","pending"
+121,"IDS0200597","PMB0761813",NA,46,2025-11-11,"5a","Masculino","Mozambique",NA,"Maputo","MAX D","pending"
+122,"IDS0200613","PMB0761838",NA,46,2025-11-11,"4a","Feminino","Mozambique",NA,"Maputo","HULENE","pending"
+123,"IDS0200614","PMB0761839",NA,46,2025-11-11,"1a","Masculino","Mozambique",NA,"Maputo","MAXAQUENE B","pending"
+124,"IDS0200615","PMB0761840",NA,46,2025-11-11,"2a","Feminino","Mozambique",NA,"Maputo","MAXQUENE B","pending"
+125,"IDS0200617","PMB0761842",NA,46,2025-11-11,"8m","Masculino","Mozambique",NA,"Maputo",NA,"pending"
+126,"IDS0200627","PMB0761852",NA,46,2025-11-12,"1a","Masculino","Mozambique",NA,"Maputo","FPLM","pending"
+127,"IDS0200661","PMB0761854",NA,46,2025-11-12,"43a","Masculino","Mozambique",NA,"Maputo","SINGATHELA","pending"
+128,"IDS0200662","PMB0761855",NA,46,2025-11-12,"18a","Feminino","Mozambique",NA,"Maputo","MAFALALA","pending"
+129,"IDS0200663","PMB0761856",NA,46,2025-11-12,"8m","Feminino","Mozambique",NA,"Maputo","MAXAQUENE D","pending"
+130,"IDS0100805","PMB0761867","Clinic",46,2025-11-12,"1a","Masculino","Mozambique",NA,"Maputo","ZIMPENTO","pending"
+131,"IDS0100795","PMB0760922","Clinic",45,2025-11-06,"6a","Feminino","Mozambique",NA,"Maputo","CHIBUENO","pending"
+132,"IDS0100801","PMB0761615","Clinic",46,2025-11-11,"7a","Feminino","Mozambique",NA,"Maputo","MAGOANINE C","pending"

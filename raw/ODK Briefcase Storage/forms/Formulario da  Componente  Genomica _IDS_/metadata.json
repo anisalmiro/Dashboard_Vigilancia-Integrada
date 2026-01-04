@@ -6,8 +6,13 @@
   "formDir" : "forms/Formulario da  Componente  Genomica _IDS_",
   "hasBeenPulled" : true,
   "cursor" : {
-    "type" : "empty",
-    "value" : null
+    "type" : "aggregate",
+    "value" : "<cursor xmlns=\"http://www.opendatakit.org/cursor\"><attributeName>_LAST_UPDATE_DATE</attributeName><attributeValue>2025-09-12T12:58:30.885+02:00</attributeValue><uriLastReturnedValue>uuid:062b8394-3d11-4892-8a67-1407332985d9</uriLastReturnedValue><isForwardCursor>true</isForwardCursor></cursor>"
   },
-  "submissionVersions" : [ ]
+  "lastExportedSubmission" : {
+    "instanceId" : "uuid:062b8394-3d11-4892-8a67-1407332985d9",
+    "submissionDate" : "2025-09-12T12:58:30.88+02:00",
+    "exportDateTime" : "2025-12-30T01:49:44.781+02:00"
+  },
+  "submissionVersions" : [ "2" ]
 }

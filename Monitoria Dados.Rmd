@@ -1,0 +1,813 @@
+---
+title: "Monitoria de Dados IDS"
+author: "Anisio"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+
+```{r}
+
+# Monitoria de dados do IDS
+
+# Carregamento das bases de dados
+##   filtrar dados de de uma data por se definir() dias atrás da base de dados vigilancia hospitalar
+
+
+if(!dir.exists("plots/monitoria")) dir.create("plots/monitoria", recursive = TRUE)
+
+library(ggplot2)
+library(dplyr)
+library(lubridate)
+library(forcats)
+library(tidyverse)
+library(janitor)
+
+
+
+
+
+#FUNCAO PARA CORREGIR FORMAATO DA DATA
+
+
+
+
+
+#converter a coluna de data para formato Date
+
+vigilancia_hospitalar <-converter_data(vigilancia_hospitalar, "Dados_demograficos:DATE2")
+vigilancia_comunitaria <-converter_data(vigilancia_comunitaria, "Dados_demograficos:DATE2")
+vigilancia_ambiental <-converter_data(vigilancia_ambiental, "Dados_demograficos:DATE2")
+resultado_testagem <- converter_data(resultado_testagem, "detalhes:data_informe")
+
+
+# denir parametro de dias por filtrar na base de dados
+#adicionar variavel `Dados_demograficos:DATE2` na base de reultados de testagem para que possa ser filtrada na funcao
+ resultado_testagem <-resultado_testagem %>% mutate(`Dados_demograficos:DATE2`= as.Date(`detalhes:data_informe`))
+ 
+ #Lista de bases de dados por filtrar
+lista_bases <- c( "vigilancia_hospitalar", "vigilancia_comunitaria", "vigilancia_ambiental", "resultado_testagem","BD_VH_VC_VA_Intermidiaria", "BD_VH_VC_Preliminar")
+
+
+
+ # parametro de filto de da base de dados
+dias_para_filtrar <- 30
+ 
+# Chamar a funcao para gerar as bases filtradas
+gerar_bases_filtradas(lista_bases, dias_para_filtrar)
+
+base_monitoria<-inner_join(BD_VH_VC_VA_Intermidiaria_30, resultado_testagem_30, by = c("Dados_demograficos:codigo_paciente" = "detalhes:codido_do_teste2"))
+
+
+# Bind BD_VH_VC_VA_Intermidiaria_15 E resultado_testagem_15 by patient code and count codes not found in results dbase
+# Combine by patient code and count codes not found in results
+left_df <- BD_VH_VC_VA_Intermidiaria_30
+right_df <- resultado_testagem_30
+
+left_key <- "Dados_demograficos:codigo_paciente"
+right_key <- "detalhes:codido_do_teste2"
+
+if (!left_key %in% names(left_df)) stop(paste("Key", left_key, "not found in `Hospitalar_Comunitario_15`"))
+if (!right_key %in% names(right_df)) stop(paste("Key", right_key, "not found in `resultado_testagem_15`"))
+
+codes_left <- unique(left_df[[left_key]])
+codes_right <- unique(right_df[[right_key]])
+
+not_found_codes <- setdiff(codes_left, codes_right)
+n_not_found <- length(not_found_codes)
+
+cat("Patient codes in `Hospitalar_Comunitario_intermediate` not found in `resultado_testagem_15`:", n_not_found, "\n")
+
+BD_Hospitalar_Comunitario_30_resultados_joined <- left_df %>%
+  left_join(right_df, by = setNames(right_key, left_key))
+# Now, from the joined database, count how many results of each surveillance type based on id patterns
+
+
+# Variáveis a monitorar
+#gerar boxplots, histogramas e graficos de barras para variaveis categoricas e numericas como idade, peso, altura, sexo para verificar outlayers e missingness
+
+# Monitoria de dados do IDS em relacao aos missigs a serem gravados na pasta plots/monitoria
+# Selecao das variaveia a serem monitoradas
+
+monitor_vars <- c(
+  "Unidade_sanitaria",
+  "Dados_demograficos:DATE2",
+  "Dados_demograficos:codigo_paciente",
+  "Dados_demograficos:sexo",
+  "Dados_demograficos:data_nascimento",
+  "Dados_demograficos:idade2",
+  "Dados_demograficos:provincia_de_residencia",
+  "testes_resultados:Resultado_de_Cultura",
+  "TIFOIDE:Resultado_de_Influenza",
+  "group_jz9ln80:SARSCov2",
+  "nota111:Sintomas"
+)
+
+# Function to summarize missing data for specified variables
+# Count nulls for `monitor_vars`
+
+
+dt_v <- BD_Hospitalar_Comunitario_30_resultados_joined
+
+# Count nulls for `monitor_vars` (safe handling of non-character columns)
+missing_summary <- tibble::tibble(variable = monitor_vars) %>%
+  dplyr::mutate(
+    present = variable %in% names(dt_v),
+    n_total = ifelse(present, nrow(dt_v), NA_integer_),
+    n_missing = purrr::map_int(variable, function(var) {
+      if (!var %in% names(dt_v)) return(NA_integer_)
+      vec <- dt_v[[var]]
+      empty_str <- if (is.character(vec) || is.factor(vec)) vec == "" else rep(FALSE, length(vec))
+      sum(is.na(vec) | empty_str, na.rm = TRUE)
+    }),
+    pct_missing = ifelse(!is.na(n_missing) & !is.na(n_total) & n_total > 0,
+                         round(100 * n_missing / n_total, 2),
+                         NA_real_)
+  ) %>%
+  dplyr::arrange(dplyr::desc(pct_missing))
+
+print(missing_summary)
+
+
+```
+
+
+
+```{r}
+# Function to create and save a completeness bar chart (percent complete vs missing)
+plot_completude <- function(df, var, dataset_name = "dataset") {
+  if (!var %in% names(df)) return(NULL)
+  vec <- df[[var]]
+  total <- length(vec)
+  n_missing <- sum(is.na(vec) | vec == "")
+  n_complete <- total - n_missing
+  comp_df <- tibble::tibble(
+    status = c("complete", "missing"),
+    n = c(n_complete, n_missing)
+  ) %>%
+    dplyr::mutate(pct = 100 * n / sum(n))
+  p <- ggplot2::ggplot(comp_df, ggplot2::aes(x = status, y = pct, fill = status)) +
+    ggplot2::geom_col() +
+    ggplot2::geom_text(ggplot2::aes(label = paste0(round(pct, 1), "%")), vjust = -0.5) +
+    ggplot2::scale_fill_manual(values = c("complete" = "#2ca25f", "missing" = "#fb6a4a")) +
+    ggplot2::labs(title = paste0(var, " completude (", dataset_name, ")"),
+                  y = "Percent", x = NULL) +
+    ggplot2::coord_cartesian(ylim = c(0, 100)) +
+    ggplot2::theme_minimal()
+  fname <- file.path("plots/monitoria", paste0(gsub("[^A-Za-z0-9_]", "_", paste0(dataset_name, "_", var)), "_completude.png"))
+  ggplot2::ggsave(fname, plot = p, width = 6, height = 4, dpi = 150)
+  invisible(p)
+}
+
+
+
+# Generate completeness plots for the main surveillance dataset
+for (v in monitor_vars) {
+  try(plot_completude(dt_v, v, "BH,BC"), silent = TRUE)
+}
+
+
+```
+
+
+
+
+```{r}
+# Generate variable distribution plots
+
+############################################################################################
+
+#Da base de dados BD_VH_VC_VH_intermediaria_15_resultados_joined, contar quantos resultados de cada vifilancia verificar se o id contem algo como IDS01= Hospitalar, IDSC= comunitaria, IDSW= ambiental
+
+id_col <- "Dados_demograficos:codigo_paciente"
+if (!id_col %in% names(BD_Hospitalar_Comunitario_30_resultados_joined)) stop(paste("Key", id_col, "not found in `BD_Hospitalar_Comunitario_30_resultados_joined`"))
+
+surv_counts <- BD_Hospitalar_Comunitario_30_resultados_joined %>%
+  mutate(id_val = as.character(.data[[id_col]]),
+         surveillance = dplyr::case_when(
+           stringr::str_detect(id_val, "IDS0") ~ "hospitalar_Maputo",
+           stringr::str_detect(id_val, "IDSW1") ~ "Ambiental_Maputo",
+           stringr::str_detect(id_val, "IDSC1")  ~ "comunitaria_Maputo",
+           stringr::str_detect(id_val, "IDSC2")  ~ "comunitaria_Maputo",
+           stringr::str_detect(id_val, "IDSC3")  ~ "comunitaria_Maputo",
+           stringr::str_detect(id_val, "IDSQ1")  ~ "Hospitalar_Quelimane",
+           stringr::str_detect(id_val, "IDSQC")  ~ "comunitaria_Quelimane",
+           stringr::str_detect(id_val, "IDSWQ")  ~ "ambiental_Quelimane",
+           stringr::str_detect(id_val, "IDSTC")  ~ "comunitaria_TETE",
+           stringr::str_detect(id_val, "IDST1")  ~ "Hospitalar_TETE",
+           stringr::str_detect(id_val, "IDSWT")  ~ "ambiental_Tete",
+           
+           TRUE ~ "other"
+         )) %>%
+  group_by(surveillance) %>%
+  summarise(n = n(), pct = round(100 * n / nrow(BD_Hospitalar_Comunitario_30_resultados_joined), 2), .groups = "drop") %>%
+  arrange(desc(n))
+
+print(surv_counts)
+
+
+```
+
+
+```{r}
+
+
+# LISTA DE CODIGOS DE PACIENTES NA BASE DE DADOS BD_VH_VC_VA_Intermidiaria_15 DISTINTOS
+distinct_codes <- unique(BD_Hospitalar_Comunitario_30_resultados_joined$`Dados_demograficos:codigo_paciente`)
+list(distinct_codes)
+
+############################################################################################
+
+
+
+generate_data_quality_report <- function(df,
+                                         date_cols = NULL,
+                                         id_cols = NULL,
+                                         sample_size = 1000,
+                                         na_threshold = 0.1,
+                                         outlier_multiplier = 1.5,
+                                         save_path = ".") {
+  stopifnot(is.data.frame(df))
+  n <- nrow(df)
+  vars <- colnames(df)
+
+  # 1) Normalize column names
+  df <- df %>% janitor::clean_names()
+  vars_clean <- colnames(df)
+
+  # 2) Infer date columns if not provided
+  if (is.null(date_cols)) {
+    date_cols <- vars_clean[grepl("date|data|dt|time", vars_clean)]
+  }
+
+  # 3) Basic missingness and completeness
+  missingness <- tibble(
+    variable = vars_clean,
+    type = sapply(df, class) %>% as.character(),
+    n_missing = sapply(df, function(x) sum(is.na(x))),
+    pct_missing = sapply(df, function(x) mean(is.na(x)))
+  ) %>%
+    arrange(desc(pct_missing))
+
+  # 4) Duplicates
+  dup_rows <- df %>% duplicated() %>% sum()
+  dup_report <- list(total_rows = n, duplicated_rows = dup_rows)
+
+  # 5) Unique / cardinality
+  cardinality <- tibble(
+    variable = vars_clean,
+    n_unique = sapply(df, function(x) length(unique(x)))
+  ) %>% arrange(n_unique)
+
+  # 6) Numeric summaries and outlier detection (IQR method)
+  numeric_vars <- vars_clean[sapply(df, is.numeric)]
+  numeric_summary <- map_dfr(numeric_vars, function(v) {
+    x <- df[[v]]
+    x_no_na <- x[!is.na(x)]
+    if (length(x_no_na) == 0) return(tibble(variable = v))
+    q <- quantile(x_no_na, probs = c(0, 0.25, 0.5, 0.75, 1))
+    iqr <- q[4] - q[2]
+    lower <- q[2] - outlier_multiplier * iqr
+    upper <- q[4] + outlier_multiplier * iqr
+    outliers <- sum(x_no_na < lower | x_no_na > upper)
+    tibble(
+      variable = v,
+      min = q[1],
+      p25 = q[2],
+      median = q[3],
+      p75 = q[4],
+      max = q[5],
+      mean = mean(x_no_na),
+      sd = sd(x_no_na),
+      n_outliers = outliers,
+      pct_outliers = outliers / length(x_no_na)
+    )
+  })
+
+  # 7) Categorical levels and unexpected values
+  cat_vars <- vars_clean[sapply(df, function(x) is.character(x) || is.factor(x))]
+  cat_summary <- map_dfr(cat_vars, function(v) {
+    x <- df[[v]]
+    freqs <- as_tibble(table(x, useNA = "ifany"))
+    freqs <- freqs %>% arrange(desc(n))
+    top <- paste0(head(freqs$x, 5), collapse = "; ")
+    tibble(variable = v, n_levels = length(unique(x)), top_values = top)
+  })
+
+  # 8) Date parsing and range checks
+  date_checks <- NULL
+  if (length(date_cols) > 0) {
+    date_checks <- map_dfr(date_cols, function(col) {
+      if (!col %in% vars_clean) return(tibble(variable = col, note = "not found"))
+      x <- df[[col]]
+      parsed <- suppressWarnings(parse_date_time(x, orders = c("Y-m-d","d/m/Y","d-m-Y","m/d/Y","Ymd","dmy","ymd"), exact = FALSE))
+      n_parsed_na <- sum(is.na(parsed) & !is.na(x))
+      n_all_na <- sum(is.na(parsed))
+      date_range <- if (all(is.na(parsed))) tibble(min = NA, max = NA) else tibble(min = min(parsed, na.rm = TRUE), max = max(parsed, na.rm = TRUE))
+      tibble(variable = col,
+             parsed_non_na = sum(!is.na(parsed)),
+             parsed_failed = n_parsed_na,
+             parsed_all_na = n_all_na,
+             min_date = date_range$min,
+             max_date = date_range$max)
+    })
+  }
+
+  # 9) ID uniqueness checks
+  id_checks <- NULL
+  if (!is.null(id_cols)) {
+    id_present <- id_cols[id_cols %in% vars_clean]
+    if (length(id_present) > 0) {
+      id_checks <- map_dfr(id_present, function(idc) {
+        total <- nrow(df)
+        n_unique <- n_distinct(df[[idc]])
+        pct_unique <- n_unique / total
+        duplicated <- total - n_unique
+        tibble(variable = idc, n_unique = n_unique, duplicated = duplicated, pct_unique = pct_unique)
+      })
+    }
+  }
+
+  # 10) Threshold-based flags
+  flag_na <- missingness %>% filter(pct_missing >= na_threshold) %>% pull(variable)
+
+  # 11) Assemble report
+  report <- list(
+    generated_at = Sys.time(),
+    total_rows = n,
+    missingness = missingness,
+    duplicates = dup_report,
+    cardinality = cardinality,
+    numeric_summary = numeric_summary,
+    categorical_summary = cat_summary,
+    date_checks = date_checks,
+    id_checks = id_checks,
+    na_flags = flag_na
+  )
+
+  # 12) Save outputs
+  date_tag <- format(Sys.Date(), "%Y%m%d")
+  csv_path <- file.path(save_path, paste0("dq_missingness_", date_tag, ".csv"))
+  readr::write_csv(missingness, csv_path)
+  saveRDS(report, file = file.path(save_path, paste0("dq_report_", date_tag, ".rds")))
+
+  # 13) Print short summary
+  cat("Data quality report generated:", as.character(report$generated_at), "\n")
+  cat("Rows:", report$total_rows, "- Variables:", length(vars_clean), "\n")
+  cat("Duplicated rows:", report$duplicates$duplicated_rows, "\n")
+  if (length(flag_na) > 0) {
+    cat("Variables above NA threshold (", na_threshold, "):", paste(flag_na, collapse = ", "), "\n")
+  } else {
+    cat("No variables exceed NA threshold.\n")
+  }
+
+  invisible(report)
+}
+
+# Example usage:
+ report <- generate_data_quality_report(BD_VH_VC_VA_Intermidiaria_15_resultados_joined,
+                                        date_cols = c("dados_demograficos_date2"),
+                                        id_cols = c("id_paciente"),
+                                        save_path = "reports")
+
+
+```
+
+
+
+
+```{r}
+
+
+
+# Data Quality Monitoring for Vigil Hospital Data
+# Install required packages if needed
+# install.packages(c("ggplot2", "dplyr", "tidyr", "scales"))
+
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(scales)
+
+# Define variables to monitor vcomunitaria Hospitalar Data
+vars_to_monitor <- c(
+  "Codigo_do_tecnico",
+  "Unidade_sanitaria",
+  "Dados_demograficos:DATE2",
+  "Dados_demograficos:codigo_paciente",
+  "Dados_demograficos:sexo",
+  "Dados_demograficos:data_nascimento",
+  "Dados_demograficos:idade2",
+  "Dados_demograficos:provincia_de_residencia",
+  "testes_resultados:Resultado_de_Cultura",
+  "TIFOIDE:Resultado_de_Influenza",
+  "group_jz9ln80:SARSCov2",
+  "nota111:Sintomas",
+  "nota124:Hospitalizado",
+  "nota124:Motivo_Hospitalizado",
+  "nota126:Diabetes",
+  "meta:instanceID"
+)
+
+
+vars_to_monitor <- c(
+  "Codigo_do_tecnico",
+  "Dados_demograficos:DATE2",
+  "Dados_demograficos:codigo_paciente",
+  "Dados_demograficos:idade2",
+  "Dados_demograficos:provincia_de_residencia",
+  "testes_resultados:Resultado_de_Cultura",
+  "TIFOIDE:Resultado_de_Influenza",
+  "group_jz9ln80:SARSCov2",
+  "nota111:Sintomas",
+  "nota124:Hospitalizado",
+  "nota124:Motivo_Hospitalizado",
+  "nota126:Diabetes",
+  "meta:instanceID"
+)
+
+
+# Calculate completeness for each variable
+calculate_completeness <- function(df, variables) {
+  
+  results <- data.frame(
+    Variable = character(),
+    Complete = numeric(),
+    Missing = numeric(),
+    Total = numeric(),
+    Completeness_Pct = numeric(),
+    stringsAsFactors = FALSE
+  )
+  
+  for (var in variables) {
+    if (var %in% names(df)) {
+      total <- nrow(df)
+      
+      # Handle different data types safely
+      col_data <- df[[var]]
+      
+      # Convert to character to avoid date parsing issues
+      if (inherits(col_data, c("POSIXct", "POSIXt", "Date"))) {
+        col_data <- as.character(col_data)
+      }
+      
+      # Count missing values
+      missing <- sum(is.na(col_data) | 
+                     (is.character(col_data) & (col_data == "" | col_data == " " | trimws(col_data) == "")))
+      
+      complete <- total - missing
+      pct <- (complete / total) * 100
+      
+      results <- rbind(results, data.frame(
+        Variable = var,
+        Complete = complete,
+        Missing = missing,
+        Total = total,
+        Completeness_Pct = pct
+      ))
+    } else {
+      warning(paste("Variable not found:", var))
+    }
+  }
+  
+  return(results)
+}
+
+# Calculate completeness
+quality_summary <- calculate_completeness(resultado_testagem_20, vars_to_monitor)
+
+# Prepare data for visualization
+quality_long <- quality_summary %>%
+  select(Variable, Complete, Missing) %>%
+  pivot_longer(cols = c(Complete, Missing), 
+               names_to = "Status", 
+               values_to = "Count") %>%
+  mutate(Variable = gsub(":", "\n", Variable))  # Line break for readability
+
+# Chart 1: Stacked Bar Chart - Completed vs Missing
+p1 <- ggplot(quality_long, aes(x = reorder(Variable, -Count), y = Count, fill = Status)) +
+  geom_bar(stat = "identity", position = "stack") +
+  scale_fill_manual(values = c("Complete" = "#2ecc71", "Missing" = "#e74c3c")) +
+  coord_flip() +
+  theme_minimal() +
+  labs(
+    title = "Data Quality Overview: Complete vs Missing Data",
+    subtitle = paste("Total Records:", unique(quality_summary$Total)),
+    x = "Variables",
+    y = "Number of Records",
+    fill = "Status"
+  ) +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    axis.text.y = element_text(size = 9),
+    legend.position = "top"
+  )
+
+print(p1)
+
+# Chart 2: Completeness Percentage
+p2 <- ggplot(quality_summary, aes(x = reorder(Variable, Completeness_Pct), 
+                                   y = Completeness_Pct)) +
+  geom_bar(stat = "identity", aes(fill = Completeness_Pct)) +
+  geom_text(aes(label = paste0(round(Completeness_Pct, 1), "%")), 
+            hjust = -0.1, size = 3) +
+  scale_fill_gradient2(low = "#e74c3c", mid = "#f39c12", high = "#2ecc71",
+                       midpoint = 50, limits = c(0, 100)) +
+  coord_flip() +
+  scale_y_continuous(limits = c(0, 110), labels = percent_format(scale = 1)) +
+  theme_minimal() +
+  labs(
+    title = "Data Completeness Rate by Variable",
+    x = "Variables",
+    y = "Completeness (%)",
+    fill = "Completeness %"
+  ) +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    axis.text.y = element_text(size = 9),
+    legend.position = "right"
+  )
+
+print(p2)
+
+# Chart 3: Summary Statistics Table
+quality_summary_display <- quality_summary %>%
+  mutate(
+    Completeness_Pct = round(Completeness_Pct, 2),
+    Variable = gsub(":", ": ", Variable)
+  ) %>%
+  arrange(desc(Completeness_Pct))
+
+print("Data Quality Summary Table:")
+print(quality_summary_display)
+
+# Identify critical issues (< 80% complete)
+critical_vars <- quality_summary %>%
+  filter(Completeness_Pct < 80) %>%
+  arrange(Completeness_Pct)
+
+if (nrow(critical_vars) > 0) {
+  cat("\n⚠️ ALERT: Variables with <80% completeness:\n")
+  print(critical_vars %>% select(Variable, Completeness_Pct, Missing))
+} else {
+  cat("\n✓ All variables have ≥80% completeness\n")
+}
+
+# Overall data quality score
+overall_score <- mean(quality_summary$Completeness_Pct)
+cat("\n📊 Overall Data Quality Score:", round(overall_score, 2), "%\n")
+
+```
+
+
+
+
+```{r, echo=FALSE}
+
+#====================#
+# CARREGAR PACOTES
+#====================#
+library(readxl)
+library(dplyr)
+library(stringr)
+library(ggplot2)
+library(plyr)
+library(cli)
+library(readr)
+library(tidyr)
+library(here)
+library(lubridate)
+
+#====================#
+# CARREGAR BASE DE DADOS
+#====================#
+
+raw <- B_geral_HCA_R
+
+# Padronizar nomes das colunas
+colnames(raw) <- tolower(colnames(raw))
+
+
+#create epiweek by DATE2
+raw <-raw %>% mutate(week = lubridate::week(parse_date_time(`dados_demograficos:date2`, orders = c("Ymd","Y-m-d","dmY","d/m/Y","mdY","m/d/Y","Ymd HMS","dmY HMS"))))
+
+#============================================================#
+# FUNÇÃO PARA ENCONTRAR COLUNAS IMPORTANTES
+#============================================================#
+find_col <- function(possible_names) {
+  found <- intersect(possible_names, colnames(raw))
+  if (length(found) == 0) return(NA_character_) else return(found[1])
+}
+
+col_id       <- find_col(c("codigo_paciente","codigo paciente","codigo","id","sample","codigo_pac"))
+col_week     <- find_col(c("week"))
+col_influenza<- find_col(c("TIFOIDE:Resultado_de_Influenza"))
+col_sars     <- find_col(c("group_jz9ln80:SARSCov2"))
+col_date     <- find_col(c("dados_demograficos:date2"))
+
+if (any(is.na(c(col_id, col_week, col_influenza, col_sars)))) {
+  stop("❌ ERROR: Missing required columns (codigo_paciente, Week, Influenza, SARS-CoV-2)")
+}
+
+#====================#
+# RENOMEAR COLUNAS
+#====================#
+df <- raw %>%
+  dplyr::rename(
+    codigo_paciente = !!sym(col_id),
+    Week = !!sym(col_week),
+    Influenza = !!sym(col_influenza),
+    SARS_CoV_2 = !!sym(col_sars)
+  ) %>%
+  mutate(
+    codigo_paciente = as.character(codigo_paciente),
+    Week = as.character(Week),
+    Influenza = as.character(Influenza),
+    SARS_CoV_2 = as.character(SARS_CoV_2)
+  )
+
+#====================#
+# PADRONIZAR SEMANA
+#====================#
+df <- df %>%
+  mutate(
+    Week = str_trim(Week),
+    Week = str_replace_all(Week, "^0+", ""),
+    Week = ifelse(Week == "", NA, Week),
+    Week_num = as.integer(Week)  # transforma string/número da semana em inteiro
+  )
+
+#====================#
+# EXTRAR ANO DA COLUNA DE DATA
+#====================#
+if (!is.na(col_date) && col_date %in% colnames(df)) {
+  df$data_evento <- suppressWarnings(
+    parse_date_time(df[[col_date]], orders = c("ymd","dmy","mdy","Ymd","dmY"))
+  ) %>% as.Date()
+  df$ano <- year(df$data_evento)
+} else {
+  df$ano <- year(Sys.Date())
+}
+
+#====================#
+# CRIAR COLUNA ANO_SEMANA (ex: 2024_W43)
+#====================#
+df <- df %>%
+  mutate(
+    Ano_Semana = paste0(
+      ano, "_W", stringr::str_pad(Week_num, width = 2, pad = "0", side = "left")
+    )
+  )
+
+#====================#
+# CRIAR FATOR ORDENADO
+#====================#
+week_levels <- df %>%
+  distinct(Ano_Semana) %>%
+  arrange(Ano_Semana) %>%
+  pull(Ano_Semana)
+
+df <- df %>%
+  mutate(
+    Ano_Semana_f = factor(Ano_Semana, levels = week_levels)
+  )
+
+#====================#
+# DEFINIR TIPO DE VIGILÂNCIA
+#====================#
+df <- df %>%
+  mutate(
+    codigo_trim = str_trim(toupper(coalesce(codigo_paciente, ""))),
+    setting = case_when(
+      str_detect(codigo_trim, "^[IL]DSW") ~ "Wastewater",
+      str_detect(codigo_trim, "^IDSC")    ~ "Community",
+      str_detect(codigo_trim, "^IDS")     ~ "Health Care Facility",
+      TRUE ~ "Other"
+    )
+  ) %>%
+  filter(setting %in% c("Community", "Health Care Facility", "Wastewater"))
+
+#====================#
+# LIMPAR RESULTADOS
+#====================#
+clean_result <- function(x) {
+  x2 <- tolower(str_trim(coalesce(x, "")))
+  x2[x2 %in% c("", "-", "na", "n/a")] <- NA_character_
+  return(x2)
+}
+
+df <- df %>%
+  mutate(
+    influenza_clean = clean_result(Influenza),
+    sars_clean      = clean_result(SARS_CoV_2)
+  )
+
+#====================#
+# FUNÇÃO – CALCULAR POSITIVIDADE
+#====================#
+
+compute_positivity <- function(df, result_col) {
+  
+  # Garantir que coluna Ano_Semana_f existe
+  if (!"Ano_Semana_f" %in% colnames(df)) {
+    stop("❌ A coluna 'Ano_Semana_f' não existe. Crie-a antes de calcular positividade.")
+  }
+  
+  df %>%
+    dplyr::filter(!is.na(.data[[result_col]])) %>%
+    dplyr::group_by(setting, Ano_Semana_f, ano, Week_num) %>%
+    dplyr::summarise(
+      tests = dplyr::n(),
+      positives = sum(.data[[result_col]] == "positivo", na.rm = TRUE),
+      positivity = ifelse(tests > 0, 100 * positives / tests, 0),
+      .groups = "drop"
+    ) %>%
+    dplyr::ungroup()
+}
+
+
+
+influenza_pos <- compute_positivity(df, "influenza_clean")
+sars_pos      <- compute_positivity(df, "sars_clean")
+
+
+#====================#
+# REGRA WASTEWATER
+#====================#
+influenza_pos <- influenza_pos %>%
+  mutate(positivity = ifelse(setting=="Wastewater" & positives>0, 100, positivity))
+
+sars_pos <- sars_pos %>%
+  mutate(positivity = ifelse(setting=="Wastewater" & positives>0, 100, positivity))
+
+#====================#
+# FUNÇÃO – PLOTAR
+#====================#
+plot_by_pathogen <- function(pos_df, title_text, out_file) {
+  
+  pos_df <- pos_df %>%
+    arrange(setting, Week_num)
+  
+  colors <- c(
+    "Community" = "#f39c12",
+    "Health Care Facility" = "#7fc8ff",
+    "Wastewater" = "#c41f1f"
+  )
+  
+  p <- ggplot(pos_df, aes(x = Ano_Semana_f, y = positivity, color = setting)) +
+    geom_line(group = 1, size = 1) +
+    geom_point(size = 2) +
+    facet_grid(rows = vars(setting)) +
+    scale_color_manual(values = colors) +
+    scale_y_continuous(limits = c(0,100)) +
+    labs(
+      x = "Epidemiological Week / Year",
+      y = "Positivity Rate (%)",
+      title = title_text
+    ) +
+    theme_minimal(base_size = 14) +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  
+  ggsave(out_file, plot = p, dpi = 300, width = 18, height = 9)
+  message("Saved plot: ", out_file)
+  
+  return(p)
+}
+
+#====================#
+# PLOTAR GRÁFICOS
+#====================#
+plot_by_pathogen(influenza_pos, "Influenza Positivity Surveillance", "Influenza_Pos.png")
+plot_by_pathogen(sars_pos, "SARS-CoV-2 Positivity Surveillance", "SARS-CoV-2_Pos.png")
+
+#====================#
+# EXPORTAÇÃO PARA DASHBOARD
+#====================#
+influenza_pos_v <- influenza_pos %>% mutate(tipo="Influenza")
+sars_pos_v      <- sars_pos %>% mutate(tipo="SARS-CoV-2")
+
+combined_pos_sars_inf <- bind_rows(influenza_pos_v, sars_pos_v)
+
+combined_pos_sars_inf$setting <- plyr::revalue(
+  combined_pos_sars_inf$setting,
+  c("Community" = "COMUNIDADE",
+    "Health Care Facility" = "HOSPITAL",
+    "Wastewater" = "AGUAS RESIDUAIS")
+)
+
+# mostrar os graficos gerados de positividade
+
+
+
+write_csv(combined_pos_sars_inf, "Sars_Influenza_Positivity_Data.csv")
+
+message("All done ✅")
+message("Output files saved in: ", getwd())
+
+
+
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+  

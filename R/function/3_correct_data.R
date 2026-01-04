@@ -4,35 +4,44 @@ cli::cli_alert_success("Correcao da data de Nascimento Hospitalar")
 
 #data de nascimento
 
-vigilancia_hospitalar <- vigilancia_hospitalar %>%
-    mutate(`Dados_demograficos:data_nascimento` = case_when(
-    # Caso a data de nascimento exista, formatamos com hora
-    !is.na(`Dados_demograficos:data_nascimento`) & `Dados_demograficos:data_nascimento` != "" ~
-      format(parse_date_time(`Dados_demograficos:data_nascimento`, orders = c("ymd", "dmy", "mdy")), "%m/%d/%Y"),
-    
-    # Caso esteja ausente, calculamos com base na idade
-    is.na(`Dados_demograficos:data_nascimento`) | `Dados_demograficos:data_nascimento` == "" ~
-      format(now() - years(as.numeric(`Dados_demograficos:idade`)), "%m/%d/%Y"),
-    
-    # fallback
-    TRUE ~ `Dados_demograficos:data_nascimento`
-  ))
-
+converter_data(vigilancia_hospitalar, "Dados_demograficos:data_nascimento")
 
 cli::cli_alert_success("Correcao da data de Nascimento na base Comunitaria")
-vigilancia_comunitaria <- vigilancia_comunitaria %>%
-  mutate(`Dados_demograficos:data_nascimento` = case_when(
+converter_data(vigilancia_comunitaria, "Dados_demograficos:data_nascimento")
+
+cli::cli_alert_success("Correcao da data de coheita de dados")
+
+
+
+#vigilancia_hospitalar <- vigilancia_hospitalar %>%
+#    mutate(`Dados_demograficos:data_nascimento` = case_when(
     # Caso a data de nascimento exista, formatamos com hora
-    !is.na(`Dados_demograficos:data_nascimento`) & `Dados_demograficos:data_nascimento` != "" ~
-      format(parse_date_time(`Dados_demograficos:data_nascimento`, orders = c("ymd", "dmy", "mdy")), "%m/%d/%Y"),
+ #   !is.na(`Dados_demograficos:data_nascimento`) & `Dados_demograficos:data_nascimento` != "" ~
+ #     format(parse_date_time(`Dados_demograficos:data_nascimento`, orders = c("ymd", "dmy", "mdy")), "%m/%d/%Y"),
     
     # Caso esteja ausente, calculamos com base na idade
-    is.na(`Dados_demograficos:data_nascimento`) | `Dados_demograficos:data_nascimento` == "" ~
-      format(now() - years(as.numeric(`Dados_demograficos:idade`)), "%m/%d/%Y"),
+#    is.na(`Dados_demograficos:data_nascimento`) | `Dados_demograficos:data_nascimento` == "" ~
+ #     format(now() - years(as.numeric(`Dados_demograficos:idade`)), "%m/%d/%Y"),
     
     # fallback
-    TRUE ~ `Dados_demograficos:data_nascimento`
-  ))
+ #   TRUE ~ `Dados_demograficos:data_nascimento`
+ # ))
+
+
+
+#vigilancia_comunitaria <- vigilancia_comunitaria %>%
+#  mutate(`Dados_demograficos:data_nascimento` = case_when(
+    # Caso a data de nascimento exista, formatamos com hora
+#    !is.na(`Dados_demograficos:data_nascimento`) & `Dados_demograficos:data_nascimento` != "" ~
+#      format(parse_date_time(`Dados_demograficos:data_nascimento`, orders = c("ymd", "dmy", "mdy")), "%m/%d/%Y"),
+    
+    # Caso esteja ausente, calculamos com base na idade
+#    is.na(`Dados_demograficos:data_nascimento`) | `Dados_demograficos:data_nascimento` == "" ~
+#      format(now() - years(as.numeric(`Dados_demograficos:idade`)), "%m/%d/%Y"),
+    
+    # fallback
+#    TRUE ~ `Dados_demograficos:data_nascimento`
+#  ))
 
 
 cli::cli_alert_success("Correcao da data de coheita de dados")
@@ -106,6 +115,10 @@ vigilancia_hospitalar<- vigilancia_hospitalar %>%
     `meta:instanceID` == "uuid:8bbfa1a9-bc4c-4900-8b8b-0079228161ad" ~ "IDS0100340",
     `meta:instanceID` == "uuid:82ee4810-1140-4651-9fc9-03420dfa60be" ~ "IDS0100044",
     `meta:instanceID` == "uuid:31516e65-4e79-489b-b136-2d6e81f36338" ~ "IDS0100045",
+    `meta:instanceID` == "uuid:60663b8a-a315-4762-aa28-c832e55f14fc" ~ "IDS0100941",
+    `meta:instanceID` == "uuid:b0354815-4dfd-421a-9bcf-1d732b6df753" ~ "IDS0100953",
+    `meta:instanceID` == "uuid:8272d00d-319c-4d15-b4f9-41231a611cab" ~ "IDST100009",
+    `meta:instanceID` == "uuid:606164d6-8e2f-4900-9b2d-a7a5fa7ca2a4" ~ "IDS0200215",
     
     TRUE ~ `Dados_demograficos:codigo_paciente`  # mantém os valores originais se não corresponder
   ))
@@ -129,9 +142,11 @@ vig_laboratorial <- vig_laboratorial %>%
     `meta:instanceID` == "uuid:c9185d9b-8d69-4773-bc18-0b3c63c44915" ~ "IDS0100092",
     `meta:instanceID` == "uuid:adb09246-30b0-4331-b345-e9f550aa2640" ~ "IDS0100091",
     
-    
     TRUE ~ `Dados_demograficos:cod_amostra_iras`
   ))
+
+
+#view(vigilancia_hospitalar %>% filter(vigilancia_hospitalar$`Dados_demograficos:codigo_paciente`=='57421186'))
 
 
 cli::cli_alert_info("Limpeza da base Ambiental")
@@ -225,32 +240,30 @@ resultado_testagem<- resultado_testagem %>%
 #Renomeando variaveis 
 cli::cli_alert_info("Limpeza da variavel do codigo do paciente")
 # Renomeia se a coluna existir
-if ("WHOTA:codigo_paciente" %in% names(vigilancia_ambiental)) {
-  vigilancia_ambiental <- vigilancia_ambiental %>%
-    rename(`Dados_demograficos:codigo_paciente` = `WHOTA:codigo_paciente`)
-}
+library(dplyr)
 
-if ("WHOTA:coordenadas_IDS:Latitude" %in% names(vigilancia_ambiental)) {
-  vigilancia_ambiental <- vigilancia_ambiental %>%
-    rename(`Dados_demograficos:coordenadas_IDS:Latitude` = `WHOTA:coordenadas_IDS:Latitude`)
-}
+vigilancia_ambiental <- dplyr::rename(
+  vigilancia_ambiental,
+  `Dados_demograficos:codigo_paciente` = `WHOTA:codigo_paciente`
+)
 
-if ("WHOTA:coordenadas_IDS:Longitude" %in% names(vigilancia_ambiental)) {
-  vigilancia_ambiental <- vigilancia_ambiental %>%
-    rename(`Dados_demograficos:coordenadas_IDS:Longitude` = `WHOTA:coordenadas_IDS:Longitude`)
-}
+# Lista de renomeações: old_name = new_name
+rename_map <- c(
+  "WHOTA:coordenadas_IDS:Latitude"  = "Dados_demograficos:coordenadas_IDS:Latitude",
+  "WHOTA:coordenadas_IDS:Longitude" = "Dados_demograficos:coordenadas_IDS:Longitude",
+  "WHOTA:DATE"                       = "Dados_demograficos:DATE2",
+  "WHOTA:provincia_colheita"         = "local_colheita:provincia_colheita"
+)
 
-if ("WHOTA:DATE" %in% names(vigilancia_ambiental)) {
-  vigilancia_ambiental <- vigilancia_ambiental %>%
-    rename(`Dados_demograficos:DATE2` = `WHOTA:DATE`)
-}
-#vigilancia_ambiental$`WHOTA:DATE` para BD_VH_VC_Preliminar$`Dados_demograficos:DATE2`
-
-cli::cli_alert_info("Limpeza da variavel provincia de colheita")
-# Renomeia se a coluna existir
-if ("WHOTA:provincia_colheita" %in% names(vigilancia_ambiental)) {
-  vigilancia_ambiental <- vigilancia_ambiental %>%
-    rename(`local_colheita:provincia_colheita` = `WHOTA:provincia_colheita`)
+# Loop para renomear apenas se a coluna existir
+for (old_name in names(rename_map)) {
+  new_name <- rename_map[[old_name]]
+  if (old_name %in% names(vigilancia_ambiental)) {
+    vigilancia_ambiental <- dplyr::rename(
+      vigilancia_ambiental,
+      !!new_name := all_of(old_name)
+    )
+  }
 }
 
 
@@ -265,22 +278,6 @@ vigilancia_ambiental <- vigilancia_ambiental %>%
   ))
 
 
-cli::cli_alert_success("Correcao da data de reporte na base Genomica SARS-CoV-2")
-gen_sarscov2 <- gen_sarscov2 %>%
-  mutate(
-    `Sample Collection Date (MM-DD-YYYY)` = case_when(
-      # se for número (decimal do Excel), converte para Date
-      suppressWarnings(!is.na(as.numeric(`Sample Collection Date (MM-DD-YYYY)`))) ~ 
-        format(as.Date(as.numeric(`Sample Collection Date (MM-DD-YYYY)`), origin = "1899-12-30"), "%m/%d/%Y"),
-      
-      # se já for texto de data, mantém a sua lógica anterior
-      !is.na(`Sample Collection Date (MM-DD-YYYY)`) & `Sample Collection Date (MM-DD-YYYY)` != "" ~
-        format(lubridate::parse_date_time(`Sample Collection Date (MM-DD-YYYY)`, orders = c("ymd", "dmy", "mdy")), "%m/%d/%Y"),
-      
-      TRUE ~ as.character(`Sample Collection Date (MM-DD-YYYY)`)
-    )
-  ) %>%
-  rename(data_de_reporte = `Sample Collection Date (MM-DD-YYYY)`)
 
 cli::cli_alert_success("Filtrando a base de Genomica SARS-CoV-2 para IDS")
 gen_sarscov2 <- gen_sarscov2 %>%
@@ -289,3 +286,22 @@ gen_sarscov2 <- gen_sarscov2 %>%
 cli::cli_alert_success("Filtrando a base de Genomica influenza para IDS")
 gen_influenza <- gen_influenza %>%
   filter(substr(`IDS ID`, 1, 3) == "IDS")
+
+
+cli::cli_alert_info("Limpeza da Unidade Subtipo A e B")
+resultado_testagem$`TIFOIDE:Subtipo_de_Influenza_A` <- plyr::revalue(
+  resultado_testagem$`TIFOIDE:Subtipo_de_Influenza_A`,
+  c("a_h3n2" = "H3N2",
+    "a_pdm_h1n1_09" = "PDM H1N1 09",
+    "a_pdm_h1n1_09 a_h3n2" = "PDM H1N1 09"),
+  warn_missing = FALSE
+) 
+
+resultado_testagem$`TIFOIDE:Subtipo_de_Influenza_B` <- plyr::revalue(
+  resultado_testagem$`TIFOIDE:Subtipo_de_Influenza_B`,
+  c("b_vic" = "Victoria",
+    "b_yamagata" = "Yamagata"),
+  warn_missing = FALSE
+)
+
+

@@ -1,0 +1,18 @@
+{
+  "key" : {
+    "name" : "Form_alive_v1",
+    "id" : "Form_alive_v1"
+  },
+  "formDir" : "forms/Form_alive_v1",
+  "hasBeenPulled" : true,
+  "cursor" : {
+    "type" : "aggregate",
+    "value" : "<cursor xmlns=\"http://www.opendatakit.org/cursor\"><attributeName>_LAST_UPDATE_DATE</attributeName><attributeValue>2025-10-14T17:43:33.838+02:00</attributeValue><uriLastReturnedValue>uuid:33b8b567-29f4-46bd-9178-507173a48786</uriLastReturnedValue><isForwardCursor>true</isForwardCursor></cursor>"
+  },
+  "lastExportedSubmission" : {
+    "instanceId" : "uuid:6cc05a18-07fd-4508-a9c1-edad0682fe25",
+    "submissionDate" : "2025-10-18T13:36:35.441+02:00",
+    "exportDateTime" : "2025-11-04T17:39:10.587+02:00"
+  },
+  "submissionVersions" : [ ]
+}

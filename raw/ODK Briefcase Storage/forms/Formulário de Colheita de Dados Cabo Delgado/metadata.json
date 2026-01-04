@@ -1,0 +1,18 @@
+{
+  "key" : {
+    "name" : "Formulário de Colheita de Dados Cabo Delgado",
+    "id" : "Formulario_6_Colheita_Dados_Cabo_Delgado"
+  },
+  "formDir" : "forms/Formulário de Colheita de Dados Cabo Delgado",
+  "hasBeenPulled" : true,
+  "cursor" : {
+    "type" : "aggregate",
+    "value" : "<cursor xmlns=\"http://www.opendatakit.org/cursor\"><attributeName>_LAST_UPDATE_DATE</attributeName><attributeValue>2022-08-24T23:29:44.693+02:00</attributeValue><uriLastReturnedValue>uuid:2cdb865c-1cfc-43d8-998a-091b11b865c6</uriLastReturnedValue><isForwardCursor>true</isForwardCursor></cursor>"
+  },
+  "lastExportedSubmission" : {
+    "instanceId" : "uuid:2cdb865c-1cfc-43d8-998a-091b11b865c6",
+    "submissionDate" : "2022-08-24T23:29:44.688+02:00",
+    "exportDateTime" : "2025-12-19T10:34:36.492+02:00"
+  },
+  "submissionVersions" : [ ]
+}

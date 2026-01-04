@@ -1,0 +1,178 @@
+﻿ORDER,IDS ID,Sample ID,Source,week,Date,Age,Gender,Country,State,District,Bairro,clade_who,Accession ID (GISAID),Accesiion number,Lineage (Clade and Pangolin),Percentage coverage,Vigilancia,Patogen,Type,Subtype/Lineage(Clade and Pagolin),vigilancia,Patogeno,Ano
+1,IDSC100013,PMB0734919,Community,12,3/19/2025,2a,Feminino,Mozambique,Maputo Provincia,Matola,NKOBE,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Comunitaria,Influenza,2025
+2,IDSC100128,PMB0734922,Community,12,3/19/2025,39a,Feminino,Mozambique,Maputo Provincia,Matola,NKOBE,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Comunitaria,Influenza,2025
+3,IDS0100184,PMB0735099,Clinic,12,3/20/2025,3a,Feminino,Mozambique,Maputo Provincia,Matola,MUHALAZE,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+4,IDS0100244,PMB0735505,Clinic,13,3/24/2025,18a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,KUMBEZA,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+5,IDS0100265,PMB0735513,Clinic,13,3/24/2025,2a,Masculino,Mozambique,Maputo Provincia,Matola,MATHEMELE,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+6,IDS0100305,PMB0735516,Clinic,14,4/2/2025,1a,Masculino,Mozambique,Maputo Cidade,Maputo Cidade,ZIMPETO,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+7,IDS0100310,PMB0735521,Clinic,14,4/1/2025,5a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,KUMBEZA,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+8,IDS0100357,PMB0736549,Clinic,16,4/14/2025,3a,Masculino,Mozambique,Maputo Provincia,Matola,INTAKA,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+9,IDS0100253,PMB0736551,Clinic,14,4/14/2025,24a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,KHONGOLOTE,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+10,IDSC100213,PMB0736653,Community,16,4/15/2025,1a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,MAGOANINE C,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Comunitaria,Influenza,2025
+11,IDS0100250,PMB0736870,Clinic,16,4/16/2025,21a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,ZIMPETO,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+12,IDSC100398,PMB0740623,Clinic,20,5/13/2025,2a,Masculino,Mozambique,Maputo Cidade,Maputo Cidade,Magoanine C,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Comunitaria,Influenza,2025
+13,IDSC100396,PMB0741510,Clinic,27,5/30/2025,22a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,Magoanine C,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Comunitaria,Influenza,2025
+14,IDSC100256,PMB0741746,Clinic,23,6/3/2025,10a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,Zimpeto,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Comunitaria,Influenza,2025
+15,IDS0100500,PMB0741759,Clinic,23,6/2/2025,2a,Feminino,Mozambique,Matola,Maputo Cidade,Mathemele,,,,,,,,,B (lineage result pending),Hospitalar,Influenza,2025
+16,IDS0100477,PMB0741763,Clinic,23,6/3/2025,1a,Masculino,Mozambique,Matola,Maputo Cidade,Matlemele,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+17,IDSC100267,PMB0742082,Clinic,23,6/5/2025,11m,Masculino,Mozambique,Maputo Cidade,Maputo Cidade,Zimpeto,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Comunitaria,Influenza,2025
+18,IDS0100517,PMB0742127,Clinic,23,6/6/2025,20a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,Zimpeto,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+19,IDS0100486,PMB0740908,Clinic,26,5/26/2025,2a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,Zimpeto,,,,,,,,,B (lineage result pending),Hospitalar,Influenza,2025
+20,IDS0100473,PMB0741756,Clinic,23,6/2/2025,19a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,Santa Isabel,,,,,,,,,B (lineage result pending),Hospitalar,Influenza,2025
+21,IDS0100474,PMB0741757,Clinic,23,6/2/2025,27a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,Magoanine C,,,,,,,,,B (lineage result pending),Hospitalar,Influenza,2025
+22,IDS0100476,PMB0741762,Clinic,23,6/3/2025,24a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,Zimpeto,,,,,,,,,B (lineage result pending),Hospitalar,Influenza,2025
+23,IDSC100274,PMB0742229,Community,24,6/9/2025,5a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,Zimpeto,,,,,,,,,B (lineage result pending),Comunitaria,Influenza,2025
+24,IDS0100327,PMB0738010,Clinic,18,29/04/2025,1a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,MATIWONE,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+25,IDS0100044,PMB0738024,Clinic,18,2/5/2025,30a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,KONGOLOTE,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+26,IDS0100278,PMB0738026,Clinic,18,2/5/2025,17a,Masculino,Mozambique,Maputo Cidade,Maputo Cidade,CUMBEZA,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+27,IDS0100279,PMB0738027,Clinic,18,2/5/2025,27a,Feminino,Mozambique,Maputo Provincia,Matola,MATLEMELE,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+28,IDS0100282,PMB0738032,Clinic,18,2/5/2025,2a,Masculino,Mozambique,Maputo Provincia,Matola,MARRACUENE,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+29,IDS0100363,PMB0738083,Clinic,19,6/5/2025,19a,Feminino,Mozambique,Maputo Provincia,Matola,INTAKA,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+30,IDS0100385,PMB0738085,Clinic,19,6/5/2025,8m,Masculino,Mozambique,Maputo Provincia,Matola,INTAKA,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+31,IDS0100369,PMB0738624,Clinic,19,8/5/2025,38a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,KUMBEZA,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+32,IDS0100390,PMB0738626,Clinic,19,8/5/2025,2a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,MICHAFUTENE,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+33,IDS0100392,PMB0738628,Clinic,19,8/5/2025,1a,Masculino,Mozambique,Maputo Provincia,Matola,MATHEMELE,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+34,IDS0100372,PMB0738635,Clinic,19,9/5/2025,28a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,ZIMPETO,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+35,IDS0100460,PMB0739961,Clinic,20,15/05/2025,24a,Masculino,Mozambique,Maputo Cidade,Maputo Cidade,POLANA CANICO B,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+36,IDS0100412,PMB0740294,Clinic,21,20/05/2025,3a,Feminino,Mozambique,Maputo Provincia,Matola,MUHALAZE,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+37,IDS0100448,PMB0740296,Clinic,21,20/05/25,24a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,ZIMPETO,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+38,IDS0100446,PMB0739151,Clinic,20,14/05/25,1a,Masculino,Mozambique,Maputo Cidade,Maputo Cidade,MAGOANINE,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+39,IDS0100566,PMB0745909,Clinic,28,7/4/2025,2,Masculino,Mozambique,Maputo,Maputo,C.S. Zimpeto,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+40,IDS0100578,PMB0746535,Clinic,28,7/8/2025,2,Masculino,Mozambique,Maputo,Maputo,C.S. Zimpeto,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+41,IDSC100368,PMB0746917,Community,28,7/10/2025,33,Feminino,Mozambique,Maputo,Maputo,C.S Zimpeto,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Comunitaria,Influenza,2025
+42,IDS0200091,PMB0746921,Clinic,28,7/10/2025,55,Feminino,Mozambique,Maputo,Maputo,C.S Mavalane ,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+43,IDS0100615,PMB0747015,Clinic,28,7/11/2025,7,Masculino,Mozambique,Maputo,Maputo,C.S Zimpeto,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+44,IDS0200093,PMB0747023,Clinic,28,7/11/2025,16,Feminino,Mozambique,Maputo,Maputo,C.S Mavalane ,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+45,IDS0100618,PMB0747037,Clinic,29,7/14/2025,6a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,Magoanine,,,,,,,,,B (lineage result pending),Hospitalar,Influenza,2025
+46,IDSC100376,PMB0747045,Community,29,7/14/2025,12a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,Zimpeto,,,,,,,,,H1N1 D.3.1 (6B.1A.5a.2a),Comunitaria,Influenza,2025
+47,IDS0100643,PMB0747117,Clinic,29,7/15/2025,4a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,Khongolote,,,,,,,,,B (lineage result pending),Hospitalar,Influenza,2025
+48,IDS0100646,PMB0747159,Clinic,29,7/16/2025,9m,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,Boquisso,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+49,IDS0100650,PMB0747163,Clinic,29,7/16/2025,22a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,Cumbeza,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+50,IDS0100653,PMB0747468,Clinic,28,7/9/2025,6a,Masculino,Mozambique,Maputo Cidade,Maputo Cidade,Nkobe,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+51,IDS0200015,PMB0747479,Clinic,29,7/17/2025,30d,,Mozambique,Maputo Cidade,Maputo Cidade,Maxaquene D,,,,,,,,,B (lineage result pending),Hospitalar,Influenza,2025
+52,IDSC200001,PMB0747482,Community,29,7/17/2025,1a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,Mavalane A,,,,,,,,,B (lineage result pending),Comunitaria,Influenza,2025
+53,IDSC200002,PMB0747483,Community,29,7/17/2025,7a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,Mavalane A,,,,,,,,,B (lineage result pending),Comunitaria,Influenza,2025
+54,IDSC200005,PMB0747486,Community,29,7/17/2025,1a,Masculino,Mozambique,Maputo Cidade,Maputo Cidade,Mavalane A,,,,,,,,,B (lineage result pending),Comunitaria,Influenza,2025
+55,IDS0100665,PMB0748090,Clinic,30,7/21/2025,40a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,Madeira,,,,,,,,,A H1N1 D.3.1 (6B.1A.5a.2a),Hospitalar,Influenza,2025
+56,IDSC100417,PMB0748121,Community,30,7/21/2025,13a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,Zimpeto,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Comunitaria,Influenza,2025
+57,IDSC100418,PMB0748122,Community,30,7/21/2025,32a,Masculino,Mozambique,Maputo Cidade,Maputo Cidade,Zimpeto,,,,,,,,,A H1N1 D.3.1 (6B.1A.5a.2a),Comunitaria,Influenza,2025
+58,IDS0100668,PMB0748129,Clinic,30,7/22/2025,1a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,Zimpeto,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+59,IDSC100420,PMB0748133,Community,30,7/22/2025,14a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,Zimpeto,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Comunitaria,Influenza,2025
+60,IDS0100673,PMB0748189,Clinic,30,7/23/2025,2a,Masculino,Mozambique,Maputo Cidade,Maputo Cidade,Zimpeto,,,,,,,,,A H1N1 D.3.1 (6B.1A.5a.2a),Hospitalar,Influenza,2025
+61,IDS0100678,PMB0748352,Clinic,30,7/24/2025,2a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,Zimpeto,,,,,,,,,B (lineage result pending),Hospitalar,Influenza,2025
+62,IDSC100432,PMB0748355,Clinic,30,7/24/2025,36a,Feminino,Mozambique,Maputo Cidade,Maputo Cidade,Zimpeto,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Comunitaria,Influenza,2025
+63,IDS0100736,PMB0759659,,42,15/10/25,1a,Feminino,Mozambique,,Maputo,Intaka,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+64,IDS0200541,PMB0759676,,42,14/10/25,1a,Feminino,Mozambique,,Maputo,Mavalane A,,,,,,,,,A H3N2 J.2.2 (3C.2a1b.2a.2a.3a.1),Hospitalar,Influenza,2025
+65,IDS0100762,PMB0759633,,43,10/24/2025,2a,Masculino,Mozambique,,Maputo,Kumbeza,,,,,,,,,A H3N2 K (2a.3a.1),Hospitalar,Influenza,2025
+66,IDS0100744,PMB0758922,,42,10/16/2025,42a,Feminino,Mozambique,,Maputo,Intaka,,,,,,,,,A H1N1 D.3.1 (6B.1A.5a.2a),Hospitalar,Influenza,2025
+67,IDS0200556,PMB0760205,,43,10/21/2025,5a,Masculino,Mozambique,,Maputo,FPLM,,,,,,,,,A H3N2 K (2a.3a.1),Hospitalar,Influenza,2025
+68,IDS0100777,PMB0760237,,44,10/30/2025,31a,Feminino,Mozambique,,Maputo,CUMBEZA,,,,,,,,,A H1N1 D.3.1 (6B.1A.5a.2a),Hospitalar,Influenza,2025
+69,IDS0200575,PMB0760239,,44,10/30/2025,9a,Feminino,Mozambique,,Maputo,HULENE A,,,,,,,,,A H3N2 K (2a.3a.1),Hospitalar,Influenza,2025
+70,IDS0200577,PMB0760242,,44,10/30/2025,9a,Feminino,Mozambique,,Maputo,MAVALANE A,,,,,,,,,A H3N2 K (2a.3a.1),Hospitalar,Influenza,2025
+71,IDS0100773,PMB0760267,,44,10/29/2025,2a,Masculino,Mozambique,,Maputo,MATLEMELE,,,,,,,,,A H3N2 K (2a.3a.1),Hospitalar,Influenza,2025
+72,IDS0200254,PMB0760746,,35,8/25/2025,3a,Feminino,Mozambique,,Maputo,POLANA CANICO,,,,,,,,,A H3N2 J.2.2 (2a.3a.1),Hospitalar,Influenza,2025
+73,IDSC300126,PMB0760855,,45,11/5/2025,25a,Feminino,Mozambique,,Maputo,ZIMPETO,,,,,,,,,A H3N2 J.2.2 (2a.3a.1),Comunitaria,Influenza,2025
+74,IDS0200590,PMB0760905,,45,11/6/2025,10m,Masculino,Mozambique,,Maputo,COSTA DO SOL,,,,,,,,,A H3N2 K (2a.3a.1),Hospitalar,Influenza,2025
+75,IDS0200593,PMB0760930,,45,11/6/2025,3a,Feminino,Mozambique,,Maputo,FERROVIARIO,,,,,,,,,A H3N2 K (2a.3a.1),Hospitalar,Influenza,2025
+76,IDS0100792,PMB0760931,,45,11/6/2025,51a,Feminino,Mozambique,,Maputo,ZIMPETO,,,,,,,,,A H3N2 J.2.2 (2a.3a.1),Hospitalar,Influenza,2025
+77,IDS0100794,PMB0760933,,45,11/6/2025,6a,Feminino,Mozambique,,Maputo,ZIMPETO,,,,,,,,,A H3N2 K (2a.3a.1),Hospitalar,Influenza,2025
+78,IDS0100799,PMB0761360,,45,11/7/2025,25a,Feminino,Mozambique,,Maputo,NKOBE,,,,,,,,,A H3N2 J.2 (2a.3a.1),Hospitalar,Influenza,2025
+79,IDS0200597,PMB0761813,,46,11/11/2025,5a,Masculino,Mozambique,,Maputo,MAX D,,,,,,,,,A H3N2 K (2a.3a.1),Hospitalar,Influenza,2025
+80,IDS0200613,PMB0761838,,46,11/11/2025,4a,Feminino,Mozambique,,Maputo,HULENE,,,,,,,,,A H3N2 K (2a.3a.1),Hospitalar,Influenza,2025
+81,IDS0200614,PMB0761839,,46,11/11/2025,1a,Masculino,Mozambique,,Maputo,MAXAQUENE B,,,,,,,,,A H3N2 K (2a.3a.1),Hospitalar,Influenza,2025
+82,IDS0200615,PMB0761840,,46,11/11/2025,2a,Feminino,Mozambique,,Maputo,MAXQUENE B,,,,,,,,,A H3N2 K (2a.3a.1),Hospitalar,Influenza,2025
+83,IDS0200627,PMB0761852,,46,11/12/2025,1a,Masculino,Mozambique,,Maputo,FPLM,,,,,,,,,A H3N2 J.2.2 (2a.3a.1),Hospitalar,Influenza,2025
+84,IDS0200661,PMB0761854,,46,11/12/2025,43a,Masculino,Mozambique,,Maputo,SINGATHELA,,,,,,,,,A H3N2 K (2a.3a.1),Hospitalar,Influenza,2025
+85,IDS0100805,PMB0761867,,46,11/12/2025,1a,Masculino,Mozambique,,Maputo,ZIMPENTO,,,,,,,,,A H3N2 J.2.2 (2a.3a.1),Hospitalar,Influenza,2025
+86,IDSW,,,15,,,,,,,,,,,,,,,,H3N2 (3C.2a1b.2a.2a.3a.1),Wastwater,Influenza,2025
+87,IDSW,,,16,,,,,,,,,,,,,,,,H3N2 (3C.2a1b.2a.2a.3a.1),Wastwater,Influenza,2025
+88,IDSW,,,29,,,,,,,,,,,,,,,,H3N2 (3C.2a1b.2a.2a.3a.1),Wastwater,Influenza,2025
+89,IDSW,,,30,,,,,,,,,,,,,,,,H3N2 (3C.2a1b.2a.2a.3a.1),Wastwater,Influenza,2025
+90,IDSW,,,31,,,,,,,,,,,,,,,,H3N2 (3C.2a1b.2a.2a.3a.2),Wastwater,Influenza,2025
+91,IDSW,,,32,,,,,,,,,,,,,,,,H3N2 (3C.2a1b.2a.2a.3a.3),Wastwater,Influenza,2025
+92,IDSW,,,33,,,,,,,,,,,,,,,,H3N2 (3C.2a1b.2a.2a.3a.1),Wastwater,Influenza,2025
+93,IDSW,,,34,,,,,,,,,,,,,,,,H3N2 (3C.2a1b.2a.2a.3a.3),Wastwater,Influenza,2025
+94,IDSW,,,35,,,,,,,,,,,,,,,,H3N2 (3C.2a1b.2a.2a.3a.1),Wastwater,Influenza,2025
+95,IDSW,,,36,,,,,,,,,,,,,,,,H3N2 (3C.2a1b.2a.2a.3a.1),Wastwater,Influenza,2025
+96,IDSW,,,37,,,,,,,,,,,,,,,,H3N2 (3C.2a1b.2a.3a.1),Wastwater,Influenza,2025
+97,IDSW,,,38,,,,,,,,,,,,,,,,H3N2 (3C.2a1b.2a.3a.1),Wastwater,Influenza,2025
+98,IDSW,,,39,,,,,,,,,,,,,,,,H3N2 (3C.2a1b.2a.2a.3a.1),Wastwater,Influenza,2025
+99,IDSW,,,40,,,,,,,,,,,,,,,,H3N2 (3C.2a1b.2a.2a.3a.1),Wastwater,Influenza,2025
+100,IDSW,,,41,,,,,,,,,,,,,,,,H3N2 (3C.2a1b.2a.3a.1),Wastwater,Influenza,2025
+101,IDSW,,,42,,,,,,,,,,,,,,,,H3N2 (3C.2a1b.2a.2a.3a.3),Wastwater,Influenza,2025
+102,IDSW,,,43,,,,,,,,,,,,,,,,H3N2 (3C.2a1b.2a.3a.1),Wastwater,Influenza,2025
+103,IDSW,,,44,,,,,,,,,,,,,,,,H3N2 (3C.2a1b.2a.3a.1),Wastwater,Influenza,2025
+104,IDSW,,,48,,,,,,,,,,,,,,,,H1N1 (not identified),Wastwater,Influenza,2025
+105,IDSW,,,49,,,,,,,,,,,,,,,,H3N2 (not identified),Wastwater,Influenza,2025
+,IDS0100004,,,47,,,,,,,,,,,,,,,,Omicorn 24A (JN.1.40),Hospitalar,Sars_C0v2,2024
+,IDS0100014,,,48,,,,,,,,,,,,,,,,Omicorn 24A (JN.1.49.1),Hospitalar,Sars_C0v2,2024
+,IDS0100020,,,48,,,,,,,,,,,,,,,,Omicorn 24A (JN.1.40),Hospitalar,Sars_C0v2,2024
+,IDS0100021,,,49,,,,,,,,,,,,,,,,Omicorn 24H (LF.7),Hospitalar,Sars_C0v2,2024
+,IDS0100031,,,49,,,,,,,,,,,,,,,,Omicorn 24A (JN.1.16.3),Hospitalar,Sars_C0v2,2024
+,IDS0100033,,,49,,,,,,,,,,,,,,,,Omicorn 24A (JN.1.40),Hospitalar,Sars_C0v2,2024
+,IDS0100034,,,49,,,,,,,,,,,,,,,,Omicorn 24H (LF.7),Hospitalar,Sars_C0v2,2024
+,IDS0100092,,,51,,,,,,,,,,,,,,,,Omicorn 24A (JN.1),Hospitalar,Sars_C0v2,2024
+,IDS0100093,,,51,,,,,,,,,,,,,,,,Omicorn 24A (JN.1),Hospitalar,Sars_C0v2,2024
+,IDS0100094,,,51,,,,,,,,,,,,,,,,Omicorn 24A (JN.1),Hospitalar,Sars_C0v2,2024
+,IDS0100062,,,51,,,,,,,,,,,,,,,,Omicorn 24H (LF.7),Hospitalar,Sars_C0v2,2024
+,IDS0100064,,,51,,,,,,,,,,,,,,,,Omicorn 24A (JN.1),Hospitalar,Sars_C0v2,2024
+,IDS0100066,,,51,,,,,,,,,,,,,,,,Omicorn 24A (JN.1),Hospitalar,Sars_C0v2,2024
+,IDS0100039,,,51,,,,,,,,,,,,,,,,Omicorn 24A (JN.1),Hospitalar,Sars_C0v2,2024
+,IDS0100097,,,2,,,,,,,,,,,,,,,,Omicorn 24H (LF.7),Hospitalar,Sars_C0v2,2025
+,IDS0100205,,,10,,,,,,,,,,,,,,,,Omicorn 24B (JN.1.11.1),Hospitalar,Sars_C0v2,2025
+,IDSC100012,,,12,,,,,,,,,,,,,,,,Omicorn 21M (BA.3),Comunitaria,Sars_C0v2,2025
+,IDSW,,,16,,,,,,,,,,,,,,,,Omicron 24E (KP.3.1); Omicron 25A (LP.8.1); Recombinants; Omicron 24A (JN.1) ,Wastwater,Sars_C0v2,2025
+,IDSW,,,17,,,,,,,,,,,,,,,,Omicron 24A (BA.2.86); Omicron 24A (JN.1.18); Omicron 24A (JN.1.7); Omicron 24A (KP.2); Omicron 24C (KP.3); Omicron 24E (KP.3.1.1); Omicron 24E (KP.3.1); Omicron 24A (LB.1); Omicron 24H (LF.7.3.6); Omicron 25A (L.P.8.1); Omicron 25A (LP.8.1); Omicron 24F (XEC),Wastwater,Sars_C0v2,2025
+,IDSW,,,18,,,,,,,,,,,,,,,,Omicron 24A (BA.2.86); Omicron 24A (JN.1.7); Omicron 24A (KP.2); Omicron 24C (KP.3); Omicron 24E (KP.3.1.1); Omicron 24E (KP.3.1); Omicron 24H (LF.7.3.6),Wastwater,Sars_C0v2,2025
+,IDSW,,,19,,,,,,,,,,,,,,,,Omicron 24A (JN.1.18); Omicron 24A (LB.1); Omicron 24H (LF.7.3.6); Omicron 25A (LP.8.1); Omicron 24A (JN.1); Omicron 24A (PM.2); Omicron 24A (L.B.1),Wastwater,Sars_C0v2,2025
+,IDSW,,,20,,,,,,,,,,,,,,,,Omicron 24A (JN.1.18); Omicron 24A (PM.2); Omicron 24A (L.B.1); Omicron 20A (KS.1.3),Wastwater,Sars_C0v2,2025
+,IDSW,,,21,,,,,,,,,,,,,,,,Omicron 24A (BA.2.86); Omicron 24C (KP.3); Omicron 24E (KP.3.1.1); Omicron 24E (KP.3.1.1); Omicron XFC.1.1; Omicron 20A (KS.1.3),Wastwater,Sars_C0v2,2025
+,IDSW,,,22,,,,,,,,,,,,,,,,Omicron 24A (BA.2.86); Omicron 24A (L.B.1); Omicron XFC.1.1; Omicron 20A (KS.1.3),Wastwater,Sars_C0v2,2025
+,IDSW,,,23,,,,,,,,,,,,,,,,Omicron 24A (BA.2.86); Epsilon; Lambda; Kapa; Zeta; Eta; Gamma,Wastwater,Sars_C0v2,2025
+,IDSW,,,24,,,,,,,,,,,,,,,,Omicron 24A (BA.2.86); Omicron 24C (KP.3); Omicron 24E (KP.3.1.1); Omicron 24E (KP.3.1.1); Omicron XFC.1.1; Omicron 20A (KS.1.3),Wastwater,Sars_C0v2,2025
+,IDSW,,,25,,,,,,,,,,,,,,,,Not detected,Wastwater,Sars_C0v2,2025
+,IDSW,,,26,,,,,,,,,,,,,,,,Not detected,Wastwater,Sars_C0v2,2025
+,IDSW,,,27,,,,,,,,,,,,,,,,Omicron 24A (BA.2.86); Omicron 24A (JN.1.18); Omicron 21J (BF.38.3),Wastwater,Sars_C0v2,2025
+,IDSW,,,28,,,,,,,,,,,,,,,,Not detected,Wastwater,Sars_C0v2,2025
+,IDSW,,,29,,,,,,,,,,,,,,,,Omicron 21L (BA.2.2); Omicron 21L (BA.2.1); 20A (B.1.36.27); 20A (B.1.409); Omicron 20A (Q.2); Omicron 20B (AZ.4),Wastwater,Sars_C0v2,2025
+,IDSW,,,30,,,,,,,,,,,,,,,,Omicron 21L (BA.2.2); Omicron 21L (BA.2.1),Wastwater,Sars_C0v2,2025
+,IDSW,,,31,,,,,,,,,,,,,,,,Omicron 24A (BA.2.86);Omicron BA.2; C.30,Wastwater,Sars_C0v2,2025
+,IDSW,,,32,,,,,,,,,,,,,,,,Omicron 24A (BA.2.86); Omicron BA.2; Omicron (BA.2.3),Wastwater,Sars_C0v2,2025
+,IDSW,,,33,,,,,,,,,,,,,,,,Omicron 24A (BA.2.86); Omicron BA.2,Wastwater,Sars_C0v2,2025
+,IDSW,,,34,,,,,,,,,,,,,,,,Omicron 24A (BA.2.86); Omicron BA.2,Wastwater,Sars_C0v2,2025
+,IDSW,,,35,,,,,,,,,,,,,,,,Omicron 24A (BA.2.86); Omicron 24A (JN.1.18); Omicron 21J (BF.38.3),Wastwater,Sars_C0v2,2025
+,IDSW,,,36,,,,,,,,,,,,,,,,Omicron 24A (BA.2.86); Epsilon; Lambda; Kapa; Zeta; Eta; Gamma,Wastwater,Sars_C0v2,2025
+,IDSW,,,37,,,,,,,,,,,,,,,,Omicron 24A (BA.2.86); Omicron 24A (JN.1.18); Omicron 21J (BF.38.3),Wastwater,Sars_C0v2,2025
+,IDSW,,,38,,,,,,,,,,,,,,,,Omicron 24A (BA.2.86); Omicron 24A (JN.1.18); Omicron 21J (BF.38.3),Wastwater,Sars_C0v2,2025
+,IDSW,,,39,,,,,,,,,,,,,,,,Omicron 24A (BA.2.86); Omicron BA.2,Wastwater,Sars_C0v2,2025
+,IDSW,,,40,,,,,,,,,,,,,,,,Omicron 24A (BA.2.86); Omicron 24A (L.B.1); Omicron XFC.1.1; Omicron 20A (KS.1.3),Wastwater,Sars_C0v2,2025
+,IDSW,,,41,,,,,,,,,,,,,,,,Omicron 24F/XEC*; Omicron BA.2; Omicron 25C/XFG*,Wastwater,Sars_C0v2,2025
+,IDSW,,,42,,,,,,,,,,,,,,,,Omicron 25A/LP.8.1*; Omicron BA.2; Omicron 25B/PQ*,Wastwater,Sars_C0v2,2025
+,IDSW,,,43,,,,,,,,,,,,,,,,Omicron 25A/LP.8.1*; Omicron BA.2; Omicron 25B/PQ*,Wastwater,Sars_C0v2,2025
+,IDSW,,,44,,,,,,,,,,,,,,,,Omicron 25A/LP.8.1*; Omicron BA.2; Omicron 25B/PQ*,Wastwater,Sars_C0v2,2025
+,IDSW,,,45,,,,,,,,,,,,,,,,Omicron 24F/XEC*; Omicron BA.2; Omicron 25C/XFG*;Omicron 24A (BA.2.86),Wastwater,Sars_C0v2,2025
+,IDSW,,,46,,,,,,,,,,,,,,,,pending,Wastwater,Sars_C0v2,2025
+,IDSW,,,47,,,,,,,,,,,,,,,,pending,Wastwater,Sars_C0v2,2025
+,IDSW,,,48,,,,,,,,,,,,,,,,pending,Wastwater,Sars_C0v2,2025
+,IDSW,,,49,,,,,,,,,,,,,,,,pending,Wastwater,Sars_C0v2,2025
+,IDS0100022,,,49,,,,,,,,,,,,,,,,low coverage,Hospitalar,Sars_C0v2,2024
+,IDS0100024,,,49,,,,,,,,,,,,,,,,low coverage,Hospitalar,Sars_C0v2,2024
+,IDS0100511,,,23,,,,,,,,,,,,,,,,low coverage,Hospitalar,Sars_C0v2,2025
+,IDSC100278,,,24,,,,,,,,,,,,,,,,low coverage,Comunitaria,Sars_C0v2,2025
+,IDS0100281,,,18,,,,,,,,,,,,,,,,low coverage,Hospitalar,Sars_C0v2,2025
+,IDS0100386,,,19,,,,,,,,,,,,,,,,low coverage,Hospitalar,Sars_C0v2,2025
+,IDS0100713,,,41,,,,,,,,,,,,,,,,fail,Hospitalar,Sars_C0v2,2025
+,IDS0200518,,,42,,,,,,,,,,,,,,,,fail,Hospitalar,Sars_C0v2,2025
+,IDS0200543,,,42,,,,,,,,,,,,,,,,fail,Hospitalar,Sars_C0v2,2025
+,IDS0200555,,,43,,,,,,,,,,,,,,,,fail,Hospitalar,Sars_C0v2,2025
+,IDS0100759,,,43,,,,,,,,,,,,,,,,25C (XFG.17.3),Hospitalar,Sars_C0v2,2025
+,IDS0100775,,,44,,,,,,,,,,,,,,,,fail,Hospitalar,Sars_C0v2,2025
+,IDS0200576,,,44,,,,,,,,,,,,,,,,fail,Hospitalar,Sars_C0v2,2025
+,IDS0200574,,,44,,,,,,,,,,,,,,,,low coverage,Hospitalar,Sars_C0v2,2025
+,IDS0100788,,,45,,,,,,,,,,,,,,,,fail,Hospitalar,Sars_C0v2,2025
+,IDS0200588,,,45,,,,,,,,,,,,,,,,low coverage,Hospitalar,Sars_C0v2,2025
+,IDS0100792,,,45,,,,,,,,,,,,,,,,25C (XFG.17.3),Hospitalar,Sars_C0v2,2025
+,IDS0200667,,,46,,,,,,,,,,,,,,,,fail,Hospitalar,Sars_C0v2,2025
+,IDS0200596,,,46,,,,,,,,,,,,,,,,fail,Hospitalar,Sars_C0v2,2025
+,IDS0200623,,,46,,,,,,,,,,,,,,,,25C (XFG.17.3),Hospitalar,Sars_C0v2,2025
+,IDS0200628,,,46,,,,,,,,,,,,,,,,fail,Hospitalar,Sars_C0v2,2025

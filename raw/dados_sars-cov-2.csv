@@ -1,0 +1,71 @@
+﻿Site,Epi week,WHO Variant,Clade (Pango lineage),Proportion
+IDS0100004,47,Omicron,Omicorn 24A (JN.1.40),
+IDS0100014,48,Omicron,Omicorn 24A (JN.1.49.1),
+IDS0100020,48,Omicron,Omicorn 24A (JN.1.40),
+IDS0100021,49,Omicron,Omicorn 24H (LF.7),
+IDS0100031,49,Omicron,Omicorn 24A (JN.1.16.3),
+IDS0100033,49,Omicron,Omicorn 24A (JN.1.40),
+IDS0100034,49,Omicron,Omicorn 24H (LF.7),
+IDS0100092,51,Omicron,Omicorn 24A (JN.1),
+IDS0100093,51,Omicron,Omicorn 24A (JN.1),
+IDS0100094,51,Omicron,Omicorn 24A (JN.1),
+IDS0100062,51,Omicron,Omicorn 24H (LF.7),
+IDS0100064,51,Omicron,Omicorn 24A (JN.1),
+IDS0100066,51,Omicron,Omicorn 24A (JN.1),
+IDS0100039,51,Omicron,Omicorn 24A (JN.1),
+IDS0100097,2,Omicron,Omicorn 24H (LF.7),
+IDS0100205,10,Omicron,Omicorn 24B (JN.1.11.1),
+IDSC100012,12,Omicron,Omicorn 21M (BA.3),
+IDS0100511,23,Omicron,low coverage,
+IDSC100278,24,Omicron,low coverage,
+IDS0100281,18,Omicron,low coverage,
+IDS0100386,19,Omicron,low coverage,
+IDS0100713,41,Pending,Pending,
+IDS0200518,42,Pending,Pending,
+IDS0200543,42,Pending,Pending,
+IDS0200555,43,Pending,Pending,
+IDS0100759,43,Pending,Pending,
+IDS0100775,44,Pending,Pending,
+IDS0200576,44,Pending,Pending,
+IDS0200574,44,Pending,Pending,
+IDS0100788,45,Pending,Pending,
+IDS0200588,45,Pending,Pending,
+IDS0100792,45,Pending,Pending,
+IDS0200667,46,Pending,Pending,
+IDS0200596,46,Pending,Pending,
+IDS0200623,46,Pending,Pending,
+IDS0200628,46,Pending,Pending,
+Wastewater,16,,Omicron 24E (KP.3.1); Omicron 25A (LP.8.1); Recombinants; Omicron 24A (JN.1) ,"70, 10; 10; 10"
+Wastewater,17,,Omicron 24A (BA.2.86); Omicron 24A (JN.1.18); Omicron 24A (JN.1.7); Omicron 24A (KP.2); Omicron 24C (KP.3); Omicron 24E (KP.3.1.1); Omicron 24E (KP.3.1); Omicron 24A (LB.1); Omicron 24H (LF.7.3.6); Omicron 25A (L.P.8.1); Omicron 25A (LP.8.1); Omicron 24F (XEC),60; 3; 4; 2; 5; 1; 1; 3; 4; 4; 4; 4; 5
+Wastewater,18,,Omicron 24A (BA.2.86); Omicron 24A (JN.1.7); Omicron 24A (KP.2); Omicron 24C (KP.3); Omicron 24E (KP.3.1.1); Omicron 24E (KP.3.1); Omicron 24H (LF.7.3.6),57; 10; 10; 10; 10; 2; 1
+Wastewater,19,,Omicron 24A (JN.1.18); Omicron 24A (LB.1); Omicron 24H (LF.7.3.6); Omicron 25A (LP.8.1); Omicron 24A (JN.1); Omicron 24A (PM.2); Omicron 24A (L.B.1),3; 16; 20; 30; 5; 6; 20
+Wastewater,20,,Omicron 24A (JN.1.18); Omicron 24A (PM.2); Omicron 24A (L.B.1); Omicron 20A (KS.1.3),20; 4; 60; 16
+Wastewater,21,,Omicron 24A (BA.2.86); Omicron 24C (KP.3); Omicron 24E (KP.3.1.1); Omicron 24E (KP.3.1.1); Omicron XFC.1.1; Omicron 20A (KS.1.3),60; 30; 10
+Wastewater,22,,Omicron 24A (BA.2.86); Omicron 24A (L.B.1); Omicron XFC.1.1; Omicron 20A (KS.1.3),10; 70; 10; 10
+Wastewater,23,,Omicron 24A (BA.2.86); Epsilon; Lambda; Kapa; Zeta; Eta; Gamma,40; 10; 10; 10; 10; 10; 10
+Wastewater,24,,Omicron 24A (BA.2.86); Omicron 24C (KP.3); Omicron 24E (KP.3.1.1); Omicron 24E (KP.3.1.1); Omicron XFC.1.1; Omicron 20A (KS.1.3),60; 30; 10
+Wastewater,25,,Not detected,100
+Wastewater,26,,Not detected,100
+Wastewater,27,,Omicron 24A (BA.2.86); Omicron 24A (JN.1.18); Omicron 21J (BF.38.3),80; 10; 10
+Wastewater,28,,Not detected,100
+Wastewater,29,,Omicron 21L (BA.2.2); Omicron 21L (BA.2.1); 20A (B.1.36.27); 20A (B.1.409); Omicron 20A (Q.2); Omicron 20B (AZ.4),30; 30; 10; 10; 10; 10
+Wastewater,30,,Omicron 21L (BA.2.2); Omicron 21L (BA.2.1),50; 50
+Wastewater,31,,Omicron 24A (BA.2.86);Omicron BA.2; C.30,50; 25; 25
+Wastewater,32,,Omicron 24A (BA.2.86); Omicron BA.2; Omicron (BA.2.3),50; 25; 25
+Wastewater,33,,Omicron 24A (BA.2.86); Omicron BA.2,50; 50
+Wastewater,34,,Omicron 24A (BA.2.86); Omicron BA.2,40; 10; 10; 10; 10; 10; 10
+Wastewater,35,,Omicron 24A (BA.2.86); Omicron 24A (JN.1.18); Omicron 21J (BF.38.3),80; 10; 10
+Wastewater,36,,Omicron 24A (BA.2.86); Epsilon; Lambda; Kapa; Zeta; Eta; Gamma,40; 10; 10; 10; 10; 10; 10
+Wastewater,37,,Omicron 24A (BA.2.86); Omicron 24A (JN.1.18); Omicron 21J (BF.38.3),80; 10; 10
+Wastewater,38,,Omicron 24A (BA.2.86); Omicron 24A (JN.1.18); Omicron 21J (BF.38.3),80; 10; 10
+Wastewater,39,,Omicron 24A (BA.2.86); Omicron BA.2,50; 50
+Wastewater,40,,Omicron 24A (BA.2.86); Omicron 24A (L.B.1); Omicron XFC.1.1; Omicron 20A (KS.1.3),20; 4; 60; 16
+Wastewater,41,,Omicron 24A (BA.2.86); Omicron BA.2; Omicron (BA.2.3),80; 10; 10
+Wastewater,42,Omicron,Omicron 25A/LP.8.1*; Omicron BA.2; Omicron 25B/PQ*,50; 50
+Wastewater,43,Omicron,Omicron 25A/LP.8.1*; Omicron BA.2; Omicron 25B/PQ*,
+Wastewater,44,Omicron,Omicron 25A/LP.8.1*; Omicron BA.2; Omicron 25B/PQ*,
+Wastewater,45,Omicron,Omicron 24F/XEC*; Omicron BA.2; Omicron 25C/XFG*;Omicron 24A (BA.2.86),
+Wastewater,46,pending,pending,
+Wastewater,47,pending,pending,
+Wastewater,48,pending,pending,
+Wastewater,49,pending,pending,

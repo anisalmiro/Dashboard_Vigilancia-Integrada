@@ -1,3 +1,12 @@
 Sesim_qtfad,Sesim_qtfad_other,dosagem,Posologia,Dias_de_trat,PARENT_KEY,KEY,SET-OF-Repeat_medic_pacient
 Outro,"","","","",uuid:273b11c7-d6e5-440a-84ee-d78100e5226b,uuid:273b11c7-d6e5-440a-84ee-d78100e5226b/Repeat_medic_pacient[1],uuid:273b11c7-d6e5-440a-84ee-d78100e5226b/Repeat_medic_pacient
+Amoxicillina_clav,"","",12_12h,7,uuid:2a095d10-9a3f-4f3e-9e56-c56be5508a33,uuid:2a095d10-9a3f-4f3e-9e56-c56be5508a33/Repeat_medic_pacient[1],uuid:2a095d10-9a3f-4f3e-9e56-c56be5508a33/Repeat_medic_pacient
+Amoxicillina_clav,"","",8_8h,7,uuid:4d80a8a1-8044-4f86-bd5d-9d9d80786e27,uuid:4d80a8a1-8044-4f86-bd5d-9d9d80786e27/Repeat_medic_pacient[1],uuid:4d80a8a1-8044-4f86-bd5d-9d9d80786e27/Repeat_medic_pacient
+Ceftriaxona,"","","","",uuid:c3dbab8a-242e-41ed-9e91-63d47a91b232,uuid:c3dbab8a-242e-41ed-9e91-63d47a91b232/Repeat_medic_pacient[1],uuid:c3dbab8a-242e-41ed-9e91-63d47a91b232/Repeat_medic_pacient
+Outros,Paracetamol,"",8_8h,7,uuid:d61eb781-02fd-4e95-bb40-3839f7f17772,uuid:d61eb781-02fd-4e95-bb40-3839f7f17772/Repeat_medic_pacient[1],uuid:d61eb781-02fd-4e95-bb40-3839f7f17772/Repeat_medic_pacient
+Amoxicillina_clav,"","",8_8h,6,uuid:72aa5777-c812-46c0-addd-44d21a507d06,uuid:72aa5777-c812-46c0-addd-44d21a507d06/Repeat_medic_pacient[1],uuid:72aa5777-c812-46c0-addd-44d21a507d06/Repeat_medic_pacient
+Amoxicillina_clav,"","",8_8h,6,uuid:72aa5777-c812-46c0-addd-44d21a507d06,uuid:72aa5777-c812-46c0-addd-44d21a507d06/Repeat_medic_pacient[2],uuid:72aa5777-c812-46c0-addd-44d21a507d06/Repeat_medic_pacient
+Outros,Paracetamol,"",8_8h,7,uuid:7004f28a-1c95-4786-a4f6-295a6607fe92,uuid:7004f28a-1c95-4786-a4f6-295a6607fe92/Repeat_medic_pacient[1],uuid:7004f28a-1c95-4786-a4f6-295a6607fe92/Repeat_medic_pacient
+Amoxicillina_clav Outros,Amoxicillina/clav,"",8_8h,7,uuid:7c38a25a-e571-497a-aa05-783ef56068f7,uuid:7c38a25a-e571-497a-aa05-783ef56068f7/Repeat_medic_pacient[1],uuid:7c38a25a-e571-497a-aa05-783ef56068f7/Repeat_medic_pacient
 Gentamicina,"","",8_8h,6,uuid:64f14c53-2aef-4430-8640-62d54963a619,uuid:64f14c53-2aef-4430-8640-62d54963a619/Repeat_medic_pacient[1],uuid:64f14c53-2aef-4430-8640-62d54963a619/Repeat_medic_pacient
+Amoxicillina_clav,"","",8_8h,7,uuid:61f96c94-4cd3-441f-97c8-66cf04e585a7,uuid:61f96c94-4cd3-441f-97c8-66cf04e585a7/Repeat_medic_pacient[1],uuid:61f96c94-4cd3-441f-97c8-66cf04e585a7/Repeat_medic_pacient

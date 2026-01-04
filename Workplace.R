@@ -7,6 +7,10 @@
 #    http://shiny.rstudio.com/
 #    Data Engeneer: Anisio Bule
 
+# === WORKPLACE SCRIPT MAIN FILE ===
+## clean envirnment 
+rm(list = ls())
+
 #1
 #Leitura de todas bibliotecs
 source(".RProfile", encoding = "UTF-8")
@@ -25,15 +29,35 @@ source(file.path(dir_function, "2_rename_Var.R"), encoding = "UTF-8")
 source(file.path(dir_function, "3_correct_data.R"), encoding = "UTF-8")
 
 
+#4
 #Coorecao de Variaveis
 #Limpando Valores da base de dados
 #Renomeando Resultados e Filtrando falores Null
-source(file.path(dir_function, "5_export_DB_Dashboard.R"), encoding = "UTF-8")
+source(file.path(dir_function, "4_export_DB_Dashboard.R"), encoding = "UTF-8")
 
-#
-#
-#
-#
-#
 
+#4.1
+#bases combinadas para dashboard de monitoria
+source(file.path(dir_function, "4_1_create_combined_DB.R"), encoding = "UTF-8")
+
+
+#5
+source(file.path(dir_function, "5_create_indicator.R"), encoding = "UTF-8")
+
+
+#Fim dos Criteios
+#CREATE TO MONITORIA DASHBOARD
+source(file.path(dir_function, "save_monitoria.R"), encoding = "UTF-8")
+
+
+#gerar acessos
+#source(file.path(dir_function, "acessos.R"), encoding = "UTF-8")
+
+#===================================
+#send to dropbox
+source(file.path(dir_function, "6_send_dropbox.R"), encoding = "UTF-8")
+
+
+#FIM DO SCRIPT
+cli::cli_alert_success("FIM DO SCRIPT WORKPLACE.R")
 

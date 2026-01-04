@@ -1,0 +1,963 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:odk="http://www.opendatakit.org/xforms" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head><!-- ODK Aggregate upload time: 2022-08-04T11:28:25.367+02:00 on https://inqueritos.ins.gov.mz/inqueritos -->
+    <h:title>Formulário de Colheita de Dados Cabo Delgado</h:title>
+    <model odk:xforms-version="1.0.0">
+      <instance>
+        <aEw6eXnJptPMjwvEq4VUkg id="Formulario_6_Colheita_Dados_Cabo_Delgado">
+          <start/>
+          <end/>
+          <group_qz9od97>
+            <Provincia_estud/>
+            <Distrito_estudo/>
+            <group_wk8zo20>
+              <Nome_completo_do_Inquiridor/>
+              <Nome_do_outro_Inquiridor/>
+            </group_wk8zo20>
+            <area_de_assentamento/>
+            <aea_de_trabalho/>
+            <Nome_da_US_ou_Clinica_movel/>
+            <Coordenada_Geografica/>
+            <Outra_area/>
+            <Nome_do_bairro/>
+          </group_qz9od97>
+          <LOCAL_DE_RECOLHA_DE_DADOS/>
+          <Fonte_de_dados/>
+          <Semana_Epidemiologica/>
+          <group_pm2kz65>
+            <Data_de_Recolha_Dados/>
+          </group_pm2kz65>
+          <area_de_estudo/>
+          <Genero/>
+          <Idade/>
+          <Selecionar_Unidade/>
+          <group_hs6eq52>
+            <group_hg8tj92>
+              <numero_de_Casos_malaria/>
+            </group_hg8tj92>
+            <group_ji6dr57>
+              <Casos_malaria_pesquisa_Htz/>
+            </group_ji6dr57>
+          </group_hs6eq52>
+          <group_km3zi55>
+            <Nr_casos_diarreia_gastroenteri/>
+          </group_km3zi55>
+          <group_cc9ri42>
+            <Numero_de_casos_Desnutri/>
+            <Total_casos_de_denutricao/>
+            <N_mero_de_casos_de_d_com_idade_preenchida/>
+            <group_zd0yf66>
+              <Nr_caso_Desnutri_receberam_seg/>
+            </group_zd0yf66>
+          </group_cc9ri42>
+          <group_ia8vt02>
+            <group_yg8vr12>
+              <Nr_casos_diagn_hipertencao_art/>
+            </group_yg8vr12>
+            <group_re26q81>
+              <Nr_casos_diagn_diabetes_Mellit/>
+            </group_re26q81>
+            <group_ia7gp99>
+              <Nr_casos_diadnostico_cancro/>
+            </group_ia7gp99>
+          </group_ia8vt02>
+          <group_dd9hw16>
+            <Nr_casos_violenci_basead_gener/>
+          </group_dd9hw16>
+          <group_zp5su43>
+            <Ncasos_tetano_neonatal/>
+          </group_zp5su43>
+          <group_qq6hx44>
+            <Nr_casos_suspeits_morded_anima/>
+          </group_qq6hx44>
+          <group_em9gu79>
+            <Numero_de_casos_de_Meningite/>
+            <Nr_casos_suspeitos_menegite/>
+            <Nr_casos_confirmados_menegite/>
+          </group_em9gu79>
+          <group_bd1tc67>
+            <group_db6ec81>
+              <Nr_casos_suspeitos_sarampo/>
+            </group_db6ec81>
+            <group_ky23x35>
+              <Nr_casos_confirmados_sarampo/>
+            </group_ky23x35>
+          </group_bd1tc67>
+          <group_py8ug31>
+            <group_vh2hg83>
+              <Nr_casos_suspeits_Paralesi_fla/>
+            </group_vh2hg83>
+            <group_yi4co26>
+              <Nr_de_casos_confirm_Paralesia/>
+            </group_yi4co26>
+          </group_py8ug31>
+          <group_gw2xm44>
+            <group_pq47g77>
+              <Nr_casos_diagt_deficien_fisica/>
+            </group_pq47g77>
+            <group_vq61y42>
+              <Nr_casos_diagn_defic_auditiva/>
+            </group_vq61y42>
+            <group_ea1bd54>
+              <Nr_casos_diagn_deficieci_visua/>
+            </group_ea1bd54>
+            <group_jy8fa46>
+              <Nr_casos_diagnt_deficieci_fala/>
+            </group_jy8fa46>
+          </group_gw2xm44>
+          <group_fj1rm37>
+            <group_jc6va30>
+              <Nr_cas_ferimts_lesoes_arma_fog/>
+            </group_jc6va30>
+            <group_fe2cg16>
+              <Nr_cas_ferimts_lesoes_arma_bra/>
+            </group_fe2cg16>
+            <group_nj13y41>
+              <Nr_cas_ferimts_lesoes_queimadu/>
+            </group_nj13y41>
+            <group_ms2ze81>
+              <Nr_casos_ferimts_lesoes_queda/>
+            </group_ms2ze81>
+            <group_iq7hk14>
+              <Nr_casos_trauma_a_outra_us/>
+            </group_iq7hk14>
+          </group_fj1rm37>
+          <group_xr17r16>
+            <Total_testados_para_HIV/>
+            <Total_casos_positivos_para_HIV/>
+            <Total_casos_em_tratamento_TARV/>
+          </group_xr17r16>
+          <group_tv8ek53>
+            <Totl_diagncom_ansiedde_ou_stre/>
+            <Total_diagn_com_depresao_mentl/>
+            <Total_depress_pos_parto/>
+            <Total_casos_com_esquizofrenia/>
+            <Total_casos_tentativa_de_suici/>
+            <Casos_perturbac_ment_abuz_drog/>
+            <Pacientes_q_receb_atenc_psicol/>
+          </group_tv8ek53>
+          <group_bm2dj42>
+            <Mulhers_grvidas_q_real_1ra_con/>
+            <Mulheres_grvidas_q_real_4_cons/>
+            <Nr_parts_ocorridos_dentr_mater/>
+            <Nr_partos_ocorridos_fora_mater/>
+          </group_bm2dj42>
+          <group_hm0re61>
+            <Infec_es_respirat_rias_agudas/>
+          </group_hm0re61>
+          <group_zd3ce93>
+            <group_ar3cf42>
+              <Nr_crianas_Vacinadas/>
+              <Total_de_crianas_vacinadas_BCG/>
+              <Totl_crianas_vacinadas_Sarampo/>
+              <Total_criancas_vacinadas_OPV/>
+            </group_ar3cf42>
+            <group_pv4zx21>
+              <Total_de_Adultos_Vacinados/>
+            </group_pv4zx21>
+          </group_zd3ce93>
+          <group_rs14k26>
+            <Total_das_mortes_registadas/>
+            <Total_de_morte_infantil/>
+            <Total_de_morte_neonatais/>
+            <Total_de_morte_materna/>
+            <Numero_de_bitos_por_trauma/>
+            <Causas_morte_plataforma_SISCOV/>
+            <Aut_psia_verbal_plataforma_SISCOVE/>
+          </group_rs14k26>
+          <Registou_uma_falha_no_envio_an/>
+          <Nota_de_Corre_o/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </aEw6eXnJptPMjwvEq4VUkg>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/aEw6eXnJptPMjwvEq4VUkg/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/aEw6eXnJptPMjwvEq4VUkg/end" type="dateTime"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_qz9od97" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_qz9od97/Provincia_estud" required="true()" type="string"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_qz9od97/Distrito_estudo" relevant=" /aEw6eXnJptPMjwvEq4VUkg/group_qz9od97/Provincia_estud  = 'cabo_delgado'" required="true()" type="string"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_qz9od97/group_wk8zo20" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_qz9od97/group_wk8zo20/Nome_completo_do_Inquiridor" required="false()" type="string"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_qz9od97/group_wk8zo20/Nome_do_outro_Inquiridor" relevant=" /aEw6eXnJptPMjwvEq4VUkg/group_qz9od97/group_wk8zo20/Nome_completo_do_Inquiridor  = 'outros'" required="false()" type="string"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_qz9od97/area_de_assentamento" required="true()" type="string"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_qz9od97/aea_de_trabalho" required="true()" type="string"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_qz9od97/Nome_da_US_ou_Clinica_movel" required="true()" type="string"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_qz9od97/Coordenada_Geografica" required="false()" type="geopoint"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_qz9od97/Outra_area" relevant=" /aEw6eXnJptPMjwvEq4VUkg/group_qz9od97/aea_de_trabalho  = 'outro'" required="false()" type="string"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_qz9od97/Nome_do_bairro" required="false()" type="string"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/LOCAL_DE_RECOLHA_DE_DADOS" required="true()" type="string"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/Fonte_de_dados" required="true()" type="string"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/Semana_Epidemiologica" relevant=" /aEw6eXnJptPMjwvEq4VUkg/Fonte_de_dados  = 'dados_do_bes'" required="false()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_pm2kz65" relevant=" /aEw6eXnJptPMjwvEq4VUkg/Fonte_de_dados  = 'outros'" required="false()"/>
+      <bind constraint=". &gt;= date('2019-06-01') and . &lt;= date('2022-06-30')" jr:constraintMsg="A data devera estar entre junho de 2019 a Junho do ano 2022" nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_pm2kz65/Data_de_Recolha_Dados" required="true()" type="date"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/area_de_estudo" required="true()" type="string"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/Genero" required="true()" type="string"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/Idade" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/Selecionar_Unidade" required="true()" type="string"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_hs6eq52" relevant="selected( /aEw6eXnJptPMjwvEq4VUkg/area_de_estudo , 'mal_ria')" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_hs6eq52/group_hg8tj92" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_hs6eq52/group_hg8tj92/numero_de_Casos_malaria" required="false()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_hs6eq52/group_ji6dr57" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_hs6eq52/group_ji6dr57/Casos_malaria_pesquisa_Htz" required="false()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_km3zi55" relevant="selected( /aEw6eXnJptPMjwvEq4VUkg/area_de_estudo , 'diarreia_e_gastroenterite')" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_km3zi55/Nr_casos_diarreia_gastroenteri" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_cc9ri42" relevant="selected( /aEw6eXnJptPMjwvEq4VUkg/area_de_estudo , 'desnutri_o')" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_cc9ri42/Numero_de_casos_Desnutri" required="false()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_cc9ri42/Total_casos_de_denutricao" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_cc9ri42/N_mero_de_casos_de_d_com_idade_preenchida" required="false()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_cc9ri42/group_zd0yf66" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_cc9ri42/group_zd0yf66/Nr_caso_Desnutri_receberam_seg" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_ia8vt02" relevant="selected( /aEw6eXnJptPMjwvEq4VUkg/area_de_estudo , 'doen_as_cr_nicas')" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_ia8vt02/group_yg8vr12" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_ia8vt02/group_yg8vr12/Nr_casos_diagn_hipertencao_art" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_ia8vt02/group_re26q81" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_ia8vt02/group_re26q81/Nr_casos_diagn_diabetes_Mellit" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_ia8vt02/group_ia7gp99" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_ia8vt02/group_ia7gp99/Nr_casos_diadnostico_cancro" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_dd9hw16" relevant="selected( /aEw6eXnJptPMjwvEq4VUkg/area_de_estudo , 'viol_ncia_baseada_no_g_nero')" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_dd9hw16/Nr_casos_violenci_basead_gener" required="false()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_zp5su43" relevant="selected( /aEw6eXnJptPMjwvEq4VUkg/area_de_estudo , 't_tano_neonatal')" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_zp5su43/Ncasos_tetano_neonatal" required="false()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_qq6hx44" relevant="selected( /aEw6eXnJptPMjwvEq4VUkg/area_de_estudo , 'mordedura_por_animal')" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_qq6hx44/Nr_casos_suspeits_morded_anima" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_em9gu79" relevant="selected( /aEw6eXnJptPMjwvEq4VUkg/area_de_estudo , 'meningite')" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_em9gu79/Numero_de_casos_de_Meningite" required="false()" type="string"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_em9gu79/Nr_casos_suspeitos_menegite" relevant="selected( /aEw6eXnJptPMjwvEq4VUkg/group_em9gu79/Numero_de_casos_de_Meningite , 'n_mero_de_casos_suspeitos')" required="false()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_em9gu79/Nr_casos_confirmados_menegite" relevant="selected( /aEw6eXnJptPMjwvEq4VUkg/group_em9gu79/Numero_de_casos_de_Meningite , 'n_mero_de_casos_confirmados')" required="false()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_bd1tc67" relevant="selected( /aEw6eXnJptPMjwvEq4VUkg/area_de_estudo , 'sarampo')" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_bd1tc67/group_db6ec81" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_bd1tc67/group_db6ec81/Nr_casos_suspeitos_sarampo" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_bd1tc67/group_ky23x35" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_bd1tc67/group_ky23x35/Nr_casos_confirmados_sarampo" required="false()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_py8ug31" relevant="selected( /aEw6eXnJptPMjwvEq4VUkg/area_de_estudo , 'paralisia_fl_cida_aguda')" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_py8ug31/group_vh2hg83" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_py8ug31/group_vh2hg83/Nr_casos_suspeits_Paralesi_fla" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_py8ug31/group_yi4co26" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_py8ug31/group_yi4co26/Nr_de_casos_confirm_Paralesia" required="false()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_gw2xm44" relevant="selected( /aEw6eXnJptPMjwvEq4VUkg/area_de_estudo , 'defici_ncias_f_sicas')" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_gw2xm44/group_pq47g77" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_gw2xm44/group_pq47g77/Nr_casos_diagt_deficien_fisica" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_gw2xm44/group_vq61y42" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_gw2xm44/group_vq61y42/Nr_casos_diagn_defic_auditiva" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_gw2xm44/group_ea1bd54" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_gw2xm44/group_ea1bd54/Nr_casos_diagn_deficieci_visua" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_gw2xm44/group_jy8fa46" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_gw2xm44/group_jy8fa46/Nr_casos_diagnt_deficieci_fala" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_fj1rm37" relevant="selected( /aEw6eXnJptPMjwvEq4VUkg/area_de_estudo , 'trauma_f_sico')" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_fj1rm37/group_jc6va30" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_fj1rm37/group_jc6va30/Nr_cas_ferimts_lesoes_arma_fog" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_fj1rm37/group_fe2cg16" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_fj1rm37/group_fe2cg16/Nr_cas_ferimts_lesoes_arma_bra" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_fj1rm37/group_nj13y41" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_fj1rm37/group_nj13y41/Nr_cas_ferimts_lesoes_queimadu" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_fj1rm37/group_ms2ze81" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_fj1rm37/group_ms2ze81/Nr_casos_ferimts_lesoes_queda" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_fj1rm37/group_iq7hk14" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_fj1rm37/group_iq7hk14/Nr_casos_trauma_a_outra_us" required="false()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_xr17r16" relevant="selected( /aEw6eXnJptPMjwvEq4VUkg/area_de_estudo , 'v_rus_da_imunodefici_ncia_humana_e_terap')" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_xr17r16/Total_testados_para_HIV" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_xr17r16/Total_casos_positivos_para_HIV" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_xr17r16/Total_casos_em_tratamento_TARV" required="false()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_tv8ek53" relevant="selected( /aEw6eXnJptPMjwvEq4VUkg/area_de_estudo , 'sa_de_mental__trauma_psicol_gico')" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_tv8ek53/Totl_diagncom_ansiedde_ou_stre" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_tv8ek53/Total_diagn_com_depresao_mentl" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_tv8ek53/Total_depress_pos_parto" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_tv8ek53/Total_casos_com_esquizofrenia" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_tv8ek53/Total_casos_tentativa_de_suici" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_tv8ek53/Casos_perturbac_ment_abuz_drog" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_tv8ek53/Pacientes_q_receb_atenc_psicol" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_bm2dj42" relevant="selected( /aEw6eXnJptPMjwvEq4VUkg/area_de_estudo , 'sa_de_da_mulher_e_crian_a')" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_bm2dj42/Mulhers_grvidas_q_real_1ra_con" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_bm2dj42/Mulheres_grvidas_q_real_4_cons" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_bm2dj42/Nr_parts_ocorridos_dentr_mater" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_bm2dj42/Nr_partos_ocorridos_fora_mater" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_hm0re61" relevant="selected( /aEw6eXnJptPMjwvEq4VUkg/area_de_estudo , 'infec_es_respirat_rias_agudas')" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_hm0re61/Infec_es_respirat_rias_agudas" required="false()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_zd3ce93" relevant="selected( /aEw6eXnJptPMjwvEq4VUkg/area_de_estudo , 'imuniza_o')" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_zd3ce93/group_ar3cf42" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_zd3ce93/group_ar3cf42/Nr_crianas_Vacinadas" required="true()" type="string"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_zd3ce93/group_ar3cf42/Total_de_crianas_vacinadas_BCG" relevant="selected( /aEw6eXnJptPMjwvEq4VUkg/group_zd3ce93/group_ar3cf42/Nr_crianas_Vacinadas , 'vacina_bcg')" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_zd3ce93/group_ar3cf42/Totl_crianas_vacinadas_Sarampo" relevant="selected( /aEw6eXnJptPMjwvEq4VUkg/group_zd3ce93/group_ar3cf42/Nr_crianas_Vacinadas , 'sarampo')" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_zd3ce93/group_ar3cf42/Total_criancas_vacinadas_OPV" relevant="selected( /aEw6eXnJptPMjwvEq4VUkg/group_zd3ce93/group_ar3cf42/Nr_crianas_Vacinadas , 'vacina_oral_da_p_lio__opv')" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_zd3ce93/group_pv4zx21" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_zd3ce93/group_pv4zx21/Total_de_Adultos_Vacinados" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_rs14k26" relevant="selected( /aEw6eXnJptPMjwvEq4VUkg/area_de_estudo , 'mortes_e_suas_causas')" required="false()"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_rs14k26/Total_das_mortes_registadas" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_rs14k26/Total_de_morte_infantil" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_rs14k26/Total_de_morte_neonatais" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_rs14k26/Total_de_morte_materna" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_rs14k26/Numero_de_bitos_por_trauma" required="true()" type="int"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_rs14k26/Causas_morte_plataforma_SISCOV" required="false()" type="string"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/group_rs14k26/Aut_psia_verbal_plataforma_SISCOVE" required="false()" type="string"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/Registou_uma_falha_no_envio_an" required="false()" type="string"/>
+      <bind nodeset="/aEw6eXnJptPMjwvEq4VUkg/Nota_de_Corre_o" relevant=" /aEw6eXnJptPMjwvEq4VUkg/Registou_uma_falha_no_envio_an  = 'sim'" required="false()" type="string"/>
+      <bind jr:preload="uid" nodeset="/aEw6eXnJptPMjwvEq4VUkg/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_qz9od97">
+      <label>Localização do estudo</label>
+      <select1 ref="/aEw6eXnJptPMjwvEq4VUkg/group_qz9od97/Provincia_estud">
+        <label>Provincia</label>
+        <item>
+          <label>Cabo Delgado</label>
+          <value>cabo_delgado</value>
+        </item>
+      </select1>
+      <select1 ref="/aEw6eXnJptPMjwvEq4VUkg/group_qz9od97/Distrito_estudo">
+        <label>Distritos</label>
+        <item>
+          <label>Ancuabe</label>
+          <value>ancuabe</value>
+        </item>
+        <item>
+          <label>Balama</label>
+          <value>balama</value>
+        </item>
+        <item>
+          <label>Cidade de Pemba</label>
+          <value>cidade_de_pemba</value>
+        </item>
+        <item>
+          <label>Chiure</label>
+          <value>chiure</value>
+        </item>
+        <item>
+          <label>Ibo</label>
+          <value>ibo</value>
+        </item>
+        <item>
+          <label>Macomia</label>
+          <value>macomia</value>
+        </item>
+        <item>
+          <label>Metuge</label>
+          <value>metuge</value>
+        </item>
+        <item>
+          <label>Montepuez</label>
+          <value>montepuez</value>
+        </item>
+        <item>
+          <label>Mocimboa da Praia</label>
+          <value>mocimboa_da_praia</value>
+        </item>
+        <item>
+          <label>Meluco</label>
+          <value>meluco</value>
+        </item>
+        <item>
+          <label>Mueda</label>
+          <value>mueda</value>
+        </item>
+        <item>
+          <label>Muedumbe</label>
+          <value>muedumbe</value>
+        </item>
+        <item>
+          <label>Namuno</label>
+          <value>namuno</value>
+        </item>
+        <item>
+          <label>Nangade</label>
+          <value>nangade</value>
+        </item>
+        <item>
+          <label>Palma</label>
+          <value>palma</value>
+        </item>
+        <item>
+          <label>Quissanga</label>
+          <value>quissanga</value>
+        </item>
+      </select1>
+      <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_qz9od97/group_wk8zo20">
+        <label>Informação Do Inquiridor</label>
+        <select1 ref="/aEw6eXnJptPMjwvEq4VUkg/group_qz9od97/group_wk8zo20/Nome_completo_do_Inquiridor">
+          <label>Nome completo do Inquiridor</label>
+          <item>
+            <label>Carlos Botão</label>
+            <value>carlos_bot_o</value>
+          </item>
+          <item>
+            <label>Cidia Francisco</label>
+            <value>samanta</value>
+          </item>
+          <item>
+            <label>Elidio Muamine</label>
+            <value>elidio_muamine</value>
+          </item>
+          <item>
+            <label>Hamida Mulungo</label>
+            <value>hamida_mulungo</value>
+          </item>
+          <item>
+            <label>Lutero Cuamba</label>
+            <value>lutero_cuamba</value>
+          </item>
+          <item>
+            <label>Maria Isabel Cambe</label>
+            <value>maria_isabel_cambe</value>
+          </item>
+          <item>
+            <label>Naisa Manafe</label>
+            <value>naisa_manafe</value>
+          </item>
+          <item>
+            <label>Paixão Torres</label>
+            <value>option_2</value>
+          </item>
+          <item>
+            <label>Samanta Djalo</label>
+            <value>samanta_djalo</value>
+          </item>
+          <item>
+            <label>Samuel Nuvunga</label>
+            <value>samuel_nuvunga</value>
+          </item>
+          <item>
+            <label>Outros</label>
+            <value>outros</value>
+          </item>
+        </select1>
+        <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_qz9od97/group_wk8zo20/Nome_do_outro_Inquiridor">
+          <label>Nome do outro Inquiridor</label>
+        </input>
+      </group>
+      <select1 ref="/aEw6eXnJptPMjwvEq4VUkg/group_qz9od97/area_de_assentamento">
+        <label>Área de assentamento</label>
+        <item>
+          <label>Urbano</label>
+          <value>urbano</value>
+        </item>
+        <item>
+          <label>Rural</label>
+          <value>rural</value>
+        </item>
+        <item>
+          <label>Área de reassentamento</label>
+          <value>_rea_de_reassentamento</value>
+        </item>
+      </select1>
+      <select1 ref="/aEw6eXnJptPMjwvEq4VUkg/group_qz9od97/aea_de_trabalho">
+        <label>Área de trabalho</label>
+        <item>
+          <label>Unidade Sanitária</label>
+          <value>unidade_sanit_ria</value>
+        </item>
+        <item>
+          <label>Clínica móvel de área de reassentamento</label>
+          <value>cl_nica_m_vel_de__rea_de_reass</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>outro</value>
+        </item>
+      </select1>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_qz9od97/Nome_da_US_ou_Clinica_movel">
+        <label>Nome da US ou Clinica movel</label>
+      </input>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_qz9od97/Coordenada_Geografica">
+        <label>Coordenada Geografica</label>
+      </input>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_qz9od97/Outra_area">
+        <label>Outra area</label>
+      </input>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_qz9od97/Nome_do_bairro">
+        <label>Nome do bairro</label>
+      </input>
+    </group>
+    <select1 ref="/aEw6eXnJptPMjwvEq4VUkg/LOCAL_DE_RECOLHA_DE_DADOS">
+      <label>LOCAL DE RECOLHA DE DADOS</label>
+      <item>
+        <label>Banco de Socorro</label>
+        <value>banco_de_socorro</value>
+      </item>
+      <item>
+        <label>Consulta externa (adulto)</label>
+        <value>consulta_externa__adulto</value>
+      </item>
+      <item>
+        <label>Consulta externa (pediatria)</label>
+        <value>consulta_externa__pediatria</value>
+      </item>
+      <item>
+        <label>Laboratório</label>
+        <value>laborat_rio</value>
+      </item>
+      <item>
+        <label>Programa Alargado de Vacinação</label>
+        <value>programa_alargado_de_vacina_o</value>
+      </item>
+      <item>
+        <label>Consulta Materno Infantil</label>
+        <value>consulta_materno_infantil</value>
+      </item>
+      <item>
+        <label>Consulta de HIV/TARV</label>
+        <value>consulta_de_hiv_tarv</value>
+      </item>
+    </select1>
+    <select1 ref="/aEw6eXnJptPMjwvEq4VUkg/Fonte_de_dados">
+      <label>Fonte de dados</label>
+      <item>
+        <label>Dados do BES</label>
+        <value>dados_do_bes</value>
+      </item>
+      <item>
+        <label>Outros</label>
+        <value>outros</value>
+      </item>
+    </select1>
+    <input ref="/aEw6eXnJptPMjwvEq4VUkg/Semana_Epidemiologica">
+      <label>Semana Epidemiologica</label>
+    </input>
+    <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_pm2kz65">
+      <label>Data de Recolha de Dados</label>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_pm2kz65/Data_de_Recolha_Dados">
+        <label>Data de Recolha de Dados</label>
+      </input>
+    </group>
+    <select ref="/aEw6eXnJptPMjwvEq4VUkg/area_de_estudo">
+      <label>Área de estudo</label>
+      <item>
+        <label>Malária</label>
+        <value>mal_ria</value>
+      </item>
+      <item>
+        <label>Diarreia e Gastroenterite</label>
+        <value>diarreia_e_gastroenterite</value>
+      </item>
+      <item>
+        <label>Desnutrição</label>
+        <value>desnutri_o</value>
+      </item>
+      <item>
+        <label>Infecções Respiratórias Agudas</label>
+        <value>infec_es_respirat_rias_agudas</value>
+      </item>
+      <item>
+        <label>Doenças Crónicas</label>
+        <value>doen_as_cr_nicas</value>
+      </item>
+      <item>
+        <label>Violência baseada no género</label>
+        <value>viol_ncia_baseada_no_g_nero</value>
+      </item>
+      <item>
+        <label>Tétano neonatal</label>
+        <value>t_tano_neonatal</value>
+      </item>
+      <item>
+        <label>Mordedura por animal</label>
+        <value>mordedura_por_animal</value>
+      </item>
+      <item>
+        <label>Sarampo</label>
+        <value>sarampo</value>
+      </item>
+      <item>
+        <label>Paralisia Flácida Aguda</label>
+        <value>paralisia_fl_cida_aguda</value>
+      </item>
+      <item>
+        <label>Saúde da mulher e criança</label>
+        <value>sa_de_da_mulher_e_crian_a</value>
+      </item>
+      <item>
+        <label>Saúde da mulher e criança</label>
+        <value>sa_de_da_mulher_e_crian_a_1</value>
+      </item>
+      <item>
+        <label>Imunização</label>
+        <value>imuniza_o</value>
+      </item>
+      <item>
+        <label>Deficiências Físicas </label>
+        <value>defici_ncias_f_sicas</value>
+      </item>
+      <item>
+        <label>Trauma Físico</label>
+        <value>trauma_f_sico</value>
+      </item>
+      <item>
+        <label>Vírus da Imunodeficiência Humana e Terapia Antirretroviral (TARV)</label>
+        <value>v_rus_da_imunodefici_ncia_humana_e_terap</value>
+      </item>
+      <item>
+        <label>Saúde Mental (trauma psicológico)</label>
+        <value>sa_de_mental__trauma_psicol_gico</value>
+      </item>
+      <item>
+        <label>Meningite</label>
+        <value>meningite</value>
+      </item>
+      <item>
+        <label>Mortes e suas Causas </label>
+        <value>mortes_e_suas_causas</value>
+      </item>
+    </select>
+    <select1 ref="/aEw6eXnJptPMjwvEq4VUkg/Genero">
+      <label>Genero</label>
+      <item>
+        <label>Masculino</label>
+        <value>masculino</value>
+      </item>
+      <item>
+        <label>Femenino</label>
+        <value>femenino</value>
+      </item>
+    </select1>
+    <input ref="/aEw6eXnJptPMjwvEq4VUkg/Idade">
+      <label>Idade</label>
+    </input>
+    <select1 ref="/aEw6eXnJptPMjwvEq4VUkg/Selecionar_Unidade">
+      <label>Selecionar Unidade idade</label>
+      <item>
+        <label>Anos</label>
+        <value>ano</value>
+      </item>
+      <item>
+        <label>Meses</label>
+        <value>meses</value>
+      </item>
+    </select1>
+    <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_hs6eq52">
+      <label>Numero de Casos de Malária</label>
+      <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_hs6eq52/group_hg8tj92">
+        <label>Casos da Malária com TDR Positivo</label>
+        <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_hs6eq52/group_hg8tj92/numero_de_Casos_malaria">
+          <label>Numero de Casos de Malária</label>
+        </input>
+      </group>
+      <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_hs6eq52/group_ji6dr57">
+        <label>Casos Malária com pesquisa de Htz</label>
+        <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_hs6eq52/group_ji6dr57/Casos_malaria_pesquisa_Htz">
+          <label>Numero de casos de pesquisa de Htz</label>
+        </input>
+      </group>
+    </group>
+    <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_km3zi55">
+      <label>Numero de casos de Diarreia e Gastroenterite</label>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_km3zi55/Nr_casos_diarreia_gastroenteri">
+        <label>Numero de casos de Diarreia e Gastroenterite</label>
+      </input>
+    </group>
+    <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_cc9ri42">
+      <label>Numero de Casos de Desnutrição</label>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_cc9ri42/Numero_de_casos_Desnutri">
+        <label>Numero de casos de Desnutrição</label>
+      </input>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_cc9ri42/Total_casos_de_denutricao">
+        <label>Total de casos de denutrição com registo de peso preenchido</label>
+      </input>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_cc9ri42/N_mero_de_casos_de_d_com_idade_preenchida">
+        <label>Número de casos de desnutrição com idade preenchida</label>
+      </input>
+      <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_cc9ri42/group_zd0yf66">
+        <label>Casos desnutrição que receberam seguimento</label>
+        <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_cc9ri42/group_zd0yf66/Nr_caso_Desnutri_receberam_seg">
+          <label>Numero de casos de desnutrição que receberam seguimento</label>
+        </input>
+      </group>
+    </group>
+    <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_ia8vt02">
+      <label>Numero de Doenças Crónicas</label>
+      <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_ia8vt02/group_yg8vr12">
+        <label>Número de casos com diagnóstico de Hipertensão Arterial</label>
+        <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_ia8vt02/group_yg8vr12/Nr_casos_diagn_hipertencao_art">
+          <label>Numero de casos com diagnóstico de Hipertensão Arterial</label>
+        </input>
+      </group>
+      <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_ia8vt02/group_re26q81">
+        <label>Número de casos com diagnóstico de Diabetes Mellitus</label>
+        <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_ia8vt02/group_re26q81/Nr_casos_diagn_diabetes_Mellit">
+          <label>Numero de casos com diagnóstico de Diabetes Mellitus</label>
+        </input>
+      </group>
+      <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_ia8vt02/group_ia7gp99">
+        <label>Número de casos com diagnóstico de Cancro</label>
+        <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_ia8vt02/group_ia7gp99/Nr_casos_diadnostico_cancro">
+          <label>Numero de Casos com diagnóstico de Cancro</label>
+        </input>
+      </group>
+    </group>
+    <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_dd9hw16">
+      <label>Numero de Casos de Violência baseada no género</label>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_dd9hw16/Nr_casos_violenci_basead_gener">
+        <label>Número de casos de violência notificados baseada no género</label>
+      </input>
+    </group>
+    <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_zp5su43">
+      <label>Numero de casos de Tétano neonatal</label>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_zp5su43/Ncasos_tetano_neonatal">
+        <label>Número de casos notificados de Tétano neonatal</label>
+      </input>
+    </group>
+    <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_qq6hx44">
+      <label>Numero de casos de Mordedura por animal</label>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_qq6hx44/Nr_casos_suspeits_morded_anima">
+        <label>Número de casos suspeitos de mordeduras animal</label>
+      </input>
+    </group>
+    <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_em9gu79">
+      <label>Numero de casos de Meningite</label>
+      <select ref="/aEw6eXnJptPMjwvEq4VUkg/group_em9gu79/Numero_de_casos_de_Meningite">
+        <label>Numero de casos de Meningite</label>
+        <item>
+          <label>Número de casos suspeitos</label>
+          <value>n_mero_de_casos_suspeitos</value>
+        </item>
+        <item>
+          <label>Número de casos confirmados</label>
+          <value>n_mero_de_casos_confirmados</value>
+        </item>
+      </select>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_em9gu79/Nr_casos_suspeitos_menegite">
+        <label>Número de casos suspeitos de de Meningite</label>
+      </input>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_em9gu79/Nr_casos_confirmados_menegite">
+        <label>Número de casos confirmados de Meningite</label>
+      </input>
+    </group>
+    <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_bd1tc67">
+      <label>Numero de Casos de Sarampo</label>
+      <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_bd1tc67/group_db6ec81">
+        <label>Número de casos suspeitos de Sarampo</label>
+        <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_bd1tc67/group_db6ec81/Nr_casos_suspeitos_sarampo">
+          <label>Numero de casos de Sarampo</label>
+        </input>
+      </group>
+      <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_bd1tc67/group_ky23x35">
+        <label>Número de casos confirmados</label>
+        <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_bd1tc67/group_ky23x35/Nr_casos_confirmados_sarampo">
+          <label>Numero de casos de Sarampo</label>
+        </input>
+      </group>
+    </group>
+    <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_py8ug31">
+      <label>Numero de casos de Paralisia Flácida Aguda</label>
+      <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_py8ug31/group_vh2hg83">
+        <label>Numero de casos suspeitos de Paralisia Flácida Aguda</label>
+        <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_py8ug31/group_vh2hg83/Nr_casos_suspeits_Paralesi_fla">
+          <label>Numero de casos suspeitos de Paralisia Flácida Aguda</label>
+        </input>
+      </group>
+      <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_py8ug31/group_yi4co26">
+        <label>Numero de casos confirmados de Paralisia Flácida Aguda</label>
+        <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_py8ug31/group_yi4co26/Nr_de_casos_confirm_Paralesia">
+          <label>Numero de casos confirmados de Paralisia Flácida Aguda</label>
+        </input>
+      </group>
+    </group>
+    <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_gw2xm44">
+      <label>Numero de casos por Deficiências Físicas</label>
+      <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_gw2xm44/group_pq47g77">
+        <label>Número de casos diagnosticados com deficiência física/ motora</label>
+        <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_gw2xm44/group_pq47g77/Nr_casos_diagt_deficien_fisica">
+          <label>Número de casos de diagnosticados com deficiência física/ motora</label>
+          <hint>casos diagnosticados com deficiência física/ motora</hint>
+        </input>
+      </group>
+      <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_gw2xm44/group_vq61y42">
+        <label>Número de casos diagnosticados com deficiência auditiva</label>
+        <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_gw2xm44/group_vq61y42/Nr_casos_diagn_defic_auditiva">
+          <label>Número de casos de diagnosticados com deficiência auditiva</label>
+          <hint>Número de casos diagnosticados com deficiência auditiva</hint>
+        </input>
+      </group>
+      <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_gw2xm44/group_ea1bd54">
+        <label>Número de casos diagnosticados com deficiência visual</label>
+        <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_gw2xm44/group_ea1bd54/Nr_casos_diagn_deficieci_visua">
+          <label>Número de casos de diagnosticados com deficiência visual</label>
+          <hint>Número de casos diagnosticados com deficiência visual</hint>
+        </input>
+      </group>
+      <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_gw2xm44/group_jy8fa46">
+        <label>Número de casos diagnosticados com deficiência de fala</label>
+        <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_gw2xm44/group_jy8fa46/Nr_casos_diagnt_deficieci_fala">
+          <label>Número de casos de diagnosticados com deficiência de fala</label>
+          <hint>Número de casos diagnosticados com deficiência de fala</hint>
+        </input>
+      </group>
+    </group>
+    <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_fj1rm37">
+      <label>Número de casos de Trauma Físico</label>
+      <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_fj1rm37/group_jc6va30">
+        <label>Número de casos diagnosticados/notificados com ferimentos ou lesões por arma de fogo</label>
+        <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_fj1rm37/group_jc6va30/Nr_cas_ferimts_lesoes_arma_fog">
+          <label>Número de casos com ferimentos ou lesões por arma de fogo</label>
+          <hint>Número de casos diagnosticados/notificados com ferimentos ou lesões por arma de fogo</hint>
+        </input>
+      </group>
+      <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_fj1rm37/group_fe2cg16">
+        <label>Número de casos com ferimentos ou lesões por arma branca</label>
+        <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_fj1rm37/group_fe2cg16/Nr_cas_ferimts_lesoes_arma_bra">
+          <label>Número de casos com ferimentos ou lesões por arma branca</label>
+          <hint>Número de casos diagnosticados/notificados com ferimentos ou lesões por arma branca</hint>
+        </input>
+      </group>
+      <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_fj1rm37/group_nj13y41">
+        <label>Número de casos com ferimentos ou lesões por queimaduras</label>
+        <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_fj1rm37/group_nj13y41/Nr_cas_ferimts_lesoes_queimadu">
+          <label>Número de casos com ferimentos ou lesões por queimaduras</label>
+        </input>
+      </group>
+      <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_fj1rm37/group_ms2ze81">
+        <label>Número de casos com ferimentos ou lesões por queda</label>
+        <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_fj1rm37/group_ms2ze81/Nr_casos_ferimts_lesoes_queda">
+          <label>Número de casos com ferimentos ou lesões por queda</label>
+        </input>
+      </group>
+      <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_fj1rm37/group_iq7hk14">
+        <label>Casos referenciados por trauma para outras US de nível superior</label>
+        <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_fj1rm37/group_iq7hk14/Nr_casos_trauma_a_outra_us">
+          <label>Número de casos por trauma para outras US de nível superior</label>
+        </input>
+      </group>
+    </group>
+    <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_xr17r16">
+      <label>Vírus da Imunodeficiência Humana e Terapia Antirretroviral (TARV)</label>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_xr17r16/Total_testados_para_HIV">
+        <label>Total testados para HIV</label>
+      </input>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_xr17r16/Total_casos_positivos_para_HIV">
+        <label>Total de casos positivos para HIV</label>
+      </input>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_xr17r16/Total_casos_em_tratamento_TARV">
+        <label>Total de casos em tratamento com TARV</label>
+      </input>
+    </group>
+    <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_tv8ek53">
+      <label>Saúde Mental (trauma psicológico)</label>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_tv8ek53/Totl_diagncom_ansiedde_ou_stre">
+        <label>Total diagnósticado com ansiedade ou estresse</label>
+      </input>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_tv8ek53/Total_diagn_com_depresao_mentl">
+        <label>Total diagnósticado com depressão mental</label>
+      </input>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_tv8ek53/Total_depress_pos_parto">
+        <label>Total de depressão pós-parto</label>
+      </input>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_tv8ek53/Total_casos_com_esquizofrenia">
+        <label>Total de casos com esquizofrenia</label>
+      </input>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_tv8ek53/Total_casos_tentativa_de_suici">
+        <label>Total de casos de tentativa de suicídio</label>
+      </input>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_tv8ek53/Casos_perturbac_ment_abuz_drog">
+        <label>Total de casos de perturbação mental decorrente do uso abusivo de álcool e outras drogas</label>
+      </input>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_tv8ek53/Pacientes_q_receb_atenc_psicol">
+        <label>Total de casos que pacientes que receberam atenção psicológica</label>
+      </input>
+    </group>
+    <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_bm2dj42">
+      <label>Saúde da mulher e criança</label>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_bm2dj42/Mulhers_grvidas_q_real_1ra_con">
+        <label>Número de mulheres grávidas que realizaram a primeira consulta pré-natal</label>
+      </input>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_bm2dj42/Mulheres_grvidas_q_real_4_cons">
+        <label>Número de mulheres grávidas que realizaram pelo menos quatro (4) consultas pré-natal</label>
+      </input>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_bm2dj42/Nr_parts_ocorridos_dentr_mater">
+        <label>Número de partos ocorridos dentro da maternidade</label>
+      </input>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_bm2dj42/Nr_partos_ocorridos_fora_mater">
+        <label>Número de partos ocorridos fora da maternidade</label>
+      </input>
+    </group>
+    <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_hm0re61">
+      <label>Infecções Respiratórias Agudas</label>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_hm0re61/Infec_es_respirat_rias_agudas">
+        <label>Infecções respiratórias agudas</label>
+        <hint>buscar catarro comum, Gripe, constipação, Sinusite, IRA, IVRs, Amigdalite, Faringite, COVID-19</hint>
+      </input>
+    </group>
+    <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_zd3ce93">
+      <label>Imunização</label>
+      <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_zd3ce93/group_ar3cf42">
+        <label>Vacinação de Crianças</label>
+        <select ref="/aEw6eXnJptPMjwvEq4VUkg/group_zd3ce93/group_ar3cf42/Nr_crianas_Vacinadas">
+          <label>Crianças vacinadas</label>
+          <item>
+            <label>Vacina BCG</label>
+            <value>vacina_bcg</value>
+          </item>
+          <item>
+            <label>Sarampo</label>
+            <value>sarampo</value>
+          </item>
+          <item>
+            <label>Vacina Oral da Pólio (OPV) </label>
+            <value>vacina_oral_da_p_lio__opv</value>
+          </item>
+        </select>
+        <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_zd3ce93/group_ar3cf42/Total_de_crianas_vacinadas_BCG">
+          <label>Total de crianças vacinadas vacina BCG</label>
+        </input>
+        <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_zd3ce93/group_ar3cf42/Totl_crianas_vacinadas_Sarampo">
+          <label>Total de crianças vacinadas Sarampo</label>
+        </input>
+        <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_zd3ce93/group_ar3cf42/Total_criancas_vacinadas_OPV">
+          <label>Total de crianças vacinadas Vacina Oral OPV</label>
+        </input>
+      </group>
+      <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_zd3ce93/group_pv4zx21">
+        <label>Vacinação de Adultos</label>
+        <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_zd3ce93/group_pv4zx21/Total_de_Adultos_Vacinados">
+          <label>Total de Adultos Vacinados</label>
+        </input>
+      </group>
+    </group>
+    <group ref="/aEw6eXnJptPMjwvEq4VUkg/group_rs14k26">
+      <label>Mortes e suas Causas</label>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_rs14k26/Total_das_mortes_registadas">
+        <label>Total das mortes registadas</label>
+        <hint>Todas as mortes notificadas no livro independentemente da causa</hint>
+      </input>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_rs14k26/Total_de_morte_infantil">
+        <label>Total de morte infantil</label>
+        <hint>Referem-se a todas as mortes das crianças antes de completar 1 ano de vida</hint>
+      </input>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_rs14k26/Total_de_morte_neonatais">
+        <label>Total de morte neonatais</label>
+        <hint>Morte de um neonato antes de 28 dias de vida completos</hint>
+      </input>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_rs14k26/Total_de_morte_materna">
+        <label>Total de morte materna</label>
+        <hint>Morte durante a gravidez ou no prazo de 40 dias pós-parto</hint>
+      </input>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_rs14k26/Numero_de_bitos_por_trauma">
+        <label>Número de óbitos por trauma</label>
+        <hint>Casos que perderam a vida por consequência de trauma</hint>
+      </input>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_rs14k26/Causas_morte_plataforma_SISCOV">
+        <label>Causas da morte (plataforma SISCOVE)</label>
+      </input>
+      <input ref="/aEw6eXnJptPMjwvEq4VUkg/group_rs14k26/Aut_psia_verbal_plataforma_SISCOVE">
+        <label>Autópsia verbal (plataforma SISCOVE)</label>
+      </input>
+    </group>
+    <select1 ref="/aEw6eXnJptPMjwvEq4VUkg/Registou_uma_falha_no_envio_an">
+      <label>Registou uma falha no envio anterior?</label>
+      <item>
+        <label>Sim</label>
+        <value>sim</value>
+      </item>
+      <item>
+        <label>Não </label>
+        <value>n_o</value>
+      </item>
+    </select1>
+    <select1 ref="/aEw6eXnJptPMjwvEq4VUkg/Nota_de_Corre_o">
+      <label>Nota de Correção</label>
+      <hint>Caso seja segunda emissão de correção anterriormente enviiada ao servidor selecione a opção abaixo.</hint>
+      <item>
+        <label>999 </label>
+        <value>999</value>
+      </item>
+    </select1>
+  </h:body>
+</h:html>

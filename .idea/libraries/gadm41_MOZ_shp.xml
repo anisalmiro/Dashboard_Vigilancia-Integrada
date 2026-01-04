@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="gadm41_MOZ_shp">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/shape/gadm41_MOZ_shp.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -8,55 +8,47 @@ cli::cli_alert_info("Combinando base de dado Vig e ambiental para analises")
 BD_VH_VC_VA_Intermidiaria<-full_join(BD_VH_VC_Preliminar,vigilancia_ambiental)
 
 
-cli::cli_alert_success("Exportando Bases de Dados para DashBoard")
+cli::cli_alert_info("Exportando Bases de Dados para DashBoard")
 #Exportando Bases de dados para DashBoard
-cli::cli_alert_success("Exportando Base Hospitalar")
+cli::cli_alert_info("Exportando Base Hospitalar")
 write.csv(vigilancia_hospitalar, file = file.path(dir_preliminar, "Base_Vigilancia_Hospitalar.csv"),
           row.names = FALSE, fileEncoding = "UTF-8")
 
-cli::cli_alert_success("Exportando Bases Laboratorial")
+cli::cli_alert_info("Exportando Bases Laboratorial")
 write.csv(vig_laboratorial, file = file.path(dir_preliminar, "Base_Laboratorio.csv"),
           row.names = FALSE, fileEncoding = "UTF-8")
 
-cli::cli_alert_success("Exportando Base Comunitario")
+cli::cli_alert_info("Exportando Base Comunitario")
 write.csv(vigilancia_comunitaria, file = file.path(dir_preliminar, "Base_Comunitario.csv"),
           row.names = FALSE, fileEncoding = "UTF-8")
 
-cli::cli_alert_success("Exportando Base Ambiental")
+cli::cli_alert_info("Exportando Base Ambiental")
 write.csv(vigilancia_ambiental, file = file.path(dir_dashboard, "Base_Ambiental.csv"),
           row.names = FALSE, fileEncoding = "UTF-8")
 
-cli::cli_alert_success("Exportando Base Resultados")
+cli::cli_alert_info("Exportando Base Resultados")
 write.csv(resultado_testagem, file = file.path(dir_dashboard, "Base_Resultados.csv"),
           row.names = FALSE, fileEncoding = "UTF-8")
 
 
-cli::cli_alert_success("Exportando Base Combinada Hospitalar e Comunitaria")
+cli::cli_alert_info("Exportando Base Combinada Hospitalar e Comunitaria")
 write.csv(BD_VH_VC_Preliminar, file = file.path(dir_dashboard, "BD_VH_VC_Preliminar.csv"),row.names = FALSE, fileEncoding = "UTF-8")
 
 
-cli::cli_alert_success("Exportando Base intermidiaria para resultados")
+cli::cli_alert_info("Exportando Base intermidiaria para resultados")
 write.csv(BD_VH_VC_VA_Intermidiaria, file = file.path(dir_dashboard, "BD_VH_VC_VA_Intermidiate.csv"),row.names = FALSE, fileEncoding = "UTF-8")
 
 
-cli::cli_alert_info("Espoertando Base de Dados da Genomica combinada")
 
-cli::cli_alert_success("Exportando Base de Dados para GENOMICA de SARS-CoV-2")
+cli::cli_alert_info("Exportando Base de dados de Colera")
+write.csv(B_geral_Colera, file = file.path(dir_dashboard, "B_geral_Colera.csv"),row.names = FALSE, fileEncoding = "UTF-8")
 
-write.csv(gen_sarscov2, file = file.path(dir_dashboard, "Base_Genomica_SARS-CoV-2.csv"),
-          row.names = FALSE, fileEncoding = "UTF-8")
-
-cli::cli_alert_success("Exportando Base de Dados para GENOMICA de INFLUENZA")
-write.csv(gen_influenza, file = file.path(dir_dashboard, "Base_Genomica_Influenza.csv"),
-          row.names = FALSE, fileEncoding = "UTF-8")
-
-cli::cli_alert_success("Exportando Base de Dados para GENOMICA de SARS-CoV-2 em Esgoto")
-write.csv(gen_ww_sarscov2, file = file.path(dir_dashboard, "Base_Genomica_SARS-CoV-2_Esgoto.csv"),
-          row.names = FALSE, fileEncoding = "UTF-8")
-
-cli::cli_alert_success("Exportando Base de Dados para GENOMICA de INFLUENZA em Esgoto")
-write.csv(gen_ww_influenza, file = file.path(dir_dashboard, "Base_Genomica_Influenza_Esgoto.csv"),
-          row.names = FALSE, fileEncoding = "UTF-8")
+#Exportar base combinada de resultados com as tres vigilancias
 
 
+cli::cli_alert_info("Exportando Base de de resultados das vigilancia combinada as tres vigilancias H,C e Ambiental")
+write.csv(B_geral_HCA_R, file = file.path(dir_dashboard, "B_geral_HCA_R.csv"),row.names = FALSE, fileEncoding = "UTF-8")
 
+
+cli::cli_alert_success("Bases de Dados para monitoria exportada com sucesso!")
+#exportar base de colera 

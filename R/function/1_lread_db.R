@@ -73,25 +73,9 @@ cli::cli_alert_success("Lida com Sucesso a base da dos Resultados das Vigilancia
 
 
 
+#Carregando base da Genomica no directorio R/Dashboard/BD_GENOMICA_LINED.csv
+cli::cli_alert_success("Carregando bases de dados da Genomica")
+BD_genomica_lined <- read.csv("R/Dashboard/BD_GENOMICA_LINED.csv")
 
-
-gen_sarscov2 <- read_excel_raw("SARS-Flu_Geno.xlsx",
-                               sheet = "IDS-SARS-CoV-2  (data)")
-
-gen_influenza <- read_excel_raw("SARS-Flu_Geno.xlsx",
-                                sheet = "IDS-Flu (data)")
-
-gen_ww_sarscov2 <- read_excel_raw("SARS-Flu_Geno.xlsx",
-                                  sheet = "IDS-Wastewater-SARS-CoV-2")
-
-gen_ww_influenza <- read_excel_raw("SARS-Flu_Geno.xlsx",
-                                   sheet = "IDS-Wastewater-Influenza")
-
-bd_genomica_sars  <- read_csv_raw("dados_sars-cov-2.csv")
-bd_genomica_influ <- read_csv_raw("dados_influenza.csv")
-
-#list.files(dir_raw)
-
-excel_sheets(file.path(dir_raw, "SARS-Flu_Geno.xlsx"))
 
 cli::cli_alert_success("Bases de dados carregadas com sucesso")

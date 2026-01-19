@@ -7,12 +7,12 @@
   "hasBeenPulled" : true,
   "cursor" : {
     "type" : "aggregate",
-    "value" : "<cursor xmlns=\"http://www.opendatakit.org/cursor\"><attributeName>_LAST_UPDATE_DATE</attributeName><attributeValue>2025-12-23T14:12:15.333+01:00</attributeValue><uriLastReturnedValue>uuid:d6a81f50-1d83-4a1e-a1a3-7d2e4483fab0</uriLastReturnedValue><isForwardCursor>true</isForwardCursor></cursor>"
+    "value" : "<cursor xmlns=\"http://www.opendatakit.org/cursor\"><attributeName>_LAST_UPDATE_DATE</attributeName><attributeValue>2026-01-12T16:12:06.162+01:00</attributeValue><uriLastReturnedValue>uuid:0ff13ebc-8eeb-4809-97e1-cd417eb783c7</uriLastReturnedValue><isForwardCursor>true</isForwardCursor></cursor>"
   },
   "lastExportedSubmission" : {
-    "instanceId" : "uuid:d6a81f50-1d83-4a1e-a1a3-7d2e4483fab0",
-    "submissionDate" : "2025-12-23T14:12:15.326+01:00",
-    "exportDateTime" : "2025-12-30T01:50:55.244+02:00"
+    "instanceId" : "uuid:0ff13ebc-8eeb-4809-97e1-cd417eb783c7",
+    "submissionDate" : "2026-01-12T16:12:06.156+01:00",
+    "exportDateTime" : "2026-01-13T11:05:12.458+02:00"
   },
   "submissionVersions" : [ "12", "1", "13" ]
 }

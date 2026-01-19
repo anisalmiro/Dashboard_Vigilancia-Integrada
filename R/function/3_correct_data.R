@@ -78,7 +78,7 @@ vigilancia_hospitalar <- vigilancia_hospitalar %>%
 
 cli::cli_alert_success("Correcao do ID da AMOSTRA")
 
-
+#Limpeza na base de Resultados de Vigilancia
 cli::cli_alert_success("Limpeza da base de resultados")
 #BASE DE RESULTADOS
 resultado_testagem<- resultado_testagem %>% 
@@ -92,6 +92,11 @@ resultado_testagem<- resultado_testagem %>%
     `meta:instanceID` == "uuid:7f3d641e-1d39-4043-baae-0f9dba17236f" ~ "IDS0100002",
     `meta:instanceID` == "uuid:88cb5eec-5971-49be-bda4-c659346f6849" ~ "IDS0100332",
     `meta:instanceID` == "uuid:f56e2a2d-5a29-4de3-98d2-4a68bf6360eb" ~ "IDS0100145_1",
+    `meta:instanceID` == "uuid:dfb9d61d-7c9a-4bef-b7c8-bac0f1a8adb8" ~ "IDST100163",
+    `meta:instanceID` == "uuid:3aa454a9-fc52-4113-9f27-1996f3a0c091" ~ "IDST100162_1",
+    `meta:instanceID` == "uuid:da3069d7-0881-4ade-a68d-0d09717b7d0f" ~ "IDS0200003_1",
+    `meta:instanceID` == "uuid:abc21b3b-e98d-4c09-b43a-d4a1e1afba95" ~ "IDS0200001_1",
+    `meta:instanceID` == "uuid:868c3a31-0f6f-4211-971f-f73995af9f3f" ~ "IDS0200002_1",
 
      
     TRUE ~ `detalhes:codido_do_teste2`  # mantém os valores originais se não corresponder
@@ -100,7 +105,7 @@ resultado_testagem<- resultado_testagem %>%
 
 
 
-
+#Limpeza na base de Vigilancia Hospitalar
 cli::cli_alert_info("Limpeza da base hospitalar")
 #VIGILANCIA HOSPITALAR
 vigilancia_hospitalar<- vigilancia_hospitalar %>% 
@@ -119,6 +124,14 @@ vigilancia_hospitalar<- vigilancia_hospitalar %>%
     `meta:instanceID` == "uuid:b0354815-4dfd-421a-9bcf-1d732b6df753" ~ "IDS0100953",
     `meta:instanceID` == "uuid:8272d00d-319c-4d15-b4f9-41231a611cab" ~ "IDST100009",
     `meta:instanceID` == "uuid:606164d6-8e2f-4900-9b2d-a7a5fa7ca2a4" ~ "IDS0200215",
+    `meta:instanceID` == "uuid:8272d00d-319c-4d15-b4f9-41231a611cab" ~ "IDST100009",
+    `meta:instanceID` == "uuid:9d5fe6de-ae4e-48b6-923b-e10232859dd3" ~ "IDST100036",
+    `meta:instanceID` == "uuid:148386f7-e6b5-47c5-92cc-b690436db754" ~ "IDST100073_1",
+    `meta:instanceID` == "uuid:19e06eff-90f5-4f9d-a018-812dd7082360" ~ "IDST100107",
+    `meta:instanceID` == "uuid:b0bd66db-68d5-4eb8-b5e2-f90bd49f81be" ~ "IDST100108",
+    `meta:instanceID` == "uuid:dd85f66d-b9ea-4fda-8cb2-d83b7e9db807" ~ "IDST100132",
+    `meta:instanceID` == "uuid:7458c3fc-1d1d-408d-a28b-9792e590bcbb" ~ "IDST100181",
+    `meta:instanceID` == "uuid:5e78f7e8-fe98-453e-9bc3-2ec5be0f5995" ~ "IDST100188_1",
     
     TRUE ~ `Dados_demograficos:codigo_paciente`  # mantém os valores originais se não corresponder
   ))
@@ -141,9 +154,48 @@ vig_laboratorial <- vig_laboratorial %>%
     `meta:instanceID` == "uuid:a1321aa3-bb82-4821-a775-b1931c498f8e" ~ "IDS0100065",
     `meta:instanceID` == "uuid:c9185d9b-8d69-4773-bc18-0b3c63c44915" ~ "IDS0100092",
     `meta:instanceID` == "uuid:adb09246-30b0-4331-b345-e9f550aa2640" ~ "IDS0100091",
+    `meta:instanceID` == "uuid:f19523a3-0d77-40c0-b27e-2a38fc3d30da" ~ "IDST100057",
+    `meta:instanceID` == "uuid:b4fe03cf-82fe-4f40-a086-6cae09c9450b" ~  "IDST100056",
+    `meta:instanceID` == "uuid:206f563b-9bb3-4a45-980b-8b5e80f5d399" ~  "IDST100110",
+    `meta:instanceID` == "uuid:43c7addd-fc2c-4efd-b3db-b15f19ef9bfd" ~  "IDST100156",
+    `meta:instanceID` == "uuid:acb6ddf9-89ad-4f35-831a-e36bac986c57" ~  "IDST100123",
+    
+    
     
     TRUE ~ `Dados_demograficos:cod_amostra_iras`
   ))
+
+#para variavel Dados_demograficos:codigo_amostra_colera
+
+
+
+vig_laboratorial <- vig_laboratorial %>% 
+  mutate(`Dados_demograficos:codigo_amostra_colera` = case_when(
+    `meta:instanceID` == "uuid:ffd1d46f-5cea-4fa1-a418-5ff290e08128" ~ "IDS0100011",
+    `meta:instanceID` == "uuid:aecb799c-6af5-469b-9c68-f17665efe73e" ~ "IDS0100039",
+    `meta:instanceID` == "uuid:ee7634a2-b0ed-4ca4-a5f9-6e6fc576a1dd" ~ "IDS0100063",
+    `meta:instanceID` == "uuid:a1321aa3-bb82-4821-a775-b1931c498f8e" ~ "IDS0100065",
+    `meta:instanceID` == "uuid:adb09246-30b0-4331-b345-e9f550aa2640" ~ "IDS0100091",
+    `meta:instanceID` == "uuid:c9185d9b-8d69-4773-bc18-0b3c63c44915" ~ "IDS0100092",
+    `meta:instanceID` == "uuid:046f6b08-ea0c-4904-9d3c-32543fdc9e08" ~ "IDS0100148",
+    `meta:instanceID` == "uuid:ffd1d46f-5cea-4fa1-a418-5ff290e08128" ~ "IDS0100011",
+    `meta:instanceID` == "uuid:aecb799c-6af5-469b-9c68-f17665efe73e" ~ "IDS0100039",
+    `meta:instanceID` == "uuid:ee7634a2-b0ed-4ca4-a5f9-6e6fc576a1dd" ~ "IDS0100063",
+    `meta:instanceID` == "uuid:a1321aa3-bb82-4821-a775-b1931c498f8e" ~ "IDS0100065",
+    `meta:instanceID` == "uuid:c9185d9b-8d69-4773-bc18-0b3c63c44915" ~ "IDS0100092",
+    `meta:instanceID` == "uuid:adb09246-30b0-4331-b345-e9f550aa2640" ~ "IDS0100091",
+    `meta:instanceID` == "uuid:f19523a3-0d77-40c0-b27e-2a38fc3d30da" ~ "IDST100057",
+    `meta:instanceID` == "uuid:b4fe03cf-82fe-4f40-a086-6cae09c9450b" ~  "IDST100056",
+    `meta:instanceID` == "uuid:206f563b-9bb3-4a45-980b-8b5e80f5d399" ~  "IDST100110",
+    `meta:instanceID` == "uuid:43c7addd-fc2c-4efd-b3db-b15f19ef9bfd" ~  "IDST100156",
+    `meta:instanceID` == "uuid:acb6ddf9-89ad-4f35-831a-e36bac986c57" ~  "IDST100123",
+    
+    
+    
+    TRUE ~ `Dados_demograficos:codigo_amostra_colera`
+  ))
+
+
 
 
 #view(vigilancia_hospitalar %>% filter(vigilancia_hospitalar$`Dados_demograficos:codigo_paciente`=='57421186'))
@@ -279,13 +331,13 @@ vigilancia_ambiental <- vigilancia_ambiental %>%
 
 
 
-cli::cli_alert_success("Filtrando a base de Genomica SARS-CoV-2 para IDS")
-gen_sarscov2 <- gen_sarscov2 %>%
-  filter(substr(`IDS ID`, 1, 3) == "IDS")
+#cli::cli_alert_success("Filtrando a base de Genomica SARS-CoV-2 para IDS")
+#gen_sarscov2 <- gen_sarscov2 %>%
+#  filter(substr(`IDS ID`, 1, 3) == "IDS")
 
-cli::cli_alert_success("Filtrando a base de Genomica influenza para IDS")
-gen_influenza <- gen_influenza %>%
-  filter(substr(`IDS ID`, 1, 3) == "IDS")
+#cli::cli_alert_success("Filtrando a base de Genomica influenza para IDS")
+#gen_influenza <- gen_influenza %>%
+#  filter(substr(`IDS ID`, 1, 3) == "IDS")
 
 
 cli::cli_alert_info("Limpeza da Unidade Subtipo A e B")
@@ -303,5 +355,24 @@ resultado_testagem$`TIFOIDE:Subtipo_de_Influenza_B` <- plyr::revalue(
     "b_yamagata" = "Yamagata"),
   warn_missing = FALSE
 )
+
+
+
+#corregir para caracter a variavel nota111:FRE_RESPIRATORIA na vigilancia comunitaria e hospitalar
+vigilancia_comunitaria$`nota111:FRE_RESPIRATORIA` <- as.character(vigilancia_comunitaria$`nota111:FRE_RESPIRATORIA`)
+vigilancia_hospitalar$`nota111:FRE_RESPIRATORIA` <- as.character(vigilancia_hospitalar$`nota111:FRE_RESPIRATORIA`)
+
+#corregir para integer a variavel nota111:TEMPERATURA na vigilancia comunitaria e hospitalar
+#vigilancia_comunitaria$`nota111:TEMPERATURA` <- as.integer(vigilancia_comunitaria$`nota111:TEMPERATURA`)
+#vigilancia_hospitalar$`nota111:TEMPERATURA` <- as.integer(vigilancia_hospitalar$`nota111:TEMPERATURA`)
+
+#corregir para caracter a variavel nota111:TOSSE na vigilancia comunitaria e hospitalar
+#vigilancia_comunitaria$`nota111:TOSSE` <- as.character(vigilancia_comunitaria$`nota111:TOSSE`)
+#vigilancia_hospitalar$`nota111:TOSSE` <- as.character(vigilancia_hospitalar$`nota111:TOSSE`)
+
+#corregir para caracter a variavel  nota111:Frequencia_cardiaca na base vigilancia hospitalar e comunitaria
+vigilancia_comunitaria$`nota111:Frequencia_cardiaca` <- as.character(vigilancia_comunitaria$`nota111:Frequencia_cardiaca`)
+vigilancia_hospitalar$`nota111:Frequencia_cardiaca` <- as.character(vigilancia_hospitalar$`nota111:Frequencia_cardiaca`)  
+
 
 

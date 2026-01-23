@@ -1,0 +1,74 @@
+source("renv/activate.R")
+
+# ==========================================================
+# Autor: Anisio Bule
+# Fonte: http://shiny.rstudio.com/
+# Descrição: Configuração inicial e carregamento de pacotes
+# ==========================================================
+
+# Definir local e opções
+Sys.setlocale("LC_ALL", "Portuguese")
+options(scipen = 100, digits = 2)
+
+# Lista de bibliotecas necessárias
+libraries <- c(
+  # Manipulação e limpeza de dados
+  "dplyr", "tidyr", "stringr", "forcats", "janitor", "lubridate", "zoo",
+  
+  # Visualização
+  "ggplot2", "cowplot", "plotly", "scales", "esquisse",
+  
+  # Importação/exportação e utilitários
+  "rio", "cli", "glue", "here",
+  
+  # Geoespacial
+  "sf",
+  
+  # Conexão e publicação
+  "rsconnect",
+  
+  # Conjunto tidyverse
+  "tidyverse", "stringr"
+)
+
+#install.packages("readxl")
+library("readxl")
+library("writexl")
+library(here)
+#install.packages("openxlsx")
+library(openxlsx)
+
+if (!requireNamespace("pacman", quietly = TRUE)) install.packages("pacman")
+pacman::p_load(readr, ggplot2, scales, forcats)
+
+
+# Instalar pacotes que não estão instalados
+installed <- rownames(installed.packages())
+to_install <- setdiff(libraries, installed)
+if (length(to_install) > 0) install.packages(to_install, dependencies = TRUE)
+
+# Carregar todas as bibliotecas
+lapply(libraries, library, character.only = TRUE)
+
+# Limpar mensagens de carregamento
+invisible(gc())
+
+#load packages ----------------------------------------------------------------
+cli::cli_alert_info("Se tiver erros de Leitura de Bibliotecas, Instale-os ou faca um restart do ser R")
+
+cli::cli_alert_success("Iniciando Dashboar - carregamento de directorios e BD")
+
+
+#DEFININDO Directorios
+dir_raw <- "raw"
+dir_data <- "data_raw"
+charts_dir <- "charts"
+dir_R <- "R"
+
+#dir for get/pull/save
+dir_dashboard <- file.path(dir_R, "Dashboard")
+dir_function <- file.path(dir_R, 'function')
+dir_preliminar <- file.path(dir_R, 'Preliminar')
+dir_intermediaria <- file.path(dir_R, 'Intermediaria')
+
+

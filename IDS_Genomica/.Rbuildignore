@@ -1,0 +1,7 @@
+^renv$
+^renv\.lock$
+^vignettes$
+^.*\.Rmd$
+^.*\.qmd$
+^quarto\.yml$
+^_quarto\.yml$

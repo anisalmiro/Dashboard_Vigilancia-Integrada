@@ -3,11 +3,12 @@
 # Autor: Gerado por ChatGPT (Anisio Bule - adaptação)
 # ------------------------------------------------------------------
 
+
+
 # libraries
 library(shiny)
 library(shinydashboard)
 library(shinycssloaders)
-library(DT)
 library(htmltools)
 library(htmlwidgets)
 library(shinythemes)
@@ -17,10 +18,8 @@ library(reactable)
 library(reactablefmtr)
 library(highcharter)
 library(rpivotTable)
-library(DBI)
 library(googleVis)
 library(plotly)
-library(readxl)
 library(stringr)
 library(ggplot2)
 library(plyr)
@@ -30,9 +29,14 @@ library(tidyr)
 library(here)
 library(lubridate)
 library(fontawesome)
+library(rsconnect) 
+library(sf)
+library(leaflet)
 
 
-
+rsconnect::deployApp(
+  appFiles = c("app.R", "www/","data")
+)
 
 
 # Instalar rdrop2 a partir do GitHub
@@ -45,8 +49,9 @@ options(encoding = "UTF-8")
 
 # ---------------- Carregar bases locais (se já baixadas) --------------
 
-load(file = 'data/DB_Dashboard/B_geral.rda')        # B_geral_HCA_R
+load(file = 'data/DB_Dashboard/B_HCAR.rda')        # B_geral_HCA_R
 load(file = 'data/DB_Dashboard/BD_Genomica_Final.rda')  # BD_Final_VH_R
+load(file = 'data/DB_Dashboard/mapa_dados_influenza_sarsc.rda')  # BD_genomica_lined
 
 
 ultima_data_reporte <- B_geral_HCA_R %>%
@@ -81,8 +86,7 @@ ui_inner <- dashboardPage(
     sidebarMenu(
       id = "sidebar",
       menuItem("Sindrome Respiratorio", tabName = "sfb", icon = icon("lungs-virus")),
-      menuItem("Síndrome Diarreica", tabName = "diarrheaT", icon = icon("disease")),
-      menuItem("Sobre", tabName = "sobre", icon = icon("info-circle"))
+      menuItem("Síndrome Diarreica", tabName = "diarrheaT", icon = icon("disease"))
     )
   ),
   dashboardBody(
@@ -118,16 +122,36 @@ ui_inner <- dashboardPage(
       tabItem(tabName = "sfb",
               
               tabBox(width = 12, id = "dashboard_tabs",
-                     
+                     fluidRow(
+                       column(width = 3,
+                              p(strong("Última atualização:")),
+                              p(as.character(ultima_data))
+                       )),
+                  
                      # ---- Tab 1: Indicadores e Filtros ----
-                     tabPanel("Indicadores",
+                     tabPanel("Positividade",
+                              # ---- Tab 1: Indicadores e Filtros ----
                               fluidRow(
-                                column(width = 3,
-                                       p(strong("Última atualização:")),
-                                       p(as.character(ultima_data))
-                                )),
-                             
-                        
+                                box(
+                                  width = 12,
+                                  title = "Alertas",
+                                  status = "danger",
+                                  solidHeader = TRUE,
+                                  column(width = 12,
+                                         
+                                         column(
+                                           width = 3,
+                                           valueBoxOutput("alert_sars", width = 6),
+                                           valueBoxOutput("alert_inf", width = 6)
+                                         ),
+                                         
+                                         br(),
+                                         
+                                         highchartOutput("tend_alerta", height = "300px")
+                                         
+                                  )
+                                )
+                              ),
                               
                               fluidRow(
                                 box(width = 12, status = "primary", solidHeader = TRUE,
@@ -205,7 +229,7 @@ ui_inner <- dashboardPage(
                               )
                      ),
                      
-                     tabPanel("Maps",
+                     tabPanel("Mapas",
                               div(style="
                            background-color:#005c99;color:white;padding:12px;
                            margin-bottom:15px;border-radius:6px;font-weight:bold;font-size:20px;",
@@ -215,7 +239,12 @@ ui_inner <- dashboardPage(
                               fluidRow(
                                 column(width = 12,
                                        box( width = 12,
-                                           highchartOutput("influmap", height = "500px"))
+                                            leafletOutput(
+                                              outputId = "mapa_influenza",
+                                              height = "700px"
+                                            )
+                                          
+                                            )
                                     
                                 )
                               ),
@@ -228,7 +257,11 @@ ui_inner <- dashboardPage(
                                 column(width = 12,
                                        
                                        box( width = 12,
-                                           highchartOutput("sarscmap", height = "500px"))
+                                           
+                                            leafletOutput(
+                                              outputId = "mapa_sarscov2",
+                                              height = "700px"
+                                            ))
                                 )
                               )
                      )
@@ -257,55 +290,17 @@ ui_inner <- dashboardPage(
                    )
                  )
                )
-      ),
-      
-      
-      tabItem(tabName = "sobre",
-              fluidRow(
-                box(width = 6, title = "Sobre este Dashboard", status = "info", solidHeader = TRUE,
-                    p("Dashboard de Monitoria das Vigilâncias Hospitalar, Comunitária e Ambiental - INS"),
-                    p("Desenvolvido para visualização e análise rápida de dados de vigilância.")
-                )
-              ),
-              fluidRow(
-                box(width = 12, title = "Informações Gerais / Links", status = "success", solidHeader = TRUE,
-                    tags$a(href = "https://ins.gov.mz/", "INS - site oficial", target = "_blank"),
-                    br()
-                )
-              )
       )
-    ),
-    # tabItems end
-    
-    
-    
-    tags$footer(
-      div(style = "text-align:center; padding:10px;",
-          "Instituto Nacional de Saúde - Todos Direitos Reservados - DATICGD")
     )
   )
-) # end dashboardPage
+) 
 
-# Wrap UI with secure_app (mantendo compatibilidade com seu código)
-
-# Customização do cabeçalho de login
-#ui <- secure_app(ui_inner,
-#                 # customização do cabeçalho de login opcional
-#                 theme = shinythemes::shinytheme("flatly"),
-##                 tags_top = tags$div(
-#                   style = "text-align:center; padding:20px;",
-#                   tags$img(src = "INS.png", width = "120px"),
-#                   tags$h3("INS - Instituto Nacional de Saúde", style = "margin-top:10px; font-weight:bold; color:#003366;")
-#                 )
-#                 
-#)
 ui <- ui_inner
 
 # ---------------- SERVER ---------------------------------------------
 server <- function(input, output, session) {
  # base positividade
 
-  
   #====================#
   output$tend_casos_positivos_inf <- renderPlot({
     
@@ -827,6 +822,8 @@ server <- function(input, output, session) {
   })
   
   
+  #Sars-Cov2 comunitária
+  
   output$graf_sars_Cov2_comunitaria <- renderHighchart({
     
     df <- BD_genomica_lined %>%
@@ -891,6 +888,9 @@ server <- function(input, output, session) {
   })
   
   
+  
+  #######_---------------------------------- GRAFICOSARS-COV2 AMBIENTAL ----------------------------------
+  
   output$graf_sars_Cov2_ambiental <- renderHighchart({
     
     df <- BD_genomica_lined %>%
@@ -949,9 +949,538 @@ server <- function(input, output, session) {
                  pointFormat = "<b>{series.name}</b>: {point.y:.1f}%<br/>") %>%
       hc_exporting(enabled = TRUE)
   })
+  
+  
+  
+  # Função para calcular centróides ou pontos dentro do polígono
+  get_centroids <- function(sf_data, method = c("centroid", "point_on_surface")) {
+    method <- match.arg(method)
+    
+    if(method == "centroid") {
+      return(st_centroid(sf_data))
+    } else if(method == "point_on_surface") {
+      return(st_point_on_surface(sf_data))
+    }
+  }
+  
+  
+  ########## --------- Grafico de mapa de influenza -------------
+  
+  # Render do mapa
+  output$mapa_influenza <- renderLeaflet({
+    
+    # =========================================================
+    # 1. PREPARAÇÃO DOS DADOS
+    # =========================================================
+    mapa_dados2 <- mapa_dados %>%
+      mutate(
+        classe_testados = ifelse(
+          classe_testados %in% c("0", "0 testados"),
+          NA,
+          classe_testados
+        )
+      )
+    
+    # =========================================================
+    # 2. CENTRÓIDES
+    # =========================================================
+    centroides_pos <- get_centroids(
+      mapa_dados2,
+      method = "point_on_surface"
+    ) %>%
+      filter(!is.na(positivos_influenza) & positivos_influenza > 0)
+    
+    centroides_labels <- get_centroids(
+      mapa_dados2,
+      method = "point_on_surface"
+    )
+    
+    # =========================================================
+    # 3. PALETA DE CORES – TESTADOS (POLÍGONOS)
+    # =========================================================
+    pal_testados <- colorFactor(
+      palette = c(
+        "01 - 25"  = "#f2e6f5",
+        "26 - 50" = "#d7a1b0",
+        "51 - 75" = "#a25364",
+        "> 75"    = "#6b0000"
+      ),
+      levels = c("01 - 25", "26 - 50", "51 - 75", "> 75"),
+      domain = mapa_dados2$classe_testados,
+      na.color = "#f0f0f0"
+    )
+    
+    # =========================================================
+    # 4. FUNÇÃO PARA TAMANHO DOS PONTOS (POSITIVOS)
+    # =========================================================
+    raio_pos <- function(x) {
+      dplyr::case_when(
+        x < 05   ~ 04,
+        x < 15  ~ 06,
+        x < 30  ~ 08,
+        TRUE    ~ 11
+      )
+    }
+    
+    # =========================================================
+    # 5. MAPA LEAFLET
+    # =========================================================
+    leaflet(options = leafletOptions(preferCanvas = TRUE)) %>%
+      addProviderTiles(providers$CartoDB.Positron) %>%
+      
+      # ---------------------------------------------------------
+    # POLÍGONOS – TESTADOS
+    # ---------------------------------------------------------
+    addPolygons(
+      data = mapa_dados2,
+      fillColor = ~pal_testados(classe_testados),
+      fillOpacity = 0.75,
+      color = "grey40",
+      weight = 0.6,
+      label = ~paste0(
+        "<b>Bairro:</b> ", bairro_geo, "<br>",
+        "<b>Classe de testados:</b> ",
+        ifelse(is.na(classe_testados), "Sem dados", classe_testados)
+      ),
+      highlightOptions = highlightOptions(
+        weight = 2,
+        color = "#000000",
+        fillOpacity = 0.9,
+        bringToFront = TRUE
+      )
+    ) %>%
+      
+      # ---------------------------------------------------------
+    # LABELS FIXOS – NOMES DOS BAIRROS
+    # ---------------------------------------------------------
+    addLabelOnlyMarkers(
+      data = centroides_labels,
+      label = ~bairro_geo,
+      labelOptions = labelOptions(
+        noHide = TRUE,
+        direction = "center",
+        textOnly = TRUE,
+        style = list(
+          "font-size"   = "10px",
+          "font-weight" = "bold",
+          "color"       = "#2b2b2b",
+          "text-shadow" = "1px 1px 2px white"
+        )
+      )
+    ) %>%
+      
+      # ---------------------------------------------------------
+    # PONTOS – POSITIVOS INFLUENZA
+    # ---------------------------------------------------------
+    addCircleMarkers(
+      data = centroides_pos,
+      radius = ~raio_pos(positivos_influenza),
+      color = "darkgreen",
+      fillColor = "darkgreen",
+      fillOpacity = 0.85,
+      stroke = FALSE,
+      label = ~paste0(
+        "<b>Bairro:</b> ", bairro_geo, "<br>",
+        "<b>Positivos Influenza:</b> ", positivos_influenza
+      )
+    ) %>%
+      
+      # ---------------------------------------------------------
+    # LEGENDA – TESTADOS
+    # ---------------------------------------------------------
+    addLegend(
+      position = "bottomleft",
+      pal = pal_testados,
+      values = mapa_dados2$classe_testados,
+      title = htmltools::HTML(
+        "<b>Total de testados</b><br>
+         <span style='font-size:11px'>(por bairro)</span>"
+      ),
+      opacity = 1,
+      na.label = "Sem dados"
+    ) %>%
+      
+      # ---------------------------------------------------------
+    # LEGENDA – POSITIVOS INFLUENZA
+    # ---------------------------------------------------------
+    addLegend(
+      position = "bottomright",
+      colors = rep("darkgreen", 4),
+      labels = c("1–4", "5–14", "15–29", "≥30"),
+      title = htmltools::HTML(
+        "<b>Casos positivos</b><br>
+         <span style='font-size:11px'>Influenza</span>"
+      ),
+      opacity = 0.9
+    )%>%
+      addControl(
+        html = htmltools::HTML("
+      <div style='
+        background: rgba(255,255,255,0.9);
+        padding: 10px 14px;
+        border-radius: 6px;
+        box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+        text-align: center;
+      '>
+        <div style='font-size:16px; font-weight:bold;'>
+          Distribuição Espacial dos Casos de Influenza
+        </div>
+        <div style='font-size:13px; color:#555;'>
+          Cidade e Província de Maputo
+        </div>
+        <div style='font-size:11px; color:#777; margin-top:4px;'>
+          Fonte: IDS
+        </div>
+      </div>
+    "),
+        position = "topright"
+      )
+    
+    
+    
+  })
+  
+  
+  
+  
+  ######## ----------- Gra
 
   
-
+  output$mapa_sarscov2 <- renderLeaflet({
+    
+    # =========================================================
+    # 1. PREPARAÇÃO DOS DADOS
+    # =========================================================
+    mapa_dados2 <- mapa_dados %>%
+      mutate(
+        classe_testados = ifelse(
+          classe_testados %in% c("0", "0 testados"),
+          NA,
+          classe_testados
+        )
+      )
+    
+    # =========================================================
+    # 2. CENTRÓIDES
+    # =========================================================
+    centroides_pos <- get_centroids(mapa_dados2) %>%
+      filter(!is.na(positivos_sarscov2) & positivos_sarscov2 > 0)
+    
+    centroides_labels <- get_centroids(mapa_dados2)
+    
+    # =========================================================
+    # 3. PALETA DE CORES – TESTADOS (POLÍGONOS)
+    # =========================================================
+    pal_testados <- colorFactor(
+      palette = c(
+        "01 - 25"  = "#edf8e9",
+        "26 - 50" = "#bae4b3",
+        "51 - 75" = "#74c476",
+        "> 75"    = "#238b45"
+      ),
+      levels = c("01 - 25", "26 - 50", "51 - 75", "> 75"),
+      domain = mapa_dados2$classe_testados,
+      na.color = "#f0f0f0"
+    )
+    
+    # =========================================================
+    # 4. FUNÇÃO PARA RAIO DOS POSITIVOS
+    # =========================================================
+    raio_pos <- function(x) {
+      dplyr::case_when(
+        x < 05   ~ 04,
+        x < 10  ~ 06,
+        x < 25  ~ 08,
+        x < 50  ~ 10,
+        TRUE    ~ 12
+      )
+    }
+    
+    # =========================================================
+    # 5. MAPA LEAFLET
+    # =========================================================
+    leaflet(options = leafletOptions(preferCanvas = TRUE)) %>%
+      addProviderTiles(providers$CartoDB.Positron) %>%
+      
+      # ---------------------------------------------------------
+    # POLÍGONOS – TESTADOS
+    # ---------------------------------------------------------
+    addPolygons(
+      data = mapa_dados2,
+      fillColor = ~pal_testados(classe_testados),
+      fillOpacity = 0.75,
+      color = "#525252",
+      weight = 0.6,
+      label = ~paste0(
+        "<b>Bairro:</b> ", bairro_geo, "<br>",
+        "<b>Classe de testados:</b> ",
+        ifelse(is.na(classe_testados), "Sem dados", classe_testados)
+      ),
+      highlightOptions = highlightOptions(
+        weight = 2,
+        color = "#000000",
+        fillOpacity = 0.9,
+        bringToFront = TRUE
+      )
+    ) %>%
+      
+      # ---------------------------------------------------------
+    # LABELS FIXOS – NOMES DOS BAIRROS
+    # ---------------------------------------------------------
+    addLabelOnlyMarkers(
+      data = centroides_labels,
+      label = ~bairro_geo,
+      labelOptions = labelOptions(
+        noHide = TRUE,
+        direction = "center",
+        textOnly = TRUE,
+        style = list(
+          "font-size"   = "10px",
+          "font-weight" = "bold",
+          "color"       = "#2b2b2b",
+          "text-shadow" = "1px 1px 2px white"
+        )
+      )
+    ) %>%
+      
+      # ---------------------------------------------------------
+    # PONTOS – POSITIVOS SARS-CoV-2
+    # ---------------------------------------------------------
+    addCircleMarkers(
+      data = centroides_pos,
+      radius = ~raio_pos(positivos_sarscov2),
+      color = "#b30000",
+      fillColor = "#b30000",
+      fillOpacity = 0.85,
+      stroke = FALSE,
+      label = ~paste0(
+        "<b>Bairro:</b> ", bairro_geo, "<br>",
+        "<b>Positivos SARS-CoV-2:</b> ", positivos_sarscov2
+      )
+    ) %>%
+      
+      # ---------------------------------------------------------
+    # LEGENDA – TESTADOS
+    # ---------------------------------------------------------
+    addLegend(
+      position = "bottomleft",
+      pal = pal_testados,
+      values = mapa_dados2$classe_testados,
+      title = htmltools::HTML(
+        "<b>Total de testados</b><br>
+         <span style='font-size:11px'>(por bairro)</span>"
+      ),
+      opacity = 1,
+      na.label = "Sem dados"
+    ) %>%
+      
+      
+      # ---------------------------------------------------------
+    # LEGENDA – POSITIVOS
+    # ---------------------------------------------------------
+    addLegend(
+      position = "bottomright",
+      colors = rep("#b30000", 5),
+      labels = c("1–4", "5–9", "10–24", "25–49", "≥50"),
+      title = htmltools::HTML(
+        "<b>Casos positivos</b><br>
+         <span style='font-size:11px'>SARS-CoV-2</span>"
+      ),
+      opacity = 0.9
+    ) %>%
+      addControl(
+        html = htmltools::HTML("
+      <div style='
+        background: rgba(255,255,255,0.9);
+        padding: 10px 14px;
+        border-radius: 6px;
+        box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+        text-align: center;
+      '>
+        <div style='font-size:16px; font-weight:bold;'>
+          Distribuição Espacial dos Casos de SARS-CoV-2
+        </div>
+        <div style='font-size:13px; color:#555;'>
+          Cidade e Província de Maputo
+        </div>
+        <div style='font-size:11px; color:#777; margin-top:4px;'>
+          Fonte: IDS
+        </div>
+      </div>
+    "),
+        position = "topright"
+      )
+    
+  })
+  
+  
+  
+  alertas <- reactiveValues(
+    nivel_sars = NA,
+    tend_sars  = NA,
+    nivel_inf  = NA,
+    tend_inf   = NA
+  )
+  
+  
+  
+  output$tend_alerta <- renderHighchart({
+    
+    # ---------------- PREPARAÇÃO DOS DADOS ----------------
+    df_f <- B_geral_HCA_R %>%
+      dplyr::mutate(
+        DATA2 = suppressWarnings(
+          lubridate::parse_date_time(
+            `Dados_demograficos:DATE2`,
+            orders = c("ymd", "dmy", "mdy", "Ymd", "dmY")
+          )
+        ) %>% as.Date()
+      ) %>%
+      dplyr::filter(!is.na(DATA2)) %>%
+      dplyr::mutate(
+        ano = lubridate::year(DATA2),
+        sem_epi = lubridate::epiweek(DATA2),
+        influenza_pos = ifelse(`TIFOIDE:Resultado_de_Influenza` == "positivo", 1, 0),
+        sarscov2_pos  = ifelse(`group_jz9ln80:SARSCov2` == "positivo", 1, 0)
+      ) %>%
+      dplyr::group_by(ano, sem_epi) %>%
+      dplyr::summarise(
+        total_testados = n(),
+        Influenza = sum(influenza_pos, na.rm = TRUE),
+        SARSCoV2  = sum(sarscov2_pos, na.rm = TRUE),
+        .groups = "drop"
+      ) %>%
+      dplyr::mutate(
+        taxa_influenza = round((Influenza / total_testados) * 100, 1),
+        taxa_sarscov2  = round((SARSCoV2  / total_testados) * 100, 1)
+      ) %>%
+      dplyr::arrange(ano, sem_epi)
+    
+    req(nrow(df_f) >= 2)
+    
+    # ---------------- ALERTAS ----------------
+    ult    <- df_f %>% dplyr::slice_tail(n = 1)
+    penult <- df_f %>% dplyr::slice_tail(n = 2) %>% dplyr::slice(1)
+    
+    media_hist <- df_f %>%
+      dplyr::slice_tail(n = min(52, nrow(df_f))) %>%
+      dplyr::summarise(
+        media_sars = mean(taxa_sarscov2, na.rm = TRUE),
+        media_inf  = mean(taxa_influenza, na.rm = TRUE)
+      )
+    
+    margem <- 0.10
+    
+    nivel_sars <- dplyr::case_when(
+      ult$taxa_sarscov2 > media_hist$media_sars * (1 + margem) ~ "Alto",
+      ult$taxa_sarscov2 < media_hist$media_sars * (1 - margem) ~ "Baixo",
+      TRUE ~ "Médio"
+    )
+    
+    nivel_inf <- dplyr::case_when(
+      ult$taxa_influenza > media_hist$media_inf * (1 + margem) ~ "Alto",
+      ult$taxa_influenza < media_hist$media_inf * (1 - margem) ~ "Baixo",
+      TRUE ~ "Médio"
+    )
+    
+    tend_sars <- ifelse(ult$taxa_sarscov2 > penult$taxa_sarscov2, "Subindo", "Diminuindo")
+    tend_inf  <- ifelse(ult$taxa_influenza > penult$taxa_influenza, "Subindo", "Diminuindo")
+    
+    alertas$nivel_sars <- nivel_sars
+    alertas$tend_sars  <- tend_sars
+    alertas$nivel_inf  <- nivel_inf
+    alertas$tend_inf   <- tend_inf
+    
+    cor_nivel <- function(nivel) {
+      dplyr::case_when(
+        nivel == "Alto"  ~ "#d9534f",
+        nivel == "Médio" ~ "#5bc0de",
+        nivel == "Baixo" ~ "#5cb85c"
+      )
+    }
+    
+    # ---------------- EIXO X ----------------
+    categorias <- paste0("WK ", sprintf("%02d", df_f$sem_epi), "<br>", df_f$ano)
+    
+    # ---------------- GRÁFICO (SEM TESTADOS) ----------------
+    highchart() %>%
+      hc_chart(type = "line", zoomType = "x") %>%
+      hc_title(text = "SARS-CoV-2 e Influenza – Taxa de Positividade (%)") %>%
+      hc_subtitle(
+        useHTML = TRUE,
+        text = paste0(
+          "<b>SARS-CoV-2:</b> <span style='color:", cor_nivel(nivel_sars), "'>",
+          nivel_sars, " – ", tend_sars, "</span> | ",
+          "<b>Influenza:</b> <span style='color:", cor_nivel(nivel_inf), "'>",
+          nivel_inf, " – ", tend_inf, "</span>"
+        )
+      ) %>%
+      hc_xAxis(categories = categorias, labels = list(useHTML = TRUE)) %>%
+      hc_yAxis(
+        title = list(text = "Taxa de Positividade (%)"),
+        min = 0,
+        max = 100
+      ) %>%
+      hc_add_series(
+        name = "Influenza (%)",
+        data = df_f$taxa_influenza,
+        dashStyle = "ShortDot",
+        marker = list(enabled = TRUE)
+      ) %>%
+      hc_add_series(
+        name = "SARS-CoV-2 (%)",
+        data = df_f$taxa_sarscov2,
+        dashStyle = "Dash",
+        marker = list(enabled = TRUE),
+        dataLabels = list(enabled = TRUE)
+      ) %>%
+      hc_tooltip(shared = TRUE, valueSuffix = " %") %>%
+      hc_add_theme(hc_theme_google()) %>%
+      hc_exporting(enabled = TRUE)
+  })
+  
+  
+  
+  output$alert_sars <- renderValueBox({
+    
+    req(alertas$nivel_sars, alertas$tend_sars)
+    
+    cor <- ifelse(
+      alertas$nivel_sars == "Alto", "red",
+      ifelse(alertas$nivel_sars == "Médio", "light-blue", "green")
+    )
+    
+    icon_dir <- ifelse(alertas$tend_sars == "Subindo", "arrow-up", "arrow-down")
+    
+    valueBox(
+      value = alertas$nivel_sars,
+      subtitle = paste("SARS-CoV-2 |", alertas$tend_sars),
+      icon = icon(icon_dir),
+      color = cor
+    )
+  })
+  
+  
+  output$alert_inf <- renderValueBox({
+    
+    req(alertas$nivel_inf, alertas$tend_inf)
+    
+    cor <- ifelse(
+      alertas$nivel_inf == "Alto", "red",
+      ifelse(alertas$nivel_inf == "Médio", "light-blue", "green")
+    )
+    
+    icon_dir <- ifelse(alertas$tend_inf == "Subindo", "arrow-up", "arrow-down")
+    
+    valueBox(
+      value = alertas$nivel_inf,
+      subtitle = paste("Influenza |", alertas$tend_inf),
+      icon = icon(icon_dir),
+      color = cor
+    )
+  })
+  
+  # secao de mapas de positivos e nehativos de influenza por bairos usando a variavel  que compoe os bairros usando a base de dados B_geral_HCA_R
   
 } # end server
 

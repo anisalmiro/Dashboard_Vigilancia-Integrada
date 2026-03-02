@@ -1,0 +1,10 @@
+name: IDS_Genomica
+title: IDS_Genomica
+username: monitoriadashboard
+account: monitoriadashboard
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 16491715
+bundleId: 11639719
+url: https://monitoriadashboard.shinyapps.io/IDS_Genomica/
+version: 1

@@ -1,0 +1,914 @@
+2026-02-27 10:32:36,614 [ForkJoinPool-18-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start pulling form and submissions
+2026-02-27 10:32:36,616 [ForkJoinPool-18-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Recepção da Amostra - Start pulling form and submissions
+2026-02-27 10:32:36,615 [ForkJoinPool-18-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start pulling form and submissions
+2026-02-27 10:32:36,616 [ForkJoinPool-18-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start pulling form and submissions
+2026-02-27 10:32:36,615 [ForkJoinPool-18-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start pulling form and submissions
+2026-02-27 10:32:36,615 [ForkJoinPool-18-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start pulling form and submissions
+2026-02-27 10:32:36,612 [ForkJoinPool-18-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start pulling form and submissions
+2026-02-27 10:32:36,614 [ForkJoinPool-18-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start pulling form and submissions
+2026-02-27 10:32:36,616 [ForkJoinPool-18-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start pulling form and submissions
+2026-02-27 10:32:36,616 [ForkJoinPool-18-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulario da  Componente  Genomica (IDS) - Start pulling form and submissions
+2026-02-27 10:32:36,616 [ForkJoinPool-18-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start pulling form and submissions
+2026-02-27 10:32:36,633 [ForkJoinPool-18-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Recepção da Amostra - Start downloading form
+2026-02-27 10:32:36,632 [ForkJoinPool-18-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start downloading form
+2026-02-27 10:32:36,634 [ForkJoinPool-18-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start downloading form
+2026-02-27 10:32:36,634 [ForkJoinPool-18-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start downloading form
+2026-02-27 10:32:36,635 [ForkJoinPool-18-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start downloading form
+2026-02-27 10:32:36,636 [ForkJoinPool-18-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading form
+2026-02-27 10:32:36,636 [ForkJoinPool-18-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start downloading form
+2026-02-27 10:32:36,634 [ForkJoinPool-18-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulario da  Componente  Genomica (IDS) - Start downloading form
+2026-02-27 10:32:36,639 [ForkJoinPool-18-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start downloading form
+2026-02-27 10:32:36,639 [ForkJoinPool-18-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start downloading form
+2026-02-27 10:32:36,636 [ForkJoinPool-18-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start downloading form
+2026-02-27 10:32:39,002 [ForkJoinPool-18-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Recepção da Amostra - Form downloaded
+2026-02-27 10:32:39,002 [ForkJoinPool-18-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Form downloaded
+2026-02-27 10:32:39,003 [ForkJoinPool-18-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start getting form manifest
+2026-02-27 10:32:39,003 [ForkJoinPool-18-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Recepção da Amostra - Start getting form manifest
+2026-02-27 10:32:39,223 [ForkJoinPool-18-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Form downloaded
+2026-02-27 10:32:39,225 [ForkJoinPool-18-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start getting form manifest
+2026-02-27 10:32:39,260 [ForkJoinPool-18-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Form downloaded
+2026-02-27 10:32:39,262 [ForkJoinPool-18-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start getting submission IDs
+2026-02-27 10:32:39,535 [ForkJoinPool-18-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Got the form manifest
+2026-02-27 10:32:39,535 [ForkJoinPool-18-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Skipping 1 form attachments that have been already downloaded
+2026-02-27 10:32:39,536 [ForkJoinPool-18-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start getting submission IDs
+2026-02-27 10:32:39,774 [ForkJoinPool-18-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulario da  Componente  Genomica (IDS) - Form downloaded
+2026-02-27 10:32:39,774 [ForkJoinPool-18-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulario da  Componente  Genomica (IDS) - Start getting submission IDs
+2026-02-27 10:32:39,791 [ForkJoinPool-18-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Recepção da Amostra - Got the form manifest
+2026-02-27 10:32:39,791 [ForkJoinPool-18-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Recepção da Amostra - Skipping 1 form attachments that have been already downloaded
+2026-02-27 10:32:39,791 [ForkJoinPool-18-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Recepção da Amostra - Start getting submission IDs
+2026-02-27 10:32:40,013 [ForkJoinPool-18-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Got the form manifest
+2026-02-27 10:32:40,015 [ForkJoinPool-18-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Skipping 1 form attachments that have been already downloaded
+2026-02-27 10:32:40,015 [ForkJoinPool-18-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start getting submission IDs
+2026-02-27 10:32:40,059 [ForkJoinPool-18-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Form downloaded
+2026-02-27 10:32:40,059 [ForkJoinPool-18-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start getting form manifest
+2026-02-27 10:32:40,087 [ForkJoinPool-18-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Got all the submission IDs
+2026-02-27 10:32:40,104 [ForkJoinPool-18-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Hospitalar - Laboratório - There are no submissions to download
+2026-02-27 10:32:40,122 [ForkJoinPool-18-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Success
+2026-02-27 10:32:40,122 [ForkJoinPool-18-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Form downloaded
+2026-02-27 10:32:40,122 [ForkJoinPool-18-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start getting form manifest
+2026-02-27 10:32:40,131 [ForkJoinPool-18-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start pulling form and submissions
+2026-02-27 10:32:40,131 [ForkJoinPool-18-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start downloading form
+2026-02-27 10:32:40,272 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 88.365 ms
+2026-02-27 10:32:40,295 [ForkJoinPool-18-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Got all the submission IDs
+2026-02-27 10:32:40,295 [ForkJoinPool-18-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulario da  Componente  Genomica (IDS) - Got all the submission IDs
+2026-02-27 10:32:40,306 [ForkJoinPool-18-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Hospitalar - Laboratório - There are no submissions to download
+2026-02-27 10:32:40,309 [ForkJoinPool-18-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Success
+2026-02-27 10:32:40,311 [ForkJoinPool-18-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulario da  Componente  Genomica (IDS) - There are no submissions to download
+2026-02-27 10:32:40,314 [ForkJoinPool-18-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start pulling form and submissions
+2026-02-27 10:32:40,314 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 39.509 ms
+2026-02-27 10:32:40,314 [ForkJoinPool-18-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start downloading form
+2026-02-27 10:32:40,315 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 10:32:40,317 [AWT-EventQueue-0] INFO  XFormParser - Title: "Formulário da Vigilancia Hospitalar"
+2026-02-27 10:32:40,317 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="hospitalar" version="1" prefix="Hospitalar" delimiter="$">...
+
+2026-02-27 10:32:40,317 [ForkJoinPool-18-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulario da  Componente  Genomica (IDS) - Success
+2026-02-27 10:32:40,320 [ForkJoinPool-18-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start pulling form and submissions
+2026-02-27 10:32:40,320 [ForkJoinPool-18-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start downloading form
+2026-02-27 10:32:40,384 [ForkJoinPool-18-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Got all the submission IDs
+2026-02-27 10:32:40,384 [ForkJoinPool-18-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Recepção da Amostra - Got all the submission IDs
+2026-02-27 10:32:40,386 [ForkJoinPool-18-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Recepção da Amostra - There are no submissions to download
+2026-02-27 10:32:40,394 [ForkJoinPool-18-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Recepção da Amostra - Success
+2026-02-27 10:32:40,399 [ForkJoinPool-18-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Push VIGILÂNCIA  AMBIENTAL - There are no submissions to download
+2026-02-27 10:32:40,403 [ForkJoinPool-18-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start pulling form and submissions
+2026-02-27 10:32:40,404 [ForkJoinPool-18-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start downloading form
+2026-02-27 10:32:40,404 [ForkJoinPool-18-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Success
+2026-02-27 10:32:40,413 [ForkJoinPool-18-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start pulling form and submissions
+2026-02-27 10:32:40,413 [ForkJoinPool-18-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start downloading form
+2026-02-27 10:32:40,416 [ForkJoinPool-18-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Form downloaded
+2026-02-27 10:32:40,418 [ForkJoinPool-18-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start getting form manifest
+2026-02-27 10:32:40,439 [ForkJoinPool-18-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Form downloaded
+2026-02-27 10:32:40,444 [ForkJoinPool-18-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start getting form manifest
+2026-02-27 10:32:40,458 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 146.422 ms
+2026-02-27 10:32:40,466 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 2.968 ms
+2026-02-27 10:32:40,468 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 1.706 ms
+2026-02-27 10:32:40,468 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 10:32:40,468 [AWT-EventQueue-0] INFO  XFormParser - Title: "Formulário da Vigilancia Hospitalar - Laboratório"
+2026-02-27 10:32:40,468 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="hospitalar_ib_v1" version="2" prefix="Hospitalar LB" delimiter="$">...
+
+2026-02-27 10:32:40,481 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 13.226 ms
+2026-02-27 10:32:40,500 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 4.341 ms
+2026-02-27 10:32:40,502 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 1.855 ms
+2026-02-27 10:32:40,502 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 10:32:40,502 [AWT-EventQueue-0] INFO  XFormParser - Title: "VIGILÂNCIA  AMBIENTAL"
+2026-02-27 10:32:40,502 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="VIGILÂNCIA  AMBIENTAL" version="1" prefix="VIGILÂNCIA  AMBIENTAL" delimiter="$">...
+
+2026-02-27 10:32:40,514 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 11.232 ms
+2026-02-27 10:32:40,537 [ForkJoinPool-18-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Got the form manifest
+2026-02-27 10:32:40,537 [ForkJoinPool-18-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Got the form manifest
+2026-02-27 10:32:40,539 [ForkJoinPool-18-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Skipping 1 form attachments that have been already downloaded
+2026-02-27 10:32:40,539 [ForkJoinPool-18-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Skipping 1 form attachments that have been already downloaded
+2026-02-27 10:32:40,539 [ForkJoinPool-18-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start getting submission IDs
+2026-02-27 10:32:40,539 [ForkJoinPool-18-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start getting submission IDs
+2026-02-27 10:32:40,610 [ForkJoinPool-18-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Form downloaded
+2026-02-27 10:32:40,612 [ForkJoinPool-18-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start getting form manifest
+2026-02-27 10:32:40,635 [ForkJoinPool-18-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Form downloaded
+2026-02-27 10:32:40,637 [ForkJoinPool-18-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start getting submission IDs
+2026-02-27 10:32:40,639 [ForkJoinPool-18-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Form downloaded
+2026-02-27 10:32:40,639 [ForkJoinPool-18-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start getting submission IDs
+2026-02-27 10:32:40,707 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 17.463 ms
+2026-02-27 10:32:40,717 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 7.822 ms
+2026-02-27 10:32:40,717 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 10:32:40,717 [AWT-EventQueue-0] INFO  XFormParser - Title: "Formulário da Vigilancia Comunitaria"
+2026-02-27 10:32:40,717 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="Comunidade_v2" version="2" prefix="Comunidade_v2" delimiter="$">...
+
+2026-02-27 10:32:40,781 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 63.632 ms
+2026-02-27 10:32:40,795 [ForkJoinPool-18-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Got the form manifest
+2026-02-27 10:32:40,795 [ForkJoinPool-18-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Got the form manifest
+2026-02-27 10:32:40,797 [ForkJoinPool-18-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Skipping 1 form attachments that have been already downloaded
+2026-02-27 10:32:40,797 [ForkJoinPool-18-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start getting submission IDs
+2026-02-27 10:32:40,797 [ForkJoinPool-18-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Skipping 1 form attachments that have been already downloaded
+2026-02-27 10:32:40,797 [ForkJoinPool-18-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start getting submission IDs
+2026-02-27 10:32:40,889 [ForkJoinPool-18-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Got all the submission IDs
+2026-02-27 10:32:40,889 [ForkJoinPool-18-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Got all the submission IDs
+2026-02-27 10:32:40,891 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 80.432 ms
+2026-02-27 10:32:40,902 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 12.698 ms
+2026-02-27 10:32:40,902 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 10:32:40,902 [AWT-EventQueue-0] INFO  XFormParser - Title: "Formulário da Vigilancia Hospitalar"
+2026-02-27 10:32:40,902 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="hospitalar_v2" version="1" prefix="Hospitalar" delimiter="$">...
+
+2026-02-27 10:32:40,925 [ForkJoinPool-18-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Form downloaded
+2026-02-27 10:32:40,925 [ForkJoinPool-18-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start getting submission IDs
+2026-02-27 10:32:40,936 [ForkJoinPool-18-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Resultados de testagem das vigilâncias - There are no submissions to download
+2026-02-27 10:32:41,003 [ForkJoinPool-18-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Success
+2026-02-27 10:32:41,011 [ForkJoinPool-18-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start pulling form and submissions
+2026-02-27 10:32:41,011 [ForkJoinPool-18-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start downloading form
+2026-02-27 10:32:41,013 [ForkJoinPool-18-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Hospitalar - There are no submissions to download
+2026-02-27 10:32:41,013 [ForkJoinPool-18-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Success
+2026-02-27 10:32:41,013 [ForkJoinPool-18-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start pulling form and submissions
+2026-02-27 10:32:41,026 [ForkJoinPool-18-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start downloading form
+2026-02-27 10:32:41,034 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 129.668 ms
+2026-02-27 10:32:41,049 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 3.878 ms
+2026-02-27 10:32:41,051 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 0.827 ms
+2026-02-27 10:32:41,051 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 10:32:41,051 [AWT-EventQueue-0] INFO  XFormParser - Title: "VIGILÂNCIA  AMBIENTAL"
+2026-02-27 10:32:41,051 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="VIGILÂNCIA  AMBIENTAL_v3" version="3" prefix="VIGILÂNCIA  AMBIENTAL_v3" delimiter="$">...
+
+2026-02-27 10:32:41,058 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 6.259 ms
+2026-02-27 10:32:41,129 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 11.875 ms
+2026-02-27 10:32:41,135 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 4.684 ms
+2026-02-27 10:32:41,135 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 10:32:41,135 [AWT-EventQueue-0] INFO  XFormParser - Title: "Formulário da Vigilancia Hospitalar"
+2026-02-27 10:32:41,135 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="hospitalar_v3" version="3" prefix="Hospitalar_v3" delimiter="$">...
+
+2026-02-27 10:32:41,158 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 23.523 ms
+2026-02-27 10:32:41,627 [ForkJoinPool-18-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Got the form manifest
+2026-02-27 10:32:41,627 [ForkJoinPool-18-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Skipping 1 form attachments that have been already downloaded
+2026-02-27 10:32:41,629 [ForkJoinPool-18-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start getting submission IDs
+2026-02-27 10:32:41,833 [ForkJoinPool-18-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Got all the submission IDs
+2026-02-27 10:32:41,833 [ForkJoinPool-18-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Got all the submission IDs
+2026-02-27 10:32:42,889 [ForkJoinPool-18-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Form downloaded
+2026-02-27 10:32:42,889 [ForkJoinPool-18-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Got all the submission IDs
+2026-02-27 10:32:42,886 [ForkJoinPool-18-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Got all the submission IDs
+2026-02-27 10:32:42,889 [ForkJoinPool-18-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Got all the submission IDs
+2026-02-27 10:32:42,892 [ForkJoinPool-18-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start getting submission IDs
+2026-02-27 10:32:42,915 [ForkJoinPool-18-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Push VIGILÂNCIA  AMBIENTAL - There are no submissions to download
+2026-02-27 10:32:42,915 [ForkJoinPool-18-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Form downloaded
+2026-02-27 10:32:42,917 [ForkJoinPool-18-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start getting submission IDs
+2026-02-27 10:32:42,928 [ForkJoinPool-18-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Success
+2026-02-27 10:32:42,935 [ForkJoinPool-18-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start pulling form and submissions
+2026-02-27 10:32:42,935 [ForkJoinPool-18-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start downloading form
+2026-02-27 10:32:42,935 [ForkJoinPool-18-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Comunitaria - There are no submissions to download
+2026-02-27 10:32:42,938 [ForkJoinPool-18-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Comunitaria - There are no submissions to download
+2026-02-27 10:32:42,939 [ForkJoinPool-18-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Success
+2026-02-27 10:32:42,939 [ForkJoinPool-18-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Success
+2026-02-27 10:32:42,943 [ForkJoinPool-18-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start pulling form and submissions
+2026-02-27 10:32:42,945 [ForkJoinPool-18-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start pulling form and submissions
+2026-02-27 10:32:42,945 [ForkJoinPool-18-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading form
+2026-02-27 10:32:42,945 [ForkJoinPool-18-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start downloading form
+2026-02-27 10:32:42,997 [ForkJoinPool-18-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Hospitalar - There are no submissions to download
+2026-02-27 10:32:42,999 [ForkJoinPool-18-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Success
+2026-02-27 10:32:42,999 [ForkJoinPool-18-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Hospitalar - There are no submissions to download
+2026-02-27 10:32:43,004 [ForkJoinPool-18-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start pulling form and submissions
+2026-02-27 10:32:43,004 [ForkJoinPool-18-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Success
+2026-02-27 10:32:43,004 [ForkJoinPool-18-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start downloading form
+2026-02-27 10:32:43,006 [ForkJoinPool-18-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start pulling form and submissions
+2026-02-27 10:32:43,006 [ForkJoinPool-18-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start downloading form
+2026-02-27 10:32:43,058 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 15.208 ms
+2026-02-27 10:32:43,091 [ForkJoinPool-18-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Form downloaded
+2026-02-27 10:32:43,091 [ForkJoinPool-18-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start getting submission IDs
+2026-02-27 10:32:43,093 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 33.958 ms
+2026-02-27 10:32:43,093 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 10:32:43,095 [AWT-EventQueue-0] INFO  XFormParser - Title: "Formulário da Vigilancia Comunitaria"
+2026-02-27 10:32:43,095 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="Comunidade_v3" version="1" prefix="Comunidade_v3" delimiter="$">...
+
+2026-02-27 10:32:43,097 [ForkJoinPool-18-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Form downloaded
+2026-02-27 10:32:43,111 [ForkJoinPool-18-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start getting submission IDs
+2026-02-27 10:32:43,142 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 58.961 ms
+2026-02-27 10:32:43,158 [ForkJoinPool-18-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Got all the submission IDs
+2026-02-27 10:32:43,158 [ForkJoinPool-18-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Got all the submission IDs
+2026-02-27 10:32:43,174 [ForkJoinPool-18-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Push VIGILÂNCIA  AMBIENTAL - There are no submissions to download
+2026-02-27 10:32:43,174 [ForkJoinPool-18-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Success
+2026-02-27 10:32:43,181 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 1.050 ms
+2026-02-27 10:32:43,181 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 0.806 ms
+2026-02-27 10:32:43,181 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 10:32:43,181 [AWT-EventQueue-0] INFO  XFormParser - Title: "VIGILÂNCIA  AMBIENTAL"
+2026-02-27 10:32:43,181 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="VIGILÂNCIA  AMBIENTAL_v2" version="2" prefix="VIGILÂNCIA  AMBIENTAL_v2" delimiter="$">...
+
+2026-02-27 10:32:43,189 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 7.988 ms
+2026-02-27 10:32:43,222 [ForkJoinPool-18-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Hospitalar - There are no submissions to download
+2026-02-27 10:32:43,224 [ForkJoinPool-18-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Success
+2026-02-27 10:32:43,265 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 14.222 ms
+2026-02-27 10:32:43,269 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 5.645 ms
+2026-02-27 10:32:43,269 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 10:32:43,269 [AWT-EventQueue-0] INFO  XFormParser - Title: "Formulário da Vigilancia Comunitaria"
+2026-02-27 10:32:43,269 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="Comunidade_v4" version="1" prefix="Comunidade_v4" delimiter="$">...
+
+2026-02-27 10:32:43,319 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 47.092 ms
+2026-02-27 10:32:43,368 [ForkJoinPool-18-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Got all the submission IDs
+2026-02-27 10:32:43,376 [ForkJoinPool-18-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Form downloaded
+2026-02-27 10:32:43,376 [ForkJoinPool-18-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start getting submission IDs
+2026-02-27 10:32:43,381 [ForkJoinPool-18-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Form downloaded
+2026-02-27 10:32:43,381 [ForkJoinPool-18-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start getting submission IDs
+2026-02-27 10:32:43,381 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.566 ms
+2026-02-27 10:32:43,381 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 0.192 ms
+2026-02-27 10:32:43,381 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 10:32:43,381 [AWT-EventQueue-0] INFO  XFormParser - Title: "Formulário da Vigilancia Hospitalar - Laboratório"
+2026-02-27 10:32:43,384 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="hospitalar_ib_v2" version="1" prefix="hospitalar_ib_v2" delimiter="$">...
+
+2026-02-27 10:32:43,388 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 5.105 ms
+2026-02-27 10:32:43,398 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 2.254 ms
+2026-02-27 10:32:43,399 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 2.021 ms
+2026-02-27 10:32:43,399 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 10:32:43,399 [AWT-EventQueue-0] INFO  XFormParser - Title: "Resultados de testagem das vigilâncias"
+2026-02-27 10:32:43,399 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="hospitalar_LB_v2" version="2" prefix="Hospitalar LB_v2" delimiter="$">...
+
+2026-02-27 10:32:43,448 [ForkJoinPool-18-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Comunitaria - There are no submissions to download
+2026-02-27 10:32:43,450 [ForkJoinPool-18-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Success
+2026-02-27 10:32:43,465 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 67.577 ms
+2026-02-27 10:32:43,571 [ForkJoinPool-18-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Got all the submission IDs
+2026-02-27 10:32:43,575 [ForkJoinPool-18-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Push VIGILÂNCIA  AMBIENTAL - There are no submissions to download
+2026-02-27 10:32:43,575 [ForkJoinPool-18-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Form downloaded
+2026-02-27 10:32:43,578 [ForkJoinPool-18-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start getting submission IDs
+2026-02-27 10:32:43,578 [ForkJoinPool-18-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Success
+2026-02-27 10:32:43,620 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 1.130 ms
+2026-02-27 10:32:43,620 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 0.308 ms
+2026-02-27 10:32:43,620 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 10:32:43,620 [AWT-EventQueue-0] INFO  XFormParser - Title: "Formulário da Vigilancia Hospitalar - Laboratório"
+2026-02-27 10:32:43,620 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="hospitalar_ib_v3" version="3" prefix="hospitalar_ib_v3" delimiter="$">...
+
+2026-02-27 10:32:43,635 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 6.035 ms
+2026-02-27 10:32:43,690 [ForkJoinPool-18-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Got all the submission IDs
+2026-02-27 10:32:43,690 [ForkJoinPool-18-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Got all the submission IDs
+2026-02-27 10:32:43,692 [ForkJoinPool-18-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Got all the submission IDs
+2026-02-27 10:32:43,694 [ForkJoinPool-18-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Hospitalar - Laboratório - There are no submissions to download
+2026-02-27 10:32:43,696 [ForkJoinPool-18-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Success
+2026-02-27 10:32:43,720 [ForkJoinPool-18-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Resultados de testagem das vigilâncias - There are no submissions to download
+2026-02-27 10:32:43,720 [ForkJoinPool-18-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Success
+2026-02-27 10:32:43,763 [ForkJoinPool-18-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Comunitaria - There are no submissions to download
+2026-02-27 10:32:43,765 [ForkJoinPool-18-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Success
+2026-02-27 10:32:43,879 [ForkJoinPool-18-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Got all the submission IDs
+2026-02-27 10:32:43,881 [ForkJoinPool-18-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Hospitalar - Laboratório - There are no submissions to download
+2026-02-27 10:32:43,883 [ForkJoinPool-18-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Success
+2026-02-27 10:32:44,616 [ForkJoinPool-18-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Form downloaded
+2026-02-27 10:32:44,618 [ForkJoinPool-18-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start getting submission IDs
+2026-02-27 10:32:45,088 [ForkJoinPool-18-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Got all the submission IDs
+2026-02-27 10:32:45,171 [ForkJoinPool-18-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Hospitalar - There are no submissions to download
+2026-02-27 10:32:45,173 [ForkJoinPool-18-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Success
+2026-02-27 10:32:45,251 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 15.995 ms
+2026-02-27 10:32:45,258 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 7.230 ms
+2026-02-27 10:32:45,258 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 10:32:45,258 [AWT-EventQueue-0] INFO  XFormParser - Title: "Formulário da Vigilancia Hospitalar"
+2026-02-27 10:32:45,258 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="hospitalar_v4" version="1" prefix="hospitalar_v4" delimiter="$">...
+
+2026-02-27 10:32:45,297 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 38.899 ms
+2026-02-27 10:32:45,622 [ForkJoinPool-18-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Form downloaded
+2026-02-27 10:32:45,622 [ForkJoinPool-18-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start getting submission IDs
+2026-02-27 10:32:45,930 [ForkJoinPool-18-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Got all the submission IDs
+2026-02-27 10:32:45,989 [ForkJoinPool-18-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Hospitalar - There are no submissions to download
+2026-02-27 10:32:45,991 [ForkJoinPool-18-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Success
+2026-02-27 10:32:46,057 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 16.755 ms
+2026-02-27 10:32:46,066 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 6.983 ms
+2026-02-27 10:32:46,066 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 10:32:46,066 [AWT-EventQueue-0] INFO  XFormParser - Title: "Formulário da Vigilancia Hospitalar"
+2026-02-27 10:32:46,066 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="hospitalar_v5" version="1" prefix="hospitalar_v5" delimiter="$">...
+
+2026-02-27 10:32:46,113 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 48.040 ms
+2026-02-27 10:32:51,355 [ForkJoinPool-18-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Form downloaded
+2026-02-27 10:32:51,355 [ForkJoinPool-18-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start getting submission IDs
+2026-02-27 10:32:51,848 [ForkJoinPool-18-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Got all the submission IDs
+2026-02-27 10:32:51,942 [ForkJoinPool-18-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Hospitalar - There are no submissions to download
+2026-02-27 10:32:51,945 [ForkJoinPool-18-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Success
+2026-02-27 10:32:52,012 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 16.966 ms
+2026-02-27 10:32:52,048 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 27.627 ms
+2026-02-27 10:32:52,048 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 10:32:52,048 [AWT-EventQueue-0] INFO  XFormParser - Title: "Formulário da Vigilancia Hospitalar"
+2026-02-27 10:32:52,048 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="hospitalar_v6" version="6" prefix="hospitalar_v6" delimiter="$">...
+
+2026-02-27 10:32:52,122 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 78.852 ms
+2026-02-27 10:34:04,468 [Thread-22] INFO  org.javarosa.core.model.FormDef - Dynamic select question has no choices! [instance(dis)/root/item]. If this occurs while filling out a form (and not while saving an incomplete form), the filter condition may have eliminated all the choices. Is that what you intended?
+2026-02-27 10:34:04,478 [Thread-22] INFO  org.javarosa.core.model.FormDef - Dynamic select question has no choices! [instance(bairro)/root/item]. If this occurs while filling out a form (and not while saving an incomplete form), the filter condition may have eliminated all the choices. Is that what you intended?
+2026-02-27 10:34:04,535 [Thread-22] INFO  org.javarosa.core.model.FormDef - Dynamic select question has no choices! [instance(tipo_amostra_options)/root/item]. If this occurs while filling out a form (and not while saving an incomplete form), the filter condition may have eliminated all the choices. Is that what you intended?
+2026-02-27 10:34:04,619 [Thread-22] INFO  org.javarosa.core.model.FormDef - Dynamic select question has no choices! [instance(Distrito_option_type)/root/item]. If this occurs while filling out a form (and not while saving an incomplete form), the filter condition may have eliminated all the choices. Is that what you intended?
+2026-02-27 10:34:04,807 [Thread-22] INFO  org.javarosa.core.model.FormDef - Dynamic select question has no choices! [instance(dis)/root/item]. If this occurs while filling out a form (and not while saving an incomplete form), the filter condition may have eliminated all the choices. Is that what you intended?
+2026-02-27 10:34:04,815 [Thread-22] INFO  org.javarosa.core.model.FormDef - Dynamic select question has no choices! [instance(bairro)/root/item]. If this occurs while filling out a form (and not while saving an incomplete form), the filter condition may have eliminated all the choices. Is that what you intended?
+2026-02-27 10:34:05,052 [ForkJoinPool-19-worker-2] INFO  o.o.b.export.ExportProcessTracker - Exported in 00:00:00.5312026
+2026-02-27 10:34:05,114 [ForkJoinPool-19-worker-4] INFO  o.o.b.export.ExportProcessTracker - Exported in 00:00:00.5154184
+2026-02-27 10:34:06,696 [ForkJoinPool-19-worker-13] INFO  o.o.b.export.ExportProcessTracker - Exported in 00:00:02.0657644
+2026-02-27 10:34:15,580 [ForkJoinPool-19-worker-10] INFO  o.o.b.export.ExportProcessTracker - Exported in 00:00:10.7235441
+2026-02-27 10:34:27,351 [ForkJoinPool-19-worker-6] INFO  o.o.b.export.ExportProcessTracker - Exported in 00:00:22.7122336
+2026-02-27 10:34:27,453 [ForkJoinPool-19-worker-11] INFO  o.o.b.export.ExportProcessTracker - Exported in 00:00:22.8686048
+2026-02-27 10:34:27,512 [ForkJoinPool-19-worker-9] INFO  o.o.b.export.ExportProcessTracker - Exported in 00:00:23.0147106
+2026-02-27 19:24:25,409 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start pulling form and submissions
+2026-02-27 19:24:25,413 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start pulling form and submissions
+2026-02-27 19:24:25,411 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start pulling form and submissions
+2026-02-27 19:24:25,411 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start pulling form and submissions
+2026-02-27 19:24:25,418 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Recepção da Amostra - Start pulling form and submissions
+2026-02-27 19:24:25,411 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start pulling form and submissions
+2026-02-27 19:24:25,410 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start pulling form and submissions
+2026-02-27 19:24:25,418 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start pulling form and submissions
+2026-02-27 19:24:25,419 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulario da  Componente  Genomica (IDS) - Start pulling form and submissions
+2026-02-27 19:24:25,419 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start pulling form and submissions
+2026-02-27 19:24:25,421 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start pulling form and submissions
+2026-02-27 19:24:25,421 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start downloading form
+2026-02-27 19:24:25,421 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start downloading form
+2026-02-27 19:24:25,421 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start downloading form
+2026-02-27 19:24:25,421 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start downloading form
+2026-02-27 19:24:25,421 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Recepção da Amostra - Start downloading form
+2026-02-27 19:24:25,421 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start downloading form
+2026-02-27 19:24:25,421 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start downloading form
+2026-02-27 19:24:25,424 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulario da  Componente  Genomica (IDS) - Start downloading form
+2026-02-27 19:24:25,423 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start downloading form
+2026-02-27 19:24:25,421 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading form
+2026-02-27 19:24:25,421 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start downloading form
+2026-02-27 19:24:28,520 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Recepção da Amostra - Form downloaded
+2026-02-27 19:24:28,521 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Recepção da Amostra - Start getting form manifest
+2026-02-27 19:24:28,972 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Form downloaded
+2026-02-27 19:24:28,972 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start getting form manifest
+2026-02-27 19:24:29,119 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulario da  Componente  Genomica (IDS) - Form downloaded
+2026-02-27 19:24:29,120 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulario da  Componente  Genomica (IDS) - Start getting submission IDs
+2026-02-27 19:24:30,103 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Form downloaded
+2026-02-27 19:24:30,104 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start getting form manifest
+2026-02-27 19:24:30,115 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Form downloaded
+2026-02-27 19:24:30,116 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start getting submission IDs
+2026-02-27 19:24:32,331 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Got the form manifest
+2026-02-27 19:24:32,331 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Skipping 1 form attachments that have been already downloaded
+2026-02-27 19:24:32,331 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start getting submission IDs
+2026-02-27 19:24:32,367 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Recepção da Amostra - Got the form manifest
+2026-02-27 19:24:32,383 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Recepção da Amostra - Skipping 1 form attachments that have been already downloaded
+2026-02-27 19:24:32,387 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Recepção da Amostra - Start getting submission IDs
+2026-02-27 19:24:33,196 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulario da  Componente  Genomica (IDS) - Got all the submission IDs
+2026-02-27 19:24:33,220 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulario da  Componente  Genomica (IDS) - There are no submissions to download
+2026-02-27 19:24:33,238 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulario da  Componente  Genomica (IDS) - Success
+2026-02-27 19:24:33,253 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start pulling form and submissions
+2026-02-27 19:24:33,254 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start downloading form
+2026-02-27 19:24:33,307 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Got the form manifest
+2026-02-27 19:24:33,309 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Skipping 1 form attachments that have been already downloaded
+2026-02-27 19:24:33,309 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start getting submission IDs
+2026-02-27 19:24:33,354 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 3.808 ms
+2026-02-27 19:24:33,357 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 1.109 ms
+2026-02-27 19:24:33,357 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 19:24:33,357 [AWT-EventQueue-0] INFO  XFormParser - Title: "Formulário da Vigilancia Hospitalar - Laboratório"
+2026-02-27 19:24:33,357 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="hospitalar_ib_v1" version="2" prefix="Hospitalar LB" delimiter="$">...
+
+2026-02-27 19:24:33,395 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 37.323 ms
+2026-02-27 19:24:33,419 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 5.568 ms
+2026-02-27 19:24:33,424 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 4.687 ms
+2026-02-27 19:24:33,424 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 19:24:33,424 [AWT-EventQueue-0] INFO  XFormParser - Title: "VIGILÂNCIA  AMBIENTAL"
+2026-02-27 19:24:33,424 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="VIGILÂNCIA  AMBIENTAL" version="1" prefix="VIGILÂNCIA  AMBIENTAL" delimiter="$">...
+
+2026-02-27 19:24:33,458 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 34.112 ms
+2026-02-27 19:24:33,857 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Got all the submission IDs
+2026-02-27 19:24:33,863 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Hospitalar - Laboratório - There are no submissions to download
+2026-02-27 19:24:33,870 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Success
+2026-02-27 19:24:33,875 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start pulling form and submissions
+2026-02-27 19:24:33,877 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start downloading form
+2026-02-27 19:24:34,455 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Recepção da Amostra - Got all the submission IDs
+2026-02-27 19:24:34,457 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Recepção da Amostra - There are no submissions to download
+2026-02-27 19:24:34,459 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Recepção da Amostra - Success
+2026-02-27 19:24:34,463 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start pulling form and submissions
+2026-02-27 19:24:34,463 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start downloading form
+2026-02-27 19:24:34,593 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Form downloaded
+2026-02-27 19:24:34,594 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start getting form manifest
+2026-02-27 19:24:34,686 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Form downloaded
+2026-02-27 19:24:34,688 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start getting submission IDs
+2026-02-27 19:24:35,245 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Got all the submission IDs
+2026-02-27 19:24:35,254 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Push VIGILÂNCIA  AMBIENTAL - There are no submissions to download
+2026-02-27 19:24:35,258 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Success
+2026-02-27 19:24:35,263 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start pulling form and submissions
+2026-02-27 19:24:35,263 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start downloading form
+2026-02-27 19:24:35,341 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 20.807 ms
+2026-02-27 19:24:35,350 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Form downloaded
+2026-02-27 19:24:35,350 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start getting submission IDs
+2026-02-27 19:24:35,354 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 13.448 ms
+2026-02-27 19:24:35,354 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 19:24:35,354 [AWT-EventQueue-0] INFO  XFormParser - Title: "Formulário da Vigilancia Comunitaria"
+2026-02-27 19:24:35,354 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="Comunidade_v2" version="2" prefix="Comunidade_v2" delimiter="$">...
+
+2026-02-27 19:24:35,448 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 92.503 ms
+2026-02-27 19:24:35,480 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 16.568 ms
+2026-02-27 19:24:35,486 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 8.234 ms
+2026-02-27 19:24:35,488 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 19:24:35,488 [AWT-EventQueue-0] INFO  XFormParser - Title: "Formulário da Vigilancia Hospitalar"
+2026-02-27 19:24:35,488 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="hospitalar_v2" version="1" prefix="Hospitalar" delimiter="$">...
+
+2026-02-27 19:24:35,548 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Got all the submission IDs
+2026-02-27 19:24:35,560 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Hospitalar - Laboratório - There are no submissions to download
+2026-02-27 19:24:35,566 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Success
+2026-02-27 19:24:35,570 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start pulling form and submissions
+2026-02-27 19:24:35,573 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start downloading form
+2026-02-27 19:24:35,618 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 131.078 ms
+2026-02-27 19:24:35,633 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 4.626 ms
+2026-02-27 19:24:35,638 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 2.032 ms
+2026-02-27 19:24:35,638 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 19:24:35,638 [AWT-EventQueue-0] INFO  XFormParser - Title: "VIGILÂNCIA  AMBIENTAL"
+2026-02-27 19:24:35,638 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="VIGILÂNCIA  AMBIENTAL_v2" version="2" prefix="VIGILÂNCIA  AMBIENTAL_v2" delimiter="$">...
+
+2026-02-27 19:24:35,652 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 11.654 ms
+2026-02-27 19:24:35,775 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Form downloaded
+2026-02-27 19:24:35,775 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start getting submission IDs
+2026-02-27 19:24:35,776 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Got the form manifest
+2026-02-27 19:24:35,776 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Skipping 1 form attachments that have been already downloaded
+2026-02-27 19:24:35,776 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start getting submission IDs
+2026-02-27 19:24:35,949 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Got all the submission IDs
+2026-02-27 19:24:36,056 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Comunitaria - There are no submissions to download
+2026-02-27 19:24:36,066 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Got all the submission IDs
+2026-02-27 19:24:36,066 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Success
+2026-02-27 19:24:36,077 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start pulling form and submissions
+2026-02-27 19:24:36,079 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start downloading form
+2026-02-27 19:24:36,098 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Push VIGILÂNCIA  AMBIENTAL - There are no submissions to download
+2026-02-27 19:24:36,105 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Success
+2026-02-27 19:24:36,108 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start pulling form and submissions
+2026-02-27 19:24:36,108 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start downloading form
+2026-02-27 19:24:36,173 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 4.196 ms
+2026-02-27 19:24:36,173 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 2.156 ms
+2026-02-27 19:24:36,173 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 19:24:36,173 [AWT-EventQueue-0] INFO  XFormParser - Title: "VIGILÂNCIA  AMBIENTAL"
+2026-02-27 19:24:36,173 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="VIGILÂNCIA  AMBIENTAL_v3" version="3" prefix="VIGILÂNCIA  AMBIENTAL_v3" delimiter="$">...
+
+2026-02-27 19:24:36,190 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 16.576 ms
+2026-02-27 19:24:36,660 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Got all the submission IDs
+2026-02-27 19:24:36,660 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Push VIGILÂNCIA  AMBIENTAL - There are no submissions to download
+2026-02-27 19:24:36,668 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Success
+2026-02-27 19:24:36,670 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start pulling form and submissions
+2026-02-27 19:24:36,670 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start downloading form
+2026-02-27 19:24:37,186 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Got all the submission IDs
+2026-02-27 19:24:37,301 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Hospitalar - There are no submissions to download
+2026-02-27 19:24:37,307 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Success
+2026-02-27 19:24:37,311 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start pulling form and submissions
+2026-02-27 19:24:37,311 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading form
+2026-02-27 19:24:37,686 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Form downloaded
+2026-02-27 19:24:37,687 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Start getting submission IDs
+2026-02-27 19:24:38,008 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Form downloaded
+2026-02-27 19:24:38,008 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start getting form manifest
+2026-02-27 19:24:40,831 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Form downloaded
+2026-02-27 19:24:40,831 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start getting form manifest
+2026-02-27 19:24:41,230 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Form downloaded
+2026-02-27 19:24:41,237 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start getting submission IDs
+2026-02-27 19:24:41,283 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Form downloaded
+2026-02-27 19:24:41,283 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Form downloaded
+2026-02-27 19:24:41,283 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start getting submission IDs
+2026-02-27 19:24:41,283 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start getting form manifest
+2026-02-27 19:24:41,417 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Got all the submission IDs
+2026-02-27 19:24:41,429 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Push VIGILÂNCIA  AMBIENTAL - There are no submissions to download
+2026-02-27 19:24:41,437 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull VIGILÂNCIA  AMBIENTAL - Success
+2026-02-27 19:24:41,444 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start pulling form and submissions
+2026-02-27 19:24:41,444 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start downloading form
+2026-02-27 19:24:41,496 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 22.207 ms
+2026-02-27 19:24:41,511 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 14.135 ms
+2026-02-27 19:24:41,511 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 19:24:41,511 [AWT-EventQueue-0] INFO  XFormParser - Title: "Formulário da Vigilancia Comunitaria"
+2026-02-27 19:24:41,511 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="Comunidade_v3" version="1" prefix="Comunidade_v3" delimiter="$">...
+
+2026-02-27 19:24:41,532 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Got the form manifest
+2026-02-27 19:24:41,533 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Skipping 1 form attachments that have been already downloaded
+2026-02-27 19:24:41,533 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Got the form manifest
+2026-02-27 19:24:41,533 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start getting submission IDs
+2026-02-27 19:24:41,534 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Skipping 1 form attachments that have been already downloaded
+2026-02-27 19:24:41,534 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start getting submission IDs
+2026-02-27 19:24:41,637 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 126.844 ms
+2026-02-27 19:24:41,680 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 20.545 ms
+2026-02-27 19:24:41,686 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 9.246 ms
+2026-02-27 19:24:41,686 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 19:24:41,686 [AWT-EventQueue-0] INFO  XFormParser - Title: "Formulário da Vigilancia Hospitalar"
+2026-02-27 19:24:41,686 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="hospitalar_v1" version="1" prefix="Hospitalar" delimiter="$">...
+
+2026-02-27 19:24:41,710 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Got all the submission IDs
+2026-02-27 19:24:41,742 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 51.207 ms
+2026-02-27 19:24:41,742 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Got all the submission IDs
+2026-02-27 19:24:41,746 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Got the form manifest
+2026-02-27 19:24:41,746 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Skipping 1 form attachments that have been already downloaded
+2026-02-27 19:24:41,746 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Start getting submission IDs
+2026-02-27 19:24:41,837 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 15.136 ms
+2026-02-27 19:24:41,839 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Comunitaria - There are no submissions to download
+2026-02-27 19:24:41,846 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Success
+2026-02-27 19:24:41,850 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 11.046 ms
+2026-02-27 19:24:41,851 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 19:24:41,851 [AWT-EventQueue-0] INFO  XFormParser - Title: "Resultados de testagem das vigilâncias"
+2026-02-27 19:24:41,851 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="hospitalar_LB" version="13" prefix="Hospitalar LB" delimiter="$">...
+
+2026-02-27 19:24:41,852 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start pulling form and submissions
+2026-02-27 19:24:41,852 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start downloading form
+2026-02-27 19:24:41,954 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Comunitaria - There are no submissions to download
+2026-02-27 19:24:41,957 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Success
+2026-02-27 19:24:41,961 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start pulling form and submissions
+2026-02-27 19:24:41,961 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start downloading form
+2026-02-27 19:24:41,984 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Got all the submission IDs
+2026-02-27 19:24:41,986 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Got all the submission IDs
+2026-02-27 19:24:42,110 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Resultados de testagem das vigilâncias - There are no submissions to download
+2026-02-27 19:24:42,125 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Success
+2026-02-27 19:24:42,136 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Hospitalar - There are no submissions to download
+2026-02-27 19:24:42,136 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 285.801 ms
+2026-02-27 19:24:42,138 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Success
+2026-02-27 19:24:42,146 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 5.498 ms
+2026-02-27 19:24:42,148 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 1.386 ms
+2026-02-27 19:24:42,148 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 19:24:42,148 [AWT-EventQueue-0] INFO  XFormParser - Title: "VIGILÂNCIA  AMBIENTAL"
+2026-02-27 19:24:42,148 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="VIGILÂNCIA AMBIENTAL_v4" version="4" prefix="VIGILÂNCIA AMBIENTAL_v4" delimiter="$">...
+
+2026-02-27 19:24:42,160 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 12.519 ms
+2026-02-27 19:24:42,218 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Got all the submission IDs
+2026-02-27 19:24:42,218 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Form downloaded
+2026-02-27 19:24:42,218 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start getting submission IDs
+2026-02-27 19:24:42,856 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Got all the submission IDs
+2026-02-27 19:24:42,858 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Form downloaded
+2026-02-27 19:24:42,860 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Form downloaded
+2026-02-27 19:24:42,860 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Comunitaria - There are no submissions to download
+2026-02-27 19:24:42,860 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start getting submission IDs
+2026-02-27 19:24:42,860 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start getting submission IDs
+2026-02-27 19:24:42,869 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Comunitaria - Success
+2026-02-27 19:24:42,876 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Hospitalar - Laboratório - There are no submissions to download
+2026-02-27 19:24:42,876 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Form downloaded
+2026-02-27 19:24:42,876 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start getting submission IDs
+2026-02-27 19:24:42,879 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Success
+2026-02-27 19:24:42,924 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 22.311 ms
+2026-02-27 19:24:42,940 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 9.923 ms
+2026-02-27 19:24:42,940 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 19:24:42,940 [AWT-EventQueue-0] INFO  XFormParser - Title: "Formulário da Vigilancia Hospitalar"
+2026-02-27 19:24:42,940 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="hospitalar_v5" version="1" prefix="hospitalar_v5" delimiter="$">...
+
+2026-02-27 19:24:42,990 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 50.054 ms
+2026-02-27 19:24:42,990 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.720 ms
+2026-02-27 19:24:42,990 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 0.128 ms
+2026-02-27 19:24:42,990 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 19:24:42,990 [AWT-EventQueue-0] INFO  XFormParser - Title: "Formulário da Vigilancia Hospitalar - Laboratório"
+2026-02-27 19:24:42,990 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="hospitalar_ib_v3" version="3" prefix="hospitalar_ib_v3" delimiter="$">...
+
+2026-02-27 19:24:42,997 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 3.264 ms
+2026-02-27 19:24:43,011 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 3.288 ms
+2026-02-27 19:24:43,011 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 0.841 ms
+2026-02-27 19:24:43,013 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 19:24:43,013 [AWT-EventQueue-0] INFO  XFormParser - Title: "Resultados de testagem das vigilâncias"
+2026-02-27 19:24:43,013 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="hospitalar_LB_v2" version="2" prefix="Hospitalar LB_v2" delimiter="$">...
+
+2026-02-27 19:24:43,089 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 76.124 ms
+2026-02-27 19:24:43,318 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Got all the submission IDs
+2026-02-27 19:24:43,332 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start downloading submission 1 of 4
+2026-02-27 19:24:43,335 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start downloading submission 4 of 4
+2026-02-27 19:24:43,337 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start downloading submission 3 of 4
+2026-02-27 19:24:43,337 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Start downloading submission 2 of 4
+2026-02-27 19:24:43,364 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Got all the submission IDs
+2026-02-27 19:24:43,471 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start downloading submission 1 of 3
+2026-02-27 19:24:43,472 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start downloading submission 2 of 3
+2026-02-27 19:24:43,593 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Got all the submission IDs
+2026-02-27 19:24:43,607 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Submission 1 of 4 downloaded
+2026-02-27 19:24:43,609 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Submission 3 of 4 downloaded
+2026-02-27 19:24:43,613 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Submission 4 of 4 downloaded
+2026-02-27 19:24:43,613 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start downloading submission 3 of 3
+2026-02-27 19:24:43,615 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 1 of 107
+2026-02-27 19:24:43,618 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 2 of 107
+2026-02-27 19:24:43,816 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Submission 2 of 4 downloaded
+2026-02-27 19:24:43,818 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 3 of 107
+2026-02-27 19:24:43,820 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Laboratório - Success
+2026-02-27 19:24:43,827 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 4 of 107
+2026-02-27 19:24:43,856 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Submission 1 of 3 downloaded
+2026-02-27 19:24:43,858 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Submission 2 of 3 downloaded
+2026-02-27 19:24:43,860 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 5 of 107
+2026-02-27 19:24:43,915 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Submission 3 of 3 downloaded
+2026-02-27 19:24:43,917 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 6 of 107
+2026-02-27 19:24:43,919 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Success
+2026-02-27 19:24:43,920 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 7 of 107
+2026-02-27 19:24:44,095 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 1 of 107 downloaded
+2026-02-27 19:24:44,099 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 8 of 107
+2026-02-27 19:24:44,103 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Form downloaded
+2026-02-27 19:24:44,107 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Form downloaded
+2026-02-27 19:24:44,109 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start getting submission IDs
+2026-02-27 19:24:44,110 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start getting form manifest
+2026-02-27 19:24:44,115 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 2 of 107 downloaded
+2026-02-27 19:24:44,115 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 3 of 107 downloaded
+2026-02-27 19:24:44,116 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 9 of 107
+2026-02-27 19:24:44,118 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 10 of 107
+2026-02-27 19:24:44,144 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 4 of 107 downloaded
+2026-02-27 19:24:44,144 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 11 of 107
+2026-02-27 19:24:44,299 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 6 of 107 downloaded
+2026-02-27 19:24:44,300 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 5 of 107 downloaded
+2026-02-27 19:24:44,304 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 12 of 107
+2026-02-27 19:24:44,306 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 13 of 107
+2026-02-27 19:24:44,324 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Got the form manifest
+2026-02-27 19:24:44,325 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Skipping 1 form attachments that have been already downloaded
+2026-02-27 19:24:44,326 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start getting submission IDs
+2026-02-27 19:24:44,334 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 7 of 107 downloaded
+2026-02-27 19:24:44,335 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 14 of 107
+2026-02-27 19:24:44,340 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 8 of 107 downloaded
+2026-02-27 19:24:44,342 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 15 of 107
+2026-02-27 19:24:44,411 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Form downloaded
+2026-02-27 19:24:44,412 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start getting submission IDs
+2026-02-27 19:24:44,543 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 9 of 107 downloaded
+2026-02-27 19:24:44,545 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 16 of 107
+2026-02-27 19:24:44,545 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 10 of 107 downloaded
+2026-02-27 19:24:44,546 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 17 of 107
+2026-02-27 19:24:44,551 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Got all the submission IDs
+2026-02-27 19:24:44,553 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 11 of 107 downloaded
+2026-02-27 19:24:44,555 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 18 of 107
+2026-02-27 19:24:44,558 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 12 of 107 downloaded
+2026-02-27 19:24:44,558 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 19 of 107
+2026-02-27 19:24:44,627 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 15 of 107 downloaded
+2026-02-27 19:24:44,630 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 20 of 107
+2026-02-27 19:24:44,633 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 13 of 107 downloaded
+2026-02-27 19:24:44,635 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 21 of 107
+2026-02-27 19:24:44,640 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Hospitalar - There are no submissions to download
+2026-02-27 19:24:44,643 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Success
+2026-02-27 19:24:44,645 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 22 of 107
+2026-02-27 19:24:44,723 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 21.206 ms
+2026-02-27 19:24:44,733 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 9.784 ms
+2026-02-27 19:24:44,733 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 19:24:44,733 [AWT-EventQueue-0] INFO  XFormParser - Title: "Formulário da Vigilancia Hospitalar"
+2026-02-27 19:24:44,733 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="hospitalar_v3" version="3" prefix="Hospitalar_v3" delimiter="$">...
+
+2026-02-27 19:24:44,792 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Got all the submission IDs
+2026-02-27 19:24:44,794 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 14 of 107 downloaded
+2026-02-27 19:24:44,797 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 23 of 107
+2026-02-27 19:24:44,806 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 16 of 107 downloaded
+2026-02-27 19:24:44,806 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 17 of 107 downloaded
+2026-02-27 19:24:44,806 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 24 of 107
+2026-02-27 19:24:44,806 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 25 of 107
+2026-02-27 19:24:44,843 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 110.525 ms
+2026-02-27 19:24:44,851 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 18 of 107 downloaded
+2026-02-27 19:24:44,853 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 26 of 107
+2026-02-27 19:24:44,861 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 19 of 107 downloaded
+2026-02-27 19:24:44,861 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 27 of 107
+2026-02-27 19:24:44,866 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start downloading submission 1 of 4
+2026-02-27 19:24:45,017 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 20 of 107 downloaded
+2026-02-27 19:24:45,019 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 28 of 107
+2026-02-27 19:24:45,043 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Got all the submission IDs
+2026-02-27 19:24:45,046 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 23 of 107 downloaded
+2026-02-27 19:24:45,046 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 21 of 107 downloaded
+2026-02-27 19:24:45,046 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 22 of 107 downloaded
+2026-02-27 19:24:45,046 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 29 of 107
+2026-02-27 19:24:45,049 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 31 of 107
+2026-02-27 19:24:45,049 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 30 of 107
+2026-02-27 19:24:45,107 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start downloading submission 1 of 4
+2026-02-27 19:24:45,145 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 24 of 107 downloaded
+2026-02-27 19:24:45,143 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 25 of 107 downloaded
+2026-02-27 19:24:45,153 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 33 of 107
+2026-02-27 19:24:45,153 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 32 of 107
+2026-02-27 19:24:45,301 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 26 of 107 downloaded
+2026-02-27 19:24:45,302 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 27 of 107 downloaded
+2026-02-27 19:24:45,303 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 29 of 107 downloaded
+2026-02-27 19:24:45,303 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 34 of 107
+2026-02-27 19:24:45,303 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 28 of 107 downloaded
+2026-02-27 19:24:45,303 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 35 of 107
+2026-02-27 19:24:45,306 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 36 of 107
+2026-02-27 19:24:45,306 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 37 of 107
+2026-02-27 19:24:45,321 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Submission 1 of 4 downloaded
+2026-02-27 19:24:45,321 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start downloading submission 2 of 4
+2026-02-27 19:24:45,402 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 31 of 107 downloaded
+2026-02-27 19:24:45,406 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 30 of 107 downloaded
+2026-02-27 19:24:45,406 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 39 of 107
+2026-02-27 19:24:45,406 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 38 of 107
+2026-02-27 19:24:45,596 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 32 of 107 downloaded
+2026-02-27 19:24:45,598 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 33 of 107 downloaded
+2026-02-27 19:24:45,600 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 40 of 107
+2026-02-27 19:24:45,600 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 41 of 107
+2026-02-27 19:24:45,607 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Submission 1 of 4 downloaded
+2026-02-27 19:24:45,607 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 34 of 107 downloaded
+2026-02-27 19:24:45,607 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 35 of 107 downloaded
+2026-02-27 19:24:45,608 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 42 of 107
+2026-02-27 19:24:45,610 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start downloading submission 2 of 4
+2026-02-27 19:24:45,610 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 43 of 107
+2026-02-27 19:24:45,638 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 37 of 107 downloaded
+2026-02-27 19:24:45,638 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 44 of 107
+2026-02-27 19:24:45,644 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 36 of 107 downloaded
+2026-02-27 19:24:45,648 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 45 of 107
+2026-02-27 19:24:46,136 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 38 of 107 downloaded
+2026-02-27 19:24:46,137 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Submission 2 of 4 downloaded
+2026-02-27 19:24:46,137 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 40 of 107 downloaded
+2026-02-27 19:24:46,137 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 41 of 107 downloaded
+2026-02-27 19:24:46,136 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Submission 2 of 4 downloaded
+2026-02-27 19:24:46,138 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 39 of 107 downloaded
+2026-02-27 19:24:46,138 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 42 of 107 downloaded
+2026-02-27 19:24:46,144 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start downloading submission 3 of 4
+2026-02-27 19:24:46,144 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start downloading submission 3 of 4
+2026-02-27 19:24:46,151 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 48 of 107
+2026-02-27 19:24:46,151 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 49 of 107
+2026-02-27 19:24:46,152 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 46 of 107
+2026-02-27 19:24:46,153 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 50 of 107
+2026-02-27 19:24:46,152 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 47 of 107
+2026-02-27 19:24:46,362 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 44 of 107 downloaded
+2026-02-27 19:24:46,362 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 43 of 107 downloaded
+2026-02-27 19:24:46,363 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 51 of 107
+2026-02-27 19:24:46,363 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 52 of 107
+2026-02-27 19:24:46,375 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 45 of 107 downloaded
+2026-02-27 19:24:46,375 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 53 of 107
+2026-02-27 19:24:46,406 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 48 of 107 downloaded
+2026-02-27 19:24:46,408 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 54 of 107
+2026-02-27 19:24:46,408 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 46 of 107 downloaded
+2026-02-27 19:24:46,409 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 55 of 107
+2026-02-27 19:24:46,415 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Submission 3 of 4 downloaded
+2026-02-27 19:24:46,415 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start downloading submission 4 of 4
+2026-02-27 19:24:46,428 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Submission 3 of 4 downloaded
+2026-02-27 19:24:46,431 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start downloading submission 4 of 4
+2026-02-27 19:24:46,499 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Form downloaded
+2026-02-27 19:24:46,499 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Start getting submission IDs
+2026-02-27 19:24:46,583 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 47 of 107 downloaded
+2026-02-27 19:24:46,588 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 56 of 107
+2026-02-27 19:24:46,588 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 50 of 107 downloaded
+2026-02-27 19:24:46,590 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 57 of 107
+2026-02-27 19:24:46,601 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 49 of 107 downloaded
+2026-02-27 19:24:46,601 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 58 of 107
+2026-02-27 19:24:46,659 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 53 of 107 downloaded
+2026-02-27 19:24:46,659 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 52 of 107 downloaded
+2026-02-27 19:24:46,664 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 51 of 107 downloaded
+2026-02-27 19:24:46,668 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 60 of 107
+2026-02-27 19:24:46,668 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 54 of 107 downloaded
+2026-02-27 19:24:46,669 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 59 of 107
+2026-02-27 19:24:46,669 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 61 of 107
+2026-02-27 19:24:46,671 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 62 of 107
+2026-02-27 19:24:46,712 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 55 of 107 downloaded
+2026-02-27 19:24:46,714 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 63 of 107
+2026-02-27 19:24:47,040 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Got all the submission IDs
+2026-02-27 19:24:47,047 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Submission 4 of 4 downloaded
+2026-02-27 19:24:47,049 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Success
+2026-02-27 19:24:47,051 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Submission 4 of 4 downloaded
+2026-02-27 19:24:47,051 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 64 of 107
+2026-02-27 19:24:47,053 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Success
+2026-02-27 19:24:47,055 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 65 of 107
+2026-02-27 19:24:47,061 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 57 of 107 downloaded
+2026-02-27 19:24:47,061 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 56 of 107 downloaded
+2026-02-27 19:24:47,059 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 58 of 107 downloaded
+2026-02-27 19:24:47,061 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 60 of 107 downloaded
+2026-02-27 19:24:47,063 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 68 of 107
+2026-02-27 19:24:47,063 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 67 of 107
+2026-02-27 19:24:47,063 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 66 of 107
+2026-02-27 19:24:47,064 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 69 of 107
+2026-02-27 19:24:47,069 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 61 of 107 downloaded
+2026-02-27 19:24:47,070 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 70 of 107
+2026-02-27 19:24:47,130 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Push Formulário da Vigilancia Hospitalar - There are no submissions to download
+2026-02-27 19:24:47,131 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Formulário da Vigilancia Hospitalar - Success
+2026-02-27 19:24:47,133 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 71 of 107
+2026-02-27 19:24:47,163 [AWT-EventQueue-0] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 23.155 ms
+2026-02-27 19:24:47,174 [AWT-EventQueue-0] INFO  XFormParser - Consolidating text finished in 10.009 ms
+2026-02-27 19:24:47,174 [AWT-EventQueue-0] INFO  XFormParser - Parsing form...
+2026-02-27 19:24:47,174 [AWT-EventQueue-0] INFO  XFormParser - Title: "Formulário da Vigilancia Hospitalar"
+2026-02-27 19:24:47,174 [AWT-EventQueue-0] WARN  XFormParser - XForm Parse Warning: Warning: 1 Unrecognized attributes found in Element [model] and will be ignored: [xforms-version] 
+    Problem found at nodeset: /html/head/model
+    With element <model xforms-version="1.0.0"><instance><data id="hospitalar_v4" version="1" prefix="hospitalar_v4" delimiter="$">...
+
+2026-02-27 19:24:47,231 [AWT-EventQueue-0] INFO  XFormParser - Creating FormDef from parsed XML finished in 56.725 ms
+2026-02-27 19:24:47,345 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 59 of 107 downloaded
+2026-02-27 19:24:47,352 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 72 of 107
+2026-02-27 19:24:47,353 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 62 of 107 downloaded
+2026-02-27 19:24:47,353 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 63 of 107 downloaded
+2026-02-27 19:24:47,353 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 67 of 107 downloaded
+2026-02-27 19:24:47,353 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 65 of 107 downloaded
+2026-02-27 19:24:47,355 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 66 of 107 downloaded
+2026-02-27 19:24:47,355 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 68 of 107 downloaded
+2026-02-27 19:24:47,355 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 64 of 107 downloaded
+2026-02-27 19:24:47,357 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 77 of 107
+2026-02-27 19:24:47,357 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 73 of 107
+2026-02-27 19:24:47,357 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 79 of 107
+2026-02-27 19:24:47,357 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 78 of 107
+2026-02-27 19:24:47,357 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 76 of 107
+2026-02-27 19:24:47,357 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 75 of 107
+2026-02-27 19:24:47,360 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 74 of 107
+2026-02-27 19:24:47,571 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 71 of 107 downloaded
+2026-02-27 19:24:47,575 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 80 of 107
+2026-02-27 19:24:47,580 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 69 of 107 downloaded
+2026-02-27 19:24:47,580 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 70 of 107 downloaded
+2026-02-27 19:24:47,582 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 82 of 107
+2026-02-27 19:24:47,582 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 81 of 107
+2026-02-27 19:24:47,680 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 72 of 107 downloaded
+2026-02-27 19:24:47,680 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 79 of 107 downloaded
+2026-02-27 19:24:47,687 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 83 of 107
+2026-02-27 19:24:47,687 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 84 of 107
+2026-02-27 19:24:47,689 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 77 of 107 downloaded
+2026-02-27 19:24:47,692 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 85 of 107
+2026-02-27 19:24:47,692 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 73 of 107 downloaded
+2026-02-27 19:24:47,692 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 78 of 107 downloaded
+2026-02-27 19:24:47,696 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 86 of 107
+2026-02-27 19:24:47,696 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 87 of 107
+2026-02-27 19:24:47,794 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 76 of 107 downloaded
+2026-02-27 19:24:47,794 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 88 of 107
+2026-02-27 19:24:47,835 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 74 of 107 downloaded
+2026-02-27 19:24:47,837 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 75 of 107 downloaded
+2026-02-27 19:24:47,837 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 90 of 107
+2026-02-27 19:24:47,838 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 89 of 107
+2026-02-27 19:24:47,896 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 80 of 107 downloaded
+2026-02-27 19:24:47,898 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 91 of 107
+2026-02-27 19:24:47,926 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 84 of 107 downloaded
+2026-02-27 19:24:47,928 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 92 of 107
+2026-02-27 19:24:47,928 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 83 of 107 downloaded
+2026-02-27 19:24:47,928 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 93 of 107
+2026-02-27 19:24:47,930 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 82 of 107 downloaded
+2026-02-27 19:24:47,931 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 94 of 107
+2026-02-27 19:24:47,942 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 81 of 107 downloaded
+2026-02-27 19:24:47,942 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 95 of 107
+2026-02-27 19:24:48,040 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 85 of 107 downloaded
+2026-02-27 19:24:48,042 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 96 of 107
+2026-02-27 19:24:48,087 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 86 of 107 downloaded
+2026-02-27 19:24:48,087 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 87 of 107 downloaded
+2026-02-27 19:24:48,089 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 97 of 107
+2026-02-27 19:24:48,089 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 98 of 107
+2026-02-27 19:24:48,151 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 88 of 107 downloaded
+2026-02-27 19:24:48,153 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 99 of 107
+2026-02-27 19:24:48,187 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 90 of 107 downloaded
+2026-02-27 19:24:48,188 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 100 of 107
+2026-02-27 19:24:48,188 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 89 of 107 downloaded
+2026-02-27 19:24:48,190 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 91 of 107 downloaded
+2026-02-27 19:24:48,190 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 101 of 107
+2026-02-27 19:24:48,191 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 102 of 107
+2026-02-27 19:24:48,197 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 92 of 107 downloaded
+2026-02-27 19:24:48,199 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 103 of 107
+2026-02-27 19:24:48,288 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 93 of 107 downloaded
+2026-02-27 19:24:48,290 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 104 of 107
+2026-02-27 19:24:48,311 [ForkJoinPool-20-worker-3] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 94 of 107 downloaded
+2026-02-27 19:24:48,316 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 95 of 107 downloaded
+2026-02-27 19:24:48,316 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 105 of 107
+2026-02-27 19:24:48,424 [ForkJoinPool-20-worker-10] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 99 of 107 downloaded
+2026-02-27 19:24:48,424 [ForkJoinPool-20-worker-1] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 96 of 107 downloaded
+2026-02-27 19:24:48,429 [ForkJoinPool-20-worker-11] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 98 of 107 downloaded
+2026-02-27 19:24:48,433 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 97 of 107 downloaded
+2026-02-27 19:24:48,433 [ForkJoinPool-20-worker-13] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 100 of 107 downloaded
+2026-02-27 19:24:48,436 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 106 of 107
+2026-02-27 19:24:48,522 [ForkJoinPool-20-worker-6] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 101 of 107 downloaded
+2026-02-27 19:24:48,522 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 102 of 107 downloaded
+2026-02-27 19:24:48,524 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Start downloading submission 107 of 107
+2026-02-27 19:24:48,534 [ForkJoinPool-20-worker-9] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 103 of 107 downloaded
+2026-02-27 19:24:48,657 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 105 of 107 downloaded
+2026-02-27 19:24:48,657 [ForkJoinPool-20-worker-4] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 106 of 107 downloaded
+2026-02-27 19:24:48,657 [ForkJoinPool-20-worker-15] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 104 of 107 downloaded
+2026-02-27 19:24:48,758 [ForkJoinPool-20-worker-2] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Submission 107 of 107 downloaded
+2026-02-27 19:24:48,762 [ForkJoinPool-20-worker-8] INFO  o.o.b.p.a.PullFromAggregateTracker - Pull Resultados de testagem das vigilâncias - Success
+2026-02-27 19:25:12,197 [Thread-24] INFO  org.javarosa.core.model.FormDef - Dynamic select question has no choices! [instance(dis)/root/item]. If this occurs while filling out a form (and not while saving an incomplete form), the filter condition may have eliminated all the choices. Is that what you intended?
+2026-02-27 19:25:12,199 [Thread-24] INFO  org.javarosa.core.model.FormDef - Dynamic select question has no choices! [instance(bairro)/root/item]. If this occurs while filling out a form (and not while saving an incomplete form), the filter condition may have eliminated all the choices. Is that what you intended?
+2026-02-27 19:25:12,307 [Thread-24] INFO  org.javarosa.core.model.FormDef - Dynamic select question has no choices! [instance(tipo_amostra_options)/root/item]. If this occurs while filling out a form (and not while saving an incomplete form), the filter condition may have eliminated all the choices. Is that what you intended?
+2026-02-27 19:25:12,365 [Thread-24] INFO  org.javarosa.core.model.FormDef - Dynamic select question has no choices! [instance(Distrito_option_type)/root/item]. If this occurs while filling out a form (and not while saving an incomplete form), the filter condition may have eliminated all the choices. Is that what you intended?
+2026-02-27 19:25:12,486 [Thread-24] INFO  org.javarosa.core.model.FormDef - Dynamic select question has no choices! [instance(dis)/root/item]. If this occurs while filling out a form (and not while saving an incomplete form), the filter condition may have eliminated all the choices. Is that what you intended?
+2026-02-27 19:25:12,517 [Thread-24] INFO  org.javarosa.core.model.FormDef - Dynamic select question has no choices! [instance(bairro)/root/item]. If this occurs while filling out a form (and not while saving an incomplete form), the filter condition may have eliminated all the choices. Is that what you intended?
+2026-02-27 19:25:12,937 [ForkJoinPool-21-worker-2] INFO  o.o.b.export.ExportProcessTracker - Exported in 00:00:00.6777764
+2026-02-27 19:25:12,955 [ForkJoinPool-21-worker-4] INFO  o.o.b.export.ExportProcessTracker - Exported in 00:00:00.6030848
+2026-02-27 19:25:15,060 [ForkJoinPool-21-worker-13] INFO  o.o.b.export.ExportProcessTracker - Exported in 00:00:02.6802339
+2026-02-27 19:25:20,405 [ForkJoinPool-21-worker-3] INFO  o.o.b.export.ExportProcessTracker - Exported in 00:00:07.8572879
+2026-02-27 19:25:28,273 [ForkJoinPool-21-worker-9] INFO  o.o.b.export.ExportProcessTracker - Exported in 00:00:16.0371693
+2026-02-27 19:25:32,256 [ForkJoinPool-21-worker-11] INFO  o.o.b.export.ExportProcessTracker - Exported in 00:00:19.9109704
+2026-02-27 19:25:34,988 [ForkJoinPool-21-worker-6] INFO  o.o.b.export.ExportProcessTracker - Exported in 00:00:22.5999089

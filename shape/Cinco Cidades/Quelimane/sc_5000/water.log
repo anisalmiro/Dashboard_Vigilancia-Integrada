@@ -1,0 +1,129 @@
+LOGGFIL FOR SOSI->SHAPE KONV
+C:\PROGRA~1\SOSI-S~2.0\BIN\SOSI2AV2.EXE  versjon 2.0 1998-04-01
+GD-lib.  versjon 2.0 1998-04-01
+GD-koord versjon 1.0b1 1997-10-05
+
+Prosjektfil..................: c:\data\00101mpt\shape\Water.prj
+Inifil for prosjekt..........: C:\Program Files\Sosi-shape2.0\BIN\sosi2av.ini
+Loggfil......................: c:\data\00102qlm\shape\water.log.log
+
+Nivå.........................: 3
+
+OPPSETT
+
+SOSIDEF_FIL..................: C:\Program Files\Sosi-shape2.0\standard\sosidef.txt
+Flateformat..................: 2
+GJEMME_OPPRINNELSE...........: 0
+ARV_FRA_HODE.................: 0
+Maks_kordelengde.............: 1.000
+Maks_retningsendring.........: 1.000
+ANNO_NAVN....................: TEKST
+REGION_NAVN..................: POLY
+
+
+SOSI-filer :
+	c:\data\00102qlm\b08069_2.sos
+	c:\data\00102qlm\b08069_4.sos
+	c:\data\00102qlm\b09068_3.sos
+	c:\data\00102qlm\b09069_1.sos
+	c:\data\00102qlm\b09069_3.sos
+	c:\data\00102qlm\b09068_4.sos
+	c:\data\00102qlm\b09069_2.sos
+	
+	
+	
+	
+	
+	
+
+
+Resultatfiler (SHAPE):
+	c:\data\00102qlm\shape\water_p (PUNKT)
+	c:\data\00102qlm\shape\water_l (LINJE)
+
+
+KONVERTERING
+Start konvertering :
+Thu Dec 03 10:27:58 1998
+
+Leser c:\data\00102qlm\b08069_2.sos
+
+HODE:
+ADVR! Linjenr 15: ENHET-H er ikke definert i hodet. Verdi for ENHET benyttes.
+ADVR! Linjenr 15: ENHET-D er ikke definert i hodet. Verdi for ENHET benyttes.
+..ENHET 0.010000
+..TEGNSETT DOSN8
+..ORIGO-NØ	8026000	269000
+..OMRÅDE
+...MIN-NØ	8026000	269000
+...MAX-NØ	8032000	276000
+..KOORDSYS 99
+
+Leser c:\data\00102qlm\b08069_4.sos
+FEIL! Linjenr 14: Egenskaper finnes flere ganger enn angitt i prosjektfil!
+FEIL! Linjenr 14: Egenskaper finnes flere ganger enn angitt i prosjektfil!
+ADVR! Linjenr 15: ENHET-H er ikke definert i hodet. Verdi for ENHET benyttes.
+ADVR! Linjenr 15: ENHET-D er ikke definert i hodet. Verdi for ENHET benyttes.
+Leser c:\data\00102qlm\b09068_3.sos
+FEIL! Linjenr 14: Egenskaper finnes flere ganger enn angitt i prosjektfil!
+FEIL! Linjenr 14: Egenskaper finnes flere ganger enn angitt i prosjektfil!
+ADVR! Linjenr 15: ENHET-H er ikke definert i hodet. Verdi for ENHET benyttes.
+ADVR! Linjenr 15: ENHET-D er ikke definert i hodet. Verdi for ENHET benyttes.
+Leser c:\data\00102qlm\b09069_1.sos
+FEIL! Linjenr 14: Egenskaper finnes flere ganger enn angitt i prosjektfil!
+FEIL! Linjenr 14: Egenskaper finnes flere ganger enn angitt i prosjektfil!
+ADVR! Linjenr 15: ENHET-H er ikke definert i hodet. Verdi for ENHET benyttes.
+ADVR! Linjenr 15: ENHET-D er ikke definert i hodet. Verdi for ENHET benyttes.
+Leser c:\data\00102qlm\b09069_3.sos
+FEIL! Linjenr 14: Egenskaper finnes flere ganger enn angitt i prosjektfil!
+FEIL! Linjenr 14: Egenskaper finnes flere ganger enn angitt i prosjektfil!
+ADVR! Linjenr 15: ENHET-H er ikke definert i hodet. Verdi for ENHET benyttes.
+ADVR! Linjenr 15: ENHET-D er ikke definert i hodet. Verdi for ENHET benyttes.
+Leser c:\data\00102qlm\b09068_4.sos
+FEIL! Linjenr 14: Egenskaper finnes flere ganger enn angitt i prosjektfil!
+FEIL! Linjenr 14: Egenskaper finnes flere ganger enn angitt i prosjektfil!
+ADVR! Linjenr 15: ENHET-H er ikke definert i hodet. Verdi for ENHET benyttes.
+ADVR! Linjenr 15: ENHET-D er ikke definert i hodet. Verdi for ENHET benyttes.
+Leser c:\data\00102qlm\b09069_2.sos
+FEIL! Linjenr 14: Egenskaper finnes flere ganger enn angitt i prosjektfil!
+FEIL! Linjenr 14: Egenskaper finnes flere ganger enn angitt i prosjektfil!
+ADVR! Linjenr 15: ENHET-H er ikke definert i hodet. Verdi for ENHET benyttes.
+ADVR! Linjenr 15: ENHET-D er ikke definert i hodet. Verdi for ENHET benyttes.
+Leser 
+Leser 
+Leser 
+Leser 
+Leser 
+Leser 
+
+RESULTAT PUNKT:
+Ant. supportert i SOSI-filene: 10142
+Ant. skrevet.................: 144
+Ant. egenskaper definert.....: 6
+	FEA_CODE=PTEMA H4 1
+	HEIGHT=HØYDE D10.2 1
+	DATA_SOURCE=MÅLEMETODE H2 1
+	ACCURACY=NØYAKTIGHET H5 1
+	VISIBILITY=SYNBARHET H2 1
+	DATE=DATO DATO 1
+PTEMA og antall konvertert
+	3301	144
+
+RESULTAT LINJE:
+Ant. supportert i SOSI-filene: 39108
+Ant. skrevet.................: 1251
+Ant. egenskaper definert.....: 6
+	FEA_CODE=LTEMA H4 1
+	HEIGHT=HØYDE D10.2 1
+	DATA_SOURCE=MÅLEMETODE H2 1
+	ACCURACY=NØYAKTIGHET H5 1
+	VISIBILITY=SYNBARHET H2 1
+	DATE=DATO DATO 1
+LTEMA og antall konvertert
+	3000	0
+	3100	218
+	3101	0
+	3201	632
+	3202	251
+	3211	116
+	3212	34

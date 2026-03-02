@@ -40,6 +40,14 @@ library(here)
 library(rdrop2)
 #install.packages("openxlsx")
 library(openxlsx)
+library(stringr)
+library(stringi)
+library(lubridate)
+library(sf)
+library(dplyr)
+library(ggplot2)
+library(lubridate)
+library(stringr)
 
 if (!requireNamespace("pacman", quietly = TRUE)) install.packages("pacman")
 pacman::p_load(readr, ggplot2, scales, forcats)
@@ -73,10 +81,10 @@ cli::cli_alert_success("Iniciando Dashboar - carregamento de directorios e BD")
   dir_function <- file.path(dir_R, 'function')
   dir_preliminar <- file.path(dir_R, 'Preliminar')
   dir_intermediaria <- file.path(dir_R, 'Intermediaria')
+  dir_dashboard_alt<-"C:/Users/rgdti/OneDrive - INS - Instituto Nacional de Saúde/Documents/IDS/BD_DASHBOARD"
   
   
-  
-  
+  #funcao para converter datas em varios formatos
   converter_data <- function(base_dados, coluna_data) {
     # Verifica se a coluna existe
     if (!coluna_data %in% names(base_dados)) {
@@ -130,7 +138,6 @@ cli::cli_alert_success("Iniciando Dashboar - carregamento de directorios e BD")
       cli::cli_alert_success(paste("Base criada:", novo_nome))
     }
   }
-
 
 
   

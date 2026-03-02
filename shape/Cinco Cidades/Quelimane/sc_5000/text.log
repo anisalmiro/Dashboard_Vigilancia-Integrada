@@ -1,0 +1,101 @@
+LOGGFIL FOR SOSI->SHAPE KONV
+C:\PROGRA~1\SOSI-S~2.0\BIN\SOSI2AV2.EXE  versjon 2.0 1998-04-01
+GD-lib.  versjon 2.0 1998-04-01
+GD-koord versjon 1.0b1 1997-10-05
+
+Prosjektfil..................: c:\data\00101mpt\shape\text.prj
+Inifil for prosjekt..........: C:\Program Files\Sosi-shape2.0\BIN\sosi2av.ini
+Loggfil......................: c:\data\00102qlm\shape\text.log.log
+
+Nivå.........................: 3
+
+OPPSETT
+
+SOSIDEF_FIL..................: C:\Program Files\Sosi-shape2.0\standard\sosidef.txt
+Flateformat..................: 2
+GJEMME_OPPRINNELSE...........: 0
+ARV_FRA_HODE.................: 0
+Maks_kordelengde.............: 1.000
+Maks_retningsendring.........: 1.000
+ANNO_NAVN....................: TEKST
+REGION_NAVN..................: POLY
+
+
+SOSI-filer :
+	c:\data\00102qlm\b08069_2.sos
+	c:\data\00102qlm\b08069_4.sos
+	c:\data\00102qlm\b09068_3.sos
+	c:\data\00102qlm\b09069_1.sos
+	c:\data\00102qlm\b09069_3.sos
+	c:\data\00102qlm\b09068_4.sos
+	c:\data\00102qlm\b09069_2.sos
+	
+	
+	
+	
+	
+	
+
+
+Resultatfiler (SHAPE):
+	c:\data\00102qlm\shape\text (TEKST)
+
+
+KONVERTERING
+Start konvertering :
+Thu Dec 03 10:52:23 1998
+
+Leser c:\data\00102qlm\b08069_2.sos
+
+HODE:
+ADVR! Linjenr 15: ENHET-H er ikke definert i hodet. Verdi for ENHET benyttes.
+ADVR! Linjenr 15: ENHET-D er ikke definert i hodet. Verdi for ENHET benyttes.
+..ENHET 0.010000
+..TEGNSETT DOSN8
+..ORIGO-NØ	8026000	269000
+..OMRÅDE
+...MIN-NØ	8026000	269000
+...MAX-NØ	8032000	276000
+..KOORDSYS 99
+
+Leser c:\data\00102qlm\b08069_4.sos
+ADVR! Linjenr 15: ENHET-H er ikke definert i hodet. Verdi for ENHET benyttes.
+ADVR! Linjenr 15: ENHET-D er ikke definert i hodet. Verdi for ENHET benyttes.
+Leser c:\data\00102qlm\b09068_3.sos
+ADVR! Linjenr 15: ENHET-H er ikke definert i hodet. Verdi for ENHET benyttes.
+ADVR! Linjenr 15: ENHET-D er ikke definert i hodet. Verdi for ENHET benyttes.
+Leser c:\data\00102qlm\b09069_1.sos
+ADVR! Linjenr 15: ENHET-H er ikke definert i hodet. Verdi for ENHET benyttes.
+ADVR! Linjenr 15: ENHET-D er ikke definert i hodet. Verdi for ENHET benyttes.
+Leser c:\data\00102qlm\b09069_3.sos
+ADVR! Linjenr 15: ENHET-H er ikke definert i hodet. Verdi for ENHET benyttes.
+ADVR! Linjenr 15: ENHET-D er ikke definert i hodet. Verdi for ENHET benyttes.
+Leser c:\data\00102qlm\b09068_4.sos
+ADVR! Linjenr 15: ENHET-H er ikke definert i hodet. Verdi for ENHET benyttes.
+ADVR! Linjenr 15: ENHET-D er ikke definert i hodet. Verdi for ENHET benyttes.
+Leser c:\data\00102qlm\b09069_2.sos
+ADVR! Linjenr 15: ENHET-H er ikke definert i hodet. Verdi for ENHET benyttes.
+ADVR! Linjenr 15: ENHET-D er ikke definert i hodet. Verdi for ENHET benyttes.
+Leser 
+Leser 
+Leser 
+Leser 
+Leser 
+Leser 
+
+RESULTAT TEKST:
+Ant. supportert i SOSI-filene: 1504
+Ant. skrevet.................: 374
+Ant. egenskaper definert.....: 2
+	FEA_CODE=TTEMA H4 1
+	TEXT=STRENG T70 1
+TTEMA og antall konvertert
+	9201	1
+	9202	26
+	9401	13
+	9402	39
+	9411	234
+	9500	0
+	9501	0
+	9502	0
+	9503	61

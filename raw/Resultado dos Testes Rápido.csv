@@ -1,0 +1,15 @@
+SubmissionDate,Ident-codparticipante,Ident-CONST_HIV,Ident-CONST_DBS,Ident-CONST_HBV,Ident-CONST_HCV,Ident-QUANT_DBS,Ident-QUANT_DBS_OTHER,Ident-RESUL_HIV,Ident-RESUL_HBV,Ident-RESUL_HCV,Ident-OBS,Ident-OBS_OTHER,meta-instanceID,KEY
+"Jul 27, 2023 3:28:47 PM",M000704,conhece_o_seu_seroestado,Sim,Sim,Sim,3,"","",Negativo,Positivo,Sim,"",uuid:398e786e-380f-4573-9f6f-ae68e312e934,uuid:398e786e-380f-4573-9f6f-ae68e312e934
+"Jul 27, 2023 3:28:48 PM",10806067,Sim,Sim,Sim,Sim,0,Resultado HIV não reactivo,Negativo,Negativo,Positivo,Sim,"",uuid:e41bf288-d288-40eb-9160-cd0db89842d8,uuid:e41bf288-d288-40eb-9160-cd0db89842d8
+"Jul 27, 2023 3:43:07 PM",10231173,Sim,Sim,Sim,Sim,3,"",Positivo,Negativo,Positivo,Sim,"",uuid:2c9b8e52-2806-4fbb-b7e5-15245d697969,uuid:2c9b8e52-2806-4fbb-b7e5-15245d697969
+"Jul 27, 2023 3:53:04 PM",M000701,Sim,Sim,Sim,Sim,0,0,Negativo,Negativo,Positivo,Sim,"",uuid:84c17820-627a-4dd1-b8d6-04dc6d6c44ec,uuid:84c17820-627a-4dd1-b8d6-04dc6d6c44ec
+"Jul 27, 2023 3:53:04 PM",M000702,conhece_o_seu_seroestado,Sim,Nao,Nao,2,Difícil  colheita  e o participante  informou que precisava ausentar  urgentemente,"","","","","",uuid:246ac89e-5302-4c60-8446-5087c4031871,uuid:246ac89e-5302-4c60-8446-5087c4031871
+"Jul 27, 2023 3:53:04 PM",M000706,Sim,Sim,Sim,Sim,0,"",Negativo,Negativo,Positivo,Sim,"",uuid:6f70a126-1671-4bb5-a845-c35be107e917,uuid:6f70a126-1671-4bb5-a845-c35be107e917
+"Jul 28, 2023 6:10:47 AM",14280122,Sim,Sim,Sim,Sim,0,"",Negativo,Negativo,Positivo,Sim,"",uuid:2415f8c1-9416-4637-af26-8806aa8dcc2b,uuid:2415f8c1-9416-4637-af26-8806aa8dcc2b
+"Aug 24, 2023 4:17:40 PM",M000006,Sim,Sim,Sim,Sim,0,O teste de hiv foi negativo,Negativo,Negativo,Positivo,Sim,"",uuid:692fa925-a206-48f9-81a9-e038fb1c0538,uuid:692fa925-a206-48f9-81a9-e038fb1c0538
+"Aug 24, 2023 4:17:42 PM",M000009,Sim,Sim,Sim,Sim,0,O teste hiv foi negativo,Negativo,Negativo,Positivo,Sim,"",uuid:b2b6eb1f-b408-4347-a84e-6567e4d06b67,uuid:b2b6eb1f-b408-4347-a84e-6567e4d06b67
+"Aug 24, 2023 4:17:43 PM",M000012,Sim,Sim,Sim,Sim,0,Porque o resultado de hiv foi negativo,Negativo,Positivo,Positivo,Sim,"",uuid:84bca13d-2123-4cf2-b2f7-25471f70677a,uuid:84bca13d-2123-4cf2-b2f7-25471f70677a
+"Aug 24, 2023 4:23:40 PM",M000008,Sim,Sim,Sim,Sim,0,Teste de Hiv negativo,Negativo,Negativo,Positivo,Sim,"",uuid:f840298d-ab84-4b9c-883c-141202f232db,uuid:f840298d-ab84-4b9c-883c-141202f232db
+"Aug 24, 2023 4:23:41 PM",M000005,Sim,Sim,Sim,Sim,0,Teste de Hiv negativo,Negativo,Negativo,Positivo,Sim,"",uuid:d274d481-06ad-4493-b263-73780892aad2,uuid:d274d481-06ad-4493-b263-73780892aad2
+"Aug 24, 2023 4:23:41 PM",M000010,Sim,Sim,Sim,Sim,0,Nao aceitou  continuar,Positivo,Negativo,Positivo,Nao,Não  aceitou,uuid:4069724c-2d39-44ae-8b3a-6dc0f761d525,uuid:4069724c-2d39-44ae-8b3a-6dc0f761d525
+"Aug 24, 2023 4:23:42 PM",M000011,Sim,Sim,Sim,Sim,0,Hiv negativo,Negativo,Negativo,Negativo,"","",uuid:89599118-68df-4243-9c2f-616e6bf27c3b,uuid:89599118-68df-4243-9c2f-616e6bf27c3b

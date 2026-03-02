@@ -63,7 +63,6 @@ cli::cli_alert_success("Lida com Sucesso a base da Vigilancia Laboratorial")
 
 vcom         <- read_data("Formulário da Vigilancia Comunitaria.csv")
 cli::cli_alert_success("Lida com Sucesso a base da Vigilancia Comunitaria")
-cli::cli_alert_success("Lida com Sucesso a base da Vigilancia Comunitaria")
 
 v_ambiental  <- read_data("VIGILÂNCIA  AMBIENTAL.csv")
 cli::cli_alert_success("Lida com Sucesso a base da Vigilancia Ambiental")
@@ -74,8 +73,9 @@ cli::cli_alert_success("Lida com Sucesso a base da dos Resultados das Vigilancia
 
 
 #Carregando base da Genomica no directorio R/Dashboard/BD_GENOMICA_LINED.csv
-cli::cli_alert_success("Carregando bases de dados da Genomica")
+cli::cli_alert_info("Carregando bases de dados da Genomica")
 BD_genomica_lined <- read.csv("R/Dashboard/BD_GENOMICA_LINED.csv")
-
+cli::cli_alert_success("Base de dados da Genomica carregada com sucesso")
 
 cli::cli_alert_success("Bases de dados carregadas com sucesso")
+

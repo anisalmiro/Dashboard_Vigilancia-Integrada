@@ -8,6 +8,8 @@ cli::cli_alert_info("Combinando base de dado Vig e ambiental para analises")
 BD_VH_VC_VA_Intermidiaria<-full_join(BD_VH_VC_Preliminar,vigilancia_ambiental)
 
 
+
+
 cli::cli_alert_info("Exportando Bases de Dados para DashBoard")
 #Exportando Bases de dados para DashBoard
 cli::cli_alert_info("Exportando Base Hospitalar")
@@ -40,15 +42,26 @@ write.csv(BD_VH_VC_VA_Intermidiaria, file = file.path(dir_dashboard, "BD_VH_VC_V
 
 
 
-cli::cli_alert_info("Exportando Base de dados de Colera")
-write.csv(B_geral_Colera, file = file.path(dir_dashboard, "B_geral_Colera.csv"),row.names = FALSE, fileEncoding = "UTF-8")
 
 #Exportar base combinada de resultados com as tres vigilancias
 
 
-cli::cli_alert_info("Exportando Base de de resultados das vigilancia combinada as tres vigilancias H,C e Ambiental")
-write.csv(B_geral_HCA_R, file = file.path(dir_dashboard, "B_geral_HCA_R.csv"),row.names = FALSE, fileEncoding = "UTF-8")
+#C:/Users/rgdti/OneDrive - INS - Instituto Nacional de Saúde/Documents/IDS/BD_DASHBOARD
+cli::cli_alert_success("Exportando Bases de Dados para DashBoard - Pasta Alternativa")
+# exportar todas as bases para esta pasta alternativa de actualizacao das dashboards
 
+write.csv(vigilancia_hospitalar, file = file.path(dir_dashboard_alt, "Base_Vigilancia_Hospitalar.csv"),
+          row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(vig_laboratorial, file = file.path(dir_dashboard_alt, "Base_Laboratorio.csv"),
+          row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(vigilancia_comunitaria, file = file.path(dir_dashboard_alt, "Base_Comunitario.csv"),
+          row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(vigilancia_ambiental, file = file.path(dir_dashboard_alt, "Base_Ambiental.csv"),
+          row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(resultado_testagem, file = file.path(dir_dashboard_alt, "Base_Resultados.csv"),
+          row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(BD_VH_VC_Preliminar, file = file.path(dir_dashboard_alt, "BD_VH_VC_Preliminar.csv"),row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(BD_VH_VC_VA_Intermidiaria, file = file.path(dir_dashboard_alt, "BD_VH_VC_VA_Intermidiate.csv"),row.names = FALSE, fileEncoding = "UTF-8")
 
 cli::cli_alert_success("Bases de Dados para monitoria exportada com sucesso!")
 #exportar base de colera 

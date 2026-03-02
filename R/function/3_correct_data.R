@@ -259,8 +259,8 @@ resultado_testagem$`local_colheita:tipo_local_colheita` <- plyr::revalue(
 
 
 cli::cli_alert_info("Limpeza das provincias")
-resultado_testagem$`local_colheita:provincia_colheita` <- plyr::revalue(
-  resultado_testagem$`local_colheita:provincia_colheita`,
+vigilancia_hospitalar$`Dados_demograficos:provincia_de_residencia` <- plyr::revalue(
+  vigilancia_hospitalar$`Dados_demograficos:provincia_de_residencia`,
   c(
     "Maputo_Cidade" = "Maputo Cidade",
     "Maputo_provincia" = "Maputo Provincia",
@@ -271,22 +271,22 @@ resultado_testagem$`local_colheita:provincia_colheita` <- plyr::revalue(
 
 
 
-resultado_testagem<- resultado_testagem %>% 
-  mutate(`local_colheita:provincia_colheita` = case_when(
-    `meta:instanceID` == "uuid:1df02f67-7e29-49ac-a335-3f9e2e7a9551" ~ "Maputo Cidade",
-    TRUE ~ `local_colheita:provincia_colheita`  # mantém os valores originais se não corresponder
-  ))
+#resultado_testagem<- resultado_testagem %>% 
+#  mutate(`local_colheita:provincia_colheita` = case_when(
+#    `meta:instanceID` == "uuid:1df02f67-7e29-49ac-a335-3f9e2e7a9551" ~ "Maputo Cidade",
+#    TRUE ~ `local_colheita:provincia_colheita`  # mantém os valores originais se não corresponder
+#  ))
 
 
-cli::cli_alert_info("Limpeza da local colheita")
+#cli::cli_alert_info("Limpeza da local colheita")
 #Ambiental
-resultado_testagem<- resultado_testagem %>% 
-  mutate(`local_colheita:us_colheita` = case_when(
-    `meta:instanceID` == "uuid:1df02f67-7e29-49ac-a335-3f9e2e7a9551" ~ "CS Zimpeto",
-    `meta:instanceID` == "uuid:eddfecfa-d5d2-485d-b6b5-0dea54fd68ba" ~ "CS Zimpeto",
-    `meta:instanceID` == "uuid:7ed777bd-7430-4983-8e43-af060daa71b2" ~ "CS Zimpeto",
-    TRUE ~ `local_colheita:us_colheita`   # mantém os valores originais se não corresponder
-  ))
+#resultado_testagem<- resultado_testagem %>% 
+#  mutate(`local_colheita:us_colheita` = case_when(
+#    `meta:instanceID` == "uuid:1df02f67-7e29-49ac-a335-3f9e2e7a9551" ~ "CS Zimpeto",
+#    `meta:instanceID` == "uuid:eddfecfa-d5d2-485d-b6b5-0dea54fd68ba" ~ "CS Zimpeto",
+#    `meta:instanceID` == "uuid:7ed777bd-7430-4983-8e43-af060daa71b2" ~ "CS Zimpeto",
+#    TRUE ~ `local_colheita:us_colheita`   # mantém os valores originais se não corresponder
+#  ))
 
 
 #Renomeando variaveis 
@@ -303,8 +303,8 @@ vigilancia_ambiental <- dplyr::rename(
 rename_map <- c(
   "WHOTA:coordenadas_IDS:Latitude"  = "Dados_demograficos:coordenadas_IDS:Latitude",
   "WHOTA:coordenadas_IDS:Longitude" = "Dados_demograficos:coordenadas_IDS:Longitude",
-  "WHOTA:DATE"                       = "Dados_demograficos:DATE2",
-  "WHOTA:provincia_colheita"         = "local_colheita:provincia_colheita"
+  "WHOTA:DATE"                       = "Dados_demograficos:DATE2"#,
+ # "WHOTA:provincia_colheita"         = "local_colheita:provincia_colheita"
 )
 
 # Loop para renomear apenas se a coluna existir

@@ -42,6 +42,3 @@ message("✔️ Upload concluído com sucesso!")
 
 
 
-
-names(B_geral_HCA_R)
-

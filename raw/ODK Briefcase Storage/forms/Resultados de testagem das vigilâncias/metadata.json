@@ -1,18 +1,18 @@
 {
   "key" : {
     "name" : "Resultados de testagem das vigilâncias",
-    "id" : "hospitalar_LB"
+    "id" : "hospitalar_LB_v2"
   },
   "formDir" : "forms/Resultados de testagem das vigilâncias",
   "hasBeenPulled" : true,
   "cursor" : {
     "type" : "aggregate",
-    "value" : "<cursor xmlns=\"http://www.opendatakit.org/cursor\"><attributeName>_LAST_UPDATE_DATE</attributeName><attributeValue>2026-01-12T16:12:06.162+01:00</attributeValue><uriLastReturnedValue>uuid:0ff13ebc-8eeb-4809-97e1-cd417eb783c7</uriLastReturnedValue><isForwardCursor>true</isForwardCursor></cursor>"
+    "value" : "<cursor xmlns=\"http://www.opendatakit.org/cursor\"><attributeName>_LAST_UPDATE_DATE</attributeName><attributeValue>2026-02-27T13:16:44.915+01:00</attributeValue><uriLastReturnedValue>uuid:179046d5-442d-45fb-8287-28347bdc65ee</uriLastReturnedValue><isForwardCursor>true</isForwardCursor></cursor>"
   },
   "lastExportedSubmission" : {
-    "instanceId" : "uuid:0ff13ebc-8eeb-4809-97e1-cd417eb783c7",
-    "submissionDate" : "2026-01-12T16:12:06.156+01:00",
-    "exportDateTime" : "2026-01-13T11:05:12.458+02:00"
+    "instanceId" : "uuid:179046d5-442d-45fb-8287-28347bdc65ee",
+    "submissionDate" : "2026-02-27T13:16:44.91+01:00",
+    "exportDateTime" : "2026-03-02T10:49:29.695+02:00"
   },
-  "submissionVersions" : [ "12", "1", "13" ]
+  "submissionVersions" : [ "2" ]
 }

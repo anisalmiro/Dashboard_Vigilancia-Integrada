@@ -11,6 +11,7 @@
 ## clean envirnment 
 rm(list = ls())
 
+
 #1
 #Leitura de todas bibliotecs
 source(".RProfile", encoding = "UTF-8")
@@ -45,31 +46,21 @@ source(file.path(dir_function, "4_1_create_combined_DB.R"), encoding = "UTF-8")
 source(file.path(dir_function, "5_create_indicator.R"), encoding = "UTF-8")
 
 
+#6
+source(file.path(dir_function, "7_Maps_function.R"), encoding = "UTF-8")
+
+
 #Fim dos Criteios
 #CREATE TO MONITORIA DASHBOARD
 source(file.path(dir_function, "save_monitoria.R"), encoding = "UTF-8")
 
+#selecionar dados de localizacao, unidade sanitaria, bairro, e outras variaveis de interece para gerar mapa e positivos de influenza para mapear os casos de influenza 
+
 
 #gerar acessos
-#source(file.path(dir_function, "acessos.R"), encoding = "UTF-8")
-
-dim(B_geral_HCA_R)
-dim(B_geral_HCA_1)
-names(B_geral_HCA_R)
-
-names(B_geral_HCA_R)
-
-View(
-  vig_laboratorial %>%
-    dplyr::filter(
-      `Dados_demograficos:Amostras_colhidas` == "Colera",
-   ) %>% dplyr::select("Dados_demograficos:Amostras_colhidas","Dados_demograficos:tdtusa","Dados_demograficos:resultado_colera")
-)
+#source(file.path(dir_function, "acessos.R"), encoding = "UTF-8") 
 
 
-
-
-names(vig_laboratorial)
 
 #open file 6_send_dropbox.R
 

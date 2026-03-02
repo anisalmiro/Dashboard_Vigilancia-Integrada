@@ -113,62 +113,63 @@ B_geral_HCA_R <- B_geral_HCA_R %>%
 
 # combinar bse base BD_VH_VC_VA_Intermidiaria com base vig_laboratorial
 cli::cli_alert_info("Combinando base de dado BD_VH_VC_VA_Intermidiaria e vig_laboratorial para analises")
-left_df <- BD_VH_VC_VA_Intermidiaria
-right_df <- vig_laboratorial
-left_key <- "Dados_demograficos:codigo_paciente"
-right_key <- "Dados_demograficos:cod_amostra_iras"
-if (!left_key %in% names(left_df)) stop(paste("Key", left_key, "not found in `BD_VH_VC_VA_Intermidiaria`"))
-if (!right_key %in% names(right_df)) stop(paste("Key", right_key
-, "not found in `vig_laboratorial`"))
-codes_left <- unique(left_df[[left_key]])
-codes_right <- unique(right_df[[right_key]])
-not_found_codes <- setdiff(codes_left, codes_right)
-n_not_found <- length(not_found_codes)
-cat("Codigos na basede dados combinada de nome  `BD_VH_VC
-_VA_Intermidiaria` nao foram encontrados na base laboratorial nomeado `vig_laboratorial`:", n_not_found, "\n")
-B_geral_HCA_Lab <- left_df %>%
-  left_join(right_df, by = setNames(right_key, left_key))
-rm(left_df,right_df,left_key,right_key)
 
 
 
-cli::cli_alert_success("Base de dado combinada com sucesso para analises")
+# full join na base hospitalar e laboratorial
 
+vig_laboratorialp <- vig_laboratorial %>%
+  mutate(
+    `Dados_demograficos:codigo_paciente` =
+      `Dados_demograficos:codigo_amostra_colera`
+  )
 
-# filtrar na base B_geral_HCA_Lab onde no Dados_demograficos-Amostras_colhidas vem pelomenos string iguais a "Coler"
-B_geral_HCA_LabP <- B_geral_HCA_Lab %>%
+vig_laboratorialp <- vig_laboratorialp %>%
   filter(str_detect(`Dados_demograficos:Amostras_colhidas`, regex("Coler", ignore_case = TRUE)))
 
+
+B_geral_HC_Lab <- inner_join(
+  vigilancia_hospitalar,
+  vig_laboratorialp,
+  by = "Dados_demograficos:codigo_paciente"
+)
+
+
 #esta base seleciona as variaveis de interesse para analise preliminar de colera
-BD_Prelim_lab_analise<- B_geral_HCA_LabP %>% select(start_date=start.x,`Dados_demograficos:codigo_paciente`,
+BD_Prelim_lab_analise<- B_geral_HC_Lab %>% select(start_date=start.x, data_reorte1="Dados_demograficos:DATE2.x",`Dados_demograficos:codigo_paciente`,Unidade_sanitaria,
                                                         "Dados_demograficos:codigo_amostra_colera",
                                                         "Dados_demograficos:Tipo_d_amostra_iras",
                                                         `Dados_demograficos:Amostras_colhidas`,
-                                                        "local_colheita:provincia_colheita" ,
                                                         "Dados_demograficos:provincia_de_residencia",
                                                         "Dados_demograficos:distrito_residencia",
                                                         "Dados_demograficos:bairro" ,
-                                                         data_reorte1="Dados_demograficos:DATE2.y",
                                                         "Dados_demograficos:amostra_testada" ,
                                                         "Dados_demograficos:tipo_amostra",
                                                         "Dados_demograficos:resultado_colera",
                                                         "Dados_demograficos:bairro","Dados_demograficos:data_nascimento",
-                                                        "Dados_demograficos:idade2","Dados_demograficos:idade","Dados_demograficos:sexo",,"Dados_demograficos:distrito_residencia",
-                                                        "nota111:Sintomas","Dados_demograficos:Tipo_d_amostra_iras","Dados_demograficos:coordenadas_IDS:Latitude","Dados_demograficos:coordenadas_IDS:Longitude",
+                                                        "Dados_demograficos:idade2","Dados_demograficos:idade","Dados_demograficos:sexo","Dados_demograficos:distrito_residencia",
+                                                        "nota111:Sintomas","Dados_demograficos:Tipo_d_amostra_iras",
                                                         "Dados_demograficos:bairro","nota111:Sintomas","nota111:outro_sintoma" ,"nota124:Hospitalizado","nota124:Motivo_Hospitalizado_other",
                                                         "meta:instanceID.y")
 
 
-# remover duplicados com mesmo id na variavel Dados_demograficos:codigo_amostra_colera
+
+#criar idade unica usando `Dados_demograficos:idade` e `Dados_demograficos:idade2` d Base BD_Prelim_lab_analise
 BD_Prelim_lab_analise <- BD_Prelim_lab_analise %>%
-  distinct(`Dados_demograficos:codigo_amostra_colera`, .keep_all = TRUE)
+  mutate(
+    idade_complement = coalesce(`Dados_demograficos:idade`,
+                             `Dados_demograficos:idade2`)
+  )
 
+rm(vig_laboratorialp,B_geral_HC_Lab)
+#remove(B_geral_HCA_Lab,B_geral_HCA_LabP)
 
-remove(B_geral_HCA_Lab,B_geral_HCA_LabP)
+names(BD_Prelim_lab_analise)
 
-B_geral_Colera<- inner_join(BD_Prelim_lab_analise,resultado_testagem, by = c("Dados_demograficos:codigo_amostra_colera" = "detalhes:codido_do_teste2"))
+#combinar base BD_Prelim_lab_analise com base de resultado_testagem usando innerjoin nos codigos left_key <- "Dados_demograficos:codigo_amostra_colera" e right_key <- "detalhes:codido_do_teste2"
+B_geral_Colera<- inner_join(BD_Prelim_lab_analise,resultado_testagem, by = c("Dados_demograficos:codigo_paciente" = "detalhes:codido_do_teste2"))
 
-
+#dim(B_geral_Colera)
 
 #adicionar variavel vigilancia na base combinada B_geral_Colera apartir do codigo do colera
 B_geral_Colera <- B_geral_Colera %>%
@@ -194,14 +195,31 @@ B_geral_Colera <- B_geral_Colera %>%
     Semana_Epi = lubridate::isoweek(DATE2)
   )
 
+#calcular faixa etaria de acordo com
 
+  B_geral_Colera <- B_geral_Colera %>%
+  mutate(
+    faixa_etaria = case_when(
+      idade_complement >= 0  & idade_complement < 2  ~ "00 < 02",
+      idade_complement >= 2  & idade_complement < 5  ~ "02 < 05",
+      idade_complement >= 5  & idade_complement <= 15 ~ "05 < 15",
+      idade_complement > 15  & idade_complement < 50 ~ "15 < 50",
+      idade_complement >= 50 & idade_complement < 65 ~ "50 < 65",
+      idade_complement >= 65                      ~ "65+",
+      TRUE ~ NA_character_
+    )
+  )
+
+
+
+#view(B_geral_Colera)
 
 #se tudo estiver bem remover a base B_geral_HCA_LabP, B_geral_HCA_Lab
 
 
 
 #combinar base B_geral_HCA_LabP com base de resultado_testagem usando innerjoin nos codigos left_key <- "Dados_demograficos:codigo_paciente" e right_key <- "detalhes:codido_do_teste2"
-
+rm(left_df,right_df,df,VA_R)
 
 #filtrar na base combinada BD_C_H_R apartir da variavel modulo apenas casosque pertencem a vidilancia comunitaria  e outa base vigilancia hospitalar
 cli::cli_alert_info("Filtrando base de dado combinada Vigilancia Comunitaria")

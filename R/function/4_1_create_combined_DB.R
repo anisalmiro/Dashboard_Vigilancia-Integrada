@@ -1,244 +1,422 @@
 
+cli::cli_alert_info("Iniciando processo de combinação de bases de dados para análises")
 
-#combinar base COMUNITARI, HOSPITALAR com a base de resulatados de testagem usando osseguintes codigos left_key <- "Dados_demograficos:codigo_paciente" e right_key <- "detalhes:codido_do_teste2"
-
-cli::cli_alert_info("Combinando base de dado Vig e resultados de testagem para analises")
-left_df <- BD_VH_VC_Preliminar
-right_df <- resultado_testagem
-
-left_key <- "Dados_demograficos:codigo_paciente"
-right_key <- "detalhes:codido_do_teste2"
-
-if (!left_key %in% names(left_df)) stop(paste("Key", left_key, "not found in `BD_VH_VC_Preliminar`"))
-if (!right_key %in% names(right_df)) stop(paste("Key", right_key
-, "not found in `resultado_testagem`"))
-codes_left <- unique(left_df[[left_key]])
-codes_right <- unique(right_df[[right_key]])
-
-not_found_codes <- setdiff(codes_left, codes_right)
-n_not_found <- length(not_found_codes)
-
-cat("Codigos na basede dados combinada de nome  `BD_VH_VC_Preliminar` nao foram encontrados na base de resultados nomeado `resultado_testagem`:", n_not_found, "\n")
-
-BD_C_H_R <- left_df %>%
-  left_join(right_df, by = setNames(right_key, left_key))
+#combinar base vigilancia hospitalar, comunitaria e ambiental usando o o codigo_paciente para full join
+Base_v_HCA_total_aggre <- full_join(vigilancia_hospitalar, vigilancia_comunitaria, by = "codigo_paciente") %>%
+  full_join(vigilancia_ambiental, by = "codigo_paciente")
 
 
-rm(left_df,right_df,left_key,right_key)
-cli::cli_alert_success("Base de dado combinada com sucesso para analises")
-
-
-#combinar base Ambiental com a base de resulatados de testagem usando osseguintes codigos left_key <- "Dados_demograficos:codigo_paciente" e right_key <- "detalhes:codido_do_teste2"
-
-
-cli::cli_alert_info("Combinando base de dado Vigilancia Ambiental e resultados de testagem")
-left_df <- vigilancia_ambiental
-right_df <- resultado_testagem
-
-left_key <- "Dados_demograficos:codigo_paciente"
-right_key <- "detalhes:codido_do_teste2"
-
-if (!left_key %in% names(left_df)) stop(paste("Key", left_key, "not found in `vigilancia_ambiental`"))
-if (!right_key %in% names(right_df)) stop(paste("Key", right_key, "not found in `resultado_testagem`"))
-
-codes_left <- unique(left_df[[left_key]])
-codes_right <- unique(right_df[[right_key]])
-
-not_found_codes <- setdiff(codes_left, codes_right)
-n_not_found <- length(not_found_codes)
-
-cat("Codigos na basede dados combinada de nome  `vigilancia_ambiental` nao foram encontrados na base de resultados nomeado `resultado_testagem`:", n_not_found, "\n")
-
-VA_R <- left_df %>%
-  left_join(right_df, by = setNames(right_key, left_key))
-
-rm(left_df,right_df,left_key,right_key)
-cli::cli_alert_success("Base de dado combinada com sucesso para analises")
-
-
-
-#bse geral Hospital, comunitariaeambiental
-
-cli::cli_alert_info("Combinando base de dado Vig e resultados de testagem para analises")
-left_df <- BD_VH_VC_VA_Intermidiaria
-right_df <- resultado_testagem
-
-left_key <- "Dados_demograficos:codigo_paciente"
-right_key <- "detalhes:codido_do_teste2"
-
-if (!left_key %in% names(left_df)) stop(paste("Key", left_key, "not found in `BD_VH_VC_Preliminar`"))
-if (!right_key %in% names(right_df)) stop(paste("Key", right_key
-                                                , "not found in `resultado_testagem`"))
-codes_left <- unique(left_df[[left_key]])
-codes_right <- unique(right_df[[right_key]])
-
-not_found_codes <- setdiff(codes_left, codes_right)
-n_not_found <- length(not_found_codes)
-
-cat("Codigos na basede dados combinada de nome  `BD_VH_VC_VA_Intermidiaria` nao foram encontrados na base de resultados nomeado `resultado_testagem`:", n_not_found, "\n")
-
-B_geral_HCA_R_Final<- inner_join(BD_VH_VC_VA_Intermidiaria,resultado_testagem, by = c("Dados_demograficos:codigo_paciente" = "detalhes:codido_do_teste2"))
-
-B_geral_HCA_R <- B_geral_HCA_R_Final
-
-rm(B_geral_HCA_R_Final)
-
-
-#adicionar variavel vigilancia na base combinada B_geral_HCA apartir do codigo do paciente
-B_geral_HCA_R <- B_geral_HCA_R %>%
-  mutate(
-    codigo_trim = str_trim(toupper(coalesce(codig_paciente=as.character(B_geral_HCA_R$`Dados_demograficos:codigo_paciente`), ""))),
-    vigilancia = case_when(
-      str_detect(codigo_trim, "^[IL]DSW") ~ "Ambiental",
-      str_detect(codigo_trim, "^IDSC") ~ "Comunitaria",
-      str_detect(codigo_trim, "^IDS")  ~ "Hospitalar",
-      TRUE ~ "Outro"
-    )
-  ) %>%
-  filter(vigilancia %in% c("Comunitaria", "Hospitalar", "Ambiental"))
-
-
-cli::cli_alert_success("Base de dado combinada com sucesso para analises")
-
-# mutete semana epi
-B_geral_HCA_R <- B_geral_HCA_R %>%
-  mutate(
-    DATE2 = lubridate::parse_date_time(`Dados_demograficos:DATE2`, orders = c("Ymd", "Y-m-d", "dmY", "d/m/Y", "mdY", "m/d/Y", "Ymd HMS", "dmY HMS")),
-    Semana_Epi_ano = paste0(lubridate::year(DATE2), "-", sprintf("%02d", lubridate::isoweek(DATE2))),
-    ano = lubridate::year(DATE2),
-    Semana_Epi = lubridate::isoweek(DATE2)
+Base_v_HCA_total_aggre_1 <- Base_v_HCA_total_aggre %>%
+  select(
+    "start.x", "end.x", "deviceid.x", "Unidade_sanitaria.x", "Codigo_do_tecnico.x", 
+    "Dados_demograficos:coordenadas_IDS:Latitude.x","Dados_demograficos:coordenadas_IDS:Longitude.x",
+    "Dados_demograficos:DATE1.x", "Dados_demograficos:DATE2.x",  
+    "Dados_demograficos:Local_de_inclusao",
+    "Dados_demograficos:sexo.x", "Dados_demograficos:conhece_nascimento_data.x", 
+    "Dados_demograficos:data_nascimento.x", "Dados_demograficos:idade.x", 
+    "Dados_demograficos:tipo_idade.x", "Dados_demograficos:idade2.x", 
+    "Dados_demograficos:Escolaridade.x", "Dados_demograficos:Escolaridade_other.x", 
+    "Dados_demograficos:Marital.x", "Dados_demograficos:Profissao.x", 
+    "Dados_demograficos:Profissao_other.x", "Dados_demograficos:Relegiao.x", 
+    "Dados_demograficos:Relegiao_other.x", "Dados_demograficos:provincia_de_residencia.x", 
+    "Dados_demograficos:distrito_residencia.x", "Dados_demograficos:bairro.x", 
+    "Dados_demograficos:Gravidez.x",
+    "nota111:Tensao_arterial.x", "nota111:Sintomas.x",
+    "nota111:nest_mom_febre.x", "nota111:outro_sintoma.x","nota111:Sintomas.y",
+    "meta:instanceID.x", "codigo_paciente", "start.y", "end.y", "deviceid.y", 
+    "Unidade_sanitaria.y", "Codigo_do_tecnico.y", "Dados_demograficos:DATE1.y", 
+    "Dados_demograficos:DATE2.y", 
+    "Dados_demograficos:sexo.y", "Dados_demograficos:conhece_nascimento_data.y", 
+    "Dados_demograficos:data_nascimento.y", "Dados_demograficos:idade.y", 
+    "Dados_demograficos:tipo_idade.y", "Dados_demograficos:idade2.y", 
+    "Dados_demograficos:Escolaridade.y", "Dados_demograficos:Escolaridade_other.y", 
+    "Dados_demograficos:Marital.y", "Dados_demograficos:Profissao.y", "Dados_demograficos:Esta_em_TARV.x","Dados_demograficos:Esta_em_TARV.y",
+    "Dados_demograficos:Profissao_other.y",
+    "Dados_demograficos:Relegiao_other.y", "Dados_demograficos:provincia_de_residencia.y", 
+    "Dados_demograficos:distrito_residencia.y", "Dados_demograficos:bairro.y", "Dados_demograficos:Gravidez.y", "Dados_demograficos:ssim_meses.y", 
+    "nota124:Hospitalizado.y", "nota124:Data30.y", "nota124:Motivo_Hospitalizado.y", 
+    "nota124:Motivo_Hospitalizado_other.y", "nota126:doenca_cronica.y", 
+    "nota126:Doen_repirat.y", "nota126:Doen_repirat_other.y", "nota126:Doe_Hepatica_cronica.y", 
+    "nota126:Doe_Renal_Cronica.y", "nota126:Doe_Neuromuscular.y", "nota126:Diabetes.y", 
+    "nota126:Data40.y", "nota126:Tratamen_ultimas_48h.y", "nota126:Tratamen_ult_48h_other.y", "nota124:Motivo_Hospitalizado.x",
+    "nota126:colheu_amos.y", "Salmonella:Pac_resp_si_mesmo.y", "Salmonella:Q_rel_paciente.y","nota126:Diabetes.x", 
+    "Salmonella:Q_rel_paciente_other.y", "note5:Tom_med_US.y", "note5:Ssim_ind_med.y", 
+    "note5:antibioticos_toma_tomou.y", "note5:antibioticos_toma_tomou_other.y", 
+    "note5:antibioticos_toma_t_data.y", "note5:Opac_rec_al_medic.y", "note5:Ssim_ind_medic.y", 
+    "note5:Ssim_ind_medic_other.y", "note5:antibioticos_toma_tomou1.y", "note6:Foi_encam_US.y", 
+    "note6:DIAG_FEITO.y", "note6:DIAG_FEITO_other.y", "note6:ATFAD_pacient.y", 
+    "note6:Repeat_medic_pacient.y", "note6:APOS_CONS_HOJE.y", "note6:HA_INFOR_REPOT.y", "nota124:Hospitalizado.x",
+    "note6:colheu_amostra_febre.y", "Dados_demograficos:DATE2", "WHOTA:provincia_colheita", 
+    "WHOTA:dist_colheita", "WHOTA:LO_COLHEITA", "WHOTA:ptdcol", "WHOTA:tipmast", 
+    "WHOTA:teccol", "WHOTA:tembie", "WHOTA:temag", "WHOTA:humreab", "WHOTA:ph", 
+    "WHOTA:Turbidez", "WHOTA:condelec", "WHOTA:conamon", "WHOTA:conortf", "WHOTA:oxigenio", 
+    "WHOTA:descfras", "WHOTA:consdtr",
+    "WHOTA:Poliovirus", "WHOTA:Colera", "WHOTA:Febre_tifoide", "WHOTA:Outros", 
+    "WHOTA:Outros_other", "WHOTA:TEC_RES_COLHEITA","Dados_demograficos:bairro.x","Dados_demograficos:bairro.y" 
   )
 
 
 
-# combinar bse base BD_VH_VC_VA_Intermidiaria com base vig_laboratorial
-cli::cli_alert_info("Combinando base de dado BD_VH_VC_VA_Intermidiaria e vig_laboratorial para analises")
-
-
-
-# full join na base hospitalar e laboratorial
-
-vig_laboratorialp <- vig_laboratorial %>%
-  mutate(
-    `Dados_demograficos:codigo_paciente` =
-      `Dados_demograficos:codigo_amostra_colera`
+Base_v_HCA_total_aggre_sel <- Base_v_HCA_total_aggre_1 %>%
+  
+  # =========================================================
+# CONSOLIDAR VARIÁVEIS DUPLICADAS (.x -> .y -> original)
+# =========================================================
+mutate(
+  
+  # ---------------- DATAS ----------------
+  `Dados_demograficos:DATE2` = coalesce(
+    `Dados_demograficos:DATE2.x`,
+    `Dados_demograficos:DATE2.y`,
+    `Dados_demograficos:DATE2`
+  ),
+  
+  # ---------------- LOCAL ----------------
+  Unidade_sanitaria = coalesce(
+    `Unidade_sanitaria.x`,
+    `Unidade_sanitaria.y`
+  ),
+  
+  `Dados_demograficos:provincia_de_residencia` = coalesce(
+    `Dados_demograficos:provincia_de_residencia.x`,
+    `Dados_demograficos:provincia_de_residencia.y`
+  ),
+  
+  `Dados_demograficos:data_nascimento` = coalesce(
+    `Dados_demograficos:data_nascimento.x`,
+    `Dados_demograficos:data_nascimento.y`
+  ),
+  
+  `Dados_demograficos:distrito_residencia` = coalesce(
+    `Dados_demograficos:distrito_residencia.x`,
+    `Dados_demograficos:distrito_residencia.y`
+  ),
+  
+  # ---------------- DEMOGRAFIA ----------------
+  `Dados_demograficos:sexo` = coalesce(
+    `Dados_demograficos:sexo.x`,
+    `Dados_demograficos:sexo.y`
+  ),
+  
+  `Dados_demograficos:idade` = coalesce(
+    `Dados_demograficos:idade.x`,
+    `Dados_demograficos:idade.y`
+  ),
+  
+  `Dados_demograficos:tipo_idade` = coalesce(
+    `Dados_demograficos:tipo_idade.x`,
+    `Dados_demograficos:tipo_idade.y`
+  ),
+  
+  `Dados_demograficos:idade2` = coalesce(
+    `Dados_demograficos:idade2.x`,
+    `Dados_demograficos:idade2.y`
+  ),
+  
+  # ---------------- SINTOMAS ----------------
+  `nota111:Sintomas` = coalesce(
+    `nota111:Sintomas.x`,
+    `nota111:Sintomas.y`
+  ),
+  
+  
+  `Dados_demograficos:Esta_em_TARV` = coalesce(
+    `Dados_demograficos:Esta_em_TARV.x`,
+    `Dados_demograficos:Esta_em_TARV.y`
+  ),
+  
+  `nota126:Diabetes` = coalesce(
+    `nota126:Diabetes.x`,
+    `nota126:Diabetes.y`
+  ),
+  
+  # ---------------- HOSPITALIZAÇÃO ----------------
+  `nota124:Hospitalizado` = coalesce(
+    `nota124:Hospitalizado.x`,
+    `nota124:Hospitalizado.y`
+  ),
+  # ---------------- Bairro ----------------
+  `bairro_comb` = coalesce(
+    `Dados_demograficos:bairro.x`,
+    `Dados_demograficos:bairro.y`
+  ),
+  
+  `nota124:Motivo_Hospitalizado` = coalesce(
+    `nota124:Motivo_Hospitalizado.x`,
+    `nota124:Motivo_Hospitalizado.y`
   )
-
-vig_laboratorialp <- vig_laboratorialp %>%
-  filter(str_detect(`Dados_demograficos:Amostras_colhidas`, regex("Coler", ignore_case = TRUE)))
-
-
-B_geral_HC_Lab <- inner_join(
-  vigilancia_hospitalar,
-  vig_laboratorialp,
-  by = "Dados_demograficos:codigo_paciente"
+  
+) %>%
+  
+  # =========================================================
+# REMOVER TODAS VARIÁVEIS .x E .y
+# =========================================================
+select(
+  -matches("\\.x$"),
+  -matches("\\.y$"),
+    Latitude = `Dados_demograficos:coordenadas_IDS:Latitude.x`,
+    Longitude = `Dados_demograficos:coordenadas_IDS:Longitude.x`
+  #pegar todas outras variaveis
+) %>%
+  
+  # =========================================================
+# REMOVER PREFIXOS
+# =========================================================
+rename_with(
+  ~ gsub(
+    "^(nota111:|nota123:|nota124:|nota126:|note5:|note6:|meta:)",
+    "",
+    .
+  )
 )
 
 
-#esta base seleciona as variaveis de interesse para analise preliminar de colera
-BD_Prelim_lab_analise<- B_geral_HC_Lab %>% select(start_date=start.x, data_reorte1="Dados_demograficos:DATE2.x",`Dados_demograficos:codigo_paciente`,Unidade_sanitaria,
-                                                        "Dados_demograficos:codigo_amostra_colera",
-                                                        "Dados_demograficos:Tipo_d_amostra_iras",
-                                                        `Dados_demograficos:Amostras_colhidas`,
-                                                        "Dados_demograficos:provincia_de_residencia",
-                                                        "Dados_demograficos:distrito_residencia",
-                                                        "Dados_demograficos:bairro" ,
-                                                        "Dados_demograficos:amostra_testada" ,
-                                                        "Dados_demograficos:tipo_amostra",
-                                                        "Dados_demograficos:resultado_colera",
-                                                        "Dados_demograficos:bairro","Dados_demograficos:data_nascimento",
-                                                        "Dados_demograficos:idade2","Dados_demograficos:idade","Dados_demograficos:sexo","Dados_demograficos:distrito_residencia",
-                                                        "nota111:Sintomas","Dados_demograficos:Tipo_d_amostra_iras",
-                                                        "Dados_demograficos:bairro","nota111:Sintomas","nota111:outro_sintoma" ,"nota124:Hospitalizado","nota124:Motivo_Hospitalizado_other",
-                                                        "meta:instanceID.y")
+
+Base_v_HCA_total_aggre_sel_1 <- Base_v_HCA_total_aggre_sel %>%
+  # 1. Filtramos valores nulos, vacíos y que empiecen por "IDS"
+  filter(!is.na(codigo_paciente), 
+         codigo_paciente != "", 
+         str_detect(codigo_paciente, "^IDS")) %>%
+  # 2. Eliminamos duplicados basados en el ID del paciente
+  distinct(codigo_paciente, .keep_all = TRUE)
+
+
+BD_VH_VC_VA_Intermidiaria <- Base_v_HCA_total_aggre_sel_1 %>% left_join(vig_laboratorial, by = c("codigo_paciente" = "cod_amostra"))
 
 
 
-#criar idade unica usando `Dados_demograficos:idade` e `Dados_demograficos:idade2` d Base BD_Prelim_lab_analise
-BD_Prelim_lab_analise <- BD_Prelim_lab_analise %>%
-  mutate(
-    idade_complement = coalesce(`Dados_demograficos:idade`,
-                             `Dados_demograficos:idade2`)
-  )
 
-rm(vig_laboratorialp,B_geral_HC_Lab)
-#remove(B_geral_HCA_Lab,B_geral_HCA_LabP)
 
-names(BD_Prelim_lab_analise)
+#resultado da base de daods do AGGREGATE
 
-#combinar base BD_Prelim_lab_analise com base de resultado_testagem usando innerjoin nos codigos left_key <- "Dados_demograficos:codigo_amostra_colera" e right_key <- "detalhes:codido_do_teste2"
-B_geral_Colera<- inner_join(BD_Prelim_lab_analise,resultado_testagem, by = c("Dados_demograficos:codigo_paciente" = "detalhes:codido_do_teste2"))
-
-#dim(B_geral_Colera)
-
-#adicionar variavel vigilancia na base combinada B_geral_Colera apartir do codigo do colera
-B_geral_Colera <- B_geral_Colera %>%
-  mutate(
-    codigo_trim = str_trim(toupper(coalesce(codig_paciente=as.character(B_geral_Colera$`Dados_demograficos:codigo_amostra_colera`), ""))),
-    vigilancia = case_when(
-      str_detect(codigo_trim, "^[IL]DSW") ~ "Ambiental",
-      str_detect(codigo_trim, "^IDSC") ~ "Comunitaria",
-      str_detect(codigo_trim, "^IDS")  ~ "Hospitalar",
-      TRUE ~ "Outro"
-    )
+resultado_testagem_sel <- resultado_testagem %>%
+  select(
+    "detalhes:data_informe", 
+    "detalhes:codido_do_teste2", 
+    "detalhes:modulo", 
+    "local_colheita:tipo_local_colheita", 
+    "testes_resultados:Resultado_de_Cultura", 
+    "testes_resultados:Outro_Resultado_de_Cultura",
+    "TIFOIDE:Resultado_de_Influenza", 
+    "TIFOIDE:Tipo_de_Influenza", 
+    "TIFOIDE:Subtipo_de_Influenza_A",
+    "TIFOIDE:Subtipo_de_Influenza_B", 
+    "group_jz9ln80:SARSCov2",
+    "group_hg1cx57:Resultado_RSV", 
+    "group_hg1cx57:Tipo_de_RSV", 
+    "Ident:Resultado_hemocultura",
+    "meta:instanceID"
+    # Adicione aqui as colunas de ID de paciente e Doença se não estiverem acima
   ) %>%
-  filter(vigilancia %in% c("Comunitaria", "Hospitalar", "Ambiental"))
+  # 1. Criar um marcador de prioridade: Positivo = 1, Outros = 2
+  mutate(prioridade_resultado = if_any(
+    c(
+      "TIFOIDE:Resultado_de_Influenza",
+      "group_jz9ln80:SARSCov2",
+      "group_hg1cx57:Resultado_RSV",
+      "Ident:Resultado_hemocultura"
+      # Nota: Salmonella costuma estar na cultura ou hemocultura neste novo esquema
+    ),
+    ~ .x == "positivo" | .x == "Detectável"
+  )) %>%
+  # 2. Ordenar para que os 'TRUE' (Positivos) fiquem no topo, agrupando por paciente e doença
+  arrange(
+    `detalhes:codido_do_teste2`, # Substitua pelo seu ID de paciente real
+    desc(prioridade_resultado),
+    `detalhes:modulo` # Substitua pelo seu ID de doença real, se aplicável
+  ) %>%
+  # 3. Remover duplicados mantendo a primeira linha (a Positiva, se houver)
+#  distinct(`detalhes:codido_do_teste2`,`detalhes:modulo`, .keep_all = TRUE) %>%
+  # 4. Remover a coluna auxiliar
+  select(-prioridade_resultado)
 
 
 
-# mutete semana epi
-B_geral_Colera <- B_geral_Colera %>%
-  mutate(
-    DATE2 = lubridate::parse_date_time(data_reorte1, orders = c("Ymd", "Y-m-d", "dmY", "d/m/Y", "mdY", "m/d/Y", "Ymd HMS", "dmY HMS")),
-    Semana_Epi_ano = paste0(lubridate::year(DATE2), "-", sprintf("%02d", lubridate::isoweek(DATE2))),
-    ano = lubridate::year(DATE2),
-    Semana_Epi = lubridate::isoweek(DATE2)
+# 1. Seleção das colunas (mantendo sua estrutura original)
+bd_ids_lab_ins_cent_prel <- bd_ids_lab_ins_cent %>%
+  select(
+    DATE2="dados_demograficos_date2",
+    "resultado_lab_ins_codigo_paciente", 
+    "resultado_lab_ins_selecao_da_doenca", 
+    "resultado_lab_ins1_tipo_local_colheita",
+    "resultado_lab_ins3_resultado_de_cultura", 
+    "resultado_lab_ins3_outro_resultado_de_cultura",
+    "resultado_lab_ins5_resultado_de_influenza", 
+    "resultado_lab_ins5_tipo_de_influenza", 
+    "resultado_lab_ins5_influenza_subtipada", 
+    "resultado_lab_ins6_sars_cov2", 
+    "resultado_lab_ins6_resultado_salmonella_typhi", 
+    "resultado_lab_ins7_resultado_rsv", 
+    "resultado_lab_ins11_resultado_hemocultura"
+  ) %>%
+  # 2. Criamos uma coluna temporária de pontuação/prioridade
+  # Se houver "Positivo" em qualquer uma das colunas-alvo, atribuímos 1, caso contrário 2
+  mutate(prioridade = if_any(
+    c(
+      "resultado_lab_ins5_resultado_de_influenza",
+      "resultado_lab_ins6_sars_cov2",
+      "resultado_lab_ins6_resultado_salmonella_typhi",
+      "resultado_lab_ins7_resultado_rsv",
+      "resultado_lab_ins11_resultado_hemocultura"
+    ),
+    ~ .x == "positivo" # Ajuste para "S" ou "Detectável" se for o caso do seu BD
+  )) %>%
+  # 3. Ordenamos: TRUE (positivos) vem antes de FALSE
+  arrange(resultado_lab_ins_codigo_paciente, resultado_lab_ins_selecao_da_doenca, desc(prioridade)) %>%
+  # 4. Removemos duplicados mantendo a primeira ocorrência (que será a positiva, se existir)
+  distinct(resultado_lab_ins_codigo_paciente, resultado_lab_ins_selecao_da_doenca, .keep_all = TRUE) %>%
+  # 5. Removemos a coluna de prioridade para limpar o dataset
+  select(-prioridade)
+
+
+bd_ids_lab_ins_cent_prel <- bd_ids_lab_ins_cent_prel %>%
+  mutate(DATE2 = as.POSIXct(DATE2), # Garante que está em formato de data
+         DATE2 = format(DATE2, "%Y-%m-%d"))
+
+
+#combinar os resultados do agregate e os resultados do odkcentral usando o codigo do paciente como chave de junção
+
+resultado_testagem_prelim_comb <- resultado_testagem_sel %>%
+  full_join(bd_ids_lab_ins_cent_prel, by = c("detalhes:codido_do_teste2" = "resultado_lab_ins_codigo_paciente"))
+
+
+
+resultado_testagem_comb_fn <- resultado_testagem_prelim_comb %>%
+  dplyr::mutate(
+    # 1. Local de Colheita
+    local_colheita = coalesce(`local_colheita:tipo_local_colheita`, 
+                              resultado_lab_ins1_tipo_local_colheita),
+    
+    # 2. Resultados de Cultura
+    resultado_cultura = coalesce(`testes_resultados:Resultado_de_Cultura`, 
+                                 resultado_lab_ins3_resultado_de_cultura),
+    
+    outro_resultado_cultura = coalesce(`testes_resultados:Outro_Resultado_de_Cultura`, 
+                                       resultado_lab_ins3_outro_resultado_de_cultura),
+    
+    # 3. Influenza (Resultado, Tipo e Subtipos)
+    resultado_influenza = coalesce(`TIFOIDE:Resultado_de_Influenza`, 
+                                   resultado_lab_ins5_resultado_de_influenza),
+    
+    tipo_influenza = coalesce(`TIFOIDE:Tipo_de_Influenza`, 
+                              resultado_lab_ins5_tipo_de_influenza),
+    
+    # Aqui consolidamos os subtipos A e B com a coluna 'influenza_subtipada'
+    subtipo_influenza = coalesce(`TIFOIDE:Subtipo_de_Influenza_A`, 
+                                 `TIFOIDE:Subtipo_de_Influenza_B`, 
+                                 resultado_lab_ins5_influenza_subtipada),
+    
+    # 4. SARS-CoV-2
+    resultado_sars_cov2 = coalesce(`group_jz9ln80:SARSCov2`, 
+                                   resultado_lab_ins6_sars_cov2),
+    
+    # 5. RSV (Resultado e Tipo)
+    resultado_rsv = coalesce(`group_hg1cx57:Resultado_RSV`, 
+                             resultado_lab_ins7_resultado_rsv),
+    
+    tipo_rsv = `group_hg1cx57:Tipo_de_RSV`, # Não havia correspondente 'ins', mas incluída para não perder dados
+    
+    # 6. Hemocultura e Outros
+    resultado_hemocultura = coalesce(`Ident:Resultado_hemocultura`, 
+                                     resultado_lab_ins11_resultado_hemocultura),
+    data_reporte = coalesce(resultado_testagem_prelim_comb$`detalhes:data_informe`, DATE2),
+    modulo_reporte = coalesce(resultado_testagem_prelim_comb$`detalhes:modulo`, resultado_testagem_prelim_comb$`resultado_lab_ins_selecao_da_doenca`),
+    
+    resultado_salmonella_typhi = resultado_lab_ins6_resultado_salmonella_typhi,
+  ) %>% 
+  dplyr::select(
+    # Metadados e IDs
+    codigo_paciente="detalhes:codido_do_teste2",
+    modulo_reporte = toupper(resultado_testagem_prelim_comb$modulo_reporte),
+    modulo_reporte,
+    data_reporte,
+    
+    # Variáveis Consolidadas
+    local_colheita,
+    resultado_cultura,
+    outro_resultado_cultura,
+    resultado_influenza,
+    tipo_influenza,
+    subtipo_influenza,
+    resultado_sars_cov2,
+    resultado_rsv,
+    tipo_rsv,
+    resultado_salmonella_typhi,
+    resultado_hemocultura,
+    "meta:instanceID"
+  )
+ 
+ 
+# Supondo que seu dataframe se chame 'dados'
+BD_VH_VC_VA_Interm_fn <- BD_VH_VC_VA_Intermidiaria %>%
+  select(
+    # 1. Identificadores do Sistema
+     codigo_paciente,
+    
+    # 2. Dados Demográficos
+    `Dados_demograficos:sexo`,
+    `Dados_demograficos:data_nascimento`,
+    `Dados_demograficos:idade`,
+    `Dados_demograficos:tipo_idade`,
+    `Dados_demograficos:idade2`,
+    `Dados_demograficos:provincia_de_residencia`,
+    `Dados_demograficos:distrito_residencia`,
+    `bairro_comb`,
+    
+    # 3. Informações de Inclusão e Local de Coleta (WHOTA)
+    `Dados_demograficos:Local_de_inclusao`,
+    `Dados_demograficos:DATE2`,
+     Unidade_sanitaria,
+    `WHOTA:provincia_colheita`,
+    `WHOTA:dist_colheita`,
+    `WHOTA:LO_COLHEITA`,
+    
+    # 5. Condições Clínicas e Comorbidades
+    Sintomas,
+    Hospitalizado,
+    Motivo_Hospitalizado,
+    
+    # 6. Descrição da Doença e Resultados
+     Amostras_colhidas,
+    resultado_colera,
+     instanceID
   )
 
-#calcular faixa etaria de acordo com
-
-  B_geral_Colera <- B_geral_Colera %>%
-  mutate(
-    faixa_etaria = case_when(
-      idade_complement >= 0  & idade_complement < 2  ~ "00 < 02",
-      idade_complement >= 2  & idade_complement < 5  ~ "02 < 05",
-      idade_complement >= 5  & idade_complement <= 15 ~ "05 < 15",
-      idade_complement > 15  & idade_complement < 50 ~ "15 < 50",
-      idade_complement >= 50 & idade_complement < 65 ~ "50 < 65",
-      idade_complement >= 65                      ~ "65+",
-      TRUE ~ NA_character_
-    )
-  )
 
 
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-#view(B_geral_Colera)
-
-#se tudo estiver bem remover a base B_geral_HCA_LabP, B_geral_HCA_Lab
-
-
-
-#combinar base B_geral_HCA_LabP com base de resultado_testagem usando innerjoin nos codigos left_key <- "Dados_demograficos:codigo_paciente" e right_key <- "detalhes:codido_do_teste2"
-rm(left_df,right_df,df,VA_R)
-
-#filtrar na base combinada BD_C_H_R apartir da variavel modulo apenas casosque pertencem a vidilancia comunitaria  e outa base vigilancia hospitalar
-cli::cli_alert_info("Filtrando base de dado combinada Vigilancia Comunitaria")
-BD_Final_VC_R <- B_geral_HCA_R %>%
-  filter(vigilancia == "Comunitaria")
-cli::cli_alert_success("Base de dado combinada Vigilancia Comunitaria filtrada com sucesso para analises")
-
-cli::cli_alert_info("Filtrando base de dado combinada Vigilancia Hospitalar")
-BD_Final_VH_R <- B_geral_HCA_R %>%
-  filter(vigilancia == "Hospitalar")
-cli::cli_alert_success("Base de dado combinada Vigilancia Hospitalar filtrada com sucesso para analises")
+#combinar a base de dados BD_VH_VC_VA_Intermidiaria com a base de dados resultado_testagem_comb_fn usando o codigo do paciente como chave de junção
+B_geral_HCA_R <- BD_VH_VC_VA_Interm_fn %>%
+  inner_join(resultado_testagem_comb_fn, by = "codigo_paciente")%>%
+  filter(str_detect(codigo_paciente, "^IDS"))
 
 
-cli::cli_alert_info("Filtrando base de dado combinada Vigilancia Ambiental")
-BD_Final_VA_R <- B_geral_HCA_R %>%
-  filter(vigilancia == "Ambiental")
-cli::cli_alert_success("Base de dado combinada Vigilancia Ambiental filtrada com sucesso para analises")
+BD_Cot_colheita <- BD_VH_VC_VA_Interm_fn %>%
+  left_join(resultado_testagem_comb_fn, by = "codigo_paciente")%>%
+  filter(str_detect(codigo_paciente, "^IDS"))
+
+#remover onde lab_us_resultado for Na
+bd_ids_lab_us <- bd_ids_lab_us %>%
+  dplyr::filter(!is.na(lab_us_resultado_colera))
+  
+
+rm(
+  vigilancia_hospitalar,vigilancia_comunitaria,vigilancia_ambiental,
+   vig_laboratorial,Base_v_HCA_total_aggre_1,bd_ids_lab_ins_cent,
+   resultado_testagem_sel,df,bd_ids_HCA_central,
+   BD_VH_VC_VA_Intermidiaria,left_df,right_df,df,VA_R,
+   BD_VH_VC_VA_Interm_fn, resultado_testagem_comb_fn,resultado_testagem_comb_fn,resultado_testagem_prelim_comb,
+  Base_v_HCA_total_aggre_sel_1,Base_v_HCA_total_aggre_sel_1,Base_v_HCA_total_aggre_sel,Base_v_HCA_total_aggre_sel,Base_v_HCA_total_aggre,Base_v_HCA_total_aggre
+   
+)
 
 
 
+cli::cli_alert_success("Base de dados combinada e limpa para análises!")
+
+
+
+#### Combinar a base da dadso  do agregate com a base Central
 
 

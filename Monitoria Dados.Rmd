@@ -16,6 +16,10 @@ output: html_document
 
 if(!dir.exists("plots/monitoria")) dir.create("plots/monitoria", recursive = TRUE)
 
+
+
+
+
 library(ggplot2)
 library(dplyr)
 library(lubridate)
@@ -35,10 +39,87 @@ library(janitor)
 
 #converter a coluna de data para formato Date
 
-vigilancia_hospitalar <-converter_data(vigilancia_hospitalar, "Dados_demograficos:DATE2")
-vigilancia_comunitaria <-converter_data(vigilancia_comunitaria, "Dados_demograficos:DATE2")
-vigilancia_ambiental <-converter_data(vigilancia_ambiental, "Dados_demograficos:DATE2")
-resultado_testagem <- converter_data(resultado_testagem, "detalhes:data_informe")
+vigilancia_hospitalar <- vigilancia_hospitalar %>%
+  mutate(`Dados_demograficos:DATE2` = case_when(
+    !is.na(`Dados_demograficos:DATE2`) & `Dados_demograficos:DATE2` != "" ~
+      format(
+        suppressWarnings(lubridate::parse_date_time(
+          `Dados_demograficos:DATE2`,
+          orders = c(
+            "dmy", "d-b-y", "d-b-Y",   # para 18-fev-25
+            "ymd HMS", "ymd HMSz", "ymd HMSOSz",
+            "ymd", "mdy"
+          ),
+          locale = "pt_PT.UTF-8"  # importante para meses em português
+        )),
+        "%d-%m-%Y"  # formato final desejado
+      ),
+    TRUE ~ as.character(`Dados_demograficos:DATE2`)
+  ))
+
+
+cli::cli_alert_info("Correcao da data de Nascimento na base Comunitaria")
+vigilancia_comunitaria <- vigilancia_comunitaria %>%
+  mutate(`Dados_demograficos:data_nascimento` = corrigir_data(`Dados_demograficos:data_nascimento`))
+
+vigilancia_comunitaria <- vigilancia_comunitaria %>%
+  mutate(`Dados_demograficos:DATE2` = case_when(
+    !is.na(`Dados_demograficos:DATE2`) & `Dados_demograficos:DATE2` != "" ~
+      format(
+        suppressWarnings(lubridate::parse_date_time(
+          `Dados_demograficos:DATE2`,
+          orders = c(
+            "dmy", "d-b-y", "d-b-Y",   # para 18-fev-25
+            "ymd HMS", "ymd HMSz", "ymd HMSOSz",
+            "ymd", "mdy"
+          ),
+          locale = "pt_PT.UTF-8"  # importante para meses em português
+        )),
+        "%d-%m-%Y"  # formato final desejado
+      ),
+    TRUE ~ as.character(`Dados_demograficos:DATE2`)
+  ))
+
+
+
+cli::cli_alert_info("Correcao da data de Testagem")
+
+resultado_testagem <- resultado_testagem %>%
+  mutate(`detalhes:data_informe` = case_when(
+    !is.na(`detalhes:data_informe`) & `detalhes:data_informe` != "" ~
+      format(
+        suppressWarnings(lubridate::parse_date_time(
+          `detalhes:data_informe`,
+          orders = c(
+            "dmy", "d-b-y", "d-b-Y",   # para 18-fev-25
+            "ymd HMS", "ymd HMSz", "ymd HMSOSz",
+            "ymd", "mdy"
+          ),
+          locale = "pt_PT.UTF-8"  # importante para meses em português
+        )),
+        "%d-%m-%Y"  # formato final desejado
+      ),
+    TRUE ~ as.character(`detalhes:data_informe`)
+  ))
+
+vig_laboratorial <- vig_laboratorial %>%
+  mutate(`Dados_demograficos:DATE2` = case_when(
+    !is.na(`Dados_demograficos:DATE2`) & `Dados_demograficos:DATE2` != "" ~
+      format(
+        suppressWarnings(lubridate::parse_date_time(
+          `Dados_demograficos:DATE2`,
+          orders = c(
+            "dmy", "d-b-y", "d-b-Y",   # para 18-fev-25
+            "ymd HMS", "ymd HMSz", "ymd HMSOSz",
+            "ymd", "mdy"
+          ),
+          locale = "pt_PT.UTF-8"  # importante para meses em português
+        )),
+        "%d-%m-%Y"  # formato final desejado
+      ),
+    TRUE ~ as.character(`Dados_demograficos:DATE2`)
+  ))
+
 
 
 # denir parametro de dias por filtrar na base de dados

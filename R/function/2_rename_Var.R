@@ -2,7 +2,7 @@
 #Correcao da base hospitalar
 
 vigil_hosp <- vh_1 %>%
-  select(
+  dplyr::select(
     start=start,
     end = end,
     deviceid = deviceid,
@@ -136,7 +136,7 @@ vigil_hosp <- vh_1 %>%
     "Colera:doses_vacina" = Colera.doses_vacina,
     "Colera:colheu_amostr_colera" = Colera.colheu_amostr_colera,
     "meta:instanceID" = meta.instanceID
-  )
+  )%>% dplyr::mutate(codigo_paciente = as.character(vh_1$`Dados_demograficos.codigo_paciente`))
 
 #CORRECAO DE VARIAVEIS PARA MESMO FORMATO DE CARACTERES
 vigil_hosp$`nota111:Frequencia_cardiaca` <- as.character(vigil_hosp$`nota111:Frequencia_cardiaca`)
@@ -151,39 +151,24 @@ vigilancia_hospitalar <- vigil_hosp
 
 
 vig_laboratorial <- vh_lab %>%
-  select(
-    "start" = "start",
-    "end" = "end",
-    "deviceid" = "deviceid",
-    "Dados_demograficos:DATE1" = "Dados_demograficos.DATE1",
-    "Dados_demograficos:DATE2" = "Dados_demograficos.DATE2",
-    "Dados_demograficos:Codigo_do_tecnico" = "Dados_demograficos.Codigo_do_tecnico",
-    "Dados_demograficos:Amostras_colhidas" = "Dados_demograficos.Amostras_colhidas",
-    "Dados_demograficos:cod_amostra_iras" = "Dados_demograficos.cod_amostra_iras",
-    "Dados_demograficos:Tipo_d_amostra_iras" = "Dados_demograficos.Tipo_d_amostra_iras",
-    "Dados_demograficos:Codigo_da_amostra_febre" = "Dados_demograficos.Codigo_da_amostra_febre",
-    "Dados_demograficos:Tipo_de_amostra_febre" = "Dados_demograficos.Tipo_de_amostra_febre",
-    "Dados_demograficos:Nu_amostras_colhidas_febre" = "Dados_demograficos.Nu_amostras_colhidas_febre",
-    "Dados_demograficos:Exames_pedidos_febre" = "Dados_demograficos.Exames_pedidos_febre",
-    "Dados_demograficos:codigo_amostra_colera" = "Dados_demograficos.codigo_amostra_colera",
-    "Dados_demograficos:tipo_amostra" = "Dados_demograficos.tipo_amostra",
-    "Dados_demograficos:amostra_testada" = "Dados_demograficos.amostra_testada",
-    "Dados_demograficos:tdtusa" = "Dados_demograficos.tdtusa",
-    "Dados_demograficos:resultado_colera" = "Dados_demograficos.resultado_colera",
-    "Dados_demograficos:Data41" = "Dados_demograficos.Data41",
-    "Dados_demograficos:Hora_da_colheita" = "Dados_demograficos.Hora_da_colheita",
-    "Dados_demograficos:Assinatu_do_Tecnico" = "Dados_demograficos.Assinatu_do_Tecnico",
-    "Dados_demograficos:DATA_ENV_AMOS" = "Dados_demograficos.DATA_ENV_AMOS",
-    "Dados_demograficos:Enviado_por" = "Dados_demograficos.Enviado_por",
+  dplyr::select(
+    "Amostras_colhidas" = "Dados_demograficos.Amostras_colhidas",
+    "cod_amostra_iras" = "Dados_demograficos.cod_amostra_iras",
+    "codigo_amostra_colera" = "Dados_demograficos.codigo_amostra_colera",
+    "Codigo_da_amostra_febre" = "Dados_demograficos.Codigo_da_amostra_febre",
+    "amostra_testada" = "Dados_demograficos.amostra_testada",
+    "resultado_colera" = "Dados_demograficos.resultado_colera",
     "meta:instanceID" = "meta.instanceID"
   )
+
+
 
 #Base de Resultados
 
 
 
 resultado_testagem <- r_test %>%
-  select(
+  dplyr::select(
     "SubmissionDate" = "SubmissionDate",
     "detalhes:TimeStamp" = "detalhes.TimeStamp",
     "detalhes:data_informe" = "detalhes.data_informe",
@@ -418,13 +403,13 @@ resultado_testagem <- r_test %>%
     "Nome:data_investigacao" = "Nome.data_investigacao",
     "meta:instanceID" = "meta.instanceID",
     "KEY" = "KEY"
-  )
+  )%>% dplyr::mutate(codigo_paciente = r_test$`Dados_demograficos:codigo_paciente`)
 
 
 #BASE DA VIGILANCIA COMUNITARIA
 
 vigilancia_comunitaria <- vcom %>%
-  select(
+  dplyr::select(
     "start" = "start",
     "end" = "end",
     "deviceid" = "deviceid",
@@ -563,13 +548,13 @@ vigilancia_comunitaria <- vcom %>%
     "Colera:doses_vacina" = "Colera.doses_vacina",
     "Colera:colheu_amostr_colera" = "Colera.colheu_amostr_colera",
     "meta:instanceID" = "meta.instanceID"
-  )
+  ) %>% dplyr::mutate(codigo_paciente = as.character(vcom$`Dados_demograficos.codigo_paciente`))
 
 
 #vigilancia AMBIENTAL
 
 vigilancia_ambiental <- v_ambiental %>%
-  select(
+  dplyr::select(
     
     "WHOTA:DATE" = "WHOTA.DATE",
     "WHOTA:codigo_paciente" = "WHOTA.codigo_paciente",
@@ -605,7 +590,35 @@ vigilancia_ambiental <- v_ambiental %>%
     "WHOTA:TEC_RES_COLHEITA" = "WHOTA.TEC_RES_COLHEITA",
     "WHOTA:Observacao" = "WHOTA.Observacao",
     "meta:instanceID" = "meta.instanceID"
-  )
+  ) %>% dplyr::mutate(codigo_paciente = as.character(v_ambiental$`WHOTA.codigo_paciente`))
+
+
+# Executar a seleção de forma segura
+B_HCA_central_prel <- bd_ids_HCA_central %>% 
+ dplyr::select(
+   "dados_demograficos_date2", "dados_demograficos_select_form",
+   "hospital1_codigo_paciente", "hospital1_unidade_sanitaria", "hospital1_date22", 
+   "hospital1_provincia_residencia", "hospital1_distrito_residencia", "hospital1_outro_distrito_residencia", 
+   "hospital1_bairro_residencia", "hospital1_outro_bairro", "hospital1_residencia", 
+   "hospital1_data_inclusao", "hospital1_local_de_inclusao", "hospital1_sexo", 
+   "hospital1_conhece_nascimento_data", "hospital1_data_nascimento", "hospital1_idade", 
+   "hospital1_tipo_idade", "hospital1_idade2", "hospital1_child_age_months", 
+   "hospital1_escolaridade", "hospital1_marital", "hospital1_profissao",
+   "hospital2_sintomas", "hospital2_outro_sintoma", "hospital2_data_inic_sint",
+   "hospital5_motivo_hospitalizado", "hospital5_motivo_hospitalizado_other",
+   "ambiental_codigo_paciente", "ambiental_provincia_residencia1", "ambiental_distrito_residencia1", 
+   "ambiental_bairro_residencia1", "ambiental_outro_bairro", "ambiental_residencia", 
+   "ambiental_lo_colheita", "ambiental_tec_res_colheita",
+   "comunitaria_codigo_paciente", "comunitaria_date23", "comunitaria_provincia_residencia2", 
+   "comunitaria_distrito_residencia2", "comunitaria_bairro_residencia2", "comunitaria_clusters", 
+   "comunitaria_sexo1", "comunitaria_conhece_nascimento_data1", "comunitaria_data_nascimento1", 
+   "comunitaria_idade12", "comunitaria_tipo_idade1", "comunitaria_idade2tt", 
+   "comunitaria_escolaridade1", "comunitaria_marital", "comunitaria_profissao1", 
+   "comunitaria_provincia", "comunitaria_distrito", "comunitaria_us",
+   "comunitaria1_sintomas1", "comunitaria1_outro_sintoma1",
+   "comunitaria4_motivo_hospitalizado2"
+ )
+
 
 
 rm(vh_1)

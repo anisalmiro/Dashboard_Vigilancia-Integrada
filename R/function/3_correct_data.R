@@ -1,82 +1,101 @@
+Sys.setlocale("LC_TIME", "pt_PT.UTF-8")
 
-
-cli::cli_alert_success("Correcao da data de Nascimento Hospitalar")
+cli::cli_alert_info("Correcao da data de Nascimento Hospitalar")
 
 #data de nascimento
+cli::cli_alert_info("Correcao da data de Nascimento na base Comunitaria")
 
-converter_data(vigilancia_hospitalar, "Dados_demograficos:data_nascimento")
+#converter_data(vigilancia_hospitalar, "Dados_demograficos:data_nascimento")
+#converter_data(vigilancia_comunitaria, "Dados_demograficos:data_nascimento")
+#converter_data(vigilancia_ambiental, "WHOTA:DATE")
 
-cli::cli_alert_success("Correcao da data de Nascimento na base Comunitaria")
-converter_data(vigilancia_comunitaria, "Dados_demograficos:data_nascimento")
+corrigir_data <- function(x) {
+  suppressWarnings(
+    as.Date(parse_date_time(
+      x,
+      orders = c(
+        "ymd HMS","ymd HMSz","ymd HMSOSz",
+        "ymd","dmy","mdy",
+        "ymd HM","dmy HM","mdy HM"
+      )
+    ))
+  )
+}
 
-cli::cli_alert_success("Correcao da data de coheita de dados")
-
-
-
-#vigilancia_hospitalar <- vigilancia_hospitalar %>%
-#    mutate(`Dados_demograficos:data_nascimento` = case_when(
-    # Caso a data de nascimento exista, formatamos com hora
- #   !is.na(`Dados_demograficos:data_nascimento`) & `Dados_demograficos:data_nascimento` != "" ~
- #     format(parse_date_time(`Dados_demograficos:data_nascimento`, orders = c("ymd", "dmy", "mdy")), "%m/%d/%Y"),
-    
-    # Caso esteja ausente, calculamos com base na idade
-#    is.na(`Dados_demograficos:data_nascimento`) | `Dados_demograficos:data_nascimento` == "" ~
- #     format(now() - years(as.numeric(`Dados_demograficos:idade`)), "%m/%d/%Y"),
-    
-    # fallback
- #   TRUE ~ `Dados_demograficos:data_nascimento`
- # ))
-
-
-
-#vigilancia_comunitaria <- vigilancia_comunitaria %>%
-#  mutate(`Dados_demograficos:data_nascimento` = case_when(
-    # Caso a data de nascimento exista, formatamos com hora
-#    !is.na(`Dados_demograficos:data_nascimento`) & `Dados_demograficos:data_nascimento` != "" ~
-#      format(parse_date_time(`Dados_demograficos:data_nascimento`, orders = c("ymd", "dmy", "mdy")), "%m/%d/%Y"),
-    
-    # Caso esteja ausente, calculamos com base na idade
-#    is.na(`Dados_demograficos:data_nascimento`) | `Dados_demograficos:data_nascimento` == "" ~
-#      format(now() - years(as.numeric(`Dados_demograficos:idade`)), "%m/%d/%Y"),
-    
-    # fallback
-#    TRUE ~ `Dados_demograficos:data_nascimento`
-#  ))
-
-
-cli::cli_alert_success("Correcao da data de coheita de dados")
-
-cli::cli_alert_success("Correcao da data de Testagem")
-resultado_testagem <- resultado_testagem %>%
-  mutate(`detalhes:data_informe` = case_when(
-    !is.na(`detalhes:data_informe`) & `detalhes:data_informe` != "" ~
-      format(
-        suppressWarnings(parse_date_time(
-          `detalhes:data_informe`,
-          orders = c("ymd", "dmy", "mdy", "Ymd")
-        )),
-        "%m/%d/%Y"
-      ),
-    TRUE ~ `detalhes:data_informe`
-  ))
-
+cli::cli_alert_info("Correcao da data de Nascimento na base Hospitalar")
+vigilancia_hospitalar <- vigilancia_hospitalar %>%
+  mutate(`Dados_demograficos:data_nascimento` = corrigir_data(`Dados_demograficos:data_nascimento`))
 
 vigilancia_hospitalar <- vigilancia_hospitalar %>%
   mutate(`Dados_demograficos:DATE2` = case_when(
     !is.na(`Dados_demograficos:DATE2`) & `Dados_demograficos:DATE2` != "" ~
       format(
-        suppressWarnings(parse_date_time(
+        suppressWarnings(lubridate::parse_date_time(
           `Dados_demograficos:DATE2`,
-          orders = c("ymd", "dmy", "mdy", "Ymd")
+          orders = c(
+            "dmy", "d-b-y", "d-b-Y",   # para 18-fev-25
+            "ymd HMS", "ymd HMSz", "ymd HMSOSz",
+            "ymd", "mdy"
+          ),
+          locale = "pt_PT.UTF-8"  # importante para meses em português
         )),
-        "%m/%d/%Y"
+        "%d-%m-%Y"  # formato final desejado
       ),
-    TRUE ~ `Dados_demograficos:DATE2`
+    TRUE ~ as.character(`Dados_demograficos:DATE2`)
   ))
 
 
 
-cli::cli_alert_success("Correcao do ID da AMOSTRA")
+cli::cli_alert_info("Correcao da data de Nascimento na base Comunitaria")
+vigilancia_comunitaria <- vigilancia_comunitaria %>%
+  mutate(`Dados_demograficos:data_nascimento` = corrigir_data(`Dados_demograficos:data_nascimento`))
+
+vigilancia_comunitaria <- vigilancia_comunitaria %>%
+  mutate(`Dados_demograficos:DATE2` = case_when(
+    !is.na(`Dados_demograficos:DATE2`) & `Dados_demograficos:DATE2` != "" ~
+      format(
+        suppressWarnings(lubridate::parse_date_time(
+          `Dados_demograficos:DATE2`,
+          orders = c(
+            "dmy", "d-b-y", "d-b-Y",   # para 18-fev-25
+            "ymd HMS", "ymd HMSz", "ymd HMSOSz",
+            "ymd", "mdy"
+          ),
+          locale = "pt_PT.UTF-8"  # importante para meses em português
+        )),
+        "%d-%m-%Y"  # formato final desejado
+      ),
+    TRUE ~ as.character(`Dados_demograficos:DATE2`)
+  ))
+
+
+
+cli::cli_alert_info("Correcao da data de Testagem")
+
+resultado_testagem <- resultado_testagem %>%
+  mutate(`detalhes:data_informe` = case_when(
+    !is.na(`detalhes:data_informe`) & `detalhes:data_informe` != "" ~
+      format(
+        suppressWarnings(lubridate::parse_date_time(
+          `detalhes:data_informe`,
+          orders = c(
+            "dmy", "d-b-y", "d-b-Y",   # para 18-fev-25
+            "ymd HMS", "ymd HMSz", "ymd HMSOSz",
+            "ymd", "mdy"
+          ),
+          locale = "pt_PT.UTF-8"  # importante para meses em português
+        )),
+        "%d-%m-%Y"  # formato final desejado
+      ),
+    TRUE ~ as.character(`detalhes:data_informe`)
+  ))
+
+
+cli::cli_alert_info("Correcao da data de colheita de dados na base ambiental")
+vigilancia_ambiental <- vigilancia_ambiental %>%
+  mutate(`WHOTA:DATE` = corrigir_data(`WHOTA:DATE`))
+
+cli::cli_alert_info( 'correcao do ID do teste na base de resultados de testagem')
 
 #Limpeza na base de Resultados de Vigilancia
 cli::cli_alert_success("Limpeza da base de resultados")
@@ -140,7 +159,7 @@ vigilancia_hospitalar<- vigilancia_hospitalar %>%
 cli::cli_alert_info("Limpeza da base Laboratorio")
 #LABORATORIAL
 vig_laboratorial <- vig_laboratorial %>% 
-  mutate(`Dados_demograficos:cod_amostra_iras` = case_when(
+  mutate(`cod_amostra_iras` = case_when(
     `meta:instanceID` == "uuid:ffd1d46f-5cea-4fa1-a418-5ff290e08128" ~ "IDS0100011",
     `meta:instanceID` == "uuid:aecb799c-6af5-469b-9c68-f17665efe73e" ~ "IDS0100039",
     `meta:instanceID` == "uuid:ee7634a2-b0ed-4ca4-a5f9-6e6fc576a1dd" ~ "IDS0100063",
@@ -162,15 +181,16 @@ vig_laboratorial <- vig_laboratorial %>%
     
     
     
-    TRUE ~ `Dados_demograficos:cod_amostra_iras`
+    TRUE ~ `cod_amostra_iras`
   ))
 
 #para variavel Dados_demograficos:codigo_amostra_colera
 
 
+cli::cli_alert_info("Limpeza da base Laboratorio para variavel Dados_demograficos:codigo_amostra_colera")
 
 vig_laboratorial <- vig_laboratorial %>% 
-  mutate(`Dados_demograficos:codigo_amostra_colera` = case_when(
+  mutate(`codigo_amostra_colera` = case_when(
     `meta:instanceID` == "uuid:ffd1d46f-5cea-4fa1-a418-5ff290e08128" ~ "IDS0100011",
     `meta:instanceID` == "uuid:aecb799c-6af5-469b-9c68-f17665efe73e" ~ "IDS0100039",
     `meta:instanceID` == "uuid:ee7634a2-b0ed-4ca4-a5f9-6e6fc576a1dd" ~ "IDS0100063",
@@ -192,12 +212,33 @@ vig_laboratorial <- vig_laboratorial %>%
     
     
     
-    TRUE ~ `Dados_demograficos:codigo_amostra_colera`
+    TRUE ~ `codigo_amostra_colera`
   ))
 
 
 
+#correct vigilancia laboratorial
+vig_laboratorial <- vig_laboratorial %>% 
+  dplyr::mutate(
+    cod_amostra = coalesce(
+      na_if(trimws(cod_amostra_iras), ""),
+      na_if(trimws(codigo_amostra_colera), ""),
+      na_if(trimws(Codigo_da_amostra_febre), "")
+    )
+  ) %>% 
+  dplyr::select(
+    cod_amostra,
+    Amostras_colhidas,
+    resultado_colera,
+    instanceID = `meta:instanceID`
+  )
 
+#remover duplicados na base de vig_labora
+vig_laboratorial <- vig_laboratorial %>%
+  # Remove linhas onde cod_amostra é NA (sem informação)
+  dplyr::filter(!is.na(cod_amostra)) %>%
+  # Remove duplicados mantendo a primeira ocorrência
+  dplyr::distinct(cod_amostra, Amostras_colhidas, .keep_all = TRUE)
 #view(vigilancia_hospitalar %>% filter(vigilancia_hospitalar$`Dados_demograficos:codigo_paciente`=='57421186'))
 
 
@@ -270,29 +311,9 @@ vigilancia_hospitalar$`Dados_demograficos:provincia_de_residencia` <- plyr::reva
 )
 
 
-
-#resultado_testagem<- resultado_testagem %>% 
-#  mutate(`local_colheita:provincia_colheita` = case_when(
-#    `meta:instanceID` == "uuid:1df02f67-7e29-49ac-a335-3f9e2e7a9551" ~ "Maputo Cidade",
-#    TRUE ~ `local_colheita:provincia_colheita`  # mantém os valores originais se não corresponder
-#  ))
-
-
-#cli::cli_alert_info("Limpeza da local colheita")
-#Ambiental
-#resultado_testagem<- resultado_testagem %>% 
-#  mutate(`local_colheita:us_colheita` = case_when(
-#    `meta:instanceID` == "uuid:1df02f67-7e29-49ac-a335-3f9e2e7a9551" ~ "CS Zimpeto",
-#    `meta:instanceID` == "uuid:eddfecfa-d5d2-485d-b6b5-0dea54fd68ba" ~ "CS Zimpeto",
-#    `meta:instanceID` == "uuid:7ed777bd-7430-4983-8e43-af060daa71b2" ~ "CS Zimpeto",
-#    TRUE ~ `local_colheita:us_colheita`   # mantém os valores originais se não corresponder
-#  ))
-
-
 #Renomeando variaveis 
 cli::cli_alert_info("Limpeza da variavel do codigo do paciente")
 # Renomeia se a coluna existir
-library(dplyr)
 
 vigilancia_ambiental <- dplyr::rename(
   vigilancia_ambiental,
@@ -319,60 +340,115 @@ for (old_name in names(rename_map)) {
 }
 
 
-
+cli::cli_alert_info("Limpeza da data de colhita")
 vigilancia_ambiental <- vigilancia_ambiental %>%
   mutate(`Dados_demograficos:DATE2` = case_when(
-    !is.na(`Dados_demograficos:DATE2`) & `Dados_demograficos:DATE2` != "" ~ format(
-      parse_date_time(`Dados_demograficos:DATE2`, orders = "b d, Y I:M:S p"),
-      "%m/%d/%Y"
-    ),
+    !is.na(`Dados_demograficos:DATE2`) & `Dados_demograficos:DATE2` != "" ~
+      format(
+        suppressWarnings(lubridate::parse_date_time(
+          `Dados_demograficos:DATE2`,
+          orders = c("ymd HMS", "ymd HMSz", "ymd HMSOSz", "ymd", "dmy", "mdy")
+        )),
+        "%d-%b-%y"
+      ),
     TRUE ~ as.character(`Dados_demograficos:DATE2`)
   ))
 
 
 
-#cli::cli_alert_success("Filtrando a base de Genomica SARS-CoV-2 para IDS")
-#gen_sarscov2 <- gen_sarscov2 %>%
-#  filter(substr(`IDS ID`, 1, 3) == "IDS")
-
-#cli::cli_alert_success("Filtrando a base de Genomica influenza para IDS")
-#gen_influenza <- gen_influenza %>%
-#  filter(substr(`IDS ID`, 1, 3) == "IDS")
-
-
 cli::cli_alert_info("Limpeza da Unidade Subtipo A e B")
-resultado_testagem$`TIFOIDE:Subtipo_de_Influenza_A` <- plyr::revalue(
-  resultado_testagem$`TIFOIDE:Subtipo_de_Influenza_A`,
-  c("a_h3n2" = "H3N2",
-    "a_pdm_h1n1_09" = "PDM H1N1 09",
-    "a_pdm_h1n1_09 a_h3n2" = "PDM H1N1 09"),
-  warn_missing = FALSE
-) 
+# 1. Normalizar NA / vazio
 
-resultado_testagem$`TIFOIDE:Subtipo_de_Influenza_B` <- plyr::revalue(
-  resultado_testagem$`TIFOIDE:Subtipo_de_Influenza_B`,
-  c("b_vic" = "Victoria",
-    "b_yamagata" = "Yamagata"),
-  warn_missing = FALSE
-)
+resultado_testagem <- resultado_testagem %>%
+  mutate(`TIFOIDE:Subtipo_de_Influenza_A` =
+           case_when(
+             is.na(`TIFOIDE:Subtipo_de_Influenza_A`) ~ "Nao Tipado",
+             `TIFOIDE:Subtipo_de_Influenza_A` == "" ~ "Nao Tipado",
+             `TIFOIDE:Subtipo_de_Influenza_A` == "a_h3n2" ~ "H3N2",
+             `TIFOIDE:Subtipo_de_Influenza_A` == "a_pdm_h1n1_09" ~ "PDM H1N1 09",
+             `TIFOIDE:Subtipo_de_Influenza_A` %in% c("a_pdm_h1n1_09 a_h3n2", "a_h3n2 a_pdm_h1n1_09") ~ "PDM H1N1 09",
+             TRUE ~ `TIFOIDE:Subtipo_de_Influenza_A`
+           )
+  )
 
+
+resultado_testagem <- resultado_testagem %>%
+  mutate(`TIFOIDE:Subtipo_de_Influenza_B` =
+           case_when(
+             is.na(`TIFOIDE:Subtipo_de_Influenza_B`) ~ "Nao Tipado",
+             `TIFOIDE:Subtipo_de_Influenza_B` == "" ~ "Nao Tipado",
+             `TIFOIDE:Subtipo_de_Influenza_B` == "NA" ~ "Nao Tipado",
+             `TIFOIDE:Subtipo_de_Influenza_B` == "b_vic" ~ "Victoria",
+             `TIFOIDE:Subtipo_de_Influenza_B` == "b_yamagata" ~ "Yamagata",
+             TRUE ~ `TIFOIDE:Subtipo_de_Influenza_B`
+           )
+  )
 
 
 #corregir para caracter a variavel nota111:FRE_RESPIRATORIA na vigilancia comunitaria e hospitalar
 vigilancia_comunitaria$`nota111:FRE_RESPIRATORIA` <- as.character(vigilancia_comunitaria$`nota111:FRE_RESPIRATORIA`)
 vigilancia_hospitalar$`nota111:FRE_RESPIRATORIA` <- as.character(vigilancia_hospitalar$`nota111:FRE_RESPIRATORIA`)
 
-#corregir para integer a variavel nota111:TEMPERATURA na vigilancia comunitaria e hospitalar
-#vigilancia_comunitaria$`nota111:TEMPERATURA` <- as.integer(vigilancia_comunitaria$`nota111:TEMPERATURA`)
-#vigilancia_hospitalar$`nota111:TEMPERATURA` <- as.integer(vigilancia_hospitalar$`nota111:TEMPERATURA`)
-
-#corregir para caracter a variavel nota111:TOSSE na vigilancia comunitaria e hospitalar
-#vigilancia_comunitaria$`nota111:TOSSE` <- as.character(vigilancia_comunitaria$`nota111:TOSSE`)
-#vigilancia_hospitalar$`nota111:TOSSE` <- as.character(vigilancia_hospitalar$`nota111:TOSSE`)
-
 #corregir para caracter a variavel  nota111:Frequencia_cardiaca na base vigilancia hospitalar e comunitaria
 vigilancia_comunitaria$`nota111:Frequencia_cardiaca` <- as.character(vigilancia_comunitaria$`nota111:Frequencia_cardiaca`)
 vigilancia_hospitalar$`nota111:Frequencia_cardiaca` <- as.character(vigilancia_hospitalar$`nota111:Frequencia_cardiaca`)  
 
 
+
+
+# corregir a base de dados B_HCA_central combinando todas variaveis semelhantes entre as bases de dados de vigilancia hospitalar, comunitaria e ambiental em uma variavel
+
+B_HCA_central_corrigida <- B_HCA_central_prel %>%
+  mutate(
+    # 1. Identificação e Códigos
+    codigo_paciente = coalesce(hospital1_codigo_paciente, comunitaria_codigo_paciente, ambiental_codigo_paciente),
+    
+    # 2. Localização / Residência
+    provincia_residencia = coalesce(hospital1_provincia_residencia, comunitaria_provincia_residencia2),
+    distrito_residencia  = coalesce(hospital1_distrito_residencia, comunitaria_distrito_residencia2),
+    bairro_residencia    = coalesce(hospital1_bairro_residencia, comunitaria_bairro_residencia2),
+    outro_bairro         = coalesce(hospital1_outro_bairro, ambiental_outro_bairro),
+    residencia_tipo      = coalesce(hospital1_residencia, ambiental_residencia),
+    
+    # 3. Dados Demográficos
+    sexo                 = coalesce(hospital1_sexo, comunitaria_sexo1),
+    data_nascimento      = coalesce(hospital1_data_nascimento, comunitaria_data_nascimento1),
+    conhece_data_nasc    = coalesce(hospital1_conhece_nascimento_data, comunitaria_conhece_nascimento_data1),
+    idade                = coalesce(hospital1_idade, comunitaria_idade12),
+    tipo_idade           = coalesce(hospital1_tipo_idade, comunitaria_tipo_idade1),
+    idade2               = coalesce(hospital1_idade2, comunitaria_idade2tt),
+    
+    # 4. Socioeconómicos
+    escolaridade         = coalesce(hospital1_escolaridade, comunitaria_escolaridade1),
+    estado_civil         = coalesce(hospital1_marital, comunitaria_marital),
+    profissao            = coalesce(hospital1_profissao, comunitaria_profissao1),
+    
+    # 5. Clínicos e Sintomas
+    sintomas             = coalesce(hospital2_sintomas, comunitaria1_sintomas1),
+    outro_sintoma        = coalesce(hospital2_outro_sintoma, comunitaria1_outro_sintoma1),
+    motivo_hospitalizacao= coalesce(hospital5_motivo_hospitalizado, comunitaria4_motivo_hospitalizado2)
+  ) %>%
+  # Opcional: Remover as colunas antigas que já foram combinadas para limpar a base
+  select(
+    -hospital1_codigo_paciente, -comunitaria_codigo_paciente, -ambiental_codigo_paciente,
+    -hospital1_provincia_residencia, -comunitaria_provincia_residencia2,
+    -hospital1_distrito_residencia, -comunitaria_distrito_residencia2,
+    -hospital1_bairro_residencia, -comunitaria_bairro_residencia2,
+    -hospital1_outro_bairro, -ambiental_outro_bairro,
+    -hospital1_residencia, -ambiental_residencia,
+    -hospital1_sexo, -comunitaria_sexo1,
+    -hospital1_data_nascimento, -comunitaria_data_nascimento1,
+    -hospital1_conhece_nascimento_data, -comunitaria_conhece_nascimento_data1,
+    -hospital1_idade, -comunitaria_idade12,
+    -hospital1_tipo_idade, -comunitaria_tipo_idade1,
+    -hospital1_idade2, -comunitaria_idade2tt,
+    -hospital1_escolaridade, -comunitaria_escolaridade1,
+    -hospital1_marital, -comunitaria_marital,
+    -hospital1_profissao, -comunitaria_profissao1,
+    -hospital2_sintomas, -comunitaria1_sintomas1,
+    -hospital2_outro_sintoma, -comunitaria1_outro_sintoma1,
+    -hospital5_motivo_hospitalizado, -comunitaria4_motivo_hospitalizado2
+  )
+
+rm(bd_ids_combinada,B_HCA_central_prel)
 

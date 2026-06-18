@@ -1,9 +1,11 @@
+
+
 # =========================================================
 # 1. PACOTES
 # =========================================================
 
 Data_map <- Data_map_inicial %>%
-  filter(modulo == "IRAS")
+  filter(modulo_ras == "IRAS")
 
 
 
@@ -351,7 +353,7 @@ dados_bairro <- Data_map_corrigido %>%
 # JUNÇÃO COM O SHAPEFILE
 # =========================================================
 
-
+ 
 mapa_dados <- bairros_sf %>%
   left_join(dados_bairro, by = "bairro_geo") %>%
   mutate(
@@ -375,17 +377,6 @@ mapa_dados <- mapa_dados %>%
       TRUE ~ NA_character_
     )
   )
-
-dim(mapa_dados)
-
-# exportar para dir_dashboard a base mapa_dados csv
-write.csv(mapa_dados, file.path(dir_dashboard, "mapa_dados_influenza_sarsc.csv"), row.names = FALSE)
-
-#gravar em rds para C:/Github/IDS_API/IDS_Monitoria/data/DB_Dashboard/mapa_dados_influenza_sarsc.rds
-save(mapa_dados, file = paste0("C:/Github/IDS_API/IDS_Monitoria/data/DB_Dashboard/mapa_dados_influenza_sarsc.rda"))
-
-save(mapa_dados, file = paste0("C:/Github/IDS_API/IDS_Genomica/data/DB_Dashboard/mapa_dados_influenza_sarsc.rda"))
-
 
 
 # =========================================================

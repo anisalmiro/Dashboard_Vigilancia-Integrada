@@ -34,9 +34,9 @@ library(sf)
 library(leaflet)
 
 
-rsconnect::deployApp(
-  appFiles = c("app.R", "www/","data")
-)
+#rsconnect::deployApp(
+ # appFiles = c("app.R", "www/","data")
+#)
 
 
 # Instalar rdrop2 a partir do GitHub
@@ -57,7 +57,7 @@ load(file = 'data/DB_Dashboard/mapa_dados_influenza_sarsc.rda')  # BD_genomica_l
 ultima_data_reporte <- B_geral_HCA_R %>%
   dplyr::mutate(
     DATA2 = suppressWarnings(
-      lubridate::parse_date_time(`Dados_demograficos:DATE2`,
+      lubridate::parse_date_time(`DATE2`,
                                  orders = c("ymd", "dmy", "mdy", "Ymd", "dmY"))
     ) %>% as.Date()
   ) %>%
@@ -194,7 +194,7 @@ ui_inner <- dashboardPage(
                               div(style="
                            background-color:#005c99;color:white;padding:12px;
                            margin-bottom:15px;border-radius:6px;font-weight:bold;font-size:20px;",
-                                  "Influenza Positivity Surveillance"
+                                  "Sequency Influenza Surveillance"
                               ),
                               
                               fluidRow(
@@ -214,7 +214,7 @@ ui_inner <- dashboardPage(
                               div(style="
                            background-color:#005c99;color:white;padding:12px;
                            margin-bottom:15px;border-radius:6px;font-weight:bold;font-size:20px;",
-                                  "SARS-CoV-2 Positivity Surveillance"
+                                  "Sequency SARS-CoV-2 Surveillance"
                               ),
                               
                               fluidRow(
@@ -312,7 +312,7 @@ server <- function(input, output, session) {
         codigo_paciente = `Dados_demograficos:codigo_paciente`,
         influenza = `TIFOIDE:Resultado_de_Influenza`,
         sars_cov_2 = `group_jz9ln80:SARSCov2`,
-        date2 = `Dados_demograficos:DATE2`
+        date2 = `DATE2`
       ) %>%
       dplyr::mutate(
         date2 = lubridate::parse_date_time(
@@ -459,7 +459,7 @@ server <- function(input, output, session) {
         codigo_paciente = `Dados_demograficos:codigo_paciente`,
         influenza = `TIFOIDE:Resultado_de_Influenza`,
         sars_cov_2 = `group_jz9ln80:SARSCov2`,
-        date2 = `Dados_demograficos:DATE2`
+        date2 = `DATE2`
       ) %>%
       dplyr::mutate(
         date2 = lubridate::parse_date_time(
@@ -1331,7 +1331,7 @@ server <- function(input, output, session) {
       dplyr::mutate(
         DATA2 = suppressWarnings(
           lubridate::parse_date_time(
-            `Dados_demograficos:DATE2`,
+            `DATE2`,
             orders = c("ymd", "dmy", "mdy", "Ymd", "dmY")
           )
         ) %>% as.Date()
@@ -1355,6 +1355,8 @@ server <- function(input, output, session) {
         taxa_sarscov2  = round((SARSCoV2  / total_testados) * 100, 1)
       ) %>%
       dplyr::arrange(ano, sem_epi)
+    
+    #list(head(df_f))
     
     req(nrow(df_f) >= 2)
     

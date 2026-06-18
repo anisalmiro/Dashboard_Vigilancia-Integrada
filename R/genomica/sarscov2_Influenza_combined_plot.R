@@ -23,7 +23,8 @@ df <- read.csv(
 # Filter pathogen
 # ===============================
 var_Influenza <- "Influenza"
-df <- df %>% filter(Patogeno == var_Influenza)
+
+df <- df %>%dplyr:: filter(Patogeno == var_Influenza)
 
 # ===============================
 # Normalize column names
@@ -72,10 +73,12 @@ names(df) <- make.unique(names(df))
 
 
 df <- df %>%
-  filter(
+dplyr::filter(
     !is.na(.data[[week_col]]),
     !is.na(.data[[year_col]])
   )
+
+
 
 # ===============================
 # Rename canonical columns
@@ -104,7 +107,7 @@ if ("ids_id" %in% names(df)) {
 # Display label
 # ===============================
 df$display_label <- as.character(df$subtype_and_subclade)
-df <- df %>% filter(!is.na(display_label), nzchar(display_label))
+df <- df %>%dplyr::filter(!is.na(display_label), nzchar(display_label))
 
 # ===============================
 # Create Year-Week axis

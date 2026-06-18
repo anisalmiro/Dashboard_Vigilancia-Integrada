@@ -8,6 +8,47 @@
 Sys.setlocale("LC_ALL", "Portuguese")
 options(scipen = 100, digits = 2)
 
+#install.packages("readxl")
+library("readxl")
+library("writexl")
+
+library(stringr)
+library(here)
+#
+# Enviar bases de dados para o Dropbox
+library(rdrop2)
+#install.packages("openxlsx")
+library(openxlsx)
+library(stringr)
+library(stringi)
+library(lubridate)
+library(sf)
+library(dplyr)
+library(ggplot2)
+library(lubridate)
+library(stringr)
+library(tidyverse)
+library(readxl)
+library(openxlsx)
+library(ruODK)
+library(here)
+library(lubridate)
+library(knitr)
+library(readr)
+library(dplyr)
+library(tidyr)
+library(gridExtra)
+
+library(dplyr)
+library(lubridate)
+library(stringr)
+library(cli)
+library(plyr)
+library(rlang)
+
+
+
+
 # Lista de bibliotecas necessárias
 libraries <- c(
   # Manipulação e limpeza de dados
@@ -29,25 +70,9 @@ libraries <- c(
   "tidyverse", "stringr"
 )
 
-#install.packages("readxl")
-library("readxl")
-library("writexl")
 
-library(stringr)
-library(here)
-#
-# Enviar bases de dados para o Dropbox
-library(rdrop2)
-#install.packages("openxlsx")
-library(openxlsx)
-library(stringr)
-library(stringi)
-library(lubridate)
-library(sf)
-library(dplyr)
-library(ggplot2)
-library(lubridate)
-library(stringr)
+##---------------------------------------------------------------
+##--access ODK Central and read in the survey data
 
 if (!requireNamespace("pacman", quietly = TRUE)) install.packages("pacman")
 pacman::p_load(readr, ggplot2, scales, forcats)
@@ -69,37 +94,6 @@ cli::cli_alert_info("Se tiver erros de Leitura de Bibliotecas, Instale-os ou fac
 
 cli::cli_alert_success("Iniciando Dashboar - carregamento de directorios e BD")
 
-
-#DEFININDO Directorios
-  dir_raw <- "raw"
-  dir_data <- "data_raw"
-  charts_dir <- "charts"
-  dir_R <- "R"
-   
-  #dir for get/pull/save
-  dir_dashboard <- file.path(dir_R, "Dashboard")
-  dir_function <- file.path(dir_R, 'function')
-  dir_preliminar <- file.path(dir_R, 'Preliminar')
-  dir_intermediaria <- file.path(dir_R, 'Intermediaria')
-  dir_dashboard_alt<-"C:/Users/rgdti/OneDrive - INS - Instituto Nacional de Saúde/Documents/IDS/BD_DASHBOARD"
-  
-  
-  #funcao para converter datas em varios formatos
-  converter_data <- function(base_dados, coluna_data) {
-    # Verifica se a coluna existe
-    if (!coluna_data %in% names(base_dados)) {
-      stop(paste("A coluna", coluna_data, "não existe na base de dados."))
-    }
-    
-    base_dados %>%
-      mutate(
-        !!sym(coluna_data) := parse_date_time(
-          !!sym(coluna_data),
-          orders = c("Y-m-d", "d/m/Y", "d-m-Y", "m/d/Y", "d%m%Y", "Y%m%d", "d%b%Y", "d%b%y"),
-          tz = "UTC"
-        )
-      )
-  }
   
   #funcao que filtra a base de daods conforme dias definidos
   
@@ -117,6 +111,23 @@ cli::cli_alert_success("Iniciando Dashboar - carregamento de directorios e BD")
     return(base_filtrada)
   }
   
+#DEFININDO Directorios
+  dir_raw <- "raw"
+  dir_data <- "data_raw"
+  charts_dir <- "charts"
+  dir_R <- "R"
+   
+  #dir for get/pull/save
+  dir_dashboard <- file.path(dir_R, "Dashboard")
+  dir_function <- file.path(dir_R, 'function')
+  dir_util <- file.path(dir_R, 'util')
+  dir_preliminar <- file.path(dir_R, 'Preliminar')
+  dir_intermediaria <- file.path(dir_R, 'Intermediaria')
+  dir_backup_raw_combined <- file.path(dir_raw, "ids_comb_form_data")
+  dir_dashboard_alt<-"C:/Users/rgdti/OneDrive - INS - Instituto Nacional de Saúde/Documents/IDS/BD_DASHBOARD"
+  
+
+
   
   
   # aplicar a funcao para gerar as bases filtradas
@@ -139,27 +150,27 @@ cli::cli_alert_success("Iniciando Dashboar - carregamento de directorios e BD")
     }
   }
 
+ # saveRDS(bd_ids_combinada, file.path(dir_raw, "bd_ids_combinada.rds"))
+  # Use readRDS em vez de load
+  # ler a base de dados com o nome bd_ids_combinada_{maxima data registada no backup}.rds e atribuir a um objeto chamado bd_ids_combinada
 
+  bd_ids_combinada <- readRDS(file.path(dir_raw, "bd_ids_combinada.rds"))
   
-  #saveRDS(token, "token.rds") # saves credentials
-  token<-readRDS("token.rds") # read in credentials
   
-  #list(token)
+  # 1. Listar os arquivos dentro do seu diretório 'dir_raw' que seguem o padrão
+  #arquivos <- list.files(path = dir_raw, pattern = "^bd_ids_combinada_.*\\.rds$", full.names = TRUE)
   
-  token <- drop_auth(rdstoken = "token.rds")
+  # 2. Identificar o arquivo com a data de modificação mais recente
+  #arquivo_mais_recente <- arquivos[which.max(file.info(arquivos)$mtime)]
   
-  drop_acc(dtoken = token)
+  # 3. Ler o arquivo mais recente (o 'arquivo_mais_recente' já inclui o caminho completo)
+  #bd_ids_combinada <- readRDS(arquivo_mais_recente)
   
-  # Autenticar no Dropbox
-  # Pasta no Dropbox
-  db_folder <- "/IDS"
   
-  # Lista de arquivos locais + nomes no Dropbox
-  files <- list(
-    "data/DB_Dashboard/B_geral.rda",
-    "data/DB_Dashboard/B_Comunitaria.rda",
-    "data/DB_Dashboard/B_Hospitalar.rda",
-    "data/DB_Dashboard/B_Ambiental.rda"
-  )
+  ##--connect to ODK Central by passing hidden credentials
+  ##--the linked file should be made previous to this step and stored in your project folder
+  ##--ODK Central's OData URL contains base URL, project ID, and form ID
+  ##--ODK Central credentials can live in .Renviron
+  ##--run 'vignette("setup")' for setup and authentication options (will appear in 'Help' pane)
   
 

@@ -689,6 +689,28 @@ B_geral_HCA_R <- B_geral_HCA_R %>%
     )
   )
 
+
+
+cli::cli_alert_info("Limpeza da Unidade Sanitaria")
+B_geral_HCA_R$Unidade_sanitaria<- plyr::revalue(
+  B_geral_HCA_R$Unidade_sanitaria,
+  c("CS_Mavalane" = "CS Mavalane",
+    "H_geral_de_Mavalane" = "Hospital Geral Mavalane",
+    "CS_Zimpeto" = "CS Zimpeto",
+    "H_Provincial_de_Tete" = "Hosp Provincial de Tete"),
+  warn_missing = FALSE
+) 
+
+B_geral_HCA_R$unidade_sanitaria<- plyr::revalue(
+  B_geral_HCA_R$unidade_sanitaria,
+  c("CS_Mavalane" = "CS Mavalane",
+    "H_geral_de_Mavalane" = "Hospital Geral Mavalane",
+    "CS_Zimpeto" = "CS Zimpeto",
+    "H_Provincial_de_Tete" = "Hosp Provincial de Tete"),
+  warn_missing = FALSE
+) 
+
+names(B_geral_HCA_R)
 ## 
 
 # =========================================================

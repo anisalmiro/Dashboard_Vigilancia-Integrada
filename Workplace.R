@@ -16,7 +16,7 @@ rm(list = ls())
 source(".RProfile", encoding = "UTF-8")
 
 #pull data to ODK Central
-#source(file.path(dir_function, "00_pull_data_central.R"), encoding = "UTF-8")
+source(file.path(dir_function, "00_pull_data_central.R"), encoding = "UTF-8")
 
 #2
 #Ler Base de dados 

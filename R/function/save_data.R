@@ -22,27 +22,20 @@ save(BD_Final_VH_R, file = paste0("C:/Github/IDS_API/IDS_SRespiratorio/data/DB_D
 cli::cli_alert_info("Salvando a base de dados da vigilancia Ambiental")
 save(BD_Final_VA_R, file = paste0("C:/Github/IDS_API/IDS_SRespiratorio/data/DB_Dashboard/B_Ambiental.rda"))
 
-#Exportando base da genomica em formato .rda
 save(BD_genomica_lined, file = paste0("C:/Github/IDS_API/IDS_SRespiratorio/data/DB_Dashboard/BD_Genomica_Final.rda"))
 
 save(B_geral_Colera, file = paste0("C:/Github/IDS_API/IDS_SRespiratorio/data/DB_Dashboard/B_geral_Colera.rda"))
 
-
-
-#gravar em rds para C:/Github/IDS_API/IDS_Monitoria/data/DB_Dashboard/mapa_dados_influenza_sarsc.rds
 save(mapa_dados, file = paste0("C:/Github/IDS_API/IDS_SRespiratorio/data/DB_Dashboard/mapa_dados_influenza_sarsc.rda"))
+
+#monitria de casos de influenza e SARS-COV-2
 
 save(mapa_dados, file = paste0("C:/Github/IDS_API/IDS_Monitoria/data/DB_Dashboard/mapa_dados_influenza_sarsc.rda"))
 
 save(mapa_dados, file = paste0("C:/Github/IDS_API/IDS_Genomica/data/DB_Dashboard/mapa_dados_influenza_sarsc.rda"))
 
-
-
-#Exportando Bases de dados para DashBoard
-
 cli::cli_alert_info("Salvando a base de dados Geral de analiser")
 save(B_geral_HCA_R, file = paste0("C:/Github/IDS_API/IDS_Monitoria/data/DB_Dashboard/B_geral.rda"))
-
 
 
 cli::cli_alert_info("Salvando a base de dados da vigilancia Comunitaria")
@@ -55,6 +48,7 @@ save(BD_Final_VH_R, file = paste0("C:/Github/IDS_API/IDS_Monitoria/data/DB_Dashb
 
 cli::cli_alert_info("Salvando a base de dados da vigilancia Ambiental")
 save(BD_Final_VA_R, file = paste0("C:/Github/IDS_API/IDS_Monitoria/data/DB_Dashboard/B_Ambiental.rda"))
+
 
 #Exportando base da genomica em formato .rda
 save(BD_genomica_lined, file = paste0("C:/Github/IDS_API/IDS_Monitoria/data/DB_Dashboard/BD_Genomica_Final.rda"))
@@ -78,8 +72,6 @@ writexl::write_xlsx(
 cli::cli_alert_info("Salvando a base de dados da de colera das diferentes Vigilancias")
 save(B_geral_Colera, file = paste0("C:/Github/IDS_API/IDS_Monitoria/data/DB_Dashboard/B_geral_Colera.rda"))
 
-#Base de dados no repositorio alternartivo para actualizacao automatica de dados na Dashboard
-write.csv(B_geral_HCA_R, file = file.path(dir_dashboard_alt, "B_geral_HCA_R.csv"),row.names = FALSE, fileEncoding = "UTF-8") 
 
 #C:/Users/rgdti/OneDrive - INS - Instituto Nacional de Saúde/Documents/IDS/BD_DASHBOARD
 cli::cli_alert_success("Exportando Bases de Dados para DashBoard - Pasta Alternativa")

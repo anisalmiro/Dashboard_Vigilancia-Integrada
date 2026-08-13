@@ -129,7 +129,6 @@ cli::cli_alert_success("Iniciando Dashboar - carregamento de directorios e BD")
 
 
   
-  
   # aplicar a funcao para gerar as bases filtradas
   gerar_bases_filtradas <- function(lista_bases, dias_para_filtrar) {
     for (nome_base in lista_bases) {

@@ -364,9 +364,9 @@ resultado_testagem <- resultado_testagem %>%
            case_when(
              is.na(`TIFOIDE:Subtipo_de_Influenza_A`) ~ "Nao Tipado",
              `TIFOIDE:Subtipo_de_Influenza_A` == "" ~ "Nao Tipado",
-             `TIFOIDE:Subtipo_de_Influenza_A` == "a_h3n2" ~ "H3N2",
-             `TIFOIDE:Subtipo_de_Influenza_A` == "a_pdm_h1n1_09" ~ "PDM H1N1 09",
-             `TIFOIDE:Subtipo_de_Influenza_A` %in% c("a_pdm_h1n1_09 a_h3n2", "a_h3n2 a_pdm_h1n1_09") ~ "PDM H1N1 09",
+             `TIFOIDE:Subtipo_de_Influenza_A` == "a_h3n2" ~ "A(H3N2)",
+             `TIFOIDE:Subtipo_de_Influenza_A` == "a_pdm_h1n1_09" ~ "A(H1N1) pdm09",
+             `TIFOIDE:Subtipo_de_Influenza_A` %in% c("a_pdm_h1n1_09 a_h3n2", "a_h3n2 a_pdm_h1n1_09") ~ "A(H1N1) pdm09",
              TRUE ~ `TIFOIDE:Subtipo_de_Influenza_A`
            )
   )
@@ -378,8 +378,9 @@ resultado_testagem <- resultado_testagem %>%
              is.na(`TIFOIDE:Subtipo_de_Influenza_B`) ~ "Nao Tipado",
              `TIFOIDE:Subtipo_de_Influenza_B` == "" ~ "Nao Tipado",
              `TIFOIDE:Subtipo_de_Influenza_B` == "NA" ~ "Nao Tipado",
-             `TIFOIDE:Subtipo_de_Influenza_B` == "b_vic" ~ "Victoria",
-             `TIFOIDE:Subtipo_de_Influenza_B` == "b_yamagata" ~ "Yamagata",
+             `TIFOIDE:Subtipo_de_Influenza_B` == "b_vic" ~ "B(Victoria)",
+             `TIFOIDE:Subtipo_de_Influenza_B` == "b_yamagata" ~ "B(Yamagata)",
+             `TIFOIDE:Subtipo_de_Influenza_B` == "sim" ~ "Nao Tipado",
              TRUE ~ `TIFOIDE:Subtipo_de_Influenza_B`
            )
   )
